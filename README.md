@@ -1,8 +1,10 @@
 ![](/src/main/resources/assets/projecte/logo.png?raw=true)
 
-Repository for ProjectE, a complete rewrite of EE2 (Equivalent Exchange 2) for modern Minecraft versions. Transmutation tables, collectors, condensers, flying rings, and all the other trinkets you love are here.
+This is a fork of projectE with the aim of rebalancing for inclusion in [MagiTekkit](https://github.com/we-commit-coding-felonies/magitekkit)
 
-Discover powerful alchemical tools, items, and devices. Break down unwanted items into EMC (Energy-Matter Covalence) and use that EMC to create new items.
+Below here is all from the original readme:
+
+<hr>
 
 
 # Can I include it in a modpack?

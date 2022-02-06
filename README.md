@@ -1,6 +1,7 @@
 ![](/src/main/resources/assets/projecte/logo.png?raw=true)
 
 This is a fork of projectE with the aim of rebalancing for inclusion in [MagiTekkit](https://github.com/we-commit-coding-felonies/magitekkit)
+
 Contains some bugfixes and feature changes.
 
 Below here is all from the original readme:

@@ -97,7 +97,7 @@ tile.pe_fuel_block_1.name=Блок пального Мобіуса
 tile.pe_fuel_block_2.name=Блок ефірного пального
 tile.pe_dmPedestal.name=П'єдестал темної матерії
 
-itemGroup.projecte=ProjectE
+itemGroup.projecte=ProjectTwEaked
 
 advancements.phil_stone=Найкращий друг алхіміків!
 advancements.phil_stone.desc=Почнемо! Створіть філософський камінь!
@@ -154,7 +154,7 @@ pe.body.pedestal2=Відновлює половину голоду кожні %s
 
 pe.command.main.usage=/projecte <changelog, clearKnowledge, setEMC, reloadEMC, removeEMC, resetEMC>
 
-pe.command.changelog.uptodate=ProjectE не потребує оновлень.
+pe.command.changelog.uptodate=ProjectTwEaked не потребує оновлень.
 pe.command.clearknowledge.error=Не вдалося видалити знання гравця %s
 pe.command.clearknowledge.notify=Ваші знання про трансмутації були видалені адміністратором %s!
 pe.command.clearknowledge.playernotfound=Не вдалось знайти гравця з нікнеймом: %s
@@ -342,7 +342,7 @@ pe.transmutation.unlearned6=е
 pe.transmutation.unlearned7=н
 pe.transmutation.unlearned8=о
 
-pe.update.available=Доступне нове оновлення для ProjectE: %s
+pe.update.available=Доступне нове оновлення для ProjectTwEaked: %s
 pe.update.changelog=Використовуйте /projecte changelog для виклику списку змін!
 pe.update.getit=Завантажте тут!
 

@@ -15,6 +15,9 @@ APP_BASE_NAME=`basename "$0"`
 # Use the maximum available, or set MAX_FD != -1 to use that value.
 MAX_FD="maximum"
 
+# Force Java8 for compatability 
+JAVA_HOME="/usr/lib/jvm/java-8-openjdk/jre"
+
 warn ( ) {
     echo "$*"
 }

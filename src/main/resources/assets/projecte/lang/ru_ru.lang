@@ -100,9 +100,8 @@ tile.pe_fuel_block_1.name=Блок топлива Мёбиуса
 tile.pe_fuel_block_2.name=Блок эфирного топлива
 tile.pe_dmPedestal.name=Пьедестал из тёмной материи
 
-itemGroup.projecte=ProjectE
+itemGroup.projecte=ProjectTwEaked
 
-<<<<<<< HEAD
 advancements.pe_phil_stone=Лучший друг алхимиков!
 advancements.pe_phil_stone.desc=Давайте начнём! Сделайте философский камень
 advancements.pe_alch_chest=Улучшение хранилища!
@@ -139,44 +138,6 @@ advancements.pe_klein=EMC аккумуляторы
 advancements.pe_klein.desc=Запас EMC на чёрный день.
 advancements.pe_klein_big=Большие EMC аккумуляторы
 advancements.pe_klein_big.desc=Вселенная в Вашем кармане.
-=======
-advancements.phil_stone=Лучший друг алхимиков!
-advancements.phil_stone.desc=Давайте начнём! Сделайте философский камень
-advancements.alch_chest=Улучшение хранилища!
-advancements.alch_chest.desc="Небольшое" улучшение сундука.
-advancements.alch_bag=Карманное хранилище!
-advancements.alch_bag.desc=Все чудеса алхимического сундука в Вашем кармане.
-advancements.transmutation=Превратите это в это!
-advancements.transmutation.desc=Начало (и конец) всего.
-advancements.condenser=Конденсируй мир!
-advancements.condenser.desc=БОЛЬШЕ АЛМАЗОВ!
-advancements.collector=Энергия солнца!
-advancements.collector.desc=Теперь начинается самое интересное.
-advancements.relay=Энергия цветов!
-advancements.relay.desc=Соедините сборщики для ещё большей энергии.
-advancements.portable_transmutation=Превращение на ходу!
-advancements.portable_transmutation.desc=И тогда Вы подумали, что ничего лучше быть не может.
-advancements.dark_matter=Вся эта материя.
-advancements.dark_matter.desc=Она выглядит... странно....
-advancements.red_matter=Даже более хорошая материя!
-advancements.red_matter.desc=Пространственно-временной континуум может быть повреждён.
-advancements.dm_block=Блок материи!
-advancements.dm_block.desc=Объединение материи вместе. Потому что это хорошая идея.
-advancements.rm_block=Красная и блестящая!
-advancements.rm_block.desc=Теперь уже что-то!
-advancements.dm_furnace=Горячая материя!
-advancements.dm_furnace.desc=Печь намного лучше, если она сделана из тёмной материи.
-advancements.rm_furnace=Материя - теперь ещё горячее!
-advancements.rm_furnace.desc=Ничего себе, это вещичка быстра.
-advancements.dm_pick=Применение материи на материи
-advancements.dm_pick.desc=Почему бы и нет?
-advancements.rm_pick=Эта штука безопасна?
-advancements.rm_pick.desc=Скорее всего нет.
-advancements.klein=EMC аккумуляторы
-advancements.klein.desc=Запас EMC на чёрный день.
-advancements.klein_big=Большие EMC аккумуляторы
-advancements.klein_big.desc=Вселенная в Вашем кармане.
->>>>>>> 58338650139ab4a55681f4327b05d0245f66db21
 
 pe.arcana.mode=Режим: 
 pe.arcana.mode.0=Обнуление
@@ -196,7 +157,7 @@ pe.body.pedestal2=Восстанавливает половинку голода
 
 pe.command.main.usage=/projecte <changelog, clearKnowledge, setEMC, reloadEMC, removeEMC, resetEMC>
 
-pe.command.changelog.uptodate=Обновление ProjectE не требуется.
+pe.command.changelog.uptodate=Обновление ProjectTwEaked не требуется.
 pe.command.clearknowledge.error=Не удалось очистить знания игрока %s
 pe.command.clearknowledge.notify=Ваши знания трансмутаций были очищены администратором %s!
 pe.command.clearknowledge.playernotfound=Не удалось найти игрока с именем: %s
@@ -384,7 +345,7 @@ pe.transmutation.unlearned6=е
 pe.transmutation.unlearned7=н
 pe.transmutation.unlearned8=о
 
-pe.update.available=Новая версия ProjectE доступна! Версия: %s
+pe.update.available=Новая версия ProjectTwEaked доступна! Версия: %s
 pe.update.changelog=Используйте /projecte changelog для вызова списка изменений!
 pe.update.getit=Загрузите здесь!
 

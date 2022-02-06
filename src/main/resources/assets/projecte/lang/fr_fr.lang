@@ -100,7 +100,7 @@ tile.pe_fuel_block_1.name=Bloc de combustible Mobius
 tile.pe_fuel_block_2.name=Bloc de combustible Aeternalis
 tile.pe_dmPedestal.name=Piédestal en matière noire
 
-itemGroup.projecte=ProjectE
+itemGroup.projecte=ProjectTwEaked
 projecte.desc=Commerce Correspondant?
 
 advancements.pe_phil_stone=Le meilleur ami des alchimistes!
@@ -158,7 +158,7 @@ pe.body.pedestal2=Un demi gigot chaque %s
 
 pe.command.main.usage=/projecte <changelog, clearKnowledge, setEMC, reloadEMC, removeEMC, resetEMC>
 
-pe.command.changelog.uptodate=ProjectE est à jour.
+pe.command.changelog.uptodate=ProjectTwEaked est à jour.
 pe.command.clearknowledge.error=Impossible d'effacer les connaissances pour: %s
 pe.command.clearknowledge.notify=Vos connaissances de transmutation ont été éffacées par %s!
 pe.command.clearknowledge.playernotfound=Impossible de trouver le nom du joueur: %s
@@ -347,7 +347,7 @@ pe.transmutation.unlearned6=r
 pe.transmutation.unlearned7=i
 pe.transmutation.unlearned8=s
 
-pe.update.available=Nouvelle version de ProjectE disponible! Version: %s
+pe.update.available=Nouvelle version de ProjectTwEaked disponible! Version: %s
 pe.update.getit=Obtenez le ici!
 
 pe.volcanite.tooltip1=Appuyez sur %s pour tirer un projectile de lave
@@ -405,7 +405,7 @@ pe.manual.pe_nova_catalyst=La Nova Catalyseuse est un puissant explosive alchimi
 pe.manual.pe_transmutation_stone=La table de transmutation permet d'étudier la structure des matèriaux, et de briser les autres pour créer plus d'entre eux. La terre va dedans, les diamants en sortent!
 
 # TextPages headers and bodies
-pe.manual.introduction=En ouvrant ce livre vous avez commencée votre première étape pour devenir un Grand Alchimiste. Vous êtes peut-être las de faire toujours les mêmes tâches pénibles tous les jours dans votre monde, ou vous désirez simplement plus de puissance pour des fins..., ou vous aimeriez simplement l'utilitée et l'art de la magie à votre dispostion. Peu importe ce que vous pensez, l'alchimie est la pour assouvir vos besoins. Avant de commencer il est nécessaire de comprendre le passé... L'art de l'alchimie est connu depuis des temps ancestraux. Il a été découvert par un homme nommé x3n0ph0b3, et affiné grâce à de multiples itérations. Après la retraite de x3n0ph0b3, un nouvel apprenti, Pahimar, prit le dévelopement de cet art, mais beaucoup d'Alchimiste n'apprécié pas c'est nouvelle méthodes, une guerre éclata entre les deux côtés avec d'étranges chants sonores semblables à "tricheurs paresseux" et "EE2 OP !!!!!!" remplissant l'air. Les disciples de x3n0 disait que tout était perdu jusqu'à ce qu'un vagabonde du nom de MozeIntel les conduisit sous terre, il avait étudié et reproduit le travail de x3n0, ainsi l'art ancien vivait. Finalement, pour des raisons inconnues (motifs qu'il a étrangement décrit comme «IRL»), Moze pris sa retraite, laissant son travail à un apprenti enthousiaste, SinkillerJ. Sin a continué à apporter non seulement la paix aux deux parties leur permettant de coexister, mais pour former également un conseil d'alchimistes dédiés à la préservation de l'art ancien: Williewillus - Lord of Refactors Blubberbub - Alchemical Value Archivist Lilylicious - Lady of Little Big Things We, le conseil d'alchimistes, confèrent désormais sur vous notre connaissance la plus étendue des arts alchimiques, et vous accueillent, jeune alchimiste, dans le monde de ProjectE.
+pe.manual.introduction=En ouvrant ce livre vous avez commencée votre première étape pour devenir un Grand Alchimiste. Vous êtes peut-être las de faire toujours les mêmes tâches pénibles tous les jours dans votre monde, ou vous désirez simplement plus de puissance pour des fins..., ou vous aimeriez simplement l'utilitée et l'art de la magie à votre dispostion. Peu importe ce que vous pensez, l'alchimie est la pour assouvir vos besoins. Avant de commencer il est nécessaire de comprendre le passé... L'art de l'alchimie est connu depuis des temps ancestraux. Il a été découvert par un homme nommé x3n0ph0b3, et affiné grâce à de multiples itérations. Après la retraite de x3n0ph0b3, un nouvel apprenti, Pahimar, prit le dévelopement de cet art, mais beaucoup d'Alchimiste n'apprécié pas c'est nouvelle méthodes, une guerre éclata entre les deux côtés avec d'étranges chants sonores semblables à "tricheurs paresseux" et "EE2 OP !!!!!!" remplissant l'air. Les disciples de x3n0 disait que tout était perdu jusqu'à ce qu'un vagabonde du nom de MozeIntel les conduisit sous terre, il avait étudié et reproduit le travail de x3n0, ainsi l'art ancien vivait. Finalement, pour des raisons inconnues (motifs qu'il a étrangement décrit comme «IRL»), Moze pris sa retraite, laissant son travail à un apprenti enthousiaste, SinkillerJ. Sin a continué à apporter non seulement la paix aux deux parties leur permettant de coexister, mais pour former également un conseil d'alchimistes dédiés à la préservation de l'art ancien: Williewillus - Lord of Refactors Blubberbub - Alchemical Value Archivist Lilylicious - Lady of Little Big Things We, le conseil d'alchimistes, confèrent désormais sur vous notre connaissance la plus étendue des arts alchimiques, et vous accueillent, jeune alchimiste, dans le monde de ProjectTwEaked.
 pe.manual.introduction.header=Introduction
 
 # ImagePage headers

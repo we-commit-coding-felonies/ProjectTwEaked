@@ -27,9 +27,9 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-version = "${projecte_version}"
-group= "java.moze_intel" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "ProjectE"
+version = "${projecttweaked_version}"
+group= "java.quartzshard" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "ProjectTwEaked"
 
 minecraft {
     version = "${minecraft_version}-${forge_version}"
@@ -51,7 +51,7 @@ jar {
 repositories {
 	maven { //MinecraftForge
 		name "MinecraftForge Maven"
-		url "http://files.minecraftforge.net/maven/"
+		url "https://maven.minecraftforge.net/"
 	}
 
     maven {
@@ -82,7 +82,7 @@ dependencies {
     deobfCompile "com.azanor.baubles:Baubles:1.12-1.5.2"
     deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-${crafttweaker_version}"
     deobfCompile "CraftTweaker2:CraftTweaker2-API:1.12-${crafttweaker_version}"
-    deobfCompile "CraftTweaker2:ZenScript:1.12-${crafttweaker_version}"
+    deobfCompile "CraftTweaker2:ZenScript:${crafttweaker_version}"
 
     compile group: "org.apache.commons", name: "commons-math3", version: "3.6.1"
 
@@ -142,7 +142,7 @@ shadowJar {
     exclude('META-INF/maven/**')
 
     // Relocate apache commons-math3 to prevent conflicts with other mods that include it
-    relocate 'org.apache.commons.math3', 'moze_intel.projecte.shaded.org.apache.commons.math3'
+    relocate 'org.apache.commons.math3', 'quartzshard.projecttweaked.shaded.org.apache.commons.math3'
 
     classifier = 'universal' // Replace the default JAR
 }

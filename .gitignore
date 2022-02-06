@@ -29,6 +29,9 @@ local.properties
 eclipse/
 libs/
 
+# Codium
+.vscode/
+
 # Windows
 Thumbs.db
 ehthumbs.db

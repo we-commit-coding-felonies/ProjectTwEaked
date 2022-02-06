@@ -1,4 +1,4 @@
-item.pe_philosophers_stone.name=Philosopher's Stone
+item.pe_philosophers_stone.name=Minium Stone
 item.pe_alchemical_bag.name=Alchemical Bag
 item.pe_repair_talisman.name=Repair Talisman
 item.pe_klein_star_1.name=Klein Star Ein
@@ -100,7 +100,7 @@ tile.pe_fuel_block_1.name=Mobius Fuel Block
 tile.pe_fuel_block_2.name=Aeternalis Fuel Block
 tile.pe_dmPedestal.name=Dark Matter Pedestal
 
-itemGroup.projecte=ProjectE
+itemGroup.projecte=ProjectTwEaked
 projecte.desc=Correspondent Commerce?
 
 advancements.pe_phil_stone=An alchemist's best friend!
@@ -158,7 +158,7 @@ pe.body.pedestal2=Half a shank every %s
 
 pe.command.main.usage=/projecte <changelog, clearKnowledge, setEMC, reloadEMC, removeEMC, resetEMC>
 
-pe.command.changelog.uptodate=ProjectE is up to date.
+pe.command.changelog.uptodate=ProjectTwEaked is up to date.
 pe.command.clearknowledge.error=Couldn't clear knowledge for: %s
 pe.command.clearknowledge.notify=Your transmutation knowledge was cleared by %s!
 pe.command.clearknowledge.playernotfound=Couldn't find player named: %s
@@ -360,7 +360,7 @@ pe.transmutation.unlearned6=n
 pe.transmutation.unlearned7=e
 pe.transmutation.unlearned8=d
 
-pe.update.available=New ProjectE update available! Version: %s
+pe.update.available=New ProjectTwEaked update available! Version: %s
 pe.update.getit=Get it here!
 
 pe.volcanite.tooltip1=Press %s to fire a lava projectile
@@ -420,7 +420,7 @@ pe.manual.pe_nova_catalyst=The Nova Catalyst is a powerful alchemical explosive,
 pe.manual.pe_transmutation_stone=The Transmutation Table allows the alchemist to study the makeup of materials, and break down others to create more of them. Dirt goes in, Diamonds come out!
 
 # TextPages headers and bodies
-pe.manual.introduction=By opening this book you have taken the first steps on your journey to become a High Alchemist. Perhaps you are weary of performing the same grindy tasks over and over, or you simply desire more power for... purposes, or you'd like the utility and art of magic at your disposal. Regardless, alchemy is sure to fit your needs. Before you can begin however it is important to understand the past...    The art of alchemy has been known since ancient times. It was discovered by a man known as x3n0ph0b3, and refined through multiple iterations. After x3n0ph0b3's retirement, a new apprentice, Pahimar, took up development of the art, but many alchemists were displeased by his new methods, a war broke out between the two sides with strange audible chants akin to "lazy cheaters" and "EE2 OP!!!!!!" filling the air. x3n0's followers thought all was lost until a wander by the name of MozeIntel led them underground, he had studied and reproduced x3n0's work, thus the old art lived on. Eventually, for reasons unknown (reasons he strangely described as "IRL"), Moze retired, leaving his work to an eager apprentice, SinkillerJ. Sin went on to not only bring peace to the two sides allowing them to coexist, but to also form a council of alchemists dedicated to the preservation of the old art:    Williewillus - Lord of Refactors    Blubberbub - Alchemical Value Archivist    Lilylicious - Lady of Little Big Things    We, the council of alchemists, now impart upon you our most extensive knowledge of the alchemical arts, and welcome you, young alchemist, to the world of ProjectE.
+pe.manual.introduction=By opening this book you have taken the first steps on your journey to become a High Alchemist. Perhaps you are weary of performing the same grindy tasks over and over, or you simply desire more power for... purposes, or you'd like the utility and art of magic at your disposal. Regardless, alchemy is sure to fit your needs. Before you can begin however it is important to understand the past...    The art of alchemy has been known since ancient times. It was discovered by a man known as x3n0ph0b3, and refined through multiple iterations. After x3n0ph0b3's retirement, a new apprentice, Pahimar, took up development of the art, but many alchemists were displeased by his new methods, a war broke out between the two sides with strange audible chants akin to "lazy cheaters" and "EE2 OP!!!!!!" filling the air. x3n0's followers thought all was lost until a wander by the name of MozeIntel led them underground, he had studied and reproduced x3n0's work, thus the old art lived on. Eventually, for reasons unknown (reasons he strangely described as "IRL"), Moze retired, leaving his work to an eager apprentice, SinkillerJ. Sin went on to not only bring peace to the two sides allowing them to coexist, but to also form a council of alchemists dedicated to the preservation of the old art:    Williewillus - Lord of Refactors    Blubberbub - Alchemical Value Archivist    Lilylicious - Lady of Little Big Things    We, the council of alchemists, now impart upon you our most extensive knowledge of the alchemical arts, and welcome you, young alchemist, to the world of ProjectTwEaked.
 pe.manual.introduction.header=Introduction
 
 # ImagePage headers

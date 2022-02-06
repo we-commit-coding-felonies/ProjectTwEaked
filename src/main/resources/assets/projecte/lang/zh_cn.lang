@@ -100,7 +100,7 @@ tile.pe_fuel_block_1.name=莫比乌斯燃料块
 tile.pe_fuel_block_2.name=永恒燃料块
 tile.pe_dmPedestal.name=暗物质台座
 
-# itemGroup.projecte=ProjectE
+# itemGroup.projecte=ProjectTwEaked
 
 advancements.pe_phil_stone=炼金术师的挚友
 advancements.pe_phil_stone.desc=用贤者之石开启你的炼金之旅!
@@ -157,7 +157,7 @@ pe.body.pedestal2=每%s恢复半格饥饿值
 
 # pe.command.main.usage=/projecte <changelog, clearKnowledge, setEMC, reloadEMC, removeEMC, resetEMC>
 
-pe.command.changelog.uptodate=当前使用的ProjectE为最新版本.
+pe.command.changelog.uptodate=当前使用的ProjectTwEaked为最新版本.
 pe.command.clearknowledge.error=无法清空玩家 %s 的转化知识.
 pe.command.clearknowledge.notify=你的转化知识已被 %s 全部清空!
 pe.command.clearknowledge.playernotfound=未找到名为"%s"的玩家.
@@ -342,7 +342,7 @@ pe.transmutation.transmute=转化桌
 # pe.transmutation.unlearned7=e
 # pe.transmutation.unlearned8=d
 
-pe.update.available=现有新版ProjectE可用！版本号：%s
+pe.update.available=现有新版ProjectTwEaked可用！版本号：%s
 pe.update.changelog=使用指令/projecte changelog可查看更新日志。
 pe.update.getit=下载地址在这里！
 

@@ -158,7 +158,7 @@ pe.body.pedestal2=每 %s半格飽食度
 
 #
 
-pe.command.changelog.uptodate=ProjectE已過舊。 
+pe.command.changelog.uptodate=ProjectTwEaked已過舊。 
 pe.command.clearknowledge.error=無法清除知識： %s
 pe.command.clearknowledge.notify=你的轉換知識已被 %s清除！
 pe.command.clearknowledge.playernotfound=找不到玩家名稱： %s
@@ -343,7 +343,7 @@ pe.transmutation.unlearned6=學
 pe.transmutation.unlearned7= 
 pe.transmutation.unlearned8=習
 
-pe.update.available=最新的ProjectE更新以可使用！ 版本：%s
+pe.update.available=最新的ProjectTwEaked更新以可使用！ 版本：%s
 pe.update.changelog=使用 /projecte changelog 以變更日誌！
 pe.update.getit=點此取得！
 

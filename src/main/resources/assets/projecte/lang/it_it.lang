@@ -97,7 +97,7 @@ tile.pe_fuel_block_1.name=Blocco di Combustibile Mobius
 tile.pe_fuel_block_2.name=Blocco Combustibile Aeternalis
 tile.pe_dmPedestal.name=Piedistallo di Materia Oscura
 
-itemGroup.projecte=ProjectE
+itemGroup.projecte=ProjectTwEaked
 
 advancements.pe_phil_stone=Il migliore amico di un alchimista!
 advancements.pe_phil_stone.desc=Iniziamo a fare le cose! Crafta una Pietra Filosofale
@@ -154,7 +154,7 @@ pe.body.pedestal2=Un punto fame ogni %s
 
 pe.command.main.usage=/projecte <changelog, clearKnowledge, setEMC, reloadEMC, removeEMC, resetEMC>
 
-pe.command.changelog.uptodate=La mod ProjectE è aggiornata.
+pe.command.changelog.uptodate=La mod ProjectTwEaked è aggiornata.
 pe.command.clearknowledge.error=Impossibile cancellare la conoscenza per: %s
 pe.command.clearknowledge.notify=Le vostre conoscenze della trasmutazione vengono cancellate da %s!
 pe.command.clearknowledge.playernotfound=Impossibile trovare il giocatore: %s
@@ -339,7 +339,7 @@ pe.transmutation.unlearned6=a
 pe.transmutation.unlearned7=t
 pe.transmutation.unlearned8=0
 
-pe.update.available=Un aggiornamento della mod ProjectE è disponibile! Versione: %s
+pe.update.available=Un aggiornamento della mod ProjectTwEaked è disponibile! Versione: %s
 pe.update.changelog=Usa /projecte changelog per il change log!
 pe.update.getit=Ottienila qui!
 

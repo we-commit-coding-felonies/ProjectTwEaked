@@ -100,7 +100,7 @@ tile.pe_fuel_block_1.name=Bloco de Combustível Mobius
 tile.pe_fuel_block_2.name=Bloco de Combustível Aeternalis
 tile.pe_dmPedestal.name=Pedestal de Matéria Escura
 
-itemGroup.projecte=ProjectE
+itemGroup.projecte=ProjectTwEaked
 
 advancements.pe_phil_stone=O melhor amigo de um alquimista!
 advancements.pe_phil_stone.desc=Vamos começar as coisas! Faça uma pedra filosofal
@@ -157,7 +157,7 @@ pe.body.pedestal2=Meio pernil cada %s
 
 pe.command.main.usage=/projecte <changelog, clearKnowledge, setEMC, reloadEMC, removeEMC, resetEMC>
 
-pe.command.changelog.uptodate=ProjectE está atualizado.
+pe.command.changelog.uptodate=ProjectTwEaked está atualizado.
 pe.command.clearknowledge.error=Não pôde limpar o conhecimento para: %s
 pe.command.clearknowledge.notify=Seu conhecimento sobre transmutação foi limpado por %s!
 pe.command.clearknowledge.playernotfound=Não pôde achar um jogador chamado: %s
@@ -345,7 +345,7 @@ pe.transmutation.unlearned6=en
 pe.transmutation.unlearned7=di
 pe.transmutation.unlearned8=do
 
-pe.update.available=Nova atualização do ProjectE disponível! Versão: %s
+pe.update.available=Nova atualização do ProjectTwEaked disponível! Versão: %s
 pe.update.changelog=Use /projecte changelog para o log de mudanças!
 pe.update.getit=Pegue aqui!
 

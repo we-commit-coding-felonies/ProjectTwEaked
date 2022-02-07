@@ -1,5 +1,5 @@
 {
   "conditions": {
-    "tome_enabled": "main.java.quartzshard.projecte.config.TomeEnabledFactory"
+    "tome_enabled": "main.java.quartzshard.projecttweaked.config.TomeEnabledFactory"
   }
 }

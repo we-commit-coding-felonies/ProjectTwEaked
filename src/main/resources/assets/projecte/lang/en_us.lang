@@ -425,3 +425,13 @@ pe.manual.introduction.header=Introduction
 
 # ImagePage headers
 pe.manual.img_alchchest.header=alchchest.png
+
+#Subtitles
+pe.subtitle.pewindmagic=Wind transmuted
+pe.subtitle.pewatermagic=Water transmuted
+pe.subtitle.pepower=Alchemical power activated
+pe.subtitle.peheal=Alchemical effect triggered
+pe.subtitle.pedestruct=Alchemical destruction
+pe.subtitle.pecharge=Alchemical charge
+pe.subtitle.peuncharge=Alchemical release
+pe.subtitle.petransmute=Something transmutes

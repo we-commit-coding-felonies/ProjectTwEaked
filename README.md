@@ -2,9 +2,34 @@
 
 This is a fork of projectE with the aim of rebalancing for inclusion in [MagiTekkit](https://github.com/we-commit-coding-felonies/magitekkit)
 
-Contains some bugfixes and feature changes.
+Here is a list of changes:
+ - Gem of Eternal Density can only create up to dark matter, Void Ring can still make red matter
+ - Make the transmutation table/tablet ui less horrid (shamelessly stolen and slightly modified from [ProjectEX](https://github.com/latvian-dev/ProjectEX))
+ - Archangels smite now applies random potion effects to entities (the effects it applies are configurable, too!)
+ - Configurable collector / relay values
+ - - Stuff like EMC/s, EMC transfer rate, etc.
+ - - Also a MK0 and MK4 collector/relay, both configurable
+ - Keybind to open alchemical bag / transmutation tablet (default B / N respectively)
+ - More items are now baubles
+ - - Klein star (body slot)
+ - - Transmutation tablet (head slot)
+ - - Mind stone (head slot)
+ - - Alchemical bag (belt slot)
+ - Super Philosopher's Stone
+ - - Craft with any item to duplicate it!
+ - - Performs all normal philosophers stone functions, but for free!
+ - - Allows you to use your tablet EMC like a Klein Star!
+ - - Can be worn as a bauble in the charm slot!
+ - - Is not balanced at all!
+ - Bugfixes
+ - - Matter tools 'oredict radius mining' (eg matter axe aoe tree harvest) no longer fail when water is nearby
+ - - Subtitles have been localized (incomplete! please help if you can.)
 
-Below here is all from the original readme:
+
+
+.
+
+Below here is all from the original ProjectE readme:
 
 <hr>
 

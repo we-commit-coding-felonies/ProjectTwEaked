@@ -21,6 +21,7 @@ import main.java.quartzshard.projecttweaked.gameObjs.container.RelayMK1Container
 import main.java.quartzshard.projecttweaked.gameObjs.container.RelayMK2Container;
 import main.java.quartzshard.projecttweaked.gameObjs.container.RelayMK3Container;
 import main.java.quartzshard.projecttweaked.gameObjs.container.TransmutationContainer;
+import main.java.quartzshard.projecttweaked.gameObjs.container.TweakedTransmutationContainer;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUIAlchChest;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUICollectorMK1;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUICollectorMK2;
@@ -93,7 +94,8 @@ public class GuiHandler implements IGuiHandler
 					return new CondenserContainer(player.inventory, (CondenserTile) tile);
 				break;
 			case Constants.TRANSMUTE_STONE_GUI:
-				return new TransmutationContainer(player.inventory, new TransmutationInventory(player), null);
+				//return new TransmutationContainer(player.inventory, new TransmutationInventory(player), null);
+				return new TweakedTransmutationContainer(player, new TransmutationInventory(player), null); 
 			case Constants.RM_FURNACE_GUI:
 				if (tile != null && tile instanceof RMFurnaceTile)
 					return new RMFurnaceContainer(player.inventory, (RMFurnaceTile) tile);
@@ -165,7 +167,7 @@ public class GuiHandler implements IGuiHandler
 					return new GUICondenser(player.inventory, (CondenserTile) tile);
 				break;
 			case Constants.TRANSMUTE_STONE_GUI:
-				return new GUITransmutation(player.inventory, new TransmutationInventory(player), null);
+				//return new GUITransmutation(player.inventory, new TransmutationInventory(player), null);
 			case Constants.RM_FURNACE_GUI:
 				if (tile != null && tile instanceof RMFurnaceTile)
 					return new GUIRMFurnace(player.inventory, (RMFurnaceTile) tile);

@@ -18,11 +18,11 @@ import java.util.UUID;
 public class LayerYue implements LayerRenderer<EntityPlayer> {
 	private final RenderPlayer render;
 
-	private static final UUID SIN_UUID = UUID.fromString("5f86012c-ca4b-451a-989c-8fab167af647");
-	private static final UUID CLAR_UUID = UUID.fromString("e5c59746-9cf7-4940-a849-d09e1f1efc13");
+	private static final UUID SOL_UUID = UUID.fromString("89b9a7d2-daa3-48cc-903c-96d125106a6b");
+	private static final UUID QRTZ_UUID = UUID.fromString("b9d0673f-51af-446e-a4d0-512eab478561");
 
-	private static final ResourceLocation HEART_LOC = new ResourceLocation(PECore.MODID, "textures/models/heartcircle.png");
-	private static final ResourceLocation YUE_LOC = new ResourceLocation(PECore.MODID, "textures/models/yuecircle.png");
+	private static final ResourceLocation QRTZ_LOC = new ResourceLocation(PECore.MODID, "textures/models/qrtzcircle.png");
+	private static final ResourceLocation SOL_LOC = new ResourceLocation(PECore.MODID, "textures/models/solcircle.png");
 
 	public LayerYue(RenderPlayer renderer)
 	{
@@ -37,8 +37,8 @@ public class LayerYue implements LayerRenderer<EntityPlayer> {
 			return;
 		}
 
-		if(SIN_UUID.equals(player.getUniqueID())
-				|| CLAR_UUID.equals(player.getUniqueID())
+		if(SOL_UUID.equals(player.getUniqueID())
+				|| QRTZ_UUID.equals(player.getUniqueID())
 				|| PECore.DEV_ENVIRONMENT)
 		{
 			GlStateManager.pushMatrix();
@@ -53,12 +53,12 @@ public class LayerYue implements LayerRenderer<EntityPlayer> {
 			GlStateManager.color(0.0F, 1.0F, 0.0F, 1.0F);
 			GlStateManager.disableLighting();
 			OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, 240f, 240f);
-			if (CLAR_UUID.equals(player.getUniqueID()))
+			if (QRTZ_UUID.equals(player.getUniqueID()))
 			{
-				Minecraft.getMinecraft().renderEngine.bindTexture(HEART_LOC);
+				Minecraft.getMinecraft().renderEngine.bindTexture(QRTZ_LOC);
 			} else
 			{
-				Minecraft.getMinecraft().renderEngine.bindTexture(YUE_LOC);
+				Minecraft.getMinecraft().renderEngine.bindTexture(SOL_LOC);
 			}
 
 			Tessellator tess = Tessellator.getInstance();

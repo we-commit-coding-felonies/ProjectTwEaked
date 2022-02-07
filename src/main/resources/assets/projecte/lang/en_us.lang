@@ -7,7 +7,7 @@ item.pe_klein_star_3.name=Klein Star Drei
 item.pe_klein_star_4.name=Klein Star Vier
 item.pe_klein_star_5.name=Klein Star Sphere
 item.pe_klein_star_6.name=Klein Star Omega
-item.pe_fuel_alchemical_coal.name=Alchemical Coal
+item.pe_fuel_alchemical_coal.name=Alchemicoal
 item.pe_fuel_mobius.name=Mobius Fuel
 item.pe_fuel_aeternalis.name=Aeternalis Fuel
 item.pe_covalence_dust_low.name=Low Covalence Dust
@@ -72,7 +72,7 @@ item.pe_gem_armor_3.name=Gem Helmet
 item.pe_arcana_ring.name=Ring of Arcana
 item.pe_void_ring.name=Void Ring
 item.pe_zero_ring.name=Zero Ring
-item.pe_tome.name=Tome of Knowledge
+item.pe_tome.name=Tome of Unlimited Knowledge
 item.pe_transmutation_tablet.name=Transmutation Tablet
 item.pe_manual.name=Book of the Alchemist [WIP]
 
@@ -101,10 +101,10 @@ tile.pe_fuel_block_2.name=Aeternalis Fuel Block
 tile.pe_dmPedestal.name=Dark Matter Pedestal
 
 itemGroup.projecte=ProjectTwEaked
-projecte.desc=Correspondent Commerce?
+projecte.desc=Identical Interchange..?
 
 advancements.pe_phil_stone=An alchemist's best friend!
-advancements.pe_phil_stone.desc=Let's get things started! Craft a philosopher's stone
+advancements.pe_phil_stone.desc=Let's get things started! Craft a philosopher's stone.
 advancements.pe_alch_chest=Storage Upgrade!
 advancements.pe_alch_chest.desc=A "little" chest upgrade.
 advancements.pe_alch_bag=Pocket storage!
@@ -147,7 +147,7 @@ pe.arcana.mode.2=Harvest
 pe.arcana.mode.3=SWRG
 pe.arcana.inactive=Inactive!
 
-pe.archangel.pedestal1=Fires arrows at nearby mobs
+pe.archangel.pedestal1=Fires homing arrows at nearby mobs
 pe.archangel.pedestal2=Triggers every %s
 
 pe.bhb.pedestal1=Sucks in nearby item drops
@@ -201,8 +201,8 @@ pe.divining.maxemc=Max EMC: %s
 pe.divining.secondmax=Second Max EMC: %s
 pe.divining.thirdmax=Third Max EMC: %s
 
-pe.dmfurnace.shortname=DM Furnace
-pe.rmfurnace.shortname=RM Furnace
+pe.dmfurnace.shortname=Dark Matter Furnace
+pe.rmfurnace.shortname=Red Matter Furnace
 
 pe.emc.emc_tooltip_prefix=EMC:
 pe.emc.maxgenrate_tooltip=Maximum Generation Rate:
@@ -216,7 +216,7 @@ pe.emc.too_much=WAY TOO MUCH
 pe.emc.postfix.0=Trillion
 pe.emc.postfix.1=Quadrillion
 pe.emc.postfix.2=Quintillion
-pe.emc.has_knowledge=Transmutable
+pe.emc.has_knowledge=Learned
 
 pe.evertide.tooltip1=Press %s to fire a water projectile
 pe.evertide.tooltip2=Acts as an infinite water bucket

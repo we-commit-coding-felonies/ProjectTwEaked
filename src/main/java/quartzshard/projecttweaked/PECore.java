@@ -64,7 +64,7 @@ public class PECore
 	public static final String MODNAME = "ProjectTwEaked";
 	public static final String VERSION = "@VERSION@";
 	public static final String DEPS = "required-after:forge@[13.20.0.2253,);after:baubles@[1.3.3,);after:jei@[4.6.0,)";
-	public static final String UPDATE_JSON = "https://raw.githubusercontent.com/sinkillerj/ProjectTwEaked/mc1.12.x/update.json";
+	public static final String UPDATE_JSON = "https://raw.githubusercontent.com/we-commit-coding-felonies/ProjectTwEaked/mc1.12.x/update.json";
 	public static final GameProfile FAKEPLAYER_GAMEPROFILE = new GameProfile(UUID.fromString("590e39c7-9fb6-471b-a4c2-c0e539b2423d"), "[" + MODNAME + "]");
 	public static final int DATA_VERSION = 1;
 	public static File CONFIG_DIR;

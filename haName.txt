@@ -23,3 +23,5 @@ FitchX
 pupnewfster
 Laveticus
 AcidPureWarrior
+craft_of_mining
+solunareclipse1

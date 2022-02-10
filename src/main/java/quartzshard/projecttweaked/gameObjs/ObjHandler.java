@@ -90,18 +90,22 @@ import main.java.quartzshard.projecttweaked.gameObjs.items.tools.RedShovel;
 import main.java.quartzshard.projecttweaked.gameObjs.items.tools.RedStar;
 import main.java.quartzshard.projecttweaked.gameObjs.items.tools.RedSword;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.AlchChestTile;
+import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK0Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK1Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK2Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK3Tile;
+import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK4Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.CondenserMK2Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.CondenserTile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.DMFurnaceTile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.InterdictionTile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.RMFurnaceTile;
+import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK0Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK1Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK2Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK3Tile;
+import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK4Tile;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
@@ -145,12 +149,16 @@ public class ObjHandler
 	public static final Block dmPedestal = new Pedestal();
 	public static final Block matterBlock = new MatterBlock();
 	public static final Block fuelBlock = new FuelBlock();
+	public static final Block collectorMK0 = new Collector(0);
 	public static final Block collectorMK1 = new Collector(1);
 	public static final Block collectorMK2 = new Collector(2);
 	public static final Block collectorMK3 = new Collector(3);
+	public static final Block collectorMK4 = new Collector(4);
+	public static final Block relayMK0 = new Relay(0);
 	public static final Block relay = new Relay(1);
 	public static final Block relayMK2 = new Relay(2);
 	public static final Block relayMK3 = new Relay(3);
+	public static final Block relayMK4 = new Relay(4);
 	public static final Block novaCatalyst = new NovaCatalyst();
 	public static final Block novaCataclysm = new NovaCataclysm();
 
@@ -238,9 +246,11 @@ public class ObjHandler
 	{
 		IForgeRegistry<Block> r = evt.getRegistry();
 		registerObj(r, alchChest, "alchemical_chest");
+		registerObj(r, collectorMK0, "collector_mk0");
 		registerObj(r, collectorMK1, "collector_mk1");
 		registerObj(r, collectorMK2, "collector_mk2");
 		registerObj(r, collectorMK3, "collector_mk3");
+		registerObj(r, collectorMK4, "collector_mk4");
 		registerObj(r, condenser, "condenser_mk1");
 		registerObj(r, condenserMk2, "condenser_mk2");
 		registerObj(r, dmFurnaceOff, "dm_furnace");
@@ -251,9 +261,11 @@ public class ObjHandler
 		registerObj(r, matterBlock, "matter_block");
 		registerObj(r, novaCatalyst, "nova_catalyst");
 		registerObj(r, novaCataclysm, "nova_cataclysm");
+		registerObj(r, relayMK0, "relay_mk0");
 		registerObj(r, relay, "relay_mk1");
 		registerObj(r, relayMK2, "relay_mk2");
 		registerObj(r, relayMK3, "relay_mk3");
+		registerObj(r, relayMK4, "relay_mk4");
 		registerObj(r, rmFurnaceOff, "rm_furnace");
 		registerObj(r, rmFurnaceOn, "rm_furnace_lit");
 		registerObj(r, transmuteStone, "transmutation_table");
@@ -264,9 +276,11 @@ public class ObjHandler
 	{
 		IForgeRegistry<Item> r = evt.getRegistry();
 		registerObj(r, new ItemAlchemyChestBlock(alchChest), alchChest.getRegistryName());
+		registerObj(r, new ItemCollectorBlock(collectorMK0), collectorMK0.getRegistryName());
 		registerObj(r, new ItemCollectorBlock(collectorMK1), collectorMK1.getRegistryName());
 		registerObj(r, new ItemCollectorBlock(collectorMK2), collectorMK2.getRegistryName());
 		registerObj(r, new ItemCollectorBlock(collectorMK3), collectorMK3.getRegistryName());
+		registerObj(r, new ItemCollectorBlock(collectorMK4), collectorMK4.getRegistryName());
 		registerObj(r, new ItemCondenserBlock(condenser), condenser.getRegistryName());
 		registerObj(r, new ItemBlock(condenserMk2), condenserMk2.getRegistryName());
 		registerObj(r, new ItemDMFurnaceBlock(dmFurnaceOff), dmFurnaceOff.getRegistryName());
@@ -276,9 +290,11 @@ public class ObjHandler
 		registerObj(r, new ItemMatterBlock(matterBlock), matterBlock.getRegistryName());
 		registerObj(r, new ItemBlock(novaCatalyst), novaCatalyst.getRegistryName());
 		registerObj(r, new ItemBlock(novaCataclysm), novaCataclysm.getRegistryName());
+		registerObj(r, new ItemRelayBlock(relayMK0), relayMK0.getRegistryName());
 		registerObj(r, new ItemRelayBlock(relay), relay.getRegistryName());
 		registerObj(r, new ItemRelayBlock(relayMK2), relayMK2.getRegistryName());
 		registerObj(r, new ItemRelayBlock(relayMK3), relayMK3.getRegistryName());
+		registerObj(r, new ItemRelayBlock(relayMK4), relayMK4.getRegistryName());
 		registerObj(r, new ItemRMFurnaceBlock(rmFurnaceOff), rmFurnaceOff.getRegistryName());
 		registerObj(r, new ItemTransmutationBlock(transmuteStone), transmuteStone.getRegistryName());
 
@@ -422,12 +438,16 @@ public class ObjHandler
 		GameRegistry.registerTileEntity(CondenserMK2Tile.class, new ResourceLocation(PECore.MODID, "condenser_mk2"));
 		GameRegistry.registerTileEntity(RMFurnaceTile.class, new ResourceLocation(PECore.MODID, "rm_furnace"));
 		GameRegistry.registerTileEntity(DMFurnaceTile.class, new ResourceLocation(PECore.MODID, "dm_furnace"));
+		GameRegistry.registerTileEntity(CollectorMK0Tile.class, new ResourceLocation(PECore.MODID, "collector_mk0"));
 		GameRegistry.registerTileEntity(CollectorMK1Tile.class, new ResourceLocation(PECore.MODID, "collector_mk1"));
 		GameRegistry.registerTileEntity(CollectorMK2Tile.class, new ResourceLocation(PECore.MODID, "collector_mk2"));
 		GameRegistry.registerTileEntity(CollectorMK3Tile.class, new ResourceLocation(PECore.MODID, "collector_mk3"));
+		GameRegistry.registerTileEntity(CollectorMK4Tile.class, new ResourceLocation(PECore.MODID, "collector_mk4"));
+		GameRegistry.registerTileEntity(RelayMK0Tile.class, new ResourceLocation(PECore.MODID, "relay_mk0"));
 		GameRegistry.registerTileEntity(RelayMK1Tile.class, new ResourceLocation(PECore.MODID, "relay_mk1"));
 		GameRegistry.registerTileEntity(RelayMK2Tile.class, new ResourceLocation(PECore.MODID, "relay_mk2"));
 		GameRegistry.registerTileEntity(RelayMK3Tile.class, new ResourceLocation(PECore.MODID, "relay_mk3"));
+		GameRegistry.registerTileEntity(RelayMK4Tile.class, new ResourceLocation(PECore.MODID, "relay_mk4"));
 		GameRegistry.registerTileEntity(DMPedestalTile.class, new ResourceLocation(PECore.MODID, "dm_pedestal"));
 	}
 

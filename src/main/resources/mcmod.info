@@ -2,7 +2,7 @@
 {
   "modid": "projecte",
   "name": "ProjectTweaked",
-  "description": "A rebalance/reweork of a complete rewrite of EE2 for modern Minecraft versions.",
+  "description": "A fork of a complete rewrite of EE2 for modern Minecraft versions.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "logoFile": "assets/projectweaked/logo.png",

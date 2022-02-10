@@ -7,9 +7,11 @@ import main.java.quartzshard.projecttweaked.gameObjs.container.inventory.Mercuri
 import main.java.quartzshard.projecttweaked.gameObjs.container.inventory.TransmutationInventory;
 import main.java.quartzshard.projecttweaked.gameObjs.container.AlchBagContainer;
 import main.java.quartzshard.projecttweaked.gameObjs.container.AlchChestContainer;
+import main.java.quartzshard.projecttweaked.gameObjs.container.CollectorMK0Container;
 import main.java.quartzshard.projecttweaked.gameObjs.container.CollectorMK1Container;
 import main.java.quartzshard.projecttweaked.gameObjs.container.CollectorMK2Container;
 import main.java.quartzshard.projecttweaked.gameObjs.container.CollectorMK3Container;
+import main.java.quartzshard.projecttweaked.gameObjs.container.CollectorMK4Container;
 import main.java.quartzshard.projecttweaked.gameObjs.container.CondenserContainer;
 import main.java.quartzshard.projecttweaked.gameObjs.container.CondenserMK2Container;
 import main.java.quartzshard.projecttweaked.gameObjs.container.DMFurnaceContainer;
@@ -17,14 +19,18 @@ import main.java.quartzshard.projecttweaked.gameObjs.container.EternalDensityCon
 import main.java.quartzshard.projecttweaked.gameObjs.container.MercurialEyeContainer;
 import main.java.quartzshard.projecttweaked.gameObjs.container.PhilosStoneContainer;
 import main.java.quartzshard.projecttweaked.gameObjs.container.RMFurnaceContainer;
+import main.java.quartzshard.projecttweaked.gameObjs.container.RelayMK0Container;
 import main.java.quartzshard.projecttweaked.gameObjs.container.RelayMK1Container;
 import main.java.quartzshard.projecttweaked.gameObjs.container.RelayMK2Container;
 import main.java.quartzshard.projecttweaked.gameObjs.container.RelayMK3Container;
+import main.java.quartzshard.projecttweaked.gameObjs.container.RelayMK4Container;
 import main.java.quartzshard.projecttweaked.gameObjs.container.TransmutationContainer;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUIAlchChest;
+import main.java.quartzshard.projecttweaked.gameObjs.gui.GUICollectorMK0;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUICollectorMK1;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUICollectorMK2;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUICollectorMK3;
+import main.java.quartzshard.projecttweaked.gameObjs.gui.GUICollectorMK4;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUICondenser;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUICondenserMK2;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUIDMFurnace;
@@ -32,21 +38,27 @@ import main.java.quartzshard.projecttweaked.gameObjs.gui.GUIEternalDensity;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUIMercurialEye;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUIPhilosStone;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUIRMFurnace;
+import main.java.quartzshard.projecttweaked.gameObjs.gui.GUIRelayMK0;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUIRelayMK1;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUIRelayMK2;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUIRelayMK3;
+import main.java.quartzshard.projecttweaked.gameObjs.gui.GUIRelayMK4;
 import main.java.quartzshard.projecttweaked.gameObjs.gui.GUITransmutation;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.AlchChestTile;
+import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK0Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK1Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK2Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK3Tile;
+import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK4Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.CondenserMK2Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.CondenserTile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.DMFurnaceTile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.RMFurnaceTile;
+import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK0Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK1Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK2Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK3Tile;
+import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK4Tile;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.tileentity.TileEntity;
@@ -102,6 +114,10 @@ public class GuiHandler implements IGuiHandler
 				if (tile != null && tile instanceof DMFurnaceTile)
 					return new DMFurnaceContainer(player.inventory, (DMFurnaceTile) tile);
 				break;
+			case Constants.COLLECTOR0_GUI:
+				if (tile != null && tile instanceof CollectorMK0Tile)
+					return new CollectorMK0Container(player.inventory, (CollectorMK0Tile) tile);
+				break;
 			case Constants.COLLECTOR1_GUI:
 				if (tile != null && tile instanceof CollectorMK1Tile)
 					return new CollectorMK1Container(player.inventory, (CollectorMK1Tile) tile);
@@ -114,6 +130,14 @@ public class GuiHandler implements IGuiHandler
 				if (tile != null && tile instanceof CollectorMK3Tile)
 					return new CollectorMK3Container(player.inventory, (CollectorMK3Tile) tile);
 				break;
+			case Constants.COLLECTOR4_GUI:
+				if (tile != null && tile instanceof CollectorMK4Tile)
+					return new CollectorMK4Container(player.inventory, (CollectorMK4Tile) tile);
+				break;
+			case Constants.RELAY0_GUI:
+				if (tile != null && tile instanceof RelayMK0Tile)
+					return new RelayMK0Container(player.inventory, (RelayMK0Tile) tile);
+				break;
 			case Constants.RELAY1_GUI:
 				if (tile != null && tile instanceof RelayMK1Tile)
 					return new RelayMK1Container(player.inventory, (RelayMK1Tile) tile);
@@ -125,6 +149,10 @@ public class GuiHandler implements IGuiHandler
 			case Constants.RELAY3_GUI:
 				if (tile != null && tile instanceof RelayMK3Tile)
 					return new RelayMK3Container(player.inventory, (RelayMK3Tile) tile);
+				break;
+			case Constants.RELAY4_GUI:
+				if (tile != null && tile instanceof RelayMK4Tile)
+					return new RelayMK4Container(player.inventory, (RelayMK4Tile) tile);
 				break;
 			case Constants.MERCURIAL_GUI:
 				return new MercurialEyeContainer(player.inventory, new MercurialEyeInventory(player.getHeldItem(hand)));
@@ -174,6 +202,10 @@ public class GuiHandler implements IGuiHandler
 				if (tile != null && tile instanceof DMFurnaceTile)
 					return new GUIDMFurnace(player.inventory, (DMFurnaceTile) tile);
 				break;
+			case Constants.COLLECTOR0_GUI:
+				if (tile != null && tile instanceof CollectorMK0Tile)
+					return new GUICollectorMK0(player.inventory, (CollectorMK0Tile) tile);
+				break;
 			case Constants.COLLECTOR1_GUI:
 				if (tile != null && tile instanceof CollectorMK1Tile)
 					return new GUICollectorMK1(player.inventory, (CollectorMK1Tile) tile);
@@ -186,6 +218,14 @@ public class GuiHandler implements IGuiHandler
 				if (tile != null && tile instanceof CollectorMK3Tile)
 					return new GUICollectorMK3(player.inventory, (CollectorMK3Tile) tile);
 				break;
+			case Constants.COLLECTOR4_GUI:
+				if (tile != null && tile instanceof CollectorMK4Tile)
+					return new GUICollectorMK4(player.inventory, (CollectorMK4Tile) tile);
+				break;
+			case Constants.RELAY0_GUI:
+				if (tile != null && tile instanceof RelayMK0Tile)
+					return new GUIRelayMK0(player.inventory, (RelayMK0Tile) tile);
+				break;
 			case Constants.RELAY1_GUI:
 				if (tile != null && tile instanceof RelayMK1Tile)
 					return new GUIRelayMK1(player.inventory, (RelayMK1Tile) tile);
@@ -197,6 +237,10 @@ public class GuiHandler implements IGuiHandler
 			case Constants.RELAY3_GUI:
 				if (tile != null && tile instanceof RelayMK3Tile)
 					return new GUIRelayMK3(player.inventory, (RelayMK3Tile) tile);
+				break;
+			case Constants.RELAY4_GUI:
+				if (tile != null && tile instanceof RelayMK4Tile)
+					return new GUIRelayMK4(player.inventory, (RelayMK4Tile) tile);
 				break;
 			case Constants.MERCURIAL_GUI:
 				return new GUIMercurialEye(player.inventory, new MercurialEyeInventory(player.getHeldItem(hand)));

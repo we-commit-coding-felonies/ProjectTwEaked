@@ -137,7 +137,7 @@ public class PECore
 		fixer.registerWalker(FixTypes.BLOCK_ENTITY, new ItemStackDataLists(DMPedestalTile.class, "Items"));
 
 		fixer.registerWalker(FixTypes.BLOCK_ENTITY, new CapInventoryWalker(
-				ImmutableSet.of(CollectorMK1Tile.class, CollectorMK2Tile.class, CollectorMK3Tile.class),
+				ImmutableSet.of(CollectorMK0Tile.class, CollectorMK1Tile.class, CollectorMK2Tile.class, CollectorMK3Tile.class, CollectorMK4Tile.class),
 				"Input", "AuxSlots"));
 		fixer.registerWalker(FixTypes.BLOCK_ENTITY, new CapInventoryWalker(CondenserTile.class, "Input", "LockSlot"));
 		fixer.registerWalker(FixTypes.BLOCK_ENTITY, new CapInventoryWalker(CondenserMK2Tile.class, "Input", "LockSlot", "Output"));
@@ -145,7 +145,7 @@ public class PECore
 				ImmutableSet.of(DMFurnaceTile.class, RMFurnaceTile.class),
 				"Input", "Output", "Fuel"));
 		fixer.registerWalker(FixTypes.BLOCK_ENTITY, new CapInventoryWalker(
-				ImmutableSet.of(RelayMK1Tile.class, RelayMK2Tile.class, RelayMK3Tile.class),
+				ImmutableSet.of(RelayMK0Tile.class, RelayMK1Tile.class, RelayMK2Tile.class, RelayMK3Tile.class, RelayMK4Tile.class),
 				"Input", "Output"));
 	}
 

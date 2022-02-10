@@ -1,9 +1,11 @@
 package main.java.quartzshard.projecttweaked.gameObjs.blocks;
 
 import main.java.quartzshard.projecttweaked.PECore;
+import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK0Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK1Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK2Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK3Tile;
+import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK4Tile;
 import main.java.quartzshard.projecttweaked.utils.Constants;
 import main.java.quartzshard.projecttweaked.utils.MathUtils;
 import main.java.quartzshard.projecttweaked.utils.WorldHelper;
@@ -27,7 +29,7 @@ public class Relay extends BlockDirection
 	{
 		super(Material.ROCK);
 		this.setTranslationKey("pe_relay_MK" + Integer.toString(tier));
-		this.setLightLevel(Constants.COLLECTOR_LIGHT_VALS[tier - 1]);
+		this.setLightLevel(Constants.COLLECTOR_LIGHT_VALS[tier]);
 		this.setHardness(10.0f);
 		this.tier = tier;
 	}
@@ -43,6 +45,9 @@ public class Relay extends BlockDirection
 
 			switch (tier)
 			{
+				case 0:
+					player.openGui(PECore.instance, Constants.RELAY0_GUI, world, x, y, z);
+					break;
 				case 1:
 					player.openGui(PECore.instance, Constants.RELAY1_GUI, world, x, y, z);
 					break;
@@ -51,6 +56,9 @@ public class Relay extends BlockDirection
 					break;
 				case 3:
 					player.openGui(PECore.instance, Constants.RELAY3_GUI, world, x, y, z);
+					break;
+				case 4:
+					player.openGui(PECore.instance, Constants.RELAY4_GUI, world, x, y, z);
 					break;
 			}
 		}
@@ -69,9 +77,11 @@ public class Relay extends BlockDirection
 	{
 		switch (tier)
 		{
+			case 0: return new RelayMK0Tile();
 			case 1: return new RelayMK1Tile();
 			case 2: return new RelayMK2Tile();
 			case 3: return new RelayMK3Tile();
+			case 4: return new RelayMK4Tile();
 			default: return null;
 		}
 	}

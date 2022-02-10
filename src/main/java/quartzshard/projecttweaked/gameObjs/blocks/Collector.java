@@ -2,9 +2,11 @@ package main.java.quartzshard.projecttweaked.gameObjs.blocks;
 
 import main.java.quartzshard.projecttweaked.PECore;
 import main.java.quartzshard.projecttweaked.api.item.IItemEmc;
+import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK0Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK1Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK2Tile;
 import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK3Tile;
+import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK4Tile;
 import main.java.quartzshard.projecttweaked.utils.Constants;
 import main.java.quartzshard.projecttweaked.utils.MathUtils;
 import net.minecraft.block.material.Material;
@@ -31,7 +33,7 @@ public class Collector extends BlockDirection
 	{
 		super(Material.GLASS);
 		this.setTranslationKey("pe_collector_MK" + tier);
-		this.setLightLevel(Constants.COLLECTOR_LIGHT_VALS[tier - 1]);
+		this.setLightLevel(Constants.COLLECTOR_LIGHT_VALS[tier]);
 		this.setHardness(0.3f);
 		this.tier = tier;
 	}
@@ -46,6 +48,9 @@ public class Collector extends BlockDirection
 		if (!world.isRemote)
 			switch (tier)
 			{
+				case 0:
+					player.openGui(PECore.instance, Constants.COLLECTOR0_GUI, world, x, y, z);
+					break;
 				case 1:
 					player.openGui(PECore.instance, Constants.COLLECTOR1_GUI, world, x, y, z);
 					break;
@@ -54,6 +59,9 @@ public class Collector extends BlockDirection
 					break;
 				case 3:
 					player.openGui(PECore.instance, Constants.COLLECTOR3_GUI, world, x, y, z);
+					break;
+				case 4:
+					player.openGui(PECore.instance, Constants.COLLECTOR4_GUI, world, x, y, z);
 					break;
 			}
 		return true;
@@ -68,12 +76,16 @@ public class Collector extends BlockDirection
 	@Override
 	public TileEntity createTileEntity(@Nonnull World world, @Nonnull IBlockState state) {
 		switch (tier) {
+			case 4:
+				return new CollectorMK4Tile();
 			case 3:
 				return new CollectorMK3Tile();
 			case 2:
 				return new CollectorMK2Tile();
 			case 1:
 				return new CollectorMK1Tile();
+			case 0:
+				return new CollectorMK0Tile();
 			default:
 				return null;
 		}

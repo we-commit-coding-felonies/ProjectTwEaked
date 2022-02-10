@@ -218,6 +218,10 @@ public class ClientProxy implements IProxy
 		registerBlock(ObjHandler.relayMK3);
 		registerBlock(ObjHandler.rmFurnaceOff);
 		registerBlock(ObjHandler.transmuteStone);
+		registerBlock(ObjHandler.collectorMK0);
+		registerBlock(ObjHandler.collectorMK4);
+		registerBlock(ObjHandler.relayMK0);
+		registerBlock(ObjHandler.relayMK4);
 	}
 
 	private static void registerBlock(Block b)

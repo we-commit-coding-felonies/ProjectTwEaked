@@ -21,12 +21,16 @@ public class TENameFix implements IFixableData
         builder.put("minecraft:condensermk2tile", PECore.MODID + ":condenser_mk2");
         builder.put("minecraft:rmfurnacetile", PECore.MODID + ":rm_furnace");
         builder.put("minecraft:dmfurnacetile", PECore.MODID + ":dm_furnace");
+        builder.put("minecraft:collectormk0tile", PECore.MODID + ":collector_mk0");
         builder.put("minecraft:collectormk1tile", PECore.MODID + ":collector_mk1");
         builder.put("minecraft:collectormk2tile", PECore.MODID + ":collector_mk2");
         builder.put("minecraft:collectormk3tile", PECore.MODID + ":collector_mk3");
+        builder.put("minecraft:collectormk4tile", PECore.MODID + ":collector_mk4");
+        builder.put("minecraft:relaymk0tile", PECore.MODID + ":relay_mk0");
         builder.put("minecraft:relaymk1tile", PECore.MODID + ":relay_mk1");
         builder.put("minecraft:relaymk2tile", PECore.MODID + ":relay_mk2");
         builder.put("minecraft:relaymk3tile", PECore.MODID + ":relay_mk3");
+        builder.put("minecraft:relaymk4tile", PECore.MODID + ":relay_mk4");
         builder.put("minecraft:dmpedestaltile", PECore.MODID + ":dm_pedestal");
         NAME_MAP = builder.build();
     }

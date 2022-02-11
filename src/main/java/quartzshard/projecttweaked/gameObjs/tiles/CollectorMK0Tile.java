@@ -6,7 +6,7 @@ public class CollectorMK0Tile extends CollectorMK1Tile
 {
 	public CollectorMK0Tile()
 	{
-		super(Constants.COLLECTOR_MK0_GEN, Constants.COLLECTOR_MK0_MAX);
+		super(Constants.COLLECTOR_MK0_MAX, Constants.COLLECTOR_MK0_GEN);
 	}
 
 	@Override

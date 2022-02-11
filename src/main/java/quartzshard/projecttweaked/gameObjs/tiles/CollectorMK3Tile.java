@@ -1,12 +1,12 @@
 package main.java.quartzshard.projecttweaked.gameObjs.tiles;
 
-import main.java.quartzshard.projecttweaked.utils.Constants;
+import main.java.quartzshard.projecttweaked.config.ProjectTwEakedConfig.PowerFlowerValues;
 
 public class CollectorMK3Tile extends CollectorMK1Tile
 {
 	public CollectorMK3Tile()
 	{
-		super(Constants.COLLECTOR_MK3_MAX, Constants.COLLECTOR_MK3_GEN);
+		super(PowerFlowerValues.cMk3Max, PowerFlowerValues.cMk3Gen);
 	}
 
 	@Override

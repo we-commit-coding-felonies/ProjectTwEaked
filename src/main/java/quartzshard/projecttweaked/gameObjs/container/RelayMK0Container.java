@@ -25,26 +25,26 @@ public class RelayMK0Container extends RelayMK1Container
 		IItemHandler input = tile.getInput();
 		IItemHandler output = tile.getOutput();
 
-		//Burn slot
-		this.addSlotToContainer(new ValidatedSlot(input, 0, 84, 44, SlotPredicates.RELAY_INV));
+		//Klein Star charge slot
+		this.addSlotToContainer(new ValidatedSlot(input, 0, 67, 43, SlotPredicates.RELAY_INV));
 
 		int counter = input.getSlots() - 1;
-		//Inventory buffer
-		for (int i = 0; i <= 2; i++)
-			for (int j = 0; j <= 3; j++)
-				this.addSlotToContainer(new ValidatedSlot(input, counter--, 26 + i * 18, 18 + j * 18, SlotPredicates.RELAY_INV));
+		//Main Relay inventory
+		for (int i = 0; i <= 1; i++)
+			for (int j = 0; j <= 2; j++)
+				this.addSlotToContainer(new ValidatedSlot(input, counter--, 27 + i * 18, 17 + j * 18, SlotPredicates.RELAY_INV));
 
-		//Klein star slot
-		this.addSlotToContainer(new ValidatedSlot(output, 0, 144, 44, SlotPredicates.IITEMEMC));
+		//Burning slot
+		this.addSlotToContainer(new ValidatedSlot(output, 0, 127, 43, SlotPredicates.IITEMEMC));
 
-		//Main player inventory
+		//Player Inventory
 		for (int i = 0; i < 3; i++)
 			for (int j = 0; j < 9; j++)
-				this.addSlotToContainer(new Slot(invPlayer, j + i * 9 + 9, 16 + j * 18, 101 + i * 18));
+				this.addSlotToContainer(new Slot(invPlayer, j + i * 9 + 9, 8 + j * 18, 95 + i * 18));
 
-		//Player hotbar
+		//Player Hotbar
 		for (int i = 0; i < 9; i++)
-			this.addSlotToContainer(new Slot(invPlayer, i, 16 + i * 18, 159));
+			this.addSlotToContainer(new Slot(invPlayer, i, 8 + i * 18, 153));
 	}
 
 	@Nonnull
@@ -61,13 +61,13 @@ public class RelayMK0Container extends RelayMK1Container
 		ItemStack stack = slot.getStack();
 		ItemStack newStack = stack.copy();
 
-		if (slotIndex < 14)
+		if (slotIndex < 8)
 		{
-			if (!this.mergeItemStack(stack, 14, this.inventorySlots.size(), true))
+			if (!this.mergeItemStack(stack, 8, this.inventorySlots.size(), true))
 				return ItemStack.EMPTY;
 			slot.onSlotChanged();
 		}
-		else if (!this.mergeItemStack(stack, 0, 13, false))
+		else if (!this.mergeItemStack(stack, 0, 7, false))
 		{
 			return ItemStack.EMPTY;
 		}

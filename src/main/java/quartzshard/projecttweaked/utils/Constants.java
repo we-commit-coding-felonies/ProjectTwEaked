@@ -1,5 +1,7 @@
 package main.java.quartzshard.projecttweaked.utils;
 
+import main.java.quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+
 import java.text.DecimalFormat;
 
 public final class Constants 
@@ -8,7 +10,6 @@ public final class Constants
 	public static final DecimalFormat SINGLE_DP_EMC_FORMATTER = new DecimalFormat("#,###.#");
 
 	public static final long[] MAX_KLEIN_EMC = new long[] {50000, 200000, 800000, 3200000, 12800000, 51200000};
-	public static final long[] RELAY_KLEIN_CHARGE_RATE = new long[] {16, 48, 160};
 	public static final float[] COLLECTOR_LIGHT_VALS = new float[] {0.0F, 0.25F, 0.5F, 0.75F, 1.0F};
 	
 	public static final float[] EXPLOSIVE_LENS_RADIUS = new float[] {4.0F, 8.0F, 12.0F, 16.0F, 16.0F, 16.0F, 16.0F, 16.0F};
@@ -16,28 +17,29 @@ public final class Constants
 	
 	public static final long TILE_MAX_EMC = Long.MAX_VALUE;
 	
-	public static final long COLLECTOR_MK0_MAX = 1000;
-	public static final long COLLECTOR_MK1_MAX = 10000;
-	public static final long COLLECTOR_MK2_MAX = 30000;
-	public static final long COLLECTOR_MK3_MAX = 60000;
-	public static final long COLLECTOR_MK4_MAX = 240000;
-	public static final long COLLECTOR_MK0_GEN = 1;
-	public static final long COLLECTOR_MK1_GEN = 4;
-	public static final long COLLECTOR_MK2_GEN = 12;
-	public static final long COLLECTOR_MK3_GEN = 40;
-	public static final long COLLECTOR_MK4_GEN = 150;
+	public static final long COLLECTOR_MK0_MAX = ProjectTwEakedConfig.powerFlowerValues.cMk0Max;
+	public static final long COLLECTOR_MK1_MAX = ProjectTwEakedConfig.powerFlowerValues.cMk1Max;
+	public static final long COLLECTOR_MK2_MAX = ProjectTwEakedConfig.powerFlowerValues.cMk2Max;
+	public static final long COLLECTOR_MK3_MAX = ProjectTwEakedConfig.powerFlowerValues.cMk3Max;
+	public static final long COLLECTOR_MK4_MAX = ProjectTwEakedConfig.powerFlowerValues.cMk4Max;
 	
-	public static final long RELAY_MK0_OUTPUT = 21;
-	public static final long RELAY_MK1_OUTPUT = 64;
-	public static final long RELAY_MK2_OUTPUT = 192;
-	public static final long RELAY_MK3_OUTPUT = 640;
-	public static final long RELAY_MK4_OUTPUT = 2048;
+	public static final long COLLECTOR_MK0_GEN = ProjectTwEakedConfig.powerFlowerValues.cMk0Gen;
+	public static final long COLLECTOR_MK1_GEN = ProjectTwEakedConfig.powerFlowerValues.cMk1Gen;
+	public static final long COLLECTOR_MK2_GEN = ProjectTwEakedConfig.powerFlowerValues.cMk2Gen;
+	public static final long COLLECTOR_MK3_GEN = ProjectTwEakedConfig.powerFlowerValues.cMk3Gen;
+	public static final long COLLECTOR_MK4_GEN = ProjectTwEakedConfig.powerFlowerValues.cMk4Gen;
+
+	public static final long RELAY_MK0_MAX = ProjectTwEakedConfig.powerFlowerValues.rMk0Max;
+	public static final long RELAY_MK1_MAX = ProjectTwEakedConfig.powerFlowerValues.rMk1Max;
+	public static final long RELAY_MK2_MAX = ProjectTwEakedConfig.powerFlowerValues.rMk2Max;
+	public static final long RELAY_MK3_MAX = ProjectTwEakedConfig.powerFlowerValues.rMk3Max;
+	public static final long RELAY_MK4_MAX = ProjectTwEakedConfig.powerFlowerValues.rMk4Max;
 	
-	public static final long RELAY_MK0_MAX = 10000;
-	public static final long RELAY_MK1_MAX = 100000;
-	public static final long RELAY_MK2_MAX = 1000000;
-	public static final long RELAY_MK3_MAX = 10000000;
-	public static final long RELAY_MK4_MAX = 100000000;
+	public static final long RELAY_MK0_OUTPUT = ProjectTwEakedConfig.powerFlowerValues.rMk0Out;
+	public static final long RELAY_MK1_OUTPUT = ProjectTwEakedConfig.powerFlowerValues.rMk1Out;
+	public static final long RELAY_MK2_OUTPUT = ProjectTwEakedConfig.powerFlowerValues.rMk2Out;
+	public static final long RELAY_MK3_OUTPUT = ProjectTwEakedConfig.powerFlowerValues.rMk3Out;
+	public static final long RELAY_MK4_OUTPUT = ProjectTwEakedConfig.powerFlowerValues.rMk4Out;
 	
 	public static final int COAL_BURN_TIME = 1600;
 	public static final int ALCH_BURN_TIME = COAL_BURN_TIME * 4;

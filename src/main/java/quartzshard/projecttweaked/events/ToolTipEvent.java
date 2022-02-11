@@ -105,50 +105,50 @@ public class ToolTipEvent
 			{
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxgenrate_tooltip")
-						+ TextFormatting.BLUE + " %d " + rate, ProjectTwEakedConfig.powerFlowerValues.cMk0Gen));
+						+ TextFormatting.BLUE + " %d " + rate, Constants.COLLECTOR_MK0_GEN));
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxstorage_tooltip")
-						+ TextFormatting.BLUE + " %d " + unit, ProjectTwEakedConfig.powerFlowerValues.cMk0Max));
+						+ TextFormatting.BLUE + " %d " + unit, Constants.COLLECTOR_MK0_MAX));
 			}
 
 			if (currentBlock == ObjHandler.collectorMK1)
 			{
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxgenrate_tooltip")
-						+ TextFormatting.BLUE + " %d " + rate, ProjectTwEakedConfig.powerFlowerValues.cMk1Gen));
+						+ TextFormatting.BLUE + " %d " + rate, Constants.COLLECTOR_MK1_GEN));
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxstorage_tooltip")
-						+ TextFormatting.BLUE + " %d " + unit, ProjectTwEakedConfig.powerFlowerValues.cMk1Max));
+						+ TextFormatting.BLUE + " %d " + unit, Constants.COLLECTOR_MK1_MAX));
 			}
 
 			if (currentBlock == ObjHandler.collectorMK2)
 			{
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxgenrate_tooltip")
-						+ TextFormatting.BLUE + " %d " + rate, ProjectTwEakedConfig.powerFlowerValues.cMk2Gen));
+						+ TextFormatting.BLUE + " %d " + rate, Constants.COLLECTOR_MK2_GEN));
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxstorage_tooltip")
-						+ TextFormatting.BLUE + " %d " + unit, ProjectTwEakedConfig.powerFlowerValues.cMk2Max));
+						+ TextFormatting.BLUE + " %d " + unit, Constants.COLLECTOR_MK2_MAX));
 			}
 
 			if (currentBlock == ObjHandler.collectorMK3)
 			{
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxgenrate_tooltip")
-						+ TextFormatting.BLUE + " %d " + rate, ProjectTwEakedConfig.powerFlowerValues.cMk3Gen));
+						+ TextFormatting.BLUE + " %d " + rate, Constants.COLLECTOR_MK3_GEN));
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxstorage_tooltip")
-						+ TextFormatting.BLUE + " %d " + unit, ProjectTwEakedConfig.powerFlowerValues.cMk3Max));
+						+ TextFormatting.BLUE + " %d " + unit, Constants.COLLECTOR_MK3_MAX));
 			}
 
 			if (currentBlock == ObjHandler.collectorMK4)
 			{
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxgenrate_tooltip")
-						+ TextFormatting.BLUE + " %d " + rate, ProjectTwEakedConfig.powerFlowerValues.cMk4Gen));
+						+ TextFormatting.BLUE + " %d " + rate, Constants.COLLECTOR_MK4_GEN));
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxstorage_tooltip")
-						+ TextFormatting.BLUE + " %d " + unit, ProjectTwEakedConfig.powerFlowerValues.cMk4Max));
+						+ TextFormatting.BLUE + " %d " + unit, Constants.COLLECTOR_MK4_MAX));
 			}
 
 			/*
@@ -158,50 +158,50 @@ public class ToolTipEvent
 			{
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxoutrate_tooltip")
-						+ TextFormatting.BLUE + " %d " + rate, ProjectTwEakedConfig.powerFlowerValues.rMk0Out));
+						+ TextFormatting.BLUE + " %d " + rate, Constants.RELAY_MK0_OUTPUT));
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxstorage_tooltip")
-						+ TextFormatting.BLUE + " %d " + unit, ProjectTwEakedConfig.powerFlowerValues.rMk0Max));
+						+ TextFormatting.BLUE + " %d " + unit, Constants.RELAY_MK0_MAX));
 			}
 
 			if (currentBlock == ObjHandler.relay)
 			{
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxoutrate_tooltip")
-						+ TextFormatting.BLUE + " %d " + rate, ProjectTwEakedConfig.powerFlowerValues.rMk1Out));
+						+ TextFormatting.BLUE + " %d " + rate, Constants.RELAY_MK1_OUTPUT));
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxstorage_tooltip")
-						+ TextFormatting.BLUE + " %d " + unit, ProjectTwEakedConfig.powerFlowerValues.rMk1Max));
+						+ TextFormatting.BLUE + " %d " + unit, Constants.RELAY_MK1_MAX));
 			}
 
 			if (currentBlock == ObjHandler.relayMK2)
 			{
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxoutrate_tooltip")
-						+ TextFormatting.BLUE + " %d " + rate, ProjectTwEakedConfig.powerFlowerValues.rMk2Out));
+						+ TextFormatting.BLUE + " %d " + rate, Constants.RELAY_MK2_OUTPUT));
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxstorage_tooltip")
-						+ TextFormatting.BLUE + " %d " + unit, ProjectTwEakedConfig.powerFlowerValues.rMk2Max));
+						+ TextFormatting.BLUE + " %d " + unit, Constants.RELAY_MK2_MAX));
 			}
 
 			if (currentBlock == ObjHandler.relayMK3)
 			{
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxoutrate_tooltip")
-						+ TextFormatting.BLUE + " %d " + rate, ProjectTwEakedConfig.powerFlowerValues.rMk3Out));
+						+ TextFormatting.BLUE + " %d " + rate, Constants.RELAY_MK3_OUTPUT));
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxstorage_tooltip")
-						+ TextFormatting.BLUE + " %d " + unit, ProjectTwEakedConfig.powerFlowerValues.rMk3Max));
+						+ TextFormatting.BLUE + " %d " + unit, Constants.RELAY_MK3_MAX));
 			}
 
 			if (currentBlock == ObjHandler.relayMK4)
 			{
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxoutrate_tooltip")
-						+ TextFormatting.BLUE + " %d " + rate, ProjectTwEakedConfig.powerFlowerValues.rMk4Out));
+						+ TextFormatting.BLUE + " %d " + rate, Constants.RELAY_MK4_OUTPUT));
 				event.getToolTip().add(TextFormatting.DARK_PURPLE
 						+ String.format(I18n.format("pe.emc.maxstorage_tooltip")
-						+ TextFormatting.BLUE + " %d " + unit, ProjectTwEakedConfig.powerFlowerValues.rMk4Max));
+						+ TextFormatting.BLUE + " %d " + unit, Constants.RELAY_MK4_MAX));
 			}
 		}
 

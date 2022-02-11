@@ -6,7 +6,7 @@ import main.java.quartzshard.projecttweaked.api.tile.IEmcProvider;
 import main.java.quartzshard.projecttweaked.emc.FuelMapper;
 import main.java.quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
 import main.java.quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import main.java.quartzshard.projecttweaked.config.ProjectTwEakedConfig.PowerFlowerValues;
+import main.java.quartzshard.projecttweaked.config.ProjectTwEakedConfig;
 import main.java.quartzshard.projecttweaked.utils.EMCHelper;
 import main.java.quartzshard.projecttweaked.utils.ItemHelper;
 import main.java.quartzshard.projecttweaked.utils.WorldHelper;
@@ -63,8 +63,8 @@ public class CollectorMK1Tile extends TileEmc implements IEmcProvider, IEmcAccep
 
 	public CollectorMK1Tile()
 	{
-		super(PowerFlowerValues.cMk1Max);
-		emcGen = PowerFlowerValues.cMk1Gen;
+		super(ProjectTwEakedConfig.powerFlowerValues.cMk1Max);
+		emcGen = ProjectTwEakedConfig.powerFlowerValues.cMk1Gen;
 	}
 	
 	public CollectorMK1Tile(long maxEmc, long emcGen)

@@ -58,7 +58,8 @@ public class GUICollectorMK1 extends GuiContainer
 		this.drawTexturedModalRect(x + 126, y + 49 - progress, 177, 13 - progress, 12, progress);
 		
 		//EMC storage. Max is 48
-		this.drawTexturedModalRect(x + 64, y + 18, 0, 166, (int) (container.emc / tile.getMaximumEmc() * 48), 10);
+		progress = (int) ((double) container.emc / tile.getMaximumEmc() * 48);
+		this.drawTexturedModalRect(x + 64, y + 18, 0, 166, progress, 10);
 		
 		//Klein Star Charge Progress. Max is 48
 		progress = (int) (container.kleinChargeProgress * 48);

@@ -1,12 +1,12 @@
-package test.java.quartzshard.projecttweaked.emc.mappers.customConversions;
+package quartzshard.projecttweaked.emc.mappers.customConversions;
 
 import static org.junit.Assert.*;
-import main.java.quartzshard.projecttweaked.emc.json.NSSFake;
-import main.java.quartzshard.projecttweaked.emc.json.NSSItem;
-import main.java.quartzshard.projecttweaked.emc.mappers.customConversions.json.ConversionGroup;
-import main.java.quartzshard.projecttweaked.emc.mappers.customConversions.json.CustomConversion;
-import main.java.quartzshard.projecttweaked.emc.mappers.customConversions.json.CustomConversionFile;
-import main.java.quartzshard.projecttweaked.emc.mappers.customConversions.CustomConversionMapper;
+import quartzshard.projecttweaked.emc.json.NSSFake;
+import quartzshard.projecttweaked.emc.json.NSSItem;
+import quartzshard.projecttweaked.emc.mappers.customConversions.json.ConversionGroup;
+import quartzshard.projecttweaked.emc.mappers.customConversions.json.CustomConversion;
+import quartzshard.projecttweaked.emc.mappers.customConversions.json.CustomConversionFile;
+import quartzshard.projecttweaked.emc.mappers.customConversions.CustomConversionMapper;
 
 
 import org.junit.Test;

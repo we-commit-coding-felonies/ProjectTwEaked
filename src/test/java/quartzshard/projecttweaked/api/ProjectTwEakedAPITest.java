@@ -1,7 +1,7 @@
-package test.java.quartzshard.projecttweaked.api;
+package quartzshard.projecttweaked.api;
 
 import static org.junit.Assert.*;
-import main.java.quartzshard.projecttweaked.api.ProjectTwEakedAPI;
+import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
 import org.junit.Test;
 
 public class ProjectTwEakedAPITest

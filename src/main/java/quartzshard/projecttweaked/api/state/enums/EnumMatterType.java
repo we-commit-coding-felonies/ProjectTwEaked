@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.api.state.enums;
+package quartzshard.projecttweaked.api.state.enums;
 
 import net.minecraft.util.IStringSerializable;
 

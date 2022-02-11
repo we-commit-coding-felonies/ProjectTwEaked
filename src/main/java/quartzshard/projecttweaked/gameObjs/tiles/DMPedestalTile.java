@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.gameObjs.tiles;
+package quartzshard.projecttweaked.gameObjs.tiles;
 
-import main.java.quartzshard.projecttweaked.api.PESounds;
-import main.java.quartzshard.projecttweaked.api.item.IPedestalItem;
+import quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.api.item.IPedestalItem;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;

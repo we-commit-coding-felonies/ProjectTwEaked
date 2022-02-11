@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.api.state;
+package quartzshard.projecttweaked.api.state;
 
-import main.java.quartzshard.projecttweaked.api.state.enums.EnumFuelType;
-import main.java.quartzshard.projecttweaked.api.state.enums.EnumMatterType;
+import quartzshard.projecttweaked.api.state.enums.EnumFuelType;
+import quartzshard.projecttweaked.api.state.enums.EnumMatterType;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;

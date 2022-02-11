@@ -1,8 +1,8 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items;
+package quartzshard.projecttweaked.gameObjs.items;
 
-import main.java.quartzshard.projecttweaked.api.item.IItemCharge;
-import main.java.quartzshard.projecttweaked.api.item.IModeChanger;
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.api.item.IItemCharge;
+import quartzshard.projecttweaked.api.item.IModeChanger;
+import quartzshard.projecttweaked.utils.ItemHelper;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;

@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.api.proxy;
+package quartzshard.projecttweaked.api.proxy;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;

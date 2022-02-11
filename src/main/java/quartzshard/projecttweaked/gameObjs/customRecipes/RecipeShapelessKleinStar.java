@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.gameObjs.customRecipes;
+package quartzshard.projecttweaked.gameObjs.customRecipes;
 
-import main.java.quartzshard.projecttweaked.gameObjs.items.KleinStar;
+import quartzshard.projecttweaked.gameObjs.items.KleinStar;
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.IRecipeWrapper;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;

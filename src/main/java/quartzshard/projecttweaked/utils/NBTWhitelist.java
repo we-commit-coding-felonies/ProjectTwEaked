@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.utils;
+package quartzshard.projecttweaked.utils;
 
-import main.java.quartzshard.projecttweaked.emc.SimpleStack;
+import quartzshard.projecttweaked.emc.SimpleStack;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 

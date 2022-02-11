@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.api.item;
+package quartzshard.projecttweaked.api.item;
 
-import main.java.quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.api.PESounds;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;

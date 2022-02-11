@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.integration.jei.mappers;
+package quartzshard.projecttweaked.integration.jei.mappers;
 
 import mezz.jei.api.recipe.IRecipeWrapper;
-import main.java.quartzshard.projecttweaked.integration.jei.PEJeiPlugin;
+import quartzshard.projecttweaked.integration.jei.PEJeiPlugin;
 
 import java.util.ArrayList;
 import java.util.List;

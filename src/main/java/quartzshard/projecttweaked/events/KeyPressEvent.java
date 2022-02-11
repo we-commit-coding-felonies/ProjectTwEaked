@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.events;
+package quartzshard.projecttweaked.events;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.network.PacketHandler;
-import main.java.quartzshard.projecttweaked.network.packets.KeyPressPKT;
-import main.java.quartzshard.projecttweaked.utils.ClientKeyHelper;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.network.packets.KeyPressPKT;
+import quartzshard.projecttweaked.utils.ClientKeyHelper;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;

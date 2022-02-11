@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.gameObjs.gui;
+package quartzshard.projecttweaked.gameObjs.gui;
 
-import main.java.quartzshard.projecttweaked.gameObjs.container.PhilosStoneContainer;
+import quartzshard.projecttweaked.gameObjs.container.PhilosStoneContainer;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;

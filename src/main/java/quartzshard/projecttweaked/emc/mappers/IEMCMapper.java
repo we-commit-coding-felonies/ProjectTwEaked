@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.emc.mappers;
+package quartzshard.projecttweaked.emc.mappers;
 
-import main.java.quartzshard.projecttweaked.emc.collector.IMappingCollector;
-import main.java.quartzshard.projecttweaked.utils.PrefixConfiguration;
+import quartzshard.projecttweaked.emc.collector.IMappingCollector;
+import quartzshard.projecttweaked.utils.PrefixConfiguration;
 import net.minecraftforge.common.config.Configuration;
 
 /**

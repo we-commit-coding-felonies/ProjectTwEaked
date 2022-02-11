@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.gameObjs.customRecipes;
+package quartzshard.projecttweaked.gameObjs.customRecipes;
 
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;

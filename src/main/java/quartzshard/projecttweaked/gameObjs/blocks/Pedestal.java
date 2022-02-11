@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.gameObjs.blocks;
+package quartzshard.projecttweaked.gameObjs.blocks;
 
 
-import main.java.quartzshard.projecttweaked.api.item.IPedestalItem;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
+import quartzshard.projecttweaked.api.item.IPedestalItem;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;

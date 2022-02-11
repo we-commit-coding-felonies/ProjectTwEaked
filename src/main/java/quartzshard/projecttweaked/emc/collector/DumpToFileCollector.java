@@ -1,10 +1,10 @@
-package main.java.quartzshard.projecttweaked.emc.collector;
+package quartzshard.projecttweaked.emc.collector;
 
-import main.java.quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
-import main.java.quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-import main.java.quartzshard.projecttweaked.emc.mappers.customConversions.json.ConversionGroup;
-import main.java.quartzshard.projecttweaked.emc.mappers.customConversions.json.CustomConversion;
-import main.java.quartzshard.projecttweaked.emc.mappers.customConversions.json.CustomConversionFile;
+import quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.emc.mappers.customConversions.json.ConversionGroup;
+import quartzshard.projecttweaked.emc.mappers.customConversions.json.CustomConversion;
+import quartzshard.projecttweaked.emc.mappers.customConversions.json.CustomConversionFile;
 
 import java.io.File;
 import java.io.IOException;

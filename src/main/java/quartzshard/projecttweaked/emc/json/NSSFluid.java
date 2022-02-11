@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.emc.json;
+package quartzshard.projecttweaked.emc.json;
 
 import net.minecraftforge.fluids.Fluid;
 

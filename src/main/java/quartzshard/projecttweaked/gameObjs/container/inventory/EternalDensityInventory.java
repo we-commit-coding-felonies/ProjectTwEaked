@@ -1,8 +1,8 @@
-package main.java.quartzshard.projecttweaked.gameObjs.container.inventory;
+package quartzshard.projecttweaked.gameObjs.container.inventory;
 
-import main.java.quartzshard.projecttweaked.network.PacketHandler;
-import main.java.quartzshard.projecttweaked.network.packets.UpdateGemModePKT;
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.network.packets.UpdateGemModePKT;
+import quartzshard.projecttweaked.utils.ItemHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;

@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items.tools;
+package quartzshard.projecttweaked.gameObjs.items.tools;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumActionResult;

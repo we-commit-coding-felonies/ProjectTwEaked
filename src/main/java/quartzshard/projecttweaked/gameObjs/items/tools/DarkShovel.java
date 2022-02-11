@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items.tools;
+package quartzshard.projecttweaked.gameObjs.items.tools;
 
 import com.google.common.collect.Multimap;
 import net.minecraft.block.material.Material;

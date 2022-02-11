@@ -1,13 +1,13 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items.rings;
+package quartzshard.projecttweaked.gameObjs.items.rings;
 
 import com.google.common.collect.Lists;
-import main.java.quartzshard.projecttweaked.api.item.IPedestalItem;
-import main.java.quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
-import main.java.quartzshard.projecttweaked.utils.EMCHelper;
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
-import main.java.quartzshard.projecttweaked.utils.MathUtils;
-import main.java.quartzshard.projecttweaked.utils.WorldHelper;
+import quartzshard.projecttweaked.api.item.IPedestalItem;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.MathUtils;
+import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.state.IBlockState;

@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.emc;
+package quartzshard.projecttweaked.emc;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
-import main.java.quartzshard.projecttweaked.emc.collector.MappingCollector;
-import main.java.quartzshard.projecttweaked.emc.generators.IValueGenerator;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
+import quartzshard.projecttweaked.emc.collector.MappingCollector;
+import quartzshard.projecttweaked.emc.generators.IValueGenerator;
 
 import java.util.HashMap;
 import java.util.Map;

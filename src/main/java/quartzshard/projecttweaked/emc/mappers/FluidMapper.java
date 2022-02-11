@@ -1,15 +1,15 @@
-package main.java.quartzshard.projecttweaked.emc.mappers;
+package quartzshard.projecttweaked.emc.mappers;
 
 import com.google.common.collect.ImmutableMap;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.emc.arithmetics.FullBigFractionArithmetic;
-import main.java.quartzshard.projecttweaked.emc.collector.IExtendedMappingCollector;
-import main.java.quartzshard.projecttweaked.emc.collector.IMappingCollector;
-import main.java.quartzshard.projecttweaked.emc.json.NSSFake;
-import main.java.quartzshard.projecttweaked.emc.json.NSSFluid;
-import main.java.quartzshard.projecttweaked.emc.json.NSSItem;
-import main.java.quartzshard.projecttweaked.emc.json.NSSOreDictionary;
-import main.java.quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.emc.arithmetics.FullBigFractionArithmetic;
+import quartzshard.projecttweaked.emc.collector.IExtendedMappingCollector;
+import quartzshard.projecttweaked.emc.collector.IMappingCollector;
+import quartzshard.projecttweaked.emc.json.NSSFake;
+import quartzshard.projecttweaked.emc.json.NSSFluid;
+import quartzshard.projecttweaked.emc.json.NSSItem;
+import quartzshard.projecttweaked.emc.json.NSSOreDictionary;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;

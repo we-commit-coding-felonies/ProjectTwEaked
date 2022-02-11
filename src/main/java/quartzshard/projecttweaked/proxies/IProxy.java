@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.proxies;
+package quartzshard.projecttweaked.proxies;
 
-import main.java.quartzshard.projecttweaked.api.capabilities.IAlchBagProvider;
-import main.java.quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
+import quartzshard.projecttweaked.api.capabilities.IAlchBagProvider;
+import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
 import net.minecraft.entity.player.EntityPlayer;
 
 public interface IProxy

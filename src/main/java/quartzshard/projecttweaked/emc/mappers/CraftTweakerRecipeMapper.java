@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.emc.mappers;
+package quartzshard.projecttweaked.emc.mappers;
 
 import crafttweaker.api.recipes.ICraftingRecipe;
 import net.minecraft.item.crafting.IRecipe;

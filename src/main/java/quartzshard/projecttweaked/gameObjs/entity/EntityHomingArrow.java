@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.gameObjs.entity;
+package quartzshard.projecttweaked.gameObjs.entity;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;

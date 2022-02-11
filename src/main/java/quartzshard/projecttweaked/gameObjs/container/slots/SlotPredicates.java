@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.gameObjs.container.slots;
+package quartzshard.projecttweaked.gameObjs.container.slots;
 
-import main.java.quartzshard.projecttweaked.api.item.IItemEmc;
-import main.java.quartzshard.projecttweaked.emc.FuelMapper;
-import main.java.quartzshard.projecttweaked.utils.EMCHelper;
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.api.item.IItemEmc;
+import quartzshard.projecttweaked.emc.FuelMapper;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;

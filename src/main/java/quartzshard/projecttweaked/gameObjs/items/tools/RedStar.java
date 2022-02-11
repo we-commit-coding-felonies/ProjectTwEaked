@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items.tools;
+package quartzshard.projecttweaked.gameObjs.items.tools;
 
 import com.google.common.collect.Multimap;
-import main.java.quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.utils.ItemHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockClay;
 import net.minecraft.block.BlockDirt;

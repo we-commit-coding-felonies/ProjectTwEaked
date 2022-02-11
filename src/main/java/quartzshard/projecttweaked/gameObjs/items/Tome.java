@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items;
+package quartzshard.projecttweaked.gameObjs.items;
 
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;

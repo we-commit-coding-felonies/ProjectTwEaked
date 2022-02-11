@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.api.event;
+package quartzshard.projecttweaked.api.event;
 
 import net.minecraftforge.fml.common.eventhandler.Event;
 

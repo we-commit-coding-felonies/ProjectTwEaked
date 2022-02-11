@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.fixes;
+package quartzshard.projecttweaked.fixes;
 
 import com.google.common.collect.ImmutableSet;
-import main.java.quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.PECore;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;

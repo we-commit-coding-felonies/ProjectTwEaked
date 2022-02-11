@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.rendering;
+package quartzshard.projecttweaked.rendering;
 
-import main.java.quartzshard.projecttweaked.api.state.PEStateProps;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.AlchChestTile;
+import quartzshard.projecttweaked.api.state.PEStateProps;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.tiles.AlchChestTile;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.model.ModelChest;
 import net.minecraft.client.renderer.GlStateManager;

@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.utils;
+package quartzshard.projecttweaked.utils;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

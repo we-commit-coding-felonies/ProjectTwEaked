@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items;
+package quartzshard.projecttweaked.gameObjs.items;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
-import main.java.quartzshard.projecttweaked.utils.EMCHelper;
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.IItemPropertyGetter;
 import net.minecraft.item.Item;

@@ -1,8 +1,8 @@
-package main.java.quartzshard.projecttweaked.network.commands;
+package quartzshard.projecttweaked.network.commands;
 
-import main.java.quartzshard.projecttweaked.emc.EMCMapper;
-import main.java.quartzshard.projecttweaked.config.CustomEMCParser;
-import main.java.quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.emc.EMCMapper;
+import quartzshard.projecttweaked.config.CustomEMCParser;
+import quartzshard.projecttweaked.network.PacketHandler;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.server.MinecraftServer;

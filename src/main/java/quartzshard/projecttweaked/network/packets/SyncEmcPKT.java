@@ -1,11 +1,11 @@
-package main.java.quartzshard.projecttweaked.network.packets;
+package quartzshard.projecttweaked.network.packets;
 
 import io.netty.buffer.ByteBuf;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.emc.EMCMapper;
-import main.java.quartzshard.projecttweaked.emc.FuelMapper;
-import main.java.quartzshard.projecttweaked.emc.SimpleStack;
-import main.java.quartzshard.projecttweaked.playerData.Transmutation;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.emc.EMCMapper;
+import quartzshard.projecttweaked.emc.FuelMapper;
+import quartzshard.projecttweaked.emc.SimpleStack;
+import quartzshard.projecttweaked.playerData.Transmutation;
 import net.minecraft.client.Minecraft;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.network.ByteBufUtils;

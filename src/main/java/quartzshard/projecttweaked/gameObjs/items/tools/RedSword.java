@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items.tools;
+package quartzshard.projecttweaked.gameObjs.items.tools;
 
-import main.java.quartzshard.projecttweaked.utils.PlayerHelper;
+import quartzshard.projecttweaked.utils.PlayerHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;

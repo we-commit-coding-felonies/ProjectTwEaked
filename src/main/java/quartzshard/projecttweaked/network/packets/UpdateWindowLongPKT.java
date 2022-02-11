@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.network.packets;
+package quartzshard.projecttweaked.network.packets;
 
 import io.netty.buffer.ByteBuf;
-import main.java.quartzshard.projecttweaked.gameObjs.container.LongContainer;
+import quartzshard.projecttweaked.gameObjs.container.LongContainer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;

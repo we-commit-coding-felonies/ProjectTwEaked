@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.events;
+package quartzshard.projecttweaked.events;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraftforge.client.event.FOVUpdateEvent;
 import net.minecraftforge.fml.common.Mod;

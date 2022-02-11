@@ -1,15 +1,15 @@
-package main.java.quartzshard.projecttweaked.impl;
+package quartzshard.projecttweaked.impl;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import main.java.quartzshard.projecttweaked.api.proxy.IConversionProxy;
-import main.java.quartzshard.projecttweaked.emc.IngredientMap;
-import main.java.quartzshard.projecttweaked.emc.json.NSSFake;
-import main.java.quartzshard.projecttweaked.emc.json.NSSFluid;
-import main.java.quartzshard.projecttweaked.emc.json.NSSItem;
-import main.java.quartzshard.projecttweaked.emc.json.NSSOreDictionary;
-import main.java.quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.api.proxy.IConversionProxy;
+import quartzshard.projecttweaked.emc.IngredientMap;
+import quartzshard.projecttweaked.emc.json.NSSFake;
+import quartzshard.projecttweaked.emc.json.NSSFluid;
+import quartzshard.projecttweaked.emc.json.NSSItem;
+import quartzshard.projecttweaked.emc.json.NSSOreDictionary;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

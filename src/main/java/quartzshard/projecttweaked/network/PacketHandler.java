@@ -1,10 +1,10 @@
-package main.java.quartzshard.projecttweaked.network;
+package quartzshard.projecttweaked.network;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.emc.EMCMapper;
-import main.java.quartzshard.projecttweaked.emc.SimpleStack;
-import main.java.quartzshard.projecttweaked.network.packets.SyncEmcPKT;
-import main.java.quartzshard.projecttweaked.network.packets.*;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.emc.EMCMapper;
+import quartzshard.projecttweaked.emc.SimpleStack;
+import quartzshard.projecttweaked.network.packets.SyncEmcPKT;
+import quartzshard.projecttweaked.network.packets.*;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IContainerListener;

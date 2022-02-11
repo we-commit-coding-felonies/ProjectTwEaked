@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.utils;
+package quartzshard.projecttweaked.utils;
 
 import net.minecraft.block.*;
 import net.minecraft.block.properties.IProperty;

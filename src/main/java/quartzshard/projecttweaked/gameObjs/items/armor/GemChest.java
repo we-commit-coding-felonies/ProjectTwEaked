@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items.armor;
+package quartzshard.projecttweaked.gameObjs.items.armor;
 
-import main.java.quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import main.java.quartzshard.projecttweaked.gameObjs.items.IFireProtector;
-import main.java.quartzshard.projecttweaked.handlers.InternalTimers;
-import main.java.quartzshard.projecttweaked.utils.WorldHelper;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.items.IFireProtector;
+import quartzshard.projecttweaked.handlers.InternalTimers;
+import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.block.Block;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;

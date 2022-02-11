@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.emc.mappers;
+package quartzshard.projecttweaked.emc.mappers;
 
-import main.java.quartzshard.projecttweaked.emc.IngredientMap;
-import main.java.quartzshard.projecttweaked.emc.json.NSSItem;
-import main.java.quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-import main.java.quartzshard.projecttweaked.emc.collector.IMappingCollector;
+import quartzshard.projecttweaked.emc.IngredientMap;
+import quartzshard.projecttweaked.emc.json.NSSItem;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.emc.collector.IMappingCollector;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.common.config.Configuration;

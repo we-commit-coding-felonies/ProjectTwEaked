@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.gameObjs.entity;
+package quartzshard.projecttweaked.gameObjs.entity;
 
-import main.java.quartzshard.projecttweaked.utils.EMCHelper;
-import main.java.quartzshard.projecttweaked.utils.WorldHelper;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;

@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.gameObjs.blocks;
+package quartzshard.projecttweaked.gameObjs.blocks;
 
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
-import main.java.quartzshard.projecttweaked.gameObjs.entity.EntityNovaCataclysmPrimed;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.entity.EntityNovaCataclysmPrimed;
 import net.minecraft.block.BlockTNT;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;

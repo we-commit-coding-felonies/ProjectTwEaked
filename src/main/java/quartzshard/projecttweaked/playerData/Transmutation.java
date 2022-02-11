@@ -1,10 +1,10 @@
-package main.java.quartzshard.projecttweaked.playerData;
+package quartzshard.projecttweaked.playerData;
 
-import main.java.quartzshard.projecttweaked.emc.EMCMapper;
-import main.java.quartzshard.projecttweaked.emc.SimpleStack;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.utils.EMCHelper;
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.emc.EMCMapper;
+import quartzshard.projecttweaked.emc.SimpleStack;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
 import net.minecraft.item.ItemStack;
 
 import java.util.ArrayList;

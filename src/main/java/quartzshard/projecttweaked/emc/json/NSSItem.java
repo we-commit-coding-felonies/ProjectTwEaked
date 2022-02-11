@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.emc.json;
+package quartzshard.projecttweaked.emc.json;
 
-import main.java.quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.PECore;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.gameObjs.container.slots.transmutation;
+package quartzshard.projecttweaked.gameObjs.container.slots.transmutation;
 
-import main.java.quartzshard.projecttweaked.gameObjs.container.inventory.TransmutationInventory;
-import main.java.quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.gameObjs.container.inventory.TransmutationInventory;
+import quartzshard.projecttweaked.utils.EMCHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.SlotItemHandler;

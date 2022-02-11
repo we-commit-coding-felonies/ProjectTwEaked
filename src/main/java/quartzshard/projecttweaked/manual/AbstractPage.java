@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.manual;
+package quartzshard.projecttweaked.manual;
 
 import com.google.common.collect.Lists;
-import main.java.quartzshard.projecttweaked.gameObjs.gui.GUIManual;
+import quartzshard.projecttweaked.gameObjs.gui.GUIManual;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;

@@ -1,12 +1,12 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items;
+package quartzshard.projecttweaked.gameObjs.items;
 
-import main.java.quartzshard.projecttweaked.gameObjs.items.rings.BlackHoleBand;
-import main.java.quartzshard.projecttweaked.gameObjs.items.rings.VoidRing;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.api.ProjectTwEakedAPI;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
-import main.java.quartzshard.projecttweaked.utils.Constants;
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.gameObjs.items.rings.BlackHoleBand;
+import quartzshard.projecttweaked.gameObjs.items.rings.VoidRing;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.ItemHelper;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumDyeColor;

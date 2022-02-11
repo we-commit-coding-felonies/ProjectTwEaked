@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.emc.mappers.customConversions.json;
+package quartzshard.projecttweaked.emc.mappers.customConversions.json;
 
 import com.google.common.collect.Maps;
-import main.java.quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
 
 import java.util.HashMap;
 import java.util.Map;

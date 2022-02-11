@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.rendering;
+package quartzshard.projecttweaked.rendering;
 
-import main.java.quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.PECore;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.GlStateManager;

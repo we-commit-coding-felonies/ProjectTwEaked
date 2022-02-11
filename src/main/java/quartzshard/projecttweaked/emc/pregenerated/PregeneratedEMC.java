@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.emc.pregenerated;
+package quartzshard.projecttweaked.emc.pregenerated;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import main.java.quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

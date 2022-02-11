@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.manual;
+package quartzshard.projecttweaked.manual;
 
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;

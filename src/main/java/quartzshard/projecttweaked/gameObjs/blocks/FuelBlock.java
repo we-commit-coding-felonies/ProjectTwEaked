@@ -1,8 +1,8 @@
-package main.java.quartzshard.projecttweaked.gameObjs.blocks;
+package quartzshard.projecttweaked.gameObjs.blocks;
 
-import main.java.quartzshard.projecttweaked.api.state.PEStateProps;
-import main.java.quartzshard.projecttweaked.api.state.enums.EnumFuelType;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.api.state.PEStateProps;
+import quartzshard.projecttweaked.api.state.enums.EnumFuelType;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;

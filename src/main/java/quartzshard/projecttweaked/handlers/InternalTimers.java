@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.handlers;
+package quartzshard.projecttweaked.handlers;
 
-import main.java.quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.PECore;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.capabilities.Capability;

@@ -1,12 +1,12 @@
-package main.java.quartzshard.projecttweaked.gameObjs.tiles;
+package quartzshard.projecttweaked.gameObjs.tiles;
 
 import com.google.common.base.Predicates;
 import com.google.common.collect.Maps;
-import main.java.quartzshard.projecttweaked.api.tile.IEmcAcceptor;
-import main.java.quartzshard.projecttweaked.api.tile.IEmcProvider;
-import main.java.quartzshard.projecttweaked.api.tile.TileEmcBase;
-import main.java.quartzshard.projecttweaked.utils.Constants;
-import main.java.quartzshard.projecttweaked.utils.WorldHelper;
+import quartzshard.projecttweaked.api.tile.IEmcAcceptor;
+import quartzshard.projecttweaked.api.tile.IEmcProvider;
+import quartzshard.projecttweaked.api.tile.TileEmcBase;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;

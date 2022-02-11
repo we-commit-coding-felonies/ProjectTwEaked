@@ -1,11 +1,11 @@
-package main.java.quartzshard.projecttweaked.gameObjs.blocks;
+package quartzshard.projecttweaked.gameObjs.blocks;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.api.state.PEStateProps;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.DMFurnaceTile;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.RMFurnaceTile;
-import main.java.quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.state.PEStateProps;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.tiles.DMFurnaceTile;
+import quartzshard.projecttweaked.gameObjs.tiles.RMFurnaceTile;
+import quartzshard.projecttweaked.utils.Constants;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;

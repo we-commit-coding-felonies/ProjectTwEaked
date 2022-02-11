@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.gameObjs.tiles;
+package quartzshard.projecttweaked.gameObjs.tiles;
 
-import main.java.quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
-import main.java.quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
+import quartzshard.projecttweaked.utils.EMCHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;

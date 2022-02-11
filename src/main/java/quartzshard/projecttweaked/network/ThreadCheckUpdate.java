@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.network;
+package quartzshard.projecttweaked.network;
 
-import main.java.quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.PECore;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.util.text.ITextComponent;

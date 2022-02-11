@@ -1,12 +1,12 @@
-package main.java.quartzshard.projecttweaked.events;
+package quartzshard.projecttweaked.events;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
-import main.java.quartzshard.projecttweaked.gameObjs.items.ItemMode;
-import main.java.quartzshard.projecttweaked.gameObjs.items.PhilosophersStone;
-import main.java.quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
-import main.java.quartzshard.projecttweaked.utils.WorldTransmutations;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.items.ItemMode;
+import quartzshard.projecttweaked.gameObjs.items.PhilosophersStone;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.WorldTransmutations;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BufferBuilder;

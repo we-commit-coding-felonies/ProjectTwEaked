@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.gameObjs.sound;
+package quartzshard.projecttweaked.gameObjs.sound;
 
-import main.java.quartzshard.projecttweaked.api.PESounds;
-import main.java.quartzshard.projecttweaked.gameObjs.entity.EntitySWRGProjectile;
+import quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.gameObjs.entity.EntitySWRGProjectile;
 import net.minecraft.client.audio.MovingSound;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.MathHelper;

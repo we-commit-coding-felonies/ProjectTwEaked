@@ -1,8 +1,8 @@
-package main.java.quartzshard.projecttweaked.gameObjs.gui;
+package quartzshard.projecttweaked.gameObjs.gui;
 
-import main.java.quartzshard.projecttweaked.gameObjs.container.inventory.EternalDensityInventory;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.gameObjs.container.EternalDensityContainer;
+import quartzshard.projecttweaked.gameObjs.container.inventory.EternalDensityInventory;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.container.EternalDensityContainer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;

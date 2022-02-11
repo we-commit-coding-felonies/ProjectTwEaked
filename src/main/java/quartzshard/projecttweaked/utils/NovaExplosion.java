@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.utils;
+package quartzshard.projecttweaked.utils;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;

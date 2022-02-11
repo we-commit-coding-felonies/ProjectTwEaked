@@ -1,12 +1,12 @@
-package main.java.quartzshard.projecttweaked.utils;
+package quartzshard.projecttweaked.utils;
 
 import baubles.api.BaublesApi;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.gameObjs.items.ItemPE;
-import main.java.quartzshard.projecttweaked.network.PacketHandler;
-import main.java.quartzshard.projecttweaked.network.packets.CooldownResetPKT;
-import main.java.quartzshard.projecttweaked.network.packets.SetFlyPKT;
-import main.java.quartzshard.projecttweaked.network.packets.StepHeightPKT;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.items.ItemPE;
+import quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.network.packets.CooldownResetPKT;
+import quartzshard.projecttweaked.network.packets.SetFlyPKT;
+import quartzshard.projecttweaked.network.packets.StepHeightPKT;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;

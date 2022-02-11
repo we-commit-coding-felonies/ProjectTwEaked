@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.emc.mappers.customConversions.json;
+package quartzshard.projecttweaked.emc.mappers.customConversions.json;
 
 import com.google.common.collect.Lists;
 

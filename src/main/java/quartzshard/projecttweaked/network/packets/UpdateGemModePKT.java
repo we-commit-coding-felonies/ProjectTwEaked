@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.network.packets;
+package quartzshard.projecttweaked.network.packets;
 
 import io.netty.buffer.ByteBuf;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;

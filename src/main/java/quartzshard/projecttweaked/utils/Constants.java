@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.utils;
+package quartzshard.projecttweaked.utils;
 
-import main.java.quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
 
 import java.text.DecimalFormat;
 

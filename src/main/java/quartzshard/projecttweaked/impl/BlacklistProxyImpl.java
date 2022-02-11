@@ -1,11 +1,11 @@
-package main.java.quartzshard.projecttweaked.impl;
+package quartzshard.projecttweaked.impl;
 
 import com.google.common.base.Preconditions;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.api.proxy.IBlacklistProxy;
-import main.java.quartzshard.projecttweaked.gameObjs.items.TimeWatch;
-import main.java.quartzshard.projecttweaked.utils.NBTWhitelist;
-import main.java.quartzshard.projecttweaked.utils.WorldHelper;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.proxy.IBlacklistProxy;
+import quartzshard.projecttweaked.gameObjs.items.TimeWatch;
+import quartzshard.projecttweaked.utils.NBTWhitelist;
+import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;

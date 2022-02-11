@@ -1,14 +1,14 @@
-package main.java.quartzshard.projecttweaked.gameObjs.blocks;
+package quartzshard.projecttweaked.gameObjs.blocks;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.api.item.IItemEmc;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK0Tile;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK1Tile;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK2Tile;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK3Tile;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK4Tile;
-import main.java.quartzshard.projecttweaked.utils.Constants;
-import main.java.quartzshard.projecttweaked.utils.MathUtils;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.item.IItemEmc;
+import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK0Tile;
+import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK1Tile;
+import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK2Tile;
+import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK3Tile;
+import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK4Tile;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.MathUtils;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;

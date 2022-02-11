@@ -1,15 +1,15 @@
-package main.java.quartzshard.projecttweaked.gameObjs.container.inventory;
+package quartzshard.projecttweaked.gameObjs.container.inventory;
 
-import main.java.quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
-import main.java.quartzshard.projecttweaked.api.event.PlayerAttemptLearnEvent;
-import main.java.quartzshard.projecttweaked.api.item.IItemEmc;
-import main.java.quartzshard.projecttweaked.emc.FuelMapper;
-import main.java.quartzshard.projecttweaked.api.ProjectTwEakedAPI;
-import main.java.quartzshard.projecttweaked.utils.Constants;
-import main.java.quartzshard.projecttweaked.utils.EMCHelper;
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
-import main.java.quartzshard.projecttweaked.utils.NBTWhitelist;
-import main.java.quartzshard.projecttweaked.utils.PlayerHelper;
+import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
+import quartzshard.projecttweaked.api.event.PlayerAttemptLearnEvent;
+import quartzshard.projecttweaked.api.item.IItemEmc;
+import quartzshard.projecttweaked.emc.FuelMapper;
+import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.NBTWhitelist;
+import quartzshard.projecttweaked.utils.PlayerHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;

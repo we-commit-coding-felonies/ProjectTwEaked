@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.emc.generators;
+package quartzshard.projecttweaked.emc.generators;
 
 import java.util.Map;
 

@@ -1,11 +1,11 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items;
+package quartzshard.projecttweaked.gameObjs.items;
 
-import main.java.quartzshard.projecttweaked.api.PESounds;
-import main.java.quartzshard.projecttweaked.api.item.IItemCharge;
-import main.java.quartzshard.projecttweaked.api.item.IProjectileShooter;
-import main.java.quartzshard.projecttweaked.gameObjs.entity.EntityLensProjectile;
-import main.java.quartzshard.projecttweaked.utils.Constants;
-import main.java.quartzshard.projecttweaked.utils.PlayerHelper;
+import quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.api.item.IItemCharge;
+import quartzshard.projecttweaked.api.item.IProjectileShooter;
+import quartzshard.projecttweaked.gameObjs.entity.EntityLensProjectile;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.PlayerHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;

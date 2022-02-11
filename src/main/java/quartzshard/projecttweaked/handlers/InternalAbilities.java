@@ -1,12 +1,12 @@
-package main.java.quartzshard.projecttweaked.handlers;
+package quartzshard.projecttweaked.handlers;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
-import main.java.quartzshard.projecttweaked.gameObjs.items.IFireProtector;
-import main.java.quartzshard.projecttweaked.gameObjs.items.IFlightProvider;
-import main.java.quartzshard.projecttweaked.gameObjs.items.IStepAssister;
-import main.java.quartzshard.projecttweaked.utils.PlayerHelper;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.items.IFireProtector;
+import quartzshard.projecttweaked.gameObjs.items.IFlightProvider;
+import quartzshard.projecttweaked.gameObjs.items.IStepAssister;
+import quartzshard.projecttweaked.utils.PlayerHelper;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;

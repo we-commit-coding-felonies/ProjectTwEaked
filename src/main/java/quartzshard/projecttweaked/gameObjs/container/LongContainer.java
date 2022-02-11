@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.gameObjs.container;
+package quartzshard.projecttweaked.gameObjs.container;
 
 import net.minecraft.inventory.Container;
 import net.minecraftforge.fml.relauncher.Side;

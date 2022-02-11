@@ -1,11 +1,11 @@
-package main.java.quartzshard.projecttweaked.api;
+package quartzshard.projecttweaked.api;
 
-import main.java.quartzshard.projecttweaked.api.capabilities.IAlchBagProvider;
-import main.java.quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
-import main.java.quartzshard.projecttweaked.api.proxy.IBlacklistProxy;
-import main.java.quartzshard.projecttweaked.api.proxy.IConversionProxy;
-import main.java.quartzshard.projecttweaked.api.proxy.IEMCProxy;
-import main.java.quartzshard.projecttweaked.api.proxy.ITransmutationProxy;
+import quartzshard.projecttweaked.api.capabilities.IAlchBagProvider;
+import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
+import quartzshard.projecttweaked.api.proxy.IBlacklistProxy;
+import quartzshard.projecttweaked.api.proxy.IConversionProxy;
+import quartzshard.projecttweaked.api.proxy.IEMCProxy;
+import quartzshard.projecttweaked.api.proxy.ITransmutationProxy;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.fml.common.FMLLog;
@@ -41,7 +41,7 @@ public final class ProjectTwEakedAPI
 		{
 			try
 			{
-				Class<?> clazz = Class.forName("main.java.quartzshard.projecttweaked.impl.EMCProxyImpl");
+				Class<?> clazz = Class.forName("quartzshard.projecttweaked.impl.EMCProxyImpl");
 				emcProxy = (IEMCProxy) clazz.getField("instance").get(null);
 			} catch (ReflectiveOperationException ex)
 			{
@@ -61,7 +61,7 @@ public final class ProjectTwEakedAPI
 		{
 			try
 			{
-				Class<?> clazz = Class.forName("main.java.quartzshard.projecttweaked.impl.ConversionProxyImpl");
+				Class<?> clazz = Class.forName("quartzshard.projecttweaked.impl.ConversionProxyImpl");
 				recipeProxy = (IConversionProxy) clazz.getField("instance").get(null);
 			} catch (ReflectiveOperationException ex)
 			{
@@ -81,7 +81,7 @@ public final class ProjectTwEakedAPI
 		{
 			try
 			{
-				Class<?> clazz = Class.forName("main.java.quartzshard.projecttweaked.impl.TransmutationProxyImpl");
+				Class<?> clazz = Class.forName("quartzshard.projecttweaked.impl.TransmutationProxyImpl");
 				transProxy = (ITransmutationProxy) clazz.getField("instance").get(null);
 			} catch (ReflectiveOperationException ex)
 			{
@@ -101,7 +101,7 @@ public final class ProjectTwEakedAPI
 		{
 			try
 			{
-				Class<?> clazz = Class.forName("main.java.quartzshard.projecttweaked.impl.BlacklistProxyImpl");
+				Class<?> clazz = Class.forName("quartzshard.projecttweaked.impl.BlacklistProxyImpl");
 				blacklistProxy = (IBlacklistProxy) clazz.getField("instance").get(null);
 			} catch (ReflectiveOperationException ex)
 			{

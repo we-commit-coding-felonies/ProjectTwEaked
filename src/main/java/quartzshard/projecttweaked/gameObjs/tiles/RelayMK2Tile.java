@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.gameObjs.tiles;
+package quartzshard.projecttweaked.gameObjs.tiles;
 
-import main.java.quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.Constants;
 
 public class RelayMK2Tile extends RelayMK1Tile
 {

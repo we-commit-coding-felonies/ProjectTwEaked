@@ -1,8 +1,8 @@
-package main.java.quartzshard.projecttweaked.emc.mappers;
+package quartzshard.projecttweaked.emc.mappers;
 
-import main.java.quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-import main.java.quartzshard.projecttweaked.emc.collector.IMappingCollector;
-import main.java.quartzshard.projecttweaked.impl.ConversionProxyImpl;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.emc.collector.IMappingCollector;
+import quartzshard.projecttweaked.impl.ConversionProxyImpl;
 import net.minecraftforge.common.config.Configuration;
 
 import java.util.List;

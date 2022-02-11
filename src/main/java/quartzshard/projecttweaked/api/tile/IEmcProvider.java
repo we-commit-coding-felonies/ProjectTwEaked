@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.api.tile;
+package quartzshard.projecttweaked.api.tile;
 
 import net.minecraft.util.EnumFacing;
 

@@ -1,12 +1,12 @@
-package main.java.quartzshard.projecttweaked.emc.mappers;
+package quartzshard.projecttweaked.emc.mappers;
 
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.emc.json.NSSItem;
-import main.java.quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-import main.java.quartzshard.projecttweaked.emc.collector.IMappingCollector;
-import main.java.quartzshard.projecttweaked.impl.ConversionProxyImpl;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.emc.json.NSSItem;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.emc.collector.IMappingCollector;
+import quartzshard.projecttweaked.impl.ConversionProxyImpl;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Loader;

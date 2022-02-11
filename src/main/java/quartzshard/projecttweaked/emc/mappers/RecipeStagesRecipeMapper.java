@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.emc.mappers;
+package quartzshard.projecttweaked.emc.mappers;
 
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.fml.common.Loader;

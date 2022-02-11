@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.gameObjs.entity;
+package quartzshard.projecttweaked.gameObjs.entity;
 
-import main.java.quartzshard.projecttweaked.utils.PlayerHelper;
+import quartzshard.projecttweaked.utils.PlayerHelper;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;

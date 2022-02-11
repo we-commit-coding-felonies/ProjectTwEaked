@@ -1,11 +1,11 @@
-package main.java.quartzshard.projecttweaked.impl;
+package quartzshard.projecttweaked.impl;
 
 import com.google.common.base.Preconditions;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.api.ProjectTwEakedAPI;
-import main.java.quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
-import main.java.quartzshard.projecttweaked.api.proxy.ITransmutationProxy;
-import main.java.quartzshard.projecttweaked.utils.WorldTransmutations;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
+import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
+import quartzshard.projecttweaked.api.proxy.ITransmutationProxy;
+import quartzshard.projecttweaked.utils.WorldTransmutations;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.FMLCommonHandler;

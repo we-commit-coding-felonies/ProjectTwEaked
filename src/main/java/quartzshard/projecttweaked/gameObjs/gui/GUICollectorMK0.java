@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.gameObjs.gui;
+package quartzshard.projecttweaked.gameObjs.gui;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.gameObjs.container.CollectorMK0Container;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.CollectorMK0Tile;
-import main.java.quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.container.CollectorMK0Container;
+import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK0Tile;
+import quartzshard.projecttweaked.utils.Constants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;

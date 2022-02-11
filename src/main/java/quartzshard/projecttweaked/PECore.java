@@ -1,29 +1,29 @@
-package main.java.quartzshard.projecttweaked;
+package quartzshard.projecttweaked;
 
 import com.google.common.collect.ImmutableSet;
 import com.mojang.authlib.GameProfile;
-import main.java.quartzshard.projecttweaked.emc.EMCMapper;
-import main.java.quartzshard.projecttweaked.handlers.InternalAbilities;
-import main.java.quartzshard.projecttweaked.handlers.InternalTimers;
-import main.java.quartzshard.projecttweaked.integration.jei.PEJeiPlugin;
-import main.java.quartzshard.projecttweaked.playerData.Transmutation;
-import main.java.quartzshard.projecttweaked.config.CustomEMCParser;
-import main.java.quartzshard.projecttweaked.config.NBTWhitelistParser;
-import main.java.quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import main.java.quartzshard.projecttweaked.fixes.CapInventoryWalker;
-import main.java.quartzshard.projecttweaked.fixes.TENameFix;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.*;
-import main.java.quartzshard.projecttweaked.impl.AlchBagImpl;
-import main.java.quartzshard.projecttweaked.impl.IMCHandler;
-import main.java.quartzshard.projecttweaked.impl.KnowledgeImpl;
-import main.java.quartzshard.projecttweaked.impl.TransmutationOffline;
-import main.java.quartzshard.projecttweaked.network.PacketHandler;
-import main.java.quartzshard.projecttweaked.network.ThreadCheckUUID;
-import main.java.quartzshard.projecttweaked.network.commands.ProjectTwEakedCMD;
-import main.java.quartzshard.projecttweaked.proxies.IProxy;
-import main.java.quartzshard.projecttweaked.utils.DummyIStorage;
-import main.java.quartzshard.projecttweaked.utils.GuiHandler;
+import quartzshard.projecttweaked.emc.EMCMapper;
+import quartzshard.projecttweaked.handlers.InternalAbilities;
+import quartzshard.projecttweaked.handlers.InternalTimers;
+import quartzshard.projecttweaked.integration.jei.PEJeiPlugin;
+import quartzshard.projecttweaked.playerData.Transmutation;
+import quartzshard.projecttweaked.config.CustomEMCParser;
+import quartzshard.projecttweaked.config.NBTWhitelistParser;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.fixes.CapInventoryWalker;
+import quartzshard.projecttweaked.fixes.TENameFix;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.tiles.*;
+import quartzshard.projecttweaked.impl.AlchBagImpl;
+import quartzshard.projecttweaked.impl.IMCHandler;
+import quartzshard.projecttweaked.impl.KnowledgeImpl;
+import quartzshard.projecttweaked.impl.TransmutationOffline;
+import quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.network.ThreadCheckUUID;
+import quartzshard.projecttweaked.network.commands.ProjectTwEakedCMD;
+import quartzshard.projecttweaked.proxies.IProxy;
+import quartzshard.projecttweaked.utils.DummyIStorage;
+import quartzshard.projecttweaked.utils.GuiHandler;
 import net.minecraft.launchwrapper.Launch;
 import net.minecraft.util.datafix.FixTypes;
 import net.minecraft.util.datafix.walkers.ItemStackDataLists;
@@ -75,7 +75,7 @@ public class PECore
 	@Instance(MODID)
 	public static PECore instance;
 	
-	@SidedProxy(clientSide = "main.java.quartzshard.projecttweaked.proxies.ClientProxy", serverSide = "main.java.quartzshard.projecttweaked.proxies.ServerProxy")
+	@SidedProxy(clientSide = "quartzshard.projecttweaked.proxies.ClientProxy", serverSide = "quartzshard.projecttweaked.proxies.ServerProxy")
 	public static IProxy proxy;
 
 	public static final List<String> uuids = new ArrayList<>();

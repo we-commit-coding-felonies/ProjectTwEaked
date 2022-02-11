@@ -1,14 +1,14 @@
-package main.java.quartzshard.projecttweaked.gameObjs.tiles;
+package quartzshard.projecttweaked.gameObjs.tiles;
 
-import main.java.quartzshard.projecttweaked.api.item.IItemEmc;
-import main.java.quartzshard.projecttweaked.api.tile.IEmcAcceptor;
-import main.java.quartzshard.projecttweaked.api.tile.IEmcProvider;
-import main.java.quartzshard.projecttweaked.emc.FuelMapper;
-import main.java.quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
-import main.java.quartzshard.projecttweaked.utils.Constants;
-import main.java.quartzshard.projecttweaked.utils.EMCHelper;
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
-import main.java.quartzshard.projecttweaked.utils.WorldHelper;
+import quartzshard.projecttweaked.api.item.IItemEmc;
+import quartzshard.projecttweaked.api.tile.IEmcAcceptor;
+import quartzshard.projecttweaked.api.tile.IEmcProvider;
+import quartzshard.projecttweaked.emc.FuelMapper;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;

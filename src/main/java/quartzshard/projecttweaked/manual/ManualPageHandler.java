@@ -1,10 +1,10 @@
-package main.java.quartzshard.projecttweaked.manual;
+package quartzshard.projecttweaked.manual;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
-import main.java.quartzshard.projecttweaked.gameObjs.gui.GUIManual;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.gui.GUIManual;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;

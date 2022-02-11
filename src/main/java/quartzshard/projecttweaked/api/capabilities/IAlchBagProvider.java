@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.api.capabilities;
+package quartzshard.projecttweaked.api.capabilities;
 
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.EnumDyeColor;

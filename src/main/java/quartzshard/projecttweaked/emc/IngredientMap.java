@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.emc;
+package quartzshard.projecttweaked.emc;
 
 import com.google.common.collect.Maps;
 

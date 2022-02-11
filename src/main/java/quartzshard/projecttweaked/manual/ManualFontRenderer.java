@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.manual;
+package quartzshard.projecttweaked.manual;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;

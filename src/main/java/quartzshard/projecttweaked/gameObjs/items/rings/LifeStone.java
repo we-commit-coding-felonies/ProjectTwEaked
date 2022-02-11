@@ -1,15 +1,15 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items.rings;
+package quartzshard.projecttweaked.gameObjs.items.rings;
 
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
 import com.google.common.collect.Lists;
-import main.java.quartzshard.projecttweaked.api.PESounds;
-import main.java.quartzshard.projecttweaked.api.item.IPedestalItem;
-import main.java.quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
-import main.java.quartzshard.projecttweaked.handlers.InternalTimers;
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
-import main.java.quartzshard.projecttweaked.utils.MathUtils;
+import quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.api.item.IPedestalItem;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
+import quartzshard.projecttweaked.handlers.InternalTimers;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.MathUtils;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;

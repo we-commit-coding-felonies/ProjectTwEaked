@@ -1,15 +1,15 @@
-package main.java.quartzshard.projecttweaked.gameObjs.gui;
+package quartzshard.projecttweaked.gameObjs.gui;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.manual.AbstractPage;
-import main.java.quartzshard.projecttweaked.manual.ImagePage;
-import main.java.quartzshard.projecttweaked.manual.IndexPage;
-import main.java.quartzshard.projecttweaked.manual.ItemPage;
-import main.java.quartzshard.projecttweaked.manual.ManualFontRenderer;
-import main.java.quartzshard.projecttweaked.manual.ManualPageHandler;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.manual.AbstractPage;
+import quartzshard.projecttweaked.manual.ImagePage;
+import quartzshard.projecttweaked.manual.IndexPage;
+import quartzshard.projecttweaked.manual.ItemPage;
+import quartzshard.projecttweaked.manual.ManualFontRenderer;
+import quartzshard.projecttweaked.manual.ManualPageHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;

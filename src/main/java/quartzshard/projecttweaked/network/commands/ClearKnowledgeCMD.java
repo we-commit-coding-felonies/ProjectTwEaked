@@ -1,8 +1,8 @@
-package main.java.quartzshard.projecttweaked.network.commands;
+package quartzshard.projecttweaked.network.commands;
 
-import main.java.quartzshard.projecttweaked.api.ProjectTwEakedAPI;
-import main.java.quartzshard.projecttweaked.network.PacketHandler;
-import main.java.quartzshard.projecttweaked.network.packets.KnowledgeClearPKT;
+import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
+import quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.network.packets.KnowledgeClearPKT;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;

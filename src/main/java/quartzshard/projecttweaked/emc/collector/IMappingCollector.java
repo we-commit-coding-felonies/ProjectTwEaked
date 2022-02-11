@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.emc.collector;
+package quartzshard.projecttweaked.emc.collector;
 
-import main.java.quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
+import quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
 
 import java.util.Map;
 

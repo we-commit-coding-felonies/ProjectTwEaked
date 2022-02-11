@@ -1,8 +1,8 @@
-package main.java.quartzshard.projecttweaked.gameObjs.gui;
+package quartzshard.projecttweaked.gameObjs.gui;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.gameObjs.container.MercurialEyeContainer;
-import main.java.quartzshard.projecttweaked.gameObjs.container.inventory.MercurialEyeInventory;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.container.MercurialEyeContainer;
+import quartzshard.projecttweaked.gameObjs.container.inventory.MercurialEyeInventory;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;

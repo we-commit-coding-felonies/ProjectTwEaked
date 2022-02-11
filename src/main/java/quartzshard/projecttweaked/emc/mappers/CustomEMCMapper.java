@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.emc.mappers;
+package quartzshard.projecttweaked.emc.mappers;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.config.CustomEMCParser;
-import main.java.quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-import main.java.quartzshard.projecttweaked.emc.collector.IMappingCollector;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.config.CustomEMCParser;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.emc.collector.IMappingCollector;
 import net.minecraftforge.common.config.Configuration;
 
 public class CustomEMCMapper implements IEMCMapper<NormalizedSimpleStack, Long> {

@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.gameObjs.container;
+package quartzshard.projecttweaked.gameObjs.container;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;

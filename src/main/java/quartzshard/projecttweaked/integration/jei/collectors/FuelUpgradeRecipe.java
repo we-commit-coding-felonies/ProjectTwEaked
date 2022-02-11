@@ -1,8 +1,8 @@
-package main.java.quartzshard.projecttweaked.integration.jei.collectors;
+package quartzshard.projecttweaked.integration.jei.collectors;
 
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.IRecipeWrapper;
-import main.java.quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.EMCHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.item.ItemStack;

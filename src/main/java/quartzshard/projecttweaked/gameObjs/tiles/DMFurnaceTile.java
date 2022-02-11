@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.gameObjs.tiles;
+package quartzshard.projecttweaked.gameObjs.tiles;
 
 public class DMFurnaceTile extends RMFurnaceTile
 {

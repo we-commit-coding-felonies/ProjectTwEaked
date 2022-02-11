@@ -1,13 +1,13 @@
-package main.java.quartzshard.projecttweaked.emc.mappers;
+package quartzshard.projecttweaked.emc.mappers;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.emc.IngredientMap;
-import main.java.quartzshard.projecttweaked.emc.json.NSSFake;
-import main.java.quartzshard.projecttweaked.emc.json.NSSItem;
-import main.java.quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-import main.java.quartzshard.projecttweaked.emc.collector.IMappingCollector;
-import main.java.quartzshard.projecttweaked.gameObjs.customRecipes.RecipeShapelessHidden;
-import main.java.quartzshard.projecttweaked.gameObjs.customRecipes.RecipeShapelessKleinStar;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.emc.IngredientMap;
+import quartzshard.projecttweaked.emc.json.NSSFake;
+import quartzshard.projecttweaked.emc.json.NSSItem;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.emc.collector.IMappingCollector;
+import quartzshard.projecttweaked.gameObjs.customRecipes.RecipeShapelessHidden;
+import quartzshard.projecttweaked.gameObjs.customRecipes.RecipeShapelessKleinStar;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;

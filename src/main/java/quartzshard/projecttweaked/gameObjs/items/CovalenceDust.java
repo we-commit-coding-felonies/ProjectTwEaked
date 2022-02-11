@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items;
+package quartzshard.projecttweaked.gameObjs.items;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;

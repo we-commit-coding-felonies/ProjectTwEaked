@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.api.event;
+package quartzshard.projecttweaked.api.event;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;

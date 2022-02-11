@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.config;
+package quartzshard.projecttweaked.config;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
@@ -14,8 +14,8 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import com.google.gson.reflect.TypeToken;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.utils.NBTWhitelist;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.utils.NBTWhitelist;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.JsonUtils;

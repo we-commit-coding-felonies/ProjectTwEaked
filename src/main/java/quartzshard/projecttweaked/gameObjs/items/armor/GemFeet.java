@@ -1,12 +1,12 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items.armor;
+package quartzshard.projecttweaked.gameObjs.items.armor;
 
 import com.google.common.collect.Multimap;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.gameObjs.items.IFlightProvider;
-import main.java.quartzshard.projecttweaked.gameObjs.items.IStepAssister;
-import main.java.quartzshard.projecttweaked.utils.ClientKeyHelper;
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
-import main.java.quartzshard.projecttweaked.utils.PEKeybind;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.items.IFlightProvider;
+import quartzshard.projecttweaked.gameObjs.items.IStepAssister;
+import quartzshard.projecttweaked.utils.ClientKeyHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.PEKeybind;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.SharedMonsterAttributes;

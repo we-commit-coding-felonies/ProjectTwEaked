@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items.itemBlocks;
+package quartzshard.projecttweaked.gameObjs.items.itemBlocks;
 
-import main.java.quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.Constants;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;

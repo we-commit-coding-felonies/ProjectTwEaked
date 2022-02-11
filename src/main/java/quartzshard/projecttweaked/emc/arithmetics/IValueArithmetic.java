@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.emc.arithmetics;
+package quartzshard.projecttweaked.emc.arithmetics;
 
 /**
  * Defines the mathematical arithmetic to be used when calculating values.

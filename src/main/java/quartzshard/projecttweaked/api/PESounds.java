@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.api;
+package quartzshard.projecttweaked.api;
 
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;

@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.emc.collector;
+package quartzshard.projecttweaked.emc.collector;
 
 
 import com.google.common.collect.Maps;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
 
 import java.util.Collections;
 import java.util.HashMap;

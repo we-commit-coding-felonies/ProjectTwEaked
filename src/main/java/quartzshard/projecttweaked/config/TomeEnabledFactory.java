@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.config;
+package quartzshard.projecttweaked.config;
 
 import com.google.gson.JsonObject;
 import net.minecraftforge.common.crafting.IConditionFactory;

@@ -1,10 +1,10 @@
-package main.java.quartzshard.projecttweaked.impl;
+package quartzshard.projecttweaked.impl;
 
 import com.google.common.base.Preconditions;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.api.proxy.IEMCProxy;
-import main.java.quartzshard.projecttweaked.emc.mappers.APICustomEMCMapper;
-import main.java.quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.proxy.IEMCProxy;
+import quartzshard.projecttweaked.emc.mappers.APICustomEMCMapper;
+import quartzshard.projecttweaked.utils.EMCHelper;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

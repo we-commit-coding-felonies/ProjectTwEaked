@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.integration.crafttweaker;
+package quartzshard.projecttweaked.integration.crafttweaker;
 
 import crafttweaker.CraftTweakerAPI;
 import crafttweaker.annotations.ZenRegister;

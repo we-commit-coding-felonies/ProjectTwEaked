@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.manual;
+package quartzshard.projecttweaked.manual;
 
 import net.minecraft.client.resources.I18n;
 import net.minecraft.util.ResourceLocation;

@@ -1,8 +1,8 @@
-package main.java.quartzshard.projecttweaked.gameObjs.container;
+package quartzshard.projecttweaked.gameObjs.container;
 
-import main.java.quartzshard.projecttweaked.gameObjs.container.inventory.EternalDensityInventory;
-import main.java.quartzshard.projecttweaked.gameObjs.container.slots.SlotGhost;
-import main.java.quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
+import quartzshard.projecttweaked.gameObjs.container.inventory.EternalDensityInventory;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotGhost;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ClickType;

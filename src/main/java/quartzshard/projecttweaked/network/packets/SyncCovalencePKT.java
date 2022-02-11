@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.network.packets;
+package quartzshard.projecttweaked.network.packets;
 
 import io.netty.buffer.ByteBuf;
-import main.java.quartzshard.projecttweaked.emc.EMCMapper;
+import quartzshard.projecttweaked.emc.EMCMapper;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;

@@ -1,8 +1,8 @@
-package main.java.quartzshard.projecttweaked.network.packets;
+package quartzshard.projecttweaked.network.packets;
 
 import io.netty.buffer.ByteBuf;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
-import main.java.quartzshard.projecttweaked.gameObjs.items.rings.ArchangelSmite;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.items.rings.ArchangelSmite;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;

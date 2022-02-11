@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.network.packets;
+package quartzshard.projecttweaked.network.packets;
 
 import io.netty.buffer.ByteBuf;
 import net.minecraft.client.Minecraft;

@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items.rings;
+package quartzshard.projecttweaked.gameObjs.items.rings;
 
-import main.java.quartzshard.projecttweaked.api.PESounds;
-import main.java.quartzshard.projecttweaked.api.item.IModeChanger;
-import main.java.quartzshard.projecttweaked.gameObjs.items.ItemPE;
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.api.item.IModeChanger;
+import quartzshard.projecttweaked.gameObjs.items.ItemPE;
+import quartzshard.projecttweaked.utils.ItemHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;

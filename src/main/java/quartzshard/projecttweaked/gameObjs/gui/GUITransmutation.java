@@ -1,10 +1,10 @@
-package main.java.quartzshard.projecttweaked.gameObjs.gui;
+package quartzshard.projecttweaked.gameObjs.gui;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.gameObjs.container.TransmutationContainer;
-import main.java.quartzshard.projecttweaked.gameObjs.container.inventory.TransmutationInventory;
-import main.java.quartzshard.projecttweaked.utils.Constants;
-import main.java.quartzshard.projecttweaked.utils.TransmutationEMCFormatter;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.container.TransmutationContainer;
+import quartzshard.projecttweaked.gameObjs.container.inventory.TransmutationInventory;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.TransmutationEMCFormatter;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiTextField;

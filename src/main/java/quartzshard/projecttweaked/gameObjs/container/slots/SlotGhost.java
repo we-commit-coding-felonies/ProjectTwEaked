@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.gameObjs.container.slots;
+package quartzshard.projecttweaked.gameObjs.container.slots;
 
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;

@@ -1,10 +1,10 @@
-package main.java.quartzshard.projecttweaked.gameObjs.tiles;
+package quartzshard.projecttweaked.gameObjs.tiles;
 
-import main.java.quartzshard.projecttweaked.api.item.IItemEmc;
-import main.java.quartzshard.projecttweaked.api.tile.IEmcAcceptor;
-import main.java.quartzshard.projecttweaked.gameObjs.blocks.MatterFurnace;
-import main.java.quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.api.item.IItemEmc;
+import quartzshard.projecttweaked.api.tile.IEmcAcceptor;
+import quartzshard.projecttweaked.gameObjs.blocks.MatterFurnace;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
+import quartzshard.projecttweaked.utils.ItemHelper;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;

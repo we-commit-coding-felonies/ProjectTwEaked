@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.integration.crafttweaker;
+package quartzshard.projecttweaked.integration.crafttweaker;
 
 import crafttweaker.IAction;
-import main.java.quartzshard.projecttweaked.utils.WorldHelper;
+import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.entity.EntityLiving;
 
 abstract class EntityRandomizerAction implements IAction {

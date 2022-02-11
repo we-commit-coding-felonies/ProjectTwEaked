@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.rendering;
+package quartzshard.projecttweaked.rendering;
 
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
+import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderGlobal;

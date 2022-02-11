@@ -1,8 +1,8 @@
-package main.java.quartzshard.projecttweaked.utils;
+package quartzshard.projecttweaked.utils;
 
 import com.google.common.collect.Lists;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
 import net.minecraft.block.*;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.EnchantmentHelper;

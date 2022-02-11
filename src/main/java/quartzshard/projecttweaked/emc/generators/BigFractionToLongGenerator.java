@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.emc.generators;
+package quartzshard.projecttweaked.emc.generators;
 
 import org.apache.commons.math3.fraction.BigFraction;
 

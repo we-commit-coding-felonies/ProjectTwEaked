@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.gameObjs.entity;
+package quartzshard.projecttweaked.gameObjs.entity;
 
-import main.java.quartzshard.projecttweaked.utils.WorldHelper;
+import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.MoverType;
 import net.minecraft.entity.item.EntityTNTPrimed;

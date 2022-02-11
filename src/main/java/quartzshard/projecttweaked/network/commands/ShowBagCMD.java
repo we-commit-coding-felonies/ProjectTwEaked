@@ -1,11 +1,11 @@
-package main.java.quartzshard.projecttweaked.network.commands;
+package quartzshard.projecttweaked.network.commands;
 
-import main.java.quartzshard.projecttweaked.api.ProjectTwEakedAPI;
-import main.java.quartzshard.projecttweaked.api.capabilities.IAlchBagProvider;
-import main.java.quartzshard.projecttweaked.gameObjs.container.AlchBagContainer;
-import main.java.quartzshard.projecttweaked.impl.AlchBagImpl;
-import main.java.quartzshard.projecttweaked.network.PacketHandler;
-import main.java.quartzshard.projecttweaked.network.packets.ShowBagPKT;
+import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
+import quartzshard.projecttweaked.api.capabilities.IAlchBagProvider;
+import quartzshard.projecttweaked.gameObjs.container.AlchBagContainer;
+import quartzshard.projecttweaked.impl.AlchBagImpl;
+import quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.network.packets.ShowBagPKT;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;

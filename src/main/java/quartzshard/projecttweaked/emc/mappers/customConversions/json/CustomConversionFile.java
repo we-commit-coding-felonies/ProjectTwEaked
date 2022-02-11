@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.emc.mappers.customConversions.json;
+package quartzshard.projecttweaked.emc.mappers.customConversions.json;
 
 import com.google.common.collect.Maps;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import main.java.quartzshard.projecttweaked.emc.mappers.customConversions.CustomConversionMapper;
+import quartzshard.projecttweaked.emc.mappers.customConversions.CustomConversionMapper;
 
 import java.io.File;
 import java.io.FileWriter;

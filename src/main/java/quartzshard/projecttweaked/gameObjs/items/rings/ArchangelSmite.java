@@ -1,16 +1,16 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items.rings;
+package quartzshard.projecttweaked.gameObjs.items.rings;
 
 import com.google.common.collect.Lists;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.api.item.IModeChanger;
-import main.java.quartzshard.projecttweaked.api.item.IPedestalItem;
-import main.java.quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import main.java.quartzshard.projecttweaked.gameObjs.entity.EntityHomingArrow;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
-import main.java.quartzshard.projecttweaked.network.PacketHandler;
-import main.java.quartzshard.projecttweaked.network.packets.LeftClickArchangelPKT;
-import main.java.quartzshard.projecttweaked.utils.EMCHelper;
-import main.java.quartzshard.projecttweaked.utils.MathUtils;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.item.IModeChanger;
+import quartzshard.projecttweaked.api.item.IPedestalItem;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.entity.EntityHomingArrow;
+import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
+import quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.network.packets.LeftClickArchangelPKT;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.MathUtils;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;

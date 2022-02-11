@@ -1,8 +1,8 @@
-package main.java.quartzshard.projecttweaked.gameObjs.blocks;
+package quartzshard.projecttweaked.gameObjs.blocks;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.CondenserTile;
-import main.java.quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.tiles.CondenserTile;
+import quartzshard.projecttweaked.utils.Constants;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;

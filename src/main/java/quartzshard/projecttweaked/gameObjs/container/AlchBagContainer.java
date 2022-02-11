@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.gameObjs.container;
+package quartzshard.projecttweaked.gameObjs.container;
 
 import invtweaks.api.container.ChestContainer;
 import net.minecraft.entity.player.EntityPlayer;

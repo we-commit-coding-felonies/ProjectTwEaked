@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.config;
+package quartzshard.projecttweaked.config;
 
-import main.java.quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.PECore;
 import net.minecraftforge.common.config.Config;
 
 @Config(modid = PECore.MODID, name = PECore.MODNAME + "/" + PECore.MODNAME)

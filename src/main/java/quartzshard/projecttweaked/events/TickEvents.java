@@ -1,13 +1,13 @@
-package main.java.quartzshard.projecttweaked.events;
+package quartzshard.projecttweaked.events;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.api.ProjectTwEakedAPI;
-import main.java.quartzshard.projecttweaked.api.capabilities.IAlchBagProvider;
-import main.java.quartzshard.projecttweaked.api.item.IAlchBagItem;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
-import main.java.quartzshard.projecttweaked.gameObjs.container.AlchBagContainer;
-import main.java.quartzshard.projecttweaked.handlers.InternalAbilities;
-import main.java.quartzshard.projecttweaked.handlers.InternalTimers;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
+import quartzshard.projecttweaked.api.capabilities.IAlchBagProvider;
+import quartzshard.projecttweaked.api.item.IAlchBagItem;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.container.AlchBagContainer;
+import quartzshard.projecttweaked.handlers.InternalAbilities;
+import quartzshard.projecttweaked.handlers.InternalTimers;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.EnumDyeColor;

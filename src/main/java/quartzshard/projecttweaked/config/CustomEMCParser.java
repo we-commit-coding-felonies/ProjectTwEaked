@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.config;
+package quartzshard.projecttweaked.config;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
@@ -8,10 +8,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.annotations.SerializedName;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.emc.json.NSSItem;
-import main.java.quartzshard.projecttweaked.emc.json.NSSOreDictionary;
-import main.java.quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.emc.json.NSSItem;
+import quartzshard.projecttweaked.emc.json.NSSOreDictionary;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
 
 import java.io.BufferedReader;
 import java.io.File;

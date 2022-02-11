@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.api.proxy;
+package quartzshard.projecttweaked.api.proxy;
 
-import main.java.quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
+import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
 import net.minecraft.block.state.IBlockState;
 
 import javax.annotation.Nonnull;

@@ -1,14 +1,14 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items.rings;
+package quartzshard.projecttweaked.gameObjs.items.rings;
 
-import main.java.quartzshard.projecttweaked.api.item.IAlchBagItem;
-import main.java.quartzshard.projecttweaked.api.item.IAlchChestItem;
-import main.java.quartzshard.projecttweaked.api.item.IExtraFunction;
-import main.java.quartzshard.projecttweaked.api.item.IPedestalItem;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
-import main.java.quartzshard.projecttweaked.gameObjs.items.GemEternalDensity;
-import main.java.quartzshard.projecttweaked.utils.ItemHelper;
-import main.java.quartzshard.projecttweaked.utils.PlayerHelper;
-import main.java.quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.item.IAlchBagItem;
+import quartzshard.projecttweaked.api.item.IAlchChestItem;
+import quartzshard.projecttweaked.api.item.IExtraFunction;
+import quartzshard.projecttweaked.api.item.IPedestalItem;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.items.GemEternalDensity;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.PlayerHelper;
+import quartzshard.projecttweaked.PECore;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;

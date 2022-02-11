@@ -1,6 +1,6 @@
-package main.java.quartzshard.projecttweaked.gameObjs;
+package quartzshard.projecttweaked.gameObjs;
 
-import main.java.quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.PECore;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;

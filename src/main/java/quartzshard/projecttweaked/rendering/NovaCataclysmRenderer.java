@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.rendering;
+package quartzshard.projecttweaked.rendering;
 
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
-import main.java.quartzshard.projecttweaked.gameObjs.entity.EntityNovaCataclysmPrimed;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.entity.EntityNovaCataclysmPrimed;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockRendererDispatcher;
 import net.minecraft.client.renderer.GlStateManager;

@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.network.commands;
+package quartzshard.projecttweaked.network.commands;
 
 import net.minecraft.command.ICommandSender;
 import net.minecraft.util.text.Style;

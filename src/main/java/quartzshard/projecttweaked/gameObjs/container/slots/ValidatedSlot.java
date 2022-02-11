@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.gameObjs.container.slots;
+package quartzshard.projecttweaked.gameObjs.container.slots;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;

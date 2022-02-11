@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items.tools;
+package quartzshard.projecttweaked.gameObjs.items.tools;
 
 import com.google.common.collect.Multimap;
-import main.java.quartzshard.projecttweaked.api.state.PEStateProps;
-import main.java.quartzshard.projecttweaked.api.state.enums.EnumMatterType;
-import main.java.quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.api.state.PEStateProps;
+import quartzshard.projecttweaked.api.state.enums.EnumMatterType;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;

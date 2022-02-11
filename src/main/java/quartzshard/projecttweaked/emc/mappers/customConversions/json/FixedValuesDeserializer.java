@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.emc.mappers.customConversions.json;
+package quartzshard.projecttweaked.emc.mappers.customConversions.json;
 
 import com.google.common.collect.Maps;
 import com.google.gson.JsonDeserializationContext;
@@ -8,7 +8,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.reflect.TypeToken;
-import main.java.quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;

@@ -1,8 +1,8 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items.armor;
+package quartzshard.projecttweaked.gameObjs.items.armor;
 
 import com.google.common.base.Predicates;
 import gnu.trove.map.hash.TIntLongHashMap;
-import main.java.quartzshard.projecttweaked.utils.WorldHelper;
+import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;

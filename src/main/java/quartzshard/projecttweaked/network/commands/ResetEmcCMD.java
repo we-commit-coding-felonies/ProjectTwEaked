@@ -1,7 +1,7 @@
-package main.java.quartzshard.projecttweaked.network.commands;
+package quartzshard.projecttweaked.network.commands;
 
-import main.java.quartzshard.projecttweaked.config.CustomEMCParser;
-import main.java.quartzshard.projecttweaked.utils.MathUtils;
+import quartzshard.projecttweaked.config.CustomEMCParser;
+import quartzshard.projecttweaked.utils.MathUtils;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;

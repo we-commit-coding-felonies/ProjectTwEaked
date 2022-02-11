@@ -1,16 +1,16 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items;
+package quartzshard.projecttweaked.gameObjs.items;
 
 import com.google.common.collect.Sets;
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.api.PESounds;
-import main.java.quartzshard.projecttweaked.api.item.IExtraFunction;
-import main.java.quartzshard.projecttweaked.api.item.IProjectileShooter;
-import main.java.quartzshard.projecttweaked.gameObjs.entity.EntityMobRandomizer;
-import main.java.quartzshard.projecttweaked.utils.ClientKeyHelper;
-import main.java.quartzshard.projecttweaked.utils.Constants;
-import main.java.quartzshard.projecttweaked.utils.PEKeybind;
-import main.java.quartzshard.projecttweaked.utils.PlayerHelper;
-import main.java.quartzshard.projecttweaked.utils.WorldTransmutations;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.api.item.IExtraFunction;
+import quartzshard.projecttweaked.api.item.IProjectileShooter;
+import quartzshard.projecttweaked.gameObjs.entity.EntityMobRandomizer;
+import quartzshard.projecttweaked.utils.ClientKeyHelper;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.PEKeybind;
+import quartzshard.projecttweaked.utils.PlayerHelper;
+import quartzshard.projecttweaked.utils.WorldTransmutations;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;

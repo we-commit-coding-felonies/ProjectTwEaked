@@ -1,14 +1,14 @@
-package main.java.quartzshard.projecttweaked.gameObjs.container;
+package quartzshard.projecttweaked.gameObjs.container;
 
-import main.java.quartzshard.projecttweaked.api.event.PlayerAttemptCondenserSetEvent;
-import main.java.quartzshard.projecttweaked.gameObjs.container.slots.SlotCondenserLock;
-import main.java.quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
-import main.java.quartzshard.projecttweaked.gameObjs.container.slots.ValidatedSlot;
-import main.java.quartzshard.projecttweaked.gameObjs.blocks.Condenser;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.CondenserTile;
-import main.java.quartzshard.projecttweaked.network.PacketHandler;
-import main.java.quartzshard.projecttweaked.utils.Constants;
-import main.java.quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.api.event.PlayerAttemptCondenserSetEvent;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotCondenserLock;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
+import quartzshard.projecttweaked.gameObjs.container.slots.ValidatedSlot;
+import quartzshard.projecttweaked.gameObjs.blocks.Condenser;
+import quartzshard.projecttweaked.gameObjs.tiles.CondenserTile;
+import quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.EMCHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ClickType;

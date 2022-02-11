@@ -1,9 +1,9 @@
-package main.java.quartzshard.projecttweaked.integration.crafttweaker;
+package quartzshard.projecttweaked.integration.crafttweaker;
 
 import crafttweaker.IAction;
 import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.minecraft.CraftTweakerMC;
-import main.java.quartzshard.projecttweaked.utils.WorldTransmutations;
+import quartzshard.projecttweaked.utils.WorldTransmutations;
 import net.minecraft.block.state.IBlockState;
 
 abstract class WorldTransmuteAction implements IAction {

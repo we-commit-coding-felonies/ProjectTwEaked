@@ -1,4 +1,4 @@
-package main.java.quartzshard.projecttweaked.gameObjs.items.itemBlocks;
+package quartzshard.projecttweaked.gameObjs.items.itemBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;

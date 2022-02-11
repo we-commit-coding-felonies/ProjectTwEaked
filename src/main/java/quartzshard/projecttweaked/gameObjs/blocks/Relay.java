@@ -1,14 +1,14 @@
-package main.java.quartzshard.projecttweaked.gameObjs.blocks;
+package quartzshard.projecttweaked.gameObjs.blocks;
 
-import main.java.quartzshard.projecttweaked.PECore;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK0Tile;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK1Tile;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK2Tile;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK3Tile;
-import main.java.quartzshard.projecttweaked.gameObjs.tiles.RelayMK4Tile;
-import main.java.quartzshard.projecttweaked.utils.Constants;
-import main.java.quartzshard.projecttweaked.utils.MathUtils;
-import main.java.quartzshard.projecttweaked.utils.WorldHelper;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.tiles.RelayMK0Tile;
+import quartzshard.projecttweaked.gameObjs.tiles.RelayMK1Tile;
+import quartzshard.projecttweaked.gameObjs.tiles.RelayMK2Tile;
+import quartzshard.projecttweaked.gameObjs.tiles.RelayMK3Tile;
+import quartzshard.projecttweaked.gameObjs.tiles.RelayMK4Tile;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.MathUtils;
+import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;

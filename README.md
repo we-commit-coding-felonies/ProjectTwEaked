@@ -24,6 +24,7 @@ Here is a list of changes:
  - Bugfixes
    - Matter tools 'oredict radius mining' (eg matter axe aoe tree harvest) no longer fail when water is nearby
    - Subtitles have been localized (incomplete! please help if you can.)
+   - Energy Collector progress bars now work properly
 
 
 

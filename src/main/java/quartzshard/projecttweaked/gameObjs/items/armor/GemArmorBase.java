@@ -2,14 +2,22 @@ package quartzshard.projecttweaked.gameObjs.items.armor;
 
 import quartzshard.projecttweaked.PECore;
 import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
+import quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.SoundCategory;
 import net.minecraftforge.common.ISpecialArmor;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -41,7 +49,7 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor
 	{
 		for (ItemStack i : player.inventory.armorInventory)
 		{
-			if (!i.isEmpty() || !(i.getItem() instanceof GemArmorBase))
+			if (i.isEmpty() || !(i.getItem() instanceof GemArmorBase))
 			{
 				return false;
 			}
@@ -49,27 +57,112 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor
 		return true;
 	}
 
+
+	@SubscribeEvent
+	public void onGetHurt(LivingHurtEvent event)
+	{	
+		Entity hurt = event.getEntity();
+		if (hurt.world.isRemote) {
+            return;
+        }
+		if (hurt instanceof EntityPlayer) 
+		{
+			event.setCanceled(shieldWithEMC((EntityPlayer)hurt, event.getAmount()));
+		}
+		return;
+	}
+
+	@SubscribeEvent
+	public void onAttacked(LivingHurtEvent event)
+	{	
+		Entity hurt = event.getEntity();
+		if (hurt.world.isRemote) {
+            return;
+        }
+		if (hurt instanceof EntityPlayer) 
+		{
+			event.setCanceled(shieldWithEMC((EntityPlayer)hurt, event.getAmount()));
+		}
+		return;
+	}
+	
+	@SubscribeEvent
+	public void onPlayerAttacked(LivingAttackEvent event)
+	{	
+		Entity hurt = event.getEntity();
+		if (hurt.world.isRemote) {
+            return;
+        }
+		if (hurt instanceof EntityPlayer) 
+		{
+			event.setCanceled(shieldWithEMC((EntityPlayer)hurt, event.getAmount()));
+		}
+		return;
+	}
+	public boolean shieldWithEMC(EntityPlayer player, float damage)
+	{
+		IKnowledgeProvider provider = player.getCapability(ProjectTwEakedAPI.KNOWLEDGE_CAPABILITY, null);
+		if (GemArmorBase.hasFullSet(player))
+		{
+			if (damage * 5 < provider.getEmc())
+			{
+				provider.setEmc(provider.getEmc() - (long)(damage*5));
+				provider.sync((EntityPlayerMP)player);
+				player.getEntityWorld().playSound(null, player.posX, player.posY, player.posZ, PESounds.UNCHARGE, SoundCategory.PLAYERS, 0.5F, 0.5F);
+				return true;
+			}
+			else 
+			{
+				provider.setEmc(0);
+				provider.sync((EntityPlayerMP)player);
+			}
+		}
+		return false;
+	}
+
 	@Override
 	public ArmorProperties getProperties(EntityLivingBase player, @Nonnull ItemStack armor, DamageSource source, double damage, int slot)
-	{
+	{	
 		EntityEquipmentSlot type = ((GemArmorBase) armor.getItem()).armorType;
-		if (source.isExplosion())
-		{
-			return new ArmorProperties(1, 1.0D, 750);
-		}
+		int priority, max;
+		double ratio;
 
-		if (type == EntityEquipmentSlot.FEET && source == DamageSource.FALL)
-		{
-			return new ArmorProperties(1, 1.0D, 15);
-		}
+		priority = source.isExplosion() ? 1 : 0;
 
+		if (type == EntityEquipmentSlot.CHEST || type == EntityEquipmentSlot.LEGS)
+		{
+			ratio = 0.3D;
+		} 
+		else 
+		{
+			ratio = 0.2D;
+		}
+		
 		if (type == EntityEquipmentSlot.HEAD || type == EntityEquipmentSlot.FEET)
 		{
-			return new ArmorProperties(0, 0.2D, 400);
+			max = 250;
+		} 
+		else 
+		{
+			max = 350;
 		}
-
-		return new ArmorProperties(0, 0.3D, 500);
+		
+		return new ArmorProperties(priority, ratio, max);
 	}
+
+	@Override
+	public boolean handleUnblockableDamage(EntityLivingBase entity, @Nonnull ItemStack armor, DamageSource source, double damage, int slot)
+    {
+		IKnowledgeProvider provider = entity.getCapability(ProjectTwEakedAPI.KNOWLEDGE_CAPABILITY, null);
+		if (provider.getEmc() > 0) 
+		{
+			return GemArmorBase.hasFullSet((EntityPlayer)entity);
+		}
+		else 
+		{
+			return false;
+		}
+    }
 
 	@Override
 	public int getArmorDisplay(EntityPlayer player, @Nonnull ItemStack armor, int slot)

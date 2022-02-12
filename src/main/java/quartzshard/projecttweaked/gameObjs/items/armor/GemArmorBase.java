@@ -105,8 +105,13 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor
 		if (GemArmorBase.hasFullSet(player))
 		{
 			if (damage * 64 < provider.getEmc())
-			{
-				provider.setEmc(provider.getEmc() - (long)(damage*64));
+			{	
+				long cost = (long)damage * 64;
+				if (cost < 0)
+				{
+					cost *= -1;
+				}
+				provider.setEmc(provider.getEmc() - cost);
 				provider.sync((EntityPlayerMP)player);
 				player.getEntityWorld().playSound(null, player.posX, player.posY, player.posZ, PESounds.UNCHARGE, SoundCategory.PLAYERS, 0.5F, 0.5F);
 				return true;

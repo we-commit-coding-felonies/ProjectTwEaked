@@ -21,6 +21,9 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import java.util.List;
+import java.util.Arrays;
+
 import javax.annotation.Nonnull;
 
 public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor
@@ -66,16 +69,28 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor
         }
 		if (hurt instanceof EntityPlayer) 
 		{
-			event.setCanceled(shieldWithEMC((EntityPlayer)hurt, event.getAmount()));
+			event.setCanceled(shieldWithEMC((EntityPlayer)hurt, event.getAmount(), event.getSource()));
 		}
 		return;
 	}
-	public boolean shieldWithEMC(EntityPlayer player, float damage)
+	public boolean shieldWithEMC(EntityPlayer player, float damage, DamageSource source)
 	{
-		int costPerDamage = ProjectTwEakedConfig.alchemicalBarrier.emcShieldCost;
+		if (!GemArmorBase.hasFullSet(player)) {
+			return false;
+		}
+		if (ProjectTwEakedConfig.alchemicalBarrier.debugBarrier) {
+			PECore.LOGGER.info("*** ALCHEMICAL BARRIER DEBUG START ***");
+			PECore.LOGGER.info("Name of attacked player: " + player.getName());
+			PECore.LOGGER.info("UUID of attacked player: " + player.getUniqueID());
+			PECore.LOGGER.info("Name of attacker: " + source.getTrueSource().getName());
+			PECore.LOGGER.info("UUID of attacker: " + source.getTrueSource().getUniqueID());
+			PECore.LOGGER.info("Type of damage dealt: " + source.getDamageType());
+			PECore.LOGGER.info("Amount of damage dealt: " + damage);
+			PECore.LOGGER.info("*** ALCHEMICAL BARRIER DEBUG END ***");
+		}
 		IKnowledgeProvider provider = player.getCapability(ProjectTwEakedAPI.KNOWLEDGE_CAPABILITY, null);
-		if (GemArmorBase.hasFullSet(player))
-		{
+		int costPerDamage = ProjectTwEakedConfig.alchemicalBarrier.emcShieldCost;
+		if (checkListForDamageType(source.getDamageType())) {
 			if (damage * costPerDamage <= provider.getEmc() && provider.getEmc() > 0)
 			{	
 				long cost = (long)damage * 64;
@@ -85,14 +100,29 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor
 				}
 				provider.setEmc(provider.getEmc() - cost);
 				provider.sync((EntityPlayerMP)player);
-				player.getEntityWorld().playSound(null, player.posX, player.posY, player.posZ, PESounds.PROTECT, SoundCategory.PLAYERS, 1.0F, 1.0F);
+				player.getEntityWorld().playSound(null, player.posX, player.posY, player.posZ, PESounds.PROTECT, SoundCategory.PLAYERS, 0.45F, 1.0F);
 				return true;
 			}
-			else 
+			else
 			{
 				provider.setEmc(0);
 				provider.sync((EntityPlayerMP)player);
 			}
+			return false;
+		}
+		return false;
+	}
+
+	public boolean checkListForDamageType(String type) {
+		List<String> typeList = Arrays.asList(ProjectTwEakedConfig.alchemicalBarrier.dmgTypesBlacklist);
+		if (ProjectTwEakedConfig.alchemicalBarrier.typesIsWhitelist) {
+			if (typeList.contains(type)) {
+				return true;
+			}
+			return false;
+		}
+		if (!typeList.contains(type)) {
+			return true;
 		}
 		return false;
 	}

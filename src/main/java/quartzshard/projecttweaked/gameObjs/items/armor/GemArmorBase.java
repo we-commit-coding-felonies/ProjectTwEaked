@@ -5,6 +5,7 @@ import quartzshard.projecttweaked.gameObjs.ObjHandler;
 import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
 import quartzshard.projecttweaked.api.PESounds;
 import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,7 +17,6 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundCategory;
 import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -56,41 +56,12 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor
 		}
 		return true;
 	}
-
-
-	@SubscribeEvent
-	public void onGetHurt(LivingHurtEvent event)
-	{	
-		Entity hurt = event.getEntity();
-		if (hurt.world.isRemote) {
-            return;
-        }
-		if (hurt instanceof EntityPlayer) 
-		{
-			event.setCanceled(shieldWithEMC((EntityPlayer)hurt, event.getAmount()));
-		}
-		return;
-	}
-
-	@SubscribeEvent
-	public void onAttacked(LivingHurtEvent event)
-	{	
-		Entity hurt = event.getEntity();
-		if (hurt.world.isRemote) {
-            return;
-        }
-		if (hurt instanceof EntityPlayer) 
-		{
-			event.setCanceled(shieldWithEMC((EntityPlayer)hurt, event.getAmount()));
-		}
-		return;
-	}
 	
 	@SubscribeEvent
 	public void onPlayerAttacked(LivingAttackEvent event)
 	{	
 		Entity hurt = event.getEntity();
-		if (hurt.world.isRemote) {
+		if (hurt.world.isRemote || !ProjectTwEakedConfig.alchemicalBarrier.enableGemArmorEMCShield) {
             return;
         }
 		if (hurt instanceof EntityPlayer) 
@@ -101,10 +72,11 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor
 	}
 	public boolean shieldWithEMC(EntityPlayer player, float damage)
 	{
+		int costPerDamage = ProjectTwEakedConfig.alchemicalBarrier.emcShieldCost;
 		IKnowledgeProvider provider = player.getCapability(ProjectTwEakedAPI.KNOWLEDGE_CAPABILITY, null);
 		if (GemArmorBase.hasFullSet(player))
 		{
-			if (damage * 64 < provider.getEmc())
+			if (damage * costPerDamage <= provider.getEmc() && provider.getEmc() > 0)
 			{	
 				long cost = (long)damage * 64;
 				if (cost < 0)
@@ -113,7 +85,7 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor
 				}
 				provider.setEmc(provider.getEmc() - cost);
 				provider.sync((EntityPlayerMP)player);
-				player.getEntityWorld().playSound(null, player.posX, player.posY, player.posZ, PESounds.UNCHARGE, SoundCategory.PLAYERS, 0.5F, 0.5F);
+				player.getEntityWorld().playSound(null, player.posX, player.posY, player.posZ, PESounds.PROTECT, SoundCategory.PLAYERS, 1.0F, 1.0F);
 				return true;
 			}
 			else 

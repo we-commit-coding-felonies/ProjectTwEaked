@@ -15,6 +15,7 @@ public final class PESounds
     public static final SoundEvent CHARGE = ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("projecte", "item.pecharge"));
     public static final SoundEvent UNCHARGE = ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("projecte", "item.peuncharge"));
     public static final SoundEvent TRANSMUTE = ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("projecte", "item.petransmute"));
+    public static final SoundEvent PROTECT = ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("projecte", "item.peprotect"));
 
     private PESounds() {}
 

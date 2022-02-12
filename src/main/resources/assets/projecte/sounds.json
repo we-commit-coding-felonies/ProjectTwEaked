@@ -38,5 +38,10 @@
     {
         "sounds": [ "projecte:item/petransmute" ],
         "subtitle": "pe.subtitle.petransmute"
+    },
+    "item.peprotect":
+    {
+        "sounds": [ "projecte:item/peprotect" ],
+        "subtitle": "pe.subtitle.peprotect"
     }
 }

@@ -104,9 +104,9 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor
 		IKnowledgeProvider provider = player.getCapability(ProjectTwEakedAPI.KNOWLEDGE_CAPABILITY, null);
 		if (GemArmorBase.hasFullSet(player))
 		{
-			if (damage * 5 < provider.getEmc())
+			if (damage * 64 < provider.getEmc())
 			{
-				provider.setEmc(provider.getEmc() - (long)(damage*5));
+				provider.setEmc(provider.getEmc() - (long)(damage*64));
 				provider.sync((EntityPlayerMP)player);
 				player.getEntityWorld().playSound(null, player.posX, player.posY, player.posZ, PESounds.UNCHARGE, SoundCategory.PLAYERS, 0.5F, 0.5F);
 				return true;

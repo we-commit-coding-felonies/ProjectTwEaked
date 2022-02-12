@@ -13,6 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.world.EnumSkyBlock;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
@@ -177,7 +178,7 @@ public class CollectorMK1Tile extends TileEmc implements IEmcProvider, IEmcAccep
 	{
 		if (!this.hasMaxedEmc())
 		{
-			unprocessedEMC += emcGen * (getSunLevel() / 320.0f);
+			unprocessedEMC += emcGen * (getSunLevel() / 300.0f);
 			if (unprocessedEMC >= 1) {
 				long emcToAdd = (long) unprocessedEMC;
 				this.addEMC(emcToAdd);
@@ -285,11 +286,18 @@ public class CollectorMK1Tile extends TileEmc implements IEmcProvider, IEmcAccep
 	
 	public int getSunLevel()
 	{
-		if (world.provider.doesWaterVaporize())
-		{
-			return 16;
+		int trueSkyLight = world.getLightFor(EnumSkyBlock.SKY, pos.up()) - world.getSkylightSubtracted();
+		System.out.println(trueSkyLight);
+		int blockLight = world.getLightFor(EnumSkyBlock.BLOCK, pos.up());
+		int trueLight = 0;
+		if (trueSkyLight <= blockLight || trueSkyLight <= 4) {
+			trueLight = blockLight;
 		}
-		return world.getLight(getPos().up()) + 1;
+		else {
+			trueLight = trueSkyLight;
+		}
+		System.out.println(trueLight);
+		return trueLight;
 	}
 
 	public double getFuelProgress()

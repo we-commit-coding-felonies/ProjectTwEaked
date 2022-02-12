@@ -55,7 +55,7 @@ public class GUICollectorMK2 extends GuiContainer
 		this.drawTexturedModalRect(x, y, 0, 0, xSize, ySize);
 		
 		//Ligh Level. Max is 12
-		int progress = (int) (container.sunLevel * 12.0 / 16);
+		int progress = (int) (container.sunLevel * 12.0 / 15);
 		this.drawTexturedModalRect(x + 142, y + 49 - progress, 202, 13 - progress, 12, progress);
 				
 		//EMC storage. Max is 48

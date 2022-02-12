@@ -38,7 +38,7 @@ public class RMArmor extends ItemArmor implements ISpecialArmor, IRevealer, IGog
 			return new ArmorProperties(1, 1.0D, 500);
 		}
 
-		if (type == EntityEquipmentSlot.HEAD && source == DamageSource.FALL)
+		if (type == EntityEquipmentSlot.FEET && source == DamageSource.FALL)
 		{
 			return new ArmorProperties(1, 1.0D, 10);
 		}

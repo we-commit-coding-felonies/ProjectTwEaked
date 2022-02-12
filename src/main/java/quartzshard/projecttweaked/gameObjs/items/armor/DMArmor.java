@@ -34,7 +34,7 @@ public class DMArmor extends ItemArmor implements ISpecialArmor
 			return new ArmorProperties(1, 1.0D, 350);
 		}
 
-		if (type == EntityEquipmentSlot.HEAD && source == DamageSource.FALL)
+		if (type == EntityEquipmentSlot.FEET && source == DamageSource.FALL)
 		{
 			return new ArmorProperties(1, 1.0D, 5);
 		}

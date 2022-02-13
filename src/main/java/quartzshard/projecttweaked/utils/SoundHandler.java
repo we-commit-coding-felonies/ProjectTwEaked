@@ -24,6 +24,7 @@ public final class SoundHandler
         registerSound(evt.getRegistry(), "item.peuncharge");
         registerSound(evt.getRegistry(), "item.petransmute");
         registerSound(evt.getRegistry(), "item.peprotect");
+        registerSound(evt.getRegistry(), "item.peprotectfail");
     }
 
     private static void registerSound(IForgeRegistry<SoundEvent> registry, String soundName)

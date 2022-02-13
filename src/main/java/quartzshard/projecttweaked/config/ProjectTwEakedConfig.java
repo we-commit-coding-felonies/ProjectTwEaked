@@ -275,12 +275,12 @@ public final class ProjectTwEakedConfig
 
 		@Config.Comment({"List of damage types that the barrier should NOT block",
 						"By default, this only contains void damage (from the void and /kill)"})
-		public String[] dmgTypesBlacklist = {
+		public String[] dmgTypesList = {
 			"outOfWorld"
 		};
 
-		@Config.Comment("If set to true, dmgTypesBlacklist is instead treated as a whitelist, meaning the barrier will ONLY block damage sources listed there")
-		public boolean typesIsWhitelist = false;
+		@Config.Comment("If set to true, the barrier will ONLY block damage sources listed there")
+		public boolean typesIsAllowList = false;
 
 		@Config.Comment({"Set to true to enable a barrier debug mode",
 						"This will output the following information to the log whenever the alchemical barrier blocks damage:",

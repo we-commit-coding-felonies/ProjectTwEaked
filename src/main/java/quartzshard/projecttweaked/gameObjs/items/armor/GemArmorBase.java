@@ -123,8 +123,8 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor
 	}
 
 	public boolean checkListForDamageType(String type) {
-		List<String> typeList = Arrays.asList(ProjectTwEakedConfig.alchemicalBarrier.dmgTypesBlacklist);
-		if (ProjectTwEakedConfig.alchemicalBarrier.typesIsWhitelist) {
+		List<String> typeList = Arrays.asList(ProjectTwEakedConfig.alchemicalBarrier.dmgTypesList);
+		if (ProjectTwEakedConfig.alchemicalBarrier.typesIsAllowList) {
 			if (typeList.contains(type)) {
 				return true;
 			}

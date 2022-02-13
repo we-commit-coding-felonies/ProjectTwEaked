@@ -91,7 +91,7 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor
 		if (checkListForDamageType(source.getDamageType())) {
 			if (damage * costPerDamage <= provider.getEmc() && provider.getEmc() > 0)
 			{	
-				long cost = (long)damage * 64;
+				long cost = (long)damage * costPerDamage;
 				if (cost < 0)
 				{
 					cost *= -1;
@@ -105,10 +105,19 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor
 			}
 			else
 			{
-				provider.setEmc(0);
-				provider.sync((EntityPlayerMP)player);
+				switch (ProjectTwEakedConfig.alchemicalBarrier.lowEMCMode) {
+					case 0:
+						provider.setEmc(0);
+						provider.sync((EntityPlayerMP)player);
+						break;
+					case 1:
+						break;
+					case 2:
+						//TODO: Armor cannibalism
+						break;
+				}
+				return false;
 			}
-			return false;
 		}
 		return false;
 	}

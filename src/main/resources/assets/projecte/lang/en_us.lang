@@ -436,3 +436,4 @@ pe.subtitle.pecharge=Alchemical charge
 pe.subtitle.peuncharge=Alchemical release
 pe.subtitle.petransmute=Something transmutes
 pe.subtitle.peprotect=Alchemical barrier activates
+pe.subtitle.peprotectfail=Alchemical barrier dissipates

@@ -43,5 +43,10 @@
     {
         "sounds": [ "projecte:item/peprotect" ],
         "subtitle": "pe.subtitle.peprotect"
+    },
+    "item.peprotectfail":
+    {
+        "sounds": [ "projecte:item/peprotectfail" ],
+        "subtitle": "pe.subtitle.peprotectfail"
     }
 }

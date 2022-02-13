@@ -95,8 +95,13 @@ public interface IAlchShield {
 			{
 				switch (ProjectTwEakedConfig.alchemicalBarrier.lowEMCMode) {
 					case 0:
+						if (provider.getEmc() <= 0) {
+							break;
+						}
+						float affordableDamage = provider.getEmc() / costPerDamage;
 						provider.setEmc(0);
 						provider.sync((EntityPlayerMP)player);
+						player.attackEntityFrom(source, damage - affordableDamage);
 						break;
 					case 1:
 						break;

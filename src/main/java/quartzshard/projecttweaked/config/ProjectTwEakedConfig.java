@@ -256,6 +256,14 @@ public final class ProjectTwEakedConfig
 	@Config.Comment("This section contains config relating to the 3 armor sets, Dark, Red, and Gem")
 	public static final MatterArmors matterArmors = new MatterArmors();
 	public static class MatterArmors {
+		@Config.Comment({"How much durability Dark Matter armor has, in order of helmet, chestplate, leggings, boots",
+						"0 means infinite durability"})
+		public int[] dmArmorDurability = {
+			0,
+			0,
+			0,
+			0
+		};
 	}
 
 	@Config.Comment("This section contains settings related to the Gem Armor Alchemical Barrier")

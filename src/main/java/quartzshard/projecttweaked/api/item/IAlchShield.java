@@ -102,7 +102,7 @@ public interface IAlchShield {
 						provider.setEmc(0);
 						provider.sync((EntityPlayerMP)player);
 						player.attackEntityFrom(source, damage - affordableDamage);
-						break;
+						return true;
 					case 1:
 						break;
 					case 2:

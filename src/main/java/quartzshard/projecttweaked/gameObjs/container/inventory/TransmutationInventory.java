@@ -1,26 +1,30 @@
 package quartzshard.projecttweaked.gameObjs.container.inventory;
 
-import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
-import quartzshard.projecttweaked.api.event.PlayerAttemptLearnEvent;
-import quartzshard.projecttweaked.api.item.IItemEmc;
-import quartzshard.projecttweaked.emc.FuelMapper;
-import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
-import quartzshard.projecttweaked.utils.Constants;
-import quartzshard.projecttweaked.utils.EMCHelper;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import quartzshard.projecttweaked.utils.NBTWhitelist;
-import quartzshard.projecttweaked.utils.PlayerHelper;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Locale;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.wrapper.CombinedInvWrapper;
-
-import java.util.*;
+import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
+import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
+import quartzshard.projecttweaked.api.event.PlayerAttemptLearnEvent;
+import quartzshard.projecttweaked.api.item.IItemEmc;
+import quartzshard.projecttweaked.emc.FuelMapper;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.NBTWhitelist;
+import quartzshard.projecttweaked.utils.PlayerHelper;
 
 public class TransmutationInventory extends CombinedInvWrapper
 {

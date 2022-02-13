@@ -1,12 +1,9 @@
 package quartzshard.projecttweaked.utils;
 
+import org.apache.commons.lang3.tuple.ImmutablePair;
+import org.apache.commons.lang3.tuple.Pair;
+
 import baubles.api.BaublesApi;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.gameObjs.items.ItemPE;
-import quartzshard.projecttweaked.network.PacketHandler;
-import quartzshard.projecttweaked.network.packets.CooldownResetPKT;
-import quartzshard.projecttweaked.network.packets.SetFlyPKT;
-import quartzshard.projecttweaked.network.packets.StepHeightPKT;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -31,8 +28,12 @@ import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.items.IItemHandler;
-import org.apache.commons.lang3.tuple.ImmutablePair;
-import org.apache.commons.lang3.tuple.Pair;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.items.ItemPE;
+import quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.network.packets.CooldownResetPKT;
+import quartzshard.projecttweaked.network.packets.SetFlyPKT;
+import quartzshard.projecttweaked.network.packets.StepHeightPKT;
 
 /**
  * Helper class for player-related methods.

@@ -1,10 +1,7 @@
 package quartzshard.projecttweaked.network;
 
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.emc.EMCMapper;
-import quartzshard.projecttweaked.emc.SimpleStack;
-import quartzshard.projecttweaked.network.packets.SyncEmcPKT;
-import quartzshard.projecttweaked.network.packets.*;
+import java.util.Map;
+
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IContainerListener;
@@ -16,8 +13,25 @@ import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;
-
-import java.util.Map;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.emc.EMCMapper;
+import quartzshard.projecttweaked.emc.SimpleStack;
+import quartzshard.projecttweaked.network.packets.CheckUpdatePKT;
+import quartzshard.projecttweaked.network.packets.CooldownResetPKT;
+import quartzshard.projecttweaked.network.packets.KeyPressPKT;
+import quartzshard.projecttweaked.network.packets.KnowledgeClearPKT;
+import quartzshard.projecttweaked.network.packets.KnowledgeSyncPKT;
+import quartzshard.projecttweaked.network.packets.LeftClickArchangelPKT;
+import quartzshard.projecttweaked.network.packets.SearchUpdatePKT;
+import quartzshard.projecttweaked.network.packets.SetFlyPKT;
+import quartzshard.projecttweaked.network.packets.ShowBagPKT;
+import quartzshard.projecttweaked.network.packets.StepHeightPKT;
+import quartzshard.projecttweaked.network.packets.SyncBagDataPKT;
+import quartzshard.projecttweaked.network.packets.SyncCovalencePKT;
+import quartzshard.projecttweaked.network.packets.SyncEmcPKT;
+import quartzshard.projecttweaked.network.packets.UpdateGemModePKT;
+import quartzshard.projecttweaked.network.packets.UpdateWindowIntPKT;
+import quartzshard.projecttweaked.network.packets.UpdateWindowLongPKT;
 
 public final class PacketHandler
 {

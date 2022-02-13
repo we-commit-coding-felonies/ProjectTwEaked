@@ -1,20 +1,19 @@
 package quartzshard.projecttweaked.gameObjs.blocks;
 
-import quartzshard.projecttweaked.api.state.PEStateProps;
-import quartzshard.projecttweaked.api.state.enums.EnumFuelType;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import javax.annotation.Nonnull;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.api.state.PEStateProps;
+import quartzshard.projecttweaked.api.state.enums.EnumFuelType;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
 
 public class FuelBlock extends Block 
 {

@@ -1,8 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.container.inventory;
 
-import quartzshard.projecttweaked.network.PacketHandler;
-import quartzshard.projecttweaked.network.packets.UpdateGemModePKT;
-import quartzshard.projecttweaked.utils.ItemHelper;
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -10,8 +9,9 @@ import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.ItemStackHandler;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.network.packets.UpdateGemModePKT;
+import quartzshard.projecttweaked.utils.ItemHelper;
 
 public class EternalDensityInventory implements IItemHandlerModifiable
 {

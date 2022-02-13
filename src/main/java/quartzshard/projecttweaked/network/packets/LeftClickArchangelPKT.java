@@ -1,13 +1,13 @@
 package quartzshard.projecttweaked.network.packets;
 
 import io.netty.buffer.ByteBuf;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.gameObjs.items.rings.ArchangelSmite;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.items.rings.ArchangelSmite;
 
 public class LeftClickArchangelPKT implements IMessage
 {

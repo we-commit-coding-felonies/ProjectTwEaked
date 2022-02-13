@@ -1,7 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.tiles;
 
-import quartzshard.projecttweaked.api.item.IAlchChestItem;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import javax.annotation.Nonnull;
+
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -10,8 +10,8 @@ import net.minecraft.util.SoundCategory;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.api.item.IAlchChestItem;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
 
 public class AlchChestTile extends TileEmc
 {

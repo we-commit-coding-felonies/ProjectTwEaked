@@ -1,11 +1,11 @@
 package quartzshard.projecttweaked.gameObjs.entity;
 
-import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.MoverType;
 import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.World;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 public class EntityNovaCatalystPrimed extends EntityTNTPrimed
 {

@@ -1,10 +1,10 @@
 package quartzshard.projecttweaked.api.item;
 
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;
-
-import javax.annotation.Nonnull;
 
 /**
  * This interfaces specifies items that perform a specific function every tick when inside an Alchemical Bag, on a player

@@ -1,8 +1,8 @@
 package quartzshard.projecttweaked.api.tile;
 
-import net.minecraft.util.EnumFacing;
-
 import javax.annotation.Nonnull;
+
+import net.minecraft.util.EnumFacing;
 
 /**
  * Reference implementation of both IEMCAcceptor and IEMCProvider

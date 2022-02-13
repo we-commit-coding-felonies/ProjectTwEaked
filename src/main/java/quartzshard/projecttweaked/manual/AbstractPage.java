@@ -1,16 +1,18 @@
 package quartzshard.projecttweaked.manual;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.google.common.collect.Lists;
-import quartzshard.projecttweaked.gameObjs.gui.GUIManual;
+
+import org.apache.commons.lang3.StringUtils;
+
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import org.apache.commons.lang3.StringUtils;
-
-import java.util.ArrayList;
-import java.util.List;
+import quartzshard.projecttweaked.gameObjs.gui.GUIManual;
 
 @SideOnly(Side.CLIENT)
 public abstract class AbstractPage

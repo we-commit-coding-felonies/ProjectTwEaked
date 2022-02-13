@@ -1,12 +1,12 @@
 package quartzshard.projecttweaked.gameObjs.items.tools;
 
-import quartzshard.projecttweaked.utils.PlayerHelper;
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.utils.PlayerHelper;
 
 public class RedSword extends DarkSword
 {

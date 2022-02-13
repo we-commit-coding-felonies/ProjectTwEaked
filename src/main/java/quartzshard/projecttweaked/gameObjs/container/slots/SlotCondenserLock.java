@@ -1,10 +1,10 @@
 package quartzshard.projecttweaked.gameObjs.container.slots;
 
-import quartzshard.projecttweaked.utils.ItemHelper;
+import javax.annotation.Nonnull;
+
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.utils.ItemHelper;
 
 public class SlotCondenserLock extends SlotGhost {
 	public SlotCondenserLock(IItemHandler itemHandler, int index, int xPosition, int yPosition) {

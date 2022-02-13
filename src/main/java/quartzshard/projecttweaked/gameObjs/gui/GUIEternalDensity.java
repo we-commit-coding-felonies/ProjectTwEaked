@@ -1,8 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.gui;
 
-import quartzshard.projecttweaked.gameObjs.container.inventory.EternalDensityInventory;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.gameObjs.container.EternalDensityContainer;
+import java.io.IOException;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -10,8 +9,9 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-
-import java.io.IOException;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.container.EternalDensityContainer;
+import quartzshard.projecttweaked.gameObjs.container.inventory.EternalDensityInventory;
 
 public class GUIEternalDensity extends GuiContainer
 {

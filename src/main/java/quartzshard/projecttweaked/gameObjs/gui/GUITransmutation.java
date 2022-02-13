@@ -1,10 +1,11 @@
 package quartzshard.projecttweaked.gameObjs.gui;
 
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.gameObjs.container.TransmutationContainer;
-import quartzshard.projecttweaked.gameObjs.container.inventory.TransmutationInventory;
-import quartzshard.projecttweaked.utils.Constants;
-import quartzshard.projecttweaked.utils.TransmutationEMCFormatter;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Locale;
+
+import javax.annotation.Nullable;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiTextField;
@@ -14,11 +15,11 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
-
-import javax.annotation.Nullable;
-import java.io.IOException;
-import java.util.Locale;
-import java.util.Arrays;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.container.TransmutationContainer;
+import quartzshard.projecttweaked.gameObjs.container.inventory.TransmutationInventory;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.TransmutationEMCFormatter;
 
 public class GUITransmutation extends GuiContainer
 {

@@ -1,7 +1,5 @@
 package quartzshard.projecttweaked.gameObjs.entity;
 
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.gameObjs.items.ItemPE;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
@@ -10,6 +8,8 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.items.ItemPE;
 
 public class EntitySWRGProjectile extends PEProjectile
 {
@@ -102,6 +102,7 @@ public class EntitySWRGProjectile extends PEProjectile
 
 				break;
 			}
+			case MISS:
 		}
 	}
 

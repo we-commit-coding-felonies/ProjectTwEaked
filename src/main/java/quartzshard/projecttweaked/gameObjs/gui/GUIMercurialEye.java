@@ -1,13 +1,13 @@
 package quartzshard.projecttweaked.gameObjs.gui;
 
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.gameObjs.container.MercurialEyeContainer;
-import quartzshard.projecttweaked.gameObjs.container.inventory.MercurialEyeInventory;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.container.MercurialEyeContainer;
+import quartzshard.projecttweaked.gameObjs.container.inventory.MercurialEyeInventory;
 
 public class GUIMercurialEye extends GuiContainer
 {

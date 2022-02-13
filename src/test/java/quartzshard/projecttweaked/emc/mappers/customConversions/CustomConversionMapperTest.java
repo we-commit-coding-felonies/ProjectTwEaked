@@ -1,18 +1,20 @@
 package quartzshard.projecttweaked.emc.mappers.customConversions;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+
+import java.io.StringReader;
+import java.util.List;
+
+import org.junit.Test;
+
 import quartzshard.projecttweaked.emc.json.NSSFake;
 import quartzshard.projecttweaked.emc.json.NSSItem;
 import quartzshard.projecttweaked.emc.mappers.customConversions.json.ConversionGroup;
 import quartzshard.projecttweaked.emc.mappers.customConversions.json.CustomConversion;
 import quartzshard.projecttweaked.emc.mappers.customConversions.json.CustomConversionFile;
-import quartzshard.projecttweaked.emc.mappers.customConversions.CustomConversionMapper;
-
-
-import org.junit.Test;
-
-import java.io.StringReader;
-import java.util.List;
 
 public class CustomConversionMapperTest
 {

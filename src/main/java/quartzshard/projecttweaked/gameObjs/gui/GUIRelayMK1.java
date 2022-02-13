@@ -1,15 +1,15 @@
 package quartzshard.projecttweaked.gameObjs.gui;
 
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.gameObjs.container.RelayMK1Container;
-import quartzshard.projecttweaked.gameObjs.tiles.RelayMK1Tile;
-import quartzshard.projecttweaked.utils.Constants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.container.RelayMK1Container;
+import quartzshard.projecttweaked.gameObjs.tiles.RelayMK1Tile;
+import quartzshard.projecttweaked.utils.Constants;
 
 public class GUIRelayMK1 extends GuiContainer
 {

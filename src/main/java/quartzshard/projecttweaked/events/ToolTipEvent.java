@@ -1,14 +1,8 @@
 package quartzshard.projecttweaked.events;
 
-import com.google.common.math.LongMath;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
-import quartzshard.projecttweaked.api.item.IItemEmc;
-import quartzshard.projecttweaked.api.item.IPedestalItem;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import quartzshard.projecttweaked.utils.Constants;
-import quartzshard.projecttweaked.utils.EMCHelper;
+import java.math.BigInteger;
+import java.util.List;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
@@ -23,9 +17,14 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.oredict.OreDictionary;
-
-import java.math.BigInteger;
-import java.util.List;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
+import quartzshard.projecttweaked.api.item.IItemEmc;
+import quartzshard.projecttweaked.api.item.IPedestalItem;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.EMCHelper;
 
 @Mod.EventBusSubscriber(value = Side.CLIENT, modid = PECore.MODID)
 public class ToolTipEvent 

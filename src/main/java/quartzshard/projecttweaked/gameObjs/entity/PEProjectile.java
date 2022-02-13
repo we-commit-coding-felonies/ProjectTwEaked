@@ -1,15 +1,15 @@
 package quartzshard.projecttweaked.gameObjs.entity;
 
-import quartzshard.projecttweaked.gameObjs.items.ItemPE;
-import quartzshard.projecttweaked.utils.PlayerHelper;
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.gameObjs.items.ItemPE;
+import quartzshard.projecttweaked.utils.PlayerHelper;
 
 public abstract class PEProjectile extends EntityThrowable
 {

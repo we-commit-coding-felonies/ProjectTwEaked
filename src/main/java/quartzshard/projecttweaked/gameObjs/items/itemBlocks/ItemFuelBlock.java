@@ -1,11 +1,11 @@
 package quartzshard.projecttweaked.gameObjs.items.itemBlocks;
 
-import quartzshard.projecttweaked.utils.Constants;
+import javax.annotation.Nonnull;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.utils.Constants;
 
 public class ItemFuelBlock extends ItemBlock
 {

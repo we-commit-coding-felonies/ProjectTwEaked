@@ -1,10 +1,10 @@
 package quartzshard.projecttweaked.gameObjs.items;
 
-import com.google.common.collect.Lists;
-import quartzshard.projecttweaked.api.item.IItemCharge;
-import quartzshard.projecttweaked.api.PESounds;
-import quartzshard.projecttweaked.utils.PlayerHelper;
-import quartzshard.projecttweaked.utils.WorldHelper;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import net.minecraft.block.BlockShulkerBox;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,10 +19,10 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
-
-import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.List;
+import quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.api.item.IItemCharge;
+import quartzshard.projecttweaked.utils.PlayerHelper;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 public class DestructionCatalyst extends ItemPE implements IItemCharge
 {

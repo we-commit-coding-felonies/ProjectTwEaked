@@ -1,8 +1,9 @@
 package quartzshard.projecttweaked.emc.mappers.customConversions.json;
 
-import com.google.common.collect.Maps;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.Map;
+
 import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
@@ -11,12 +12,9 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.reflect.TypeToken;
+
 import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
 import quartzshard.projecttweaked.emc.mappers.customConversions.CustomConversionMapper;
-
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.Map;
 
 public class CustomConversionDeserializer implements JsonDeserializer<CustomConversion>
 {

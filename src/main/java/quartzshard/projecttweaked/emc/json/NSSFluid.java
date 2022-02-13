@@ -1,8 +1,8 @@
 package quartzshard.projecttweaked.emc.json;
 
-import net.minecraftforge.fluids.Fluid;
-
 import javax.annotation.Nonnull;
+
+import net.minecraftforge.fluids.Fluid;
 
 public class NSSFluid implements NormalizedSimpleStack {
 	public final String name;

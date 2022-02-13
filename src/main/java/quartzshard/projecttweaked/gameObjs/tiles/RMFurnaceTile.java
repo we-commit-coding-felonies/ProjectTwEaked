@@ -1,10 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.tiles;
 
-import quartzshard.projecttweaked.api.item.IItemEmc;
-import quartzshard.projecttweaked.api.tile.IEmcAcceptor;
-import quartzshard.projecttweaked.gameObjs.blocks.MatterFurnace;
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
-import quartzshard.projecttweaked.utils.ItemHelper;
+import javax.annotation.Nonnull;
+
 import net.minecraft.block.Block;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
@@ -27,8 +24,11 @@ import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.wrapper.CombinedInvWrapper;
 import net.minecraftforge.items.wrapper.InvWrapper;
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.api.item.IItemEmc;
+import quartzshard.projecttweaked.api.tile.IEmcAcceptor;
+import quartzshard.projecttweaked.gameObjs.blocks.MatterFurnace;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
+import quartzshard.projecttweaked.utils.ItemHelper;
 
 public class RMFurnaceTile extends TileEmc implements IEmcAcceptor
 {

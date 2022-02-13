@@ -1,5 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.customRecipes;
 
+import javax.annotation.Nonnull;
+
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
@@ -7,8 +9,6 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.crafting.ShapelessRecipes;
 import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
-
-import javax.annotation.Nonnull;
 
 /**
  * Composes a ShapelessRecipes to hide it from JEI

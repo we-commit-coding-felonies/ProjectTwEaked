@@ -1,8 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.container;
 
-import quartzshard.projecttweaked.gameObjs.container.inventory.EternalDensityInventory;
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotGhost;
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ClickType;
@@ -10,8 +9,9 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.ItemHandlerHelper;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.gameObjs.container.inventory.EternalDensityInventory;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotGhost;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
 
 public class EternalDensityContainer extends Container
 {

@@ -1,12 +1,14 @@
 package quartzshard.projecttweaked.utils;
 
 import com.google.common.collect.ImmutableBiMap;
-import quartzshard.projecttweaked.PECore;
+
+import org.lwjgl.input.Keyboard;
+
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import org.lwjgl.input.Keyboard;
+import quartzshard.projecttweaked.PECore;
 
 /**
  * Clientside key helper - because PEKeybind cannot touch client classes or it will crash dedicated servers

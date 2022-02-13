@@ -1,15 +1,15 @@
 package quartzshard.projecttweaked.gameObjs.items;
 
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.utils.Constants;
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.utils.Constants;
 
 public class TransmutationTablet extends ItemPE
 {

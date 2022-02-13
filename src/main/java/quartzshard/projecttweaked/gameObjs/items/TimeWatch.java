@@ -1,17 +1,16 @@
 package quartzshard.projecttweaked.gameObjs.items;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+
+import javax.annotation.Nonnull;
+
+import com.google.common.collect.Sets;
+
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
-import quartzshard.projecttweaked.api.item.IItemCharge;
-import quartzshard.projecttweaked.api.item.IPedestalItem;
-import quartzshard.projecttweaked.api.item.IModeChanger;
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
-import quartzshard.projecttweaked.utils.EMCHelper;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLiquid;
 import net.minecraft.block.IGrowable;
@@ -40,12 +39,14 @@ import net.minecraftforge.fluids.BlockFluidBase;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
+import quartzshard.projecttweaked.api.item.IItemCharge;
+import quartzshard.projecttweaked.api.item.IModeChanger;
+import quartzshard.projecttweaked.api.item.IPedestalItem;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 @Optional.Interface(iface = "baubles.api.IBauble", modid = "baubles")
 public class TimeWatch extends ItemPE implements IModeChanger, IBauble, IPedestalItem, IItemCharge

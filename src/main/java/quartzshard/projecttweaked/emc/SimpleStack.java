@@ -1,11 +1,11 @@
 package quartzshard.projecttweaked.emc;
 
+import java.util.Objects;
+
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.oredict.OreDictionary;
-
-import java.util.Objects;
 
 public class SimpleStack
 {

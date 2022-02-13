@@ -1,10 +1,9 @@
 package quartzshard.projecttweaked.emc.mappers.customConversions.json;
 
-import com.google.common.collect.Maps;
-import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-
 import java.util.HashMap;
 import java.util.Map;
+
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
 
 public class CustomConversion
 {

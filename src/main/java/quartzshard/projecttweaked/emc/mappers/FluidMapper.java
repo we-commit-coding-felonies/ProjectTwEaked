@@ -1,6 +1,22 @@
 package quartzshard.projecttweaked.emc.mappers;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 import com.google.common.collect.ImmutableMap;
+
+import org.apache.commons.lang3.tuple.Pair;
+
+import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fluids.FluidStack;
 import quartzshard.projecttweaked.PECore;
 import quartzshard.projecttweaked.emc.arithmetics.FullBigFractionArithmetic;
 import quartzshard.projecttweaked.emc.collector.IExtendedMappingCollector;
@@ -10,20 +26,6 @@ import quartzshard.projecttweaked.emc.json.NSSFluid;
 import quartzshard.projecttweaked.emc.json.NSSItem;
 import quartzshard.projecttweaked.emc.json.NSSOreDictionary;
 import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidRegistry;
-import net.minecraftforge.fluids.FluidStack;
-import org.apache.commons.lang3.tuple.Pair;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 public class FluidMapper implements IEMCMapper<NormalizedSimpleStack, Long> {
 	private static final List<Pair<NormalizedSimpleStack, FluidStack>> melting = new ArrayList<>();

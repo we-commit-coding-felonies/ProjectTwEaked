@@ -1,8 +1,8 @@
 package quartzshard.projecttweaked.proxies;
 
+import net.minecraft.entity.player.EntityPlayer;
 import quartzshard.projecttweaked.api.capabilities.IAlchBagProvider;
 import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
-import net.minecraft.entity.player.EntityPlayer;
 
 public class ServerProxy implements IProxy
 {

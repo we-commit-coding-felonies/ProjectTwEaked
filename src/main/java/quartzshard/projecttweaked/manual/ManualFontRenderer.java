@@ -1,14 +1,15 @@
 package quartzshard.projecttweaked.manual;
 
+import java.util.Arrays;
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nonnull;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * A shim class that very slightly modifies the behavior of the default fontrenderer. The modifed area is indicated via comment.

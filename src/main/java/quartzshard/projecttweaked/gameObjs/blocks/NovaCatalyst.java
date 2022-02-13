@@ -1,7 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.blocks;
 
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.gameObjs.entity.EntityNovaCatalystPrimed;
+import javax.annotation.Nonnull;
+
 import net.minecraft.block.BlockTNT;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
@@ -9,8 +9,8 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.entity.EntityNovaCatalystPrimed;
 
 public class NovaCatalyst extends BlockTNT
 {

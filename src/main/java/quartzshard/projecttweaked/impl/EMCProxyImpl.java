@@ -1,17 +1,18 @@
 package quartzshard.projecttweaked.impl;
 
+import javax.annotation.Nonnull;
+
 import com.google.common.base.Preconditions;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.api.proxy.IEMCProxy;
-import quartzshard.projecttweaked.emc.mappers.APICustomEMCMapper;
-import quartzshard.projecttweaked.utils.EMCHelper;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.LoaderState;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.proxy.IEMCProxy;
+import quartzshard.projecttweaked.emc.mappers.APICustomEMCMapper;
+import quartzshard.projecttweaked.utils.EMCHelper;
 
 public class EMCProxyImpl implements IEMCProxy
 {

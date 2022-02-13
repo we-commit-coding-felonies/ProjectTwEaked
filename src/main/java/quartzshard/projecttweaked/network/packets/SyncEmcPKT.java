@@ -1,17 +1,17 @@
 package quartzshard.projecttweaked.network.packets;
 
 import io.netty.buffer.ByteBuf;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.emc.EMCMapper;
-import quartzshard.projecttweaked.emc.FuelMapper;
-import quartzshard.projecttweaked.emc.SimpleStack;
-import quartzshard.projecttweaked.playerData.Transmutation;
 import net.minecraft.client.Minecraft;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.network.ByteBufUtils;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.emc.EMCMapper;
+import quartzshard.projecttweaked.emc.FuelMapper;
+import quartzshard.projecttweaked.emc.SimpleStack;
+import quartzshard.projecttweaked.playerData.Transmutation;
 
 public class SyncEmcPKT implements IMessage
 {

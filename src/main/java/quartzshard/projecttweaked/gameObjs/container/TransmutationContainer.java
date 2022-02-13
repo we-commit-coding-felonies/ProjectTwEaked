@@ -1,16 +1,8 @@
 package quartzshard.projecttweaked.gameObjs.container;
 
-import quartzshard.projecttweaked.gameObjs.container.inventory.TransmutationInventory;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.gameObjs.container.slots.transmutation.SlotConsume;
-import quartzshard.projecttweaked.gameObjs.container.slots.transmutation.SlotInput;
-import quartzshard.projecttweaked.gameObjs.container.slots.transmutation.SlotLock;
-import quartzshard.projecttweaked.gameObjs.container.slots.transmutation.SlotOutput;
-import quartzshard.projecttweaked.gameObjs.container.slots.transmutation.SlotUnlearn;
-import quartzshard.projecttweaked.network.PacketHandler;
-import quartzshard.projecttweaked.network.packets.SearchUpdatePKT;
-import quartzshard.projecttweaked.utils.EMCHelper;
-import quartzshard.projecttweaked.utils.ItemHelper;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ClickType;
@@ -22,9 +14,17 @@ import net.minecraft.util.EnumHand;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.container.inventory.TransmutationInventory;
+import quartzshard.projecttweaked.gameObjs.container.slots.transmutation.SlotConsume;
+import quartzshard.projecttweaked.gameObjs.container.slots.transmutation.SlotInput;
+import quartzshard.projecttweaked.gameObjs.container.slots.transmutation.SlotLock;
+import quartzshard.projecttweaked.gameObjs.container.slots.transmutation.SlotOutput;
+import quartzshard.projecttweaked.gameObjs.container.slots.transmutation.SlotUnlearn;
+import quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.network.packets.SearchUpdatePKT;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
 
 public class TransmutationContainer extends Container
 {

@@ -1,17 +1,5 @@
 package quartzshard.projecttweaked.emc.mappers;
 
-import com.google.common.collect.Maps;
-import com.google.common.collect.Sets;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.emc.json.NSSItem;
-import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-import quartzshard.projecttweaked.emc.collector.IMappingCollector;
-import quartzshard.projecttweaked.impl.ConversionProxyImpl;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.fml.common.Loader;
-import net.minecraftforge.fml.common.ModContainer;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -19,6 +7,16 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.fml.common.ModContainer;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.emc.collector.IMappingCollector;
+import quartzshard.projecttweaked.emc.json.NSSItem;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.impl.ConversionProxyImpl;
 
 public class APICustomEMCMapper implements IEMCMapper<NormalizedSimpleStack, Long> {
 	public static final APICustomEMCMapper instance = new APICustomEMCMapper();

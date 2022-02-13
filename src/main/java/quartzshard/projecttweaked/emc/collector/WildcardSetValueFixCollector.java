@@ -1,11 +1,11 @@
 package quartzshard.projecttweaked.emc.collector;
 
+import java.util.Map;
+
+import net.minecraftforge.oredict.OreDictionary;
 import quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
 import quartzshard.projecttweaked.emc.json.NSSItem;
 import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-import net.minecraftforge.oredict.OreDictionary;
-
-import java.util.Map;
 
 /**
  * This Collector catches all setValueBefore, setValueAfter and setValueFromConversion calls

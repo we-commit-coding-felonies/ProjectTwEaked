@@ -1,10 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.container;
 
-import quartzshard.projecttweaked.api.item.IItemEmc;
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
-import quartzshard.projecttweaked.gameObjs.container.slots.ValidatedSlot;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.gameObjs.tiles.RMFurnaceTile;
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -16,8 +13,11 @@ import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.IItemHandler;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.api.item.IItemEmc;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
+import quartzshard.projecttweaked.gameObjs.container.slots.ValidatedSlot;
+import quartzshard.projecttweaked.gameObjs.tiles.RMFurnaceTile;
 
 public class RMFurnaceContainer extends Container
 {

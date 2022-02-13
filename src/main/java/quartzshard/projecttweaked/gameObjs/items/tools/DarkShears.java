@@ -1,5 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.items.tools;
 
+import javax.annotation.Nonnull;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -13,8 +15,6 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IShearable;
-
-import javax.annotation.Nonnull;
 
 public class DarkShears extends PEToolBase
 {

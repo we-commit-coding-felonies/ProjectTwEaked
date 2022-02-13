@@ -1,12 +1,12 @@
 package quartzshard.projecttweaked.impl;
 
-import quartzshard.projecttweaked.PECore;
+import java.util.Locale;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.fml.common.event.FMLInterModComms;
-
-import java.util.Locale;
+import quartzshard.projecttweaked.PECore;
 
 // TODO 1.13 change to use te/entity ids instead of class names
 public class IMCHandler

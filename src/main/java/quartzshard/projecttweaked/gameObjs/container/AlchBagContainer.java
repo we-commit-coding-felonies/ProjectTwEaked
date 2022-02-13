@@ -1,5 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.container;
 
+import javax.annotation.Nonnull;
+
 import invtweaks.api.container.ChestContainer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -10,8 +12,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.SlotItemHandler;
-
-import javax.annotation.Nonnull;
 
 @ChestContainer(isLargeChest = true, rowSize = 13)
 public class AlchBagContainer extends Container

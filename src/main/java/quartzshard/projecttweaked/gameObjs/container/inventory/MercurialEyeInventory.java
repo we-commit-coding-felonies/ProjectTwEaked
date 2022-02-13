@@ -1,10 +1,10 @@
 package quartzshard.projecttweaked.gameObjs.container.inventory;
 
+import javax.annotation.Nonnull;
+
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandlerModifiable;
-
-import javax.annotation.Nonnull;
 
 public class MercurialEyeInventory implements IItemHandlerModifiable
 {

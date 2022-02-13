@@ -1,11 +1,17 @@
 package quartzshard.projecttweaked.network.commands;
 
-import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
-import quartzshard.projecttweaked.api.capabilities.IAlchBagProvider;
-import quartzshard.projecttweaked.gameObjs.container.AlchBagContainer;
-import quartzshard.projecttweaked.impl.AlchBagImpl;
-import quartzshard.projecttweaked.network.PacketHandler;
-import quartzshard.projecttweaked.network.packets.ShowBagPKT;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Locale;
+import java.util.UUID;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
@@ -22,17 +28,12 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.items.IItemHandlerModifiable;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
-import java.util.UUID;
+import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
+import quartzshard.projecttweaked.api.capabilities.IAlchBagProvider;
+import quartzshard.projecttweaked.gameObjs.container.AlchBagContainer;
+import quartzshard.projecttweaked.impl.AlchBagImpl;
+import quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.network.packets.ShowBagPKT;
 
 public class ShowBagCMD extends CommandBase {
 	@Override

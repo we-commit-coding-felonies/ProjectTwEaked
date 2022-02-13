@@ -1,14 +1,13 @@
 package quartzshard.projecttweaked.emc.mappers.customConversions.json;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.google.gson.annotations.SerializedName;
-import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.google.gson.annotations.SerializedName;
+
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
 
 public class FixedValues
 {

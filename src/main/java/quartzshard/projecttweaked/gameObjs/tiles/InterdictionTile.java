@@ -1,9 +1,9 @@
 package quartzshard.projecttweaked.gameObjs.tiles;
 
-import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.math.AxisAlignedBB;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 public class InterdictionTile extends TileEntity implements ITickable
 {

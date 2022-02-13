@@ -49,6 +49,8 @@ public class CondenserMK2Renderer extends TileEntitySpecialRenderer<CondenserMK2
 				case SOUTH: angle = 0; break;
 				case WEST: angle = 90; break;
 				case EAST: angle = -90; break;
+				case UP:
+				case DOWN:
 			}
 		}
 

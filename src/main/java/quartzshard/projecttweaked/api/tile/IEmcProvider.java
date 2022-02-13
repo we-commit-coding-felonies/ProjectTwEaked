@@ -1,8 +1,8 @@
 package quartzshard.projecttweaked.api.tile;
 
-import net.minecraft.util.EnumFacing;
-
 import javax.annotation.Nonnull;
+
+import net.minecraft.util.EnumFacing;
 
 /**
  * Implement this interface to specify that "EMC can be taken from this Tile Entity from an external source"

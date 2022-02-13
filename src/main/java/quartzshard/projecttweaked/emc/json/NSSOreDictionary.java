@@ -1,11 +1,9 @@
 package quartzshard.projecttweaked.emc.json;
 
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
-
-import javax.annotation.Nullable;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.annotation.Nullable;
 
 public class NSSOreDictionary implements NormalizedSimpleStack {
 	static final Map<String, NormalizedSimpleStack> oreDictStacks = new HashMap<>();

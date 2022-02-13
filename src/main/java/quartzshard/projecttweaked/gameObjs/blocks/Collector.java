@@ -1,14 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.blocks;
 
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.api.item.IItemEmc;
-import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK0Tile;
-import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK1Tile;
-import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK2Tile;
-import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK3Tile;
-import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK4Tile;
-import quartzshard.projecttweaked.utils.Constants;
-import quartzshard.projecttweaked.utils.MathUtils;
+import javax.annotation.Nonnull;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -22,8 +15,15 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.item.IItemEmc;
+import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK0Tile;
+import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK1Tile;
+import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK2Tile;
+import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK3Tile;
+import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK4Tile;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.MathUtils;
 
 public class Collector extends BlockDirection
 {

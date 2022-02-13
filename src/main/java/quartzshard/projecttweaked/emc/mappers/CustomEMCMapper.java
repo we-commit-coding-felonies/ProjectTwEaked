@@ -1,10 +1,10 @@
 package quartzshard.projecttweaked.emc.mappers;
 
+import net.minecraftforge.common.config.Configuration;
 import quartzshard.projecttweaked.PECore;
 import quartzshard.projecttweaked.config.CustomEMCParser;
-import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
 import quartzshard.projecttweaked.emc.collector.IMappingCollector;
-import net.minecraftforge.common.config.Configuration;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
 
 public class CustomEMCMapper implements IEMCMapper<NormalizedSimpleStack, Long> {
 	@Override

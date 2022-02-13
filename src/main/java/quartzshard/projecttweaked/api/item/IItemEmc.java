@@ -1,8 +1,8 @@
 package quartzshard.projecttweaked.api.item;
 
-import net.minecraft.item.ItemStack;
-
 import javax.annotation.Nonnull;
+
+import net.minecraft.item.ItemStack;
 
 /**
  * This interface defines the contract for items that wish to expose their internal EMC storage for external manipulation

@@ -1,20 +1,12 @@
 package quartzshard.projecttweaked.gameObjs.items.rings;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
-import com.google.common.collect.Lists;
-import quartzshard.projecttweaked.api.PESounds;
-import quartzshard.projecttweaked.api.item.IPedestalItem;
-import quartzshard.projecttweaked.api.item.IProjectileShooter;
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import quartzshard.projecttweaked.gameObjs.entity.EntityFireProjectile;
-import quartzshard.projecttweaked.gameObjs.items.IFireProtector;
-import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
-import quartzshard.projecttweaked.utils.EMCHelper;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import quartzshard.projecttweaked.utils.MathUtils;
-import quartzshard.projecttweaked.utils.PlayerHelper;
-import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.block.BlockTNT;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
@@ -37,10 +29,18 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.List;
+import quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.api.item.IPedestalItem;
+import quartzshard.projecttweaked.api.item.IProjectileShooter;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.entity.EntityFireProjectile;
+import quartzshard.projecttweaked.gameObjs.items.IFireProtector;
+import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.MathUtils;
+import quartzshard.projecttweaked.utils.PlayerHelper;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 @Optional.Interface(iface = "baubles.api.IBauble", modid = "baubles")
 public class Ignition extends RingToggle implements IBauble, IPedestalItem, IFireProtector, IProjectileShooter

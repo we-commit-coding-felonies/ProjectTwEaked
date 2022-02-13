@@ -1,9 +1,9 @@
 package quartzshard.projecttweaked.api.tile;
 
+import javax.annotation.Nonnull;
+
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
-
-import javax.annotation.Nonnull;
 
 /**
  * Base class for the reference implementations TileEmcProvider, TileEmcAcceptor, and TileEmcHandler

@@ -1,15 +1,14 @@
 package quartzshard.projecttweaked.gameObjs.items;
 
-import quartzshard.projecttweaked.utils.Constants;
+import javax.annotation.Nonnull;
+
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.utils.Constants;
 
 public class AlchemicalFuel extends ItemPE
 {

@@ -1,12 +1,12 @@
 package quartzshard.projecttweaked.gameObjs.items;
 
-import quartzshard.projecttweaked.api.item.IProjectileShooter;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.api.item.IProjectileShooter;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
 
 public class CataliticLens extends DestructionCatalyst implements IProjectileShooter
 {

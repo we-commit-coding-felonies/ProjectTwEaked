@@ -1,12 +1,12 @@
 package quartzshard.projecttweaked.network.packets;
 
 import io.netty.buffer.ByteBuf;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.network.ThreadCheckUpdate;
 import net.minecraftforge.common.ForgeModContainer;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.network.ThreadCheckUpdate;
 
 public class CheckUpdatePKT implements IMessage
 {

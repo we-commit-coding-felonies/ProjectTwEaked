@@ -1,27 +1,5 @@
 package quartzshard.projecttweaked.emc.mappers.customConversions;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Maps;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import quartzshard.projecttweaked.emc.mappers.customConversions.json.CustomConversionDeserializer;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.emc.json.NSSFake;
-import quartzshard.projecttweaked.emc.json.NSSItem;
-import quartzshard.projecttweaked.emc.json.NSSOreDictionary;
-import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-import quartzshard.projecttweaked.emc.collector.IMappingCollector;
-import quartzshard.projecttweaked.emc.mappers.IEMCMapper;
-import quartzshard.projecttweaked.emc.mappers.customConversions.json.ConversionGroup;
-import quartzshard.projecttweaked.emc.mappers.customConversions.json.CustomConversion;
-import quartzshard.projecttweaked.emc.mappers.customConversions.json.CustomConversionFile;
-import quartzshard.projecttweaked.emc.mappers.customConversions.json.FixedValues;
-import quartzshard.projecttweaked.emc.mappers.customConversions.json.FixedValuesDeserializer;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.oredict.OreDictionary;
-import org.apache.commons.io.IOUtils;
-
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.File;
@@ -35,6 +13,29 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+
+import com.google.common.collect.ImmutableList;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import org.apache.commons.io.IOUtils;
+
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.oredict.OreDictionary;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.emc.collector.IMappingCollector;
+import quartzshard.projecttweaked.emc.json.NSSFake;
+import quartzshard.projecttweaked.emc.json.NSSItem;
+import quartzshard.projecttweaked.emc.json.NSSOreDictionary;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.emc.mappers.IEMCMapper;
+import quartzshard.projecttweaked.emc.mappers.customConversions.json.ConversionGroup;
+import quartzshard.projecttweaked.emc.mappers.customConversions.json.CustomConversion;
+import quartzshard.projecttweaked.emc.mappers.customConversions.json.CustomConversionDeserializer;
+import quartzshard.projecttweaked.emc.mappers.customConversions.json.CustomConversionFile;
+import quartzshard.projecttweaked.emc.mappers.customConversions.json.FixedValues;
+import quartzshard.projecttweaked.emc.mappers.customConversions.json.FixedValuesDeserializer;
 
 public class CustomConversionMapper implements IEMCMapper<NormalizedSimpleStack, Long>
 {

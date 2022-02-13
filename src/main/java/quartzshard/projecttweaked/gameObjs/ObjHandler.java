@@ -1,11 +1,29 @@
 package quartzshard.projecttweaked.gameObjs;
 
+import java.util.Map.Entry;
+
+import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
+import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.EntityEntry;
+import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
+import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.IForgeRegistryEntry;
 import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.gameObjs.customRecipes.RecipeShapelessHidden;
-import quartzshard.projecttweaked.gameObjs.customRecipes.RecipeShapelessKleinStar;
-import quartzshard.projecttweaked.gameObjs.customRecipes.RecipesCovalenceRepair;
-import quartzshard.projecttweaked.gameObjs.items.itemBlocks.ItemFuelBlock;
-import quartzshard.projecttweaked.gameObjs.items.itemBlocks.ItemRelayBlock;
 import quartzshard.projecttweaked.gameObjs.blocks.AlchemicalChest;
 import quartzshard.projecttweaked.gameObjs.blocks.Collector;
 import quartzshard.projecttweaked.gameObjs.blocks.Condenser;
@@ -19,6 +37,9 @@ import quartzshard.projecttweaked.gameObjs.blocks.NovaCatalyst;
 import quartzshard.projecttweaked.gameObjs.blocks.Pedestal;
 import quartzshard.projecttweaked.gameObjs.blocks.Relay;
 import quartzshard.projecttweaked.gameObjs.blocks.TransmutationStone;
+import quartzshard.projecttweaked.gameObjs.customRecipes.RecipeShapelessHidden;
+import quartzshard.projecttweaked.gameObjs.customRecipes.RecipeShapelessKleinStar;
+import quartzshard.projecttweaked.gameObjs.customRecipes.RecipesCovalenceRepair;
 import quartzshard.projecttweaked.gameObjs.entity.EntityFireProjectile;
 import quartzshard.projecttweaked.gameObjs.entity.EntityHomingArrow;
 import quartzshard.projecttweaked.gameObjs.entity.EntityLavaProjectile;
@@ -58,8 +79,10 @@ import quartzshard.projecttweaked.gameObjs.items.itemBlocks.ItemAlchemyChestBloc
 import quartzshard.projecttweaked.gameObjs.items.itemBlocks.ItemCollectorBlock;
 import quartzshard.projecttweaked.gameObjs.items.itemBlocks.ItemCondenserBlock;
 import quartzshard.projecttweaked.gameObjs.items.itemBlocks.ItemDMFurnaceBlock;
+import quartzshard.projecttweaked.gameObjs.items.itemBlocks.ItemFuelBlock;
 import quartzshard.projecttweaked.gameObjs.items.itemBlocks.ItemMatterBlock;
 import quartzshard.projecttweaked.gameObjs.items.itemBlocks.ItemRMFurnaceBlock;
+import quartzshard.projecttweaked.gameObjs.items.itemBlocks.ItemRelayBlock;
 import quartzshard.projecttweaked.gameObjs.items.itemBlocks.ItemTransmutationBlock;
 import quartzshard.projecttweaked.gameObjs.items.rings.Arcana;
 import quartzshard.projecttweaked.gameObjs.items.rings.ArchangelSmite;
@@ -106,32 +129,6 @@ import quartzshard.projecttweaked.gameObjs.tiles.RelayMK1Tile;
 import quartzshard.projecttweaked.gameObjs.tiles.RelayMK2Tile;
 import quartzshard.projecttweaked.gameObjs.tiles.RelayMK3Tile;
 import quartzshard.projecttweaked.gameObjs.tiles.RelayMK4Tile;
-import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
-import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
-import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.common.IFuelHandler;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.EntityEntry;
-import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
-import net.minecraftforge.fml.common.registry.EntityRegistry;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.oredict.OreDictionary;
-import net.minecraftforge.oredict.ShapelessOreRecipe;
-import net.minecraftforge.registries.IForgeRegistry;
-import net.minecraftforge.registries.IForgeRegistryEntry;
-
-import java.util.Map.Entry;
 
 @Mod.EventBusSubscriber(modid = PECore.MODID)
 public class ObjHandler

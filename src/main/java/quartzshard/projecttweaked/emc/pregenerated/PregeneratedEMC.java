@@ -1,10 +1,5 @@
 package quartzshard.projecttweaked.emc.pregenerated;
 
-import com.google.common.reflect.TypeToken;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -13,6 +8,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.Map;
+
+import com.google.common.reflect.TypeToken;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
 
 public class PregeneratedEMC
 {

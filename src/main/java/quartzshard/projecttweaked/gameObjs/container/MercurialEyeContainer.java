@@ -1,17 +1,17 @@
 package quartzshard.projecttweaked.gameObjs.container;
 
-import quartzshard.projecttweaked.gameObjs.container.inventory.MercurialEyeInventory;
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotGhost;
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
-import quartzshard.projecttweaked.gameObjs.container.slots.ValidatedSlot;
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ClickType;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.gameObjs.container.inventory.MercurialEyeInventory;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotGhost;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
+import quartzshard.projecttweaked.gameObjs.container.slots.ValidatedSlot;
 
 public class MercurialEyeContainer extends Container
 {

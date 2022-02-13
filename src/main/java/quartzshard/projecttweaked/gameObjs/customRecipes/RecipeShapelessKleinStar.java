@@ -1,9 +1,12 @@
 package quartzshard.projecttweaked.gameObjs.customRecipes;
 
-import quartzshard.projecttweaked.gameObjs.items.KleinStar;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.IRecipeWrapper;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
@@ -12,11 +15,8 @@ import net.minecraft.item.crafting.ShapelessRecipes;
 import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Optional;
-
-
-import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.List;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.items.KleinStar;
 
 @Optional.Interface(iface = "mezz.jei.api.recipe.IRecipeWrapper", modid = "jei")
 public class RecipeShapelessKleinStar extends net.minecraftforge.registries.IForgeRegistryEntry.Impl<IRecipe> implements IRecipe, IRecipeWrapper {

@@ -1,8 +1,8 @@
 package quartzshard.projecttweaked.emc.json;
 
-import com.google.common.base.Objects;
-
 import javax.annotation.Nonnull;
+
+import com.google.common.base.Objects;
 
 public class NSSFake implements NormalizedSimpleStack {
 	// We need this bit of global mutable state

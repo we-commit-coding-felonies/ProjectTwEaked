@@ -1,9 +1,10 @@
 package quartzshard.projecttweaked.integration.jei;
 
-import quartzshard.projecttweaked.integration.jei.collectors.CollectorRecipeCategory;
-import quartzshard.projecttweaked.integration.jei.mappers.JEICompatMapper;
-import quartzshard.projecttweaked.integration.jei.mappers.JEIFuelMapper;
-import quartzshard.projecttweaked.integration.jei.world_transmute.WorldTransmuteRecipeCategory;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import mezz.jei.api.IJeiRuntime;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
@@ -12,15 +13,15 @@ import mezz.jei.api.JEIPlugin;
 import mezz.jei.api.ingredients.IModIngredientRegistration;
 import mezz.jei.api.recipe.IRecipeCategoryRegistration;
 import mezz.jei.api.recipe.VanillaRecipeCategoryUid;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.gameObjs.container.PhilosStoneContainer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.FMLCommonHandler;
-
-import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.List;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.container.PhilosStoneContainer;
+import quartzshard.projecttweaked.integration.jei.collectors.CollectorRecipeCategory;
+import quartzshard.projecttweaked.integration.jei.mappers.JEICompatMapper;
+import quartzshard.projecttweaked.integration.jei.mappers.JEIFuelMapper;
+import quartzshard.projecttweaked.integration.jei.world_transmute.WorldTransmuteRecipeCategory;
 
 @JEIPlugin
 public class PEJeiPlugin implements IModPlugin

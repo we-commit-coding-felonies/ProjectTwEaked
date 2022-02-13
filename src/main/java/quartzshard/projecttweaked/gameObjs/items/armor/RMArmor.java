@@ -1,7 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.items.armor;
 
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -13,10 +13,10 @@ import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
 import thaumcraft.api.items.IGoggles;
 import thaumcraft.api.items.IRevealer;
-
-import javax.annotation.Nonnull;
 
 @Optional.InterfaceList(value = {@Optional.Interface(iface = "thaumcraft.api.items.IRevealer", modid = "Thaumcraft"), @Optional.Interface(iface = "thaumcraft.api.items.IGoggles", modid = "Thaumcraft")})
 public class RMArmor extends ItemArmor implements ISpecialArmor, IRevealer, IGoggles

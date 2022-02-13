@@ -1,8 +1,12 @@
 package quartzshard.projecttweaked.gameObjs.items.armor;
 
+import java.util.List;
+
+import javax.annotation.Nullable;
+
 import com.google.common.base.Predicates;
+
 import gnu.trove.map.hash.TIntLongHashMap;
-import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
@@ -18,9 +22,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nullable;
-import java.util.List;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 public class GemLegs extends GemArmorBase
 {

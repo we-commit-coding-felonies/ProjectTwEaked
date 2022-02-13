@@ -1,8 +1,22 @@
 package quartzshard.projecttweaked.impl;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Nonnull;
+
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
+
+import org.apache.commons.lang3.ClassUtils;
+
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.fml.common.ModContainer;
 import quartzshard.projecttweaked.api.proxy.IConversionProxy;
 import quartzshard.projecttweaked.emc.IngredientMap;
 import quartzshard.projecttweaked.emc.json.NSSFake;
@@ -10,18 +24,6 @@ import quartzshard.projecttweaked.emc.json.NSSFluid;
 import quartzshard.projecttweaked.emc.json.NSSItem;
 import quartzshard.projecttweaked.emc.json.NSSOreDictionary;
 import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fml.common.Loader;
-import net.minecraftforge.fml.common.ModContainer;
-import org.apache.commons.lang3.ClassUtils;
-
-import javax.annotation.Nonnull;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class ConversionProxyImpl implements IConversionProxy
 {

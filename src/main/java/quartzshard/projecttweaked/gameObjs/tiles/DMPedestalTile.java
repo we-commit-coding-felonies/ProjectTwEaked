@@ -1,7 +1,9 @@
 package quartzshard.projecttweaked.gameObjs.tiles;
 
-import quartzshard.projecttweaked.api.PESounds;
-import quartzshard.projecttweaked.api.item.IPedestalItem;
+import java.util.Random;
+
+import javax.annotation.Nonnull;
+
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
@@ -14,9 +16,8 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.ItemStackHandler;
-
-import javax.annotation.Nonnull;
-import java.util.Random;
+import quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.api.item.IPedestalItem;
 
 public class DMPedestalTile extends TileEmc
 {

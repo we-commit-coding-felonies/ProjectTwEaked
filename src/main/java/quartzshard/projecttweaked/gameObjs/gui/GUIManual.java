@@ -1,15 +1,18 @@
 package quartzshard.projecttweaked.gameObjs.gui;
 
+import java.awt.Color;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import com.google.common.collect.ArrayListMultimap;
-import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.manual.AbstractPage;
-import quartzshard.projecttweaked.manual.ImagePage;
-import quartzshard.projecttweaked.manual.IndexPage;
-import quartzshard.projecttweaked.manual.ItemPage;
-import quartzshard.projecttweaked.manual.ManualFontRenderer;
-import quartzshard.projecttweaked.manual.ManualPageHandler;
+
+import org.apache.commons.lang3.tuple.Pair;
+import org.lwjgl.opengl.GL11;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
@@ -20,14 +23,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import org.apache.commons.lang3.tuple.Pair;
-import org.lwjgl.opengl.GL11;
-
-import javax.annotation.Nonnull;
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.manual.AbstractPage;
+import quartzshard.projecttweaked.manual.ImagePage;
+import quartzshard.projecttweaked.manual.IndexPage;
+import quartzshard.projecttweaked.manual.ItemPage;
+import quartzshard.projecttweaked.manual.ManualFontRenderer;
+import quartzshard.projecttweaked.manual.ManualPageHandler;
 
 @SideOnly(Side.CLIENT)
 public class GUIManual extends GuiScreen

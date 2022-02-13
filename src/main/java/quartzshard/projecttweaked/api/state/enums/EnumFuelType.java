@@ -1,8 +1,8 @@
 package quartzshard.projecttweaked.api.state.enums;
 
-import net.minecraft.util.IStringSerializable;
-
 import javax.annotation.Nonnull;
+
+import net.minecraft.util.IStringSerializable;
 
 public enum EnumFuelType implements IStringSerializable
 {

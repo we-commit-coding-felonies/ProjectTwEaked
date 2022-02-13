@@ -1,12 +1,12 @@
 package quartzshard.projecttweaked.gameObjs.tiles;
 
+import java.util.Map;
+
+import javax.annotation.Nonnull;
+
 import com.google.common.base.Predicates;
 import com.google.common.collect.Maps;
-import quartzshard.projecttweaked.api.tile.IEmcAcceptor;
-import quartzshard.projecttweaked.api.tile.IEmcProvider;
-import quartzshard.projecttweaked.api.tile.TileEmcBase;
-import quartzshard.projecttweaked.utils.Constants;
-import quartzshard.projecttweaked.utils.WorldHelper;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -15,9 +15,11 @@ import net.minecraft.util.ITickable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.items.ItemStackHandler;
-
-import javax.annotation.Nonnull;
-import java.util.Map;
+import quartzshard.projecttweaked.api.tile.IEmcAcceptor;
+import quartzshard.projecttweaked.api.tile.IEmcProvider;
+import quartzshard.projecttweaked.api.tile.TileEmcBase;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 public abstract class TileEmc extends TileEmcBase implements ITickable
 {

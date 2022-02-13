@@ -1,10 +1,10 @@
 package quartzshard.projecttweaked.gameObjs.gui;
 
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.util.ResourceLocation;
 import quartzshard.projecttweaked.PECore;
 import quartzshard.projecttweaked.gameObjs.container.CondenserMK2Container;
 import quartzshard.projecttweaked.gameObjs.tiles.CondenserMK2Tile;
-import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.util.ResourceLocation;
 
 public class GUICondenserMK2 extends GUICondenser
 {

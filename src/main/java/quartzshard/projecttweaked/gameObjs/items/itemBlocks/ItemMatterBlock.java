@@ -1,12 +1,10 @@
 package quartzshard.projecttweaked.gameObjs.items.itemBlocks;
 
+import javax.annotation.Nonnull;
+
 import net.minecraft.block.Block;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
-
-import javax.annotation.Nonnull;
 
 public class ItemMatterBlock extends ItemBlock
 {

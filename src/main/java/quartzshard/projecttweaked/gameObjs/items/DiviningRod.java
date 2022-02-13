@@ -1,21 +1,20 @@
 package quartzshard.projecttweaked.gameObjs.items;
 
-import com.google.common.collect.Lists;
-import quartzshard.projecttweaked.api.item.IModeChanger;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.utils.EMCHelper;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import quartzshard.projecttweaked.utils.PlayerHelper;
-import quartzshard.projecttweaked.utils.WorldHelper;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import javax.annotation.Nonnull;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -26,13 +25,12 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
+import quartzshard.projecttweaked.api.item.IModeChanger;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.PlayerHelper;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 public class DiviningRod extends ItemPE implements IModeChanger
 {

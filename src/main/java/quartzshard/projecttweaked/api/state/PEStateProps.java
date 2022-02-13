@@ -1,11 +1,11 @@
 package quartzshard.projecttweaked.api.state;
 
-import quartzshard.projecttweaked.api.state.enums.EnumFuelType;
-import quartzshard.projecttweaked.api.state.enums.EnumMatterType;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.util.EnumFacing;
+import quartzshard.projecttweaked.api.state.enums.EnumFuelType;
+import quartzshard.projecttweaked.api.state.enums.EnumMatterType;
 
 public final class PEStateProps
 {

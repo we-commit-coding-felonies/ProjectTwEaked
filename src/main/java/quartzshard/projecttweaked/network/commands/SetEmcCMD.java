@@ -1,14 +1,18 @@
 package quartzshard.projecttweaked.network.commands;
 
-import quartzshard.projecttweaked.config.CustomEMCParser;
-import quartzshard.projecttweaked.utils.MathUtils;
-import net.minecraft.command.*;
+import javax.annotation.Nonnull;
+
+import net.minecraft.command.CommandBase;
+import net.minecraft.command.CommandException;
+import net.minecraft.command.ICommandSender;
+import net.minecraft.command.NumberInvalidException;
+import net.minecraft.command.WrongUsageException;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.text.TextComponentTranslation;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.config.CustomEMCParser;
+import quartzshard.projecttweaked.utils.MathUtils;
 
 public class SetEmcCMD extends CommandBase
 {

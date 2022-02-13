@@ -1,18 +1,10 @@
 package quartzshard.projecttweaked.gameObjs.container;
 
-import quartzshard.projecttweaked.api.event.PlayerAttemptCondenserSetEvent;
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotCondenserLock;
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
-import quartzshard.projecttweaked.gameObjs.container.slots.ValidatedSlot;
-import quartzshard.projecttweaked.gameObjs.blocks.Condenser;
-import quartzshard.projecttweaked.gameObjs.tiles.CondenserTile;
-import quartzshard.projecttweaked.network.PacketHandler;
-import quartzshard.projecttweaked.utils.Constants;
-import quartzshard.projecttweaked.utils.EMCHelper;
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ClickType;
-import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IContainerListener;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
@@ -20,8 +12,15 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.IItemHandler;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.api.event.PlayerAttemptCondenserSetEvent;
+import quartzshard.projecttweaked.gameObjs.blocks.Condenser;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotCondenserLock;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
+import quartzshard.projecttweaked.gameObjs.container.slots.ValidatedSlot;
+import quartzshard.projecttweaked.gameObjs.tiles.CondenserTile;
+import quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.EMCHelper;
 
 public class CondenserContainer extends LongContainer
 {	
@@ -126,7 +125,6 @@ public class CondenserContainer extends LongContainer
 		}
 		
 		ItemStack stack = slot.getStack();
-		ItemStack newStack = stack.copy();
 
 		if (slotIndex <= 91)
 		{

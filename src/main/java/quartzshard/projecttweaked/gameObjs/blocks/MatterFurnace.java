@@ -1,11 +1,9 @@
 package quartzshard.projecttweaked.gameObjs.blocks;
 
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.api.state.PEStateProps;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.gameObjs.tiles.DMFurnaceTile;
-import quartzshard.projecttweaked.gameObjs.tiles.RMFurnaceTile;
-import quartzshard.projecttweaked.utils.Constants;
+import java.util.Random;
+
+import javax.annotation.Nonnull;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
@@ -24,9 +22,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
-
-import javax.annotation.Nonnull;
-import java.util.Random;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.state.PEStateProps;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.tiles.DMFurnaceTile;
+import quartzshard.projecttweaked.gameObjs.tiles.RMFurnaceTile;
+import quartzshard.projecttweaked.utils.Constants;
 
 public class MatterFurnace extends BlockDirection
 {
@@ -167,6 +168,8 @@ public class MatterFurnace extends BlockDirection
 					world.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
 					world.spawnParticle(EnumParticleTypes.FLAME, (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
 					break;
+				case DOWN:
+				case UP:
 			}
 		}
 	}

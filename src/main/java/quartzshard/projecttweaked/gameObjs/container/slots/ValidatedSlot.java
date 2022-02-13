@@ -1,11 +1,12 @@
 package quartzshard.projecttweaked.gameObjs.container.slots;
 
+import java.util.function.Predicate;
+
+import javax.annotation.Nonnull;
+
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
-
-import javax.annotation.Nonnull;
-import java.util.function.Predicate;
 
 // Partial copy of SlotItemhandler with a validator
 public class ValidatedSlot extends SlotItemHandler {

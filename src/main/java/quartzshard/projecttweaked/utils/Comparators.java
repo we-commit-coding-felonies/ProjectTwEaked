@@ -1,9 +1,9 @@
 package quartzshard.projecttweaked.utils;
 
+import java.util.Comparator;
+
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-
-import java.util.Comparator;
 
 public final class Comparators
 {

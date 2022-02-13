@@ -1,8 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.blocks;
 
-import quartzshard.projecttweaked.api.state.PEStateProps;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.utils.WorldHelper;
+import javax.annotation.Nonnull;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.BlockStateContainer;
@@ -17,8 +16,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.api.state.PEStateProps;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 public abstract class BlockDirection extends Block
 {

@@ -1,5 +1,9 @@
 package quartzshard.projecttweaked.api.capabilities;
 
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -7,9 +11,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.INBTSerializable;
 import net.minecraftforge.items.IItemHandler;
-
-import javax.annotation.Nonnull;
-import java.util.List;
 
 /**
  * This interface defines the contract for some object that exposes transmutation knowledge through the Capability system.

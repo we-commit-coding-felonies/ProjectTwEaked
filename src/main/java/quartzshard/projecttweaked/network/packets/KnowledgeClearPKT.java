@@ -1,11 +1,11 @@
 package quartzshard.projecttweaked.network.packets;
 
 import io.netty.buffer.ByteBuf;
-import quartzshard.projecttweaked.PECore;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import quartzshard.projecttweaked.PECore;
 
 public class KnowledgeClearPKT implements IMessage
 {

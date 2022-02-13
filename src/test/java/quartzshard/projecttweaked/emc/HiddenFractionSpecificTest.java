@@ -1,24 +1,25 @@
 package quartzshard.projecttweaked.emc;
 
-import com.google.common.collect.ImmutableMap;
-import quartzshard.projecttweaked.emc.SimpleGraphMapper;
-import quartzshard.projecttweaked.emc.arithmetics.*;
-import quartzshard.projecttweaked.emc.arithmetics.HiddenBigFractionArithmetic;
-import quartzshard.projecttweaked.emc.collector.IExtendedMappingCollector;
-import quartzshard.projecttweaked.emc.collector.LongToBigFractionCollector;
-import quartzshard.projecttweaked.emc.generators.BigFractionToLongGenerator;
-import quartzshard.projecttweaked.emc.generators.IValueGenerator;
-import quartzshard.projecttweaked.emc.SimpleGraphMapper;
-import org.apache.commons.math3.fraction.BigFraction;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import com.google.common.collect.ImmutableMap;
+
+import org.apache.commons.math3.fraction.BigFraction;
+import org.junit.Before;
+import org.junit.Test;
+
+import quartzshard.projecttweaked.emc.arithmetics.FullBigFractionArithmetic;
+import quartzshard.projecttweaked.emc.arithmetics.HiddenBigFractionArithmetic;
+import quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
+import quartzshard.projecttweaked.emc.collector.IExtendedMappingCollector;
+import quartzshard.projecttweaked.emc.collector.LongToBigFractionCollector;
+import quartzshard.projecttweaked.emc.generators.BigFractionToLongGenerator;
+import quartzshard.projecttweaked.emc.generators.IValueGenerator;
 
 public class HiddenFractionSpecificTest
 {

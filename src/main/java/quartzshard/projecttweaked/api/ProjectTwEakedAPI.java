@@ -1,14 +1,14 @@
 package quartzshard.projecttweaked.api;
 
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.CapabilityInject;
+import quartzshard.projecttweaked.PECore;
 import quartzshard.projecttweaked.api.capabilities.IAlchBagProvider;
 import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
 import quartzshard.projecttweaked.api.proxy.IBlacklistProxy;
 import quartzshard.projecttweaked.api.proxy.IConversionProxy;
 import quartzshard.projecttweaked.api.proxy.IEMCProxy;
 import quartzshard.projecttweaked.api.proxy.ITransmutationProxy;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.CapabilityInject;
-import net.minecraftforge.fml.common.FMLLog;
 
 public final class ProjectTwEakedAPI
 {
@@ -45,7 +45,7 @@ public final class ProjectTwEakedAPI
 				emcProxy = (IEMCProxy) clazz.getField("instance").get(null);
 			} catch (ReflectiveOperationException ex)
 			{
-				FMLLog.warning("[ProjectTwEakedAPI] Error retrieving EMCProxyImpl, ProjectTwEaked may be absent, damaged, or outdated.");
+				PECore.LOGGER.warn("[ProjectTwEakedAPI] Error retrieving EMCProxyImpl, ProjectTwEaked may be absent, damaged, or outdated.");
 			}
 		}
 		return emcProxy;
@@ -65,7 +65,7 @@ public final class ProjectTwEakedAPI
 				recipeProxy = (IConversionProxy) clazz.getField("instance").get(null);
 			} catch (ReflectiveOperationException ex)
 			{
-				FMLLog.warning("[ProjectTwEakedAPI] Error retrieving ConversionProxyImpl, ProjectTwEaked may be absent, damaged, or outdated.");
+				PECore.LOGGER.warn("[ProjectTwEakedAPI] Error retrieving ConversionProxyImpl, ProjectTwEaked may be absent, damaged, or outdated.");
 			}
 		}
 		return recipeProxy;
@@ -85,7 +85,7 @@ public final class ProjectTwEakedAPI
 				transProxy = (ITransmutationProxy) clazz.getField("instance").get(null);
 			} catch (ReflectiveOperationException ex)
 			{
-				FMLLog.warning("[ProjectTwEakedAPI] Error retrieving TransmutationProxyImpl, ProjectTwEaked may be absent, damaged, or outdated.");
+				PECore.LOGGER.warn("[ProjectTwEakedAPI] Error retrieving TransmutationProxyImpl, ProjectTwEaked may be absent, damaged, or outdated.");
 			}
 		}
 		return transProxy;
@@ -105,7 +105,7 @@ public final class ProjectTwEakedAPI
 				blacklistProxy = (IBlacklistProxy) clazz.getField("instance").get(null);
 			} catch (ReflectiveOperationException ex)
 			{
-				FMLLog.warning("[ProjectTwEakedAPI] Error retrieving BlacklistProxyImpl, ProjectTwEaked may be absent, damaged, or outdated.");
+				PECore.LOGGER.warn("[ProjectTwEakedAPI] Error retrieving BlacklistProxyImpl, ProjectTwEaked may be absent, damaged, or outdated.");
 			}
 		}
 		return blacklistProxy;

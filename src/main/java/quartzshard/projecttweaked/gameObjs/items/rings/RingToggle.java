@@ -1,18 +1,15 @@
 package quartzshard.projecttweaked.gameObjs.items.rings;
 
+import javax.annotation.Nonnull;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.SoundCategory;
 import quartzshard.projecttweaked.api.PESounds;
 import quartzshard.projecttweaked.api.item.IModeChanger;
 import quartzshard.projecttweaked.gameObjs.items.ItemPE;
 import quartzshard.projecttweaked.utils.ItemHelper;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.world.World;
-
-import javax.annotation.Nonnull;
 
 public abstract class RingToggle extends ItemPE implements IModeChanger
 {

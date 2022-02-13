@@ -1,8 +1,8 @@
 package quartzshard.projecttweaked.utils;
 
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-
 import java.text.DecimalFormat;
+
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
 
 public final class Constants 
 {

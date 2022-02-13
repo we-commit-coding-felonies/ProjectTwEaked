@@ -3,8 +3,8 @@ package quartzshard.projecttweaked.integration.crafttweaker;
 import crafttweaker.IAction;
 import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.minecraft.CraftTweakerMC;
-import quartzshard.projecttweaked.utils.WorldTransmutations;
 import net.minecraft.block.state.IBlockState;
+import quartzshard.projecttweaked.utils.WorldTransmutations;
 
 abstract class WorldTransmuteAction implements IAction {
     final IBlockState output;

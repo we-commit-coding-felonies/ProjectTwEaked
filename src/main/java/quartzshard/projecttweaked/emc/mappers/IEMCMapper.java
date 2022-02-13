@@ -1,8 +1,8 @@
 package quartzshard.projecttweaked.emc.mappers;
 
+import net.minecraftforge.common.config.Configuration;
 import quartzshard.projecttweaked.emc.collector.IMappingCollector;
 import quartzshard.projecttweaked.utils.PrefixConfiguration;
-import net.minecraftforge.common.config.Configuration;
 
 /**
  * Interface for Classes that want to make Contributions to the EMC Mapping.

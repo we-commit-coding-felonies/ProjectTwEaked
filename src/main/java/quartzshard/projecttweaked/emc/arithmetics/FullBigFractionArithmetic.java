@@ -1,8 +1,8 @@
 package quartzshard.projecttweaked.emc.arithmetics;
 
-import org.apache.commons.math3.fraction.BigFraction;
-
 import java.math.BigInteger;
+
+import org.apache.commons.math3.fraction.BigFraction;
 
 public class FullBigFractionArithmetic implements IValueArithmetic<BigFraction>
 {

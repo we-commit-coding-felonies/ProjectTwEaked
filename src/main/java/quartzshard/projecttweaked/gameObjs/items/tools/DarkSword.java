@@ -1,8 +1,9 @@
 package quartzshard.projecttweaked.gameObjs.items.tools;
 
+import javax.annotation.Nonnull;
+
 import com.google.common.collect.Multimap;
-import quartzshard.projecttweaked.api.item.IExtraFunction;
-import quartzshard.projecttweaked.utils.PlayerHelper;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
@@ -13,8 +14,8 @@ import net.minecraft.init.Blocks;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.api.item.IExtraFunction;
+import quartzshard.projecttweaked.utils.PlayerHelper;
 
 public class DarkSword extends PEToolBase implements IExtraFunction
 {

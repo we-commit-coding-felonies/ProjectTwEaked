@@ -1,8 +1,10 @@
 package quartzshard.projecttweaked.gameObjs.items;
 
-import quartzshard.projecttweaked.api.item.IItemCharge;
-import quartzshard.projecttweaked.api.item.IModeChanger;
-import quartzshard.projecttweaked.utils.ItemHelper;
+import java.util.List;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
@@ -13,10 +15,9 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import java.util.List;
+import quartzshard.projecttweaked.api.item.IItemCharge;
+import quartzshard.projecttweaked.api.item.IModeChanger;
+import quartzshard.projecttweaked.utils.ItemHelper;
 
 public abstract class ItemMode extends ItemPE implements IModeChanger, IItemCharge
 {

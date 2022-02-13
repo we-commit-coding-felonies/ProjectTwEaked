@@ -1,11 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.items;
 
-import quartzshard.projecttweaked.api.PESounds;
-import quartzshard.projecttweaked.api.item.IItemCharge;
-import quartzshard.projecttweaked.api.item.IProjectileShooter;
-import quartzshard.projecttweaked.gameObjs.entity.EntityLensProjectile;
-import quartzshard.projecttweaked.utils.Constants;
-import quartzshard.projecttweaked.utils.PlayerHelper;
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
@@ -13,8 +9,12 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.api.item.IItemCharge;
+import quartzshard.projecttweaked.api.item.IProjectileShooter;
+import quartzshard.projecttweaked.gameObjs.entity.EntityLensProjectile;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.PlayerHelper;
 
 public class HyperkineticLens extends ItemPE implements IProjectileShooter, IItemCharge
 {

@@ -1,11 +1,11 @@
 package quartzshard.projecttweaked.integration.jei.mappers;
 
+import net.minecraft.item.ItemStack;
 import quartzshard.projecttweaked.emc.FuelMapper;
 import quartzshard.projecttweaked.emc.SimpleStack;
 import quartzshard.projecttweaked.integration.jei.collectors.CollectorRecipeCategory;
 import quartzshard.projecttweaked.integration.jei.collectors.FuelUpgradeRecipe;
 import quartzshard.projecttweaked.utils.EMCHelper;
-import net.minecraft.item.ItemStack;
 
 public class JEIFuelMapper extends JEICompatMapper<FuelUpgradeRecipe>
 {

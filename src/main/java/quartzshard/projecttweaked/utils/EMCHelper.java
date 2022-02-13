@@ -1,10 +1,9 @@
 package quartzshard.projecttweaked.utils;
 
-import com.google.common.collect.Maps;
-import quartzshard.projecttweaked.api.item.IItemEmc;
-import quartzshard.projecttweaked.emc.EMCMapper;
-import quartzshard.projecttweaked.emc.FuelMapper;
-import quartzshard.projecttweaked.emc.SimpleStack;
+import java.math.BigInteger;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -12,13 +11,12 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
-
-import java.math.BigInteger;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import quartzshard.projecttweaked.api.item.IItemEmc;
+import quartzshard.projecttweaked.emc.EMCMapper;
+import quartzshard.projecttweaked.emc.FuelMapper;
+import quartzshard.projecttweaked.emc.SimpleStack;
 
 /**
  * Helper class for EMC.

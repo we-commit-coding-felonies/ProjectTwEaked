@@ -1,11 +1,18 @@
 package quartzshard.projecttweaked.impl;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
+import javax.annotation.Nonnull;
+
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
-import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
-import quartzshard.projecttweaked.utils.ItemHelper;
+
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompressedStreamTools;
@@ -14,15 +21,10 @@ import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.IItemHandlerModifiable;
-
-import javax.annotation.Nonnull;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
+import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
+import quartzshard.projecttweaked.utils.ItemHelper;
 public class TransmutationOffline
 {
     private static final IKnowledgeProvider NOT_FOUND_PROVIDER = immutableCopy(ProjectTwEakedAPI.KNOWLEDGE_CAPABILITY.getDefaultInstance());

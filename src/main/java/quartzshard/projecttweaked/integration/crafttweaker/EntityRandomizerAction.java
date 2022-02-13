@@ -1,8 +1,8 @@
 package quartzshard.projecttweaked.integration.crafttweaker;
 
 import crafttweaker.IAction;
-import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.entity.EntityLiving;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 abstract class EntityRandomizerAction implements IAction {
 	final boolean peaceful;

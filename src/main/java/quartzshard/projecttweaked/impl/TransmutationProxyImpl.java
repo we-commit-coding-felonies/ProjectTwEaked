@@ -1,20 +1,22 @@
 package quartzshard.projecttweaked.impl;
 
+import java.util.UUID;
+
+import javax.annotation.Nonnull;
+
 import com.google.common.base.Preconditions;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
-import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
-import quartzshard.projecttweaked.api.proxy.ITransmutationProxy;
-import quartzshard.projecttweaked.utils.WorldTransmutations;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.LoaderState;
 import net.minecraftforge.fml.relauncher.Side;
-
-import javax.annotation.Nonnull;
-import java.util.UUID;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
+import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
+import quartzshard.projecttweaked.api.proxy.ITransmutationProxy;
+import quartzshard.projecttweaked.utils.WorldTransmutations;
 
 public class TransmutationProxyImpl implements ITransmutationProxy
 {

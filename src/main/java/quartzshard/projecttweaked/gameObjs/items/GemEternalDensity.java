@@ -1,20 +1,13 @@
 package quartzshard.projecttweaked.gameObjs.items;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
-import com.google.common.collect.Lists;
-import quartzshard.projecttweaked.api.item.IAlchBagItem;
-import quartzshard.projecttweaked.api.item.IAlchChestItem;
-import quartzshard.projecttweaked.api.item.IModeChanger;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.gameObjs.tiles.AlchChestTile;
-import quartzshard.projecttweaked.utils.ClientKeyHelper;
-import quartzshard.projecttweaked.utils.Constants;
-import quartzshard.projecttweaked.utils.EMCHelper;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import quartzshard.projecttweaked.utils.PEKeybind;
-import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
@@ -39,11 +32,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.List;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.item.IAlchBagItem;
+import quartzshard.projecttweaked.api.item.IAlchChestItem;
+import quartzshard.projecttweaked.api.item.IModeChanger;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.tiles.AlchChestTile;
+import quartzshard.projecttweaked.utils.ClientKeyHelper;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.PEKeybind;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 @Optional.Interface(iface = "baubles.api.IBauble", modid = "baubles")
 public class GemEternalDensity extends ItemPE implements IAlchBagItem, IAlchChestItem, IModeChanger, IBauble

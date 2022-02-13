@@ -1,8 +1,5 @@
 package quartzshard.projecttweaked.gameObjs.entity;
 
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.gameObjs.items.ItemPE;
-import quartzshard.projecttweaked.utils.PlayerHelper;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,6 +12,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import net.minecraft.world.storage.WorldInfo;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.items.ItemPE;
+import quartzshard.projecttweaked.utils.PlayerHelper;
 
 public class EntityLavaProjectile extends PEProjectile
 {
@@ -92,6 +92,7 @@ public class EntityLavaProjectile extends PEProjectile
 					Entity ent = mop.entityHit;
 					ent.setFire(5);
 					ent.attackEntityFrom(DamageSource.IN_FIRE, 5);
+				case MISS:
 			}
 		}
 	}

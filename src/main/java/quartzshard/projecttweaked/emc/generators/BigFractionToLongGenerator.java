@@ -1,9 +1,9 @@
 package quartzshard.projecttweaked.emc.generators;
 
-import org.apache.commons.math3.fraction.BigFraction;
-
 import java.util.HashMap;
 import java.util.Map;
+
+import org.apache.commons.math3.fraction.BigFraction;
 
 /**
  * Composes another IValueGenerator, and truncates all fractional values towards 0.

@@ -1,5 +1,11 @@
 package quartzshard.projecttweaked.emc.json;
 
+import java.lang.reflect.Type;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -7,10 +13,7 @@ import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
-import mezz.jei.util.Log;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.emc.collector.IMappingCollector;
-import quartzshard.projecttweaked.utils.ItemHelper;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -18,12 +21,9 @@ import net.minecraft.util.NonNullList;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.oredict.OreDictionary;
-
-import java.lang.reflect.Type;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.emc.collector.IMappingCollector;
+import quartzshard.projecttweaked.utils.ItemHelper;
 
 public interface NormalizedSimpleStack {
 

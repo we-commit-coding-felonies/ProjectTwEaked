@@ -1,8 +1,8 @@
 package quartzshard.projecttweaked.gameObjs.container;
 
+import javax.annotation.Nonnull;
+
 import invtweaks.api.container.ChestContainer;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.gameObjs.tiles.AlchChestTile;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -11,8 +11,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.tiles.AlchChestTile;
 
 @ChestContainer(isLargeChest = true, rowSize = 13)
 public class AlchChestContainer extends Container

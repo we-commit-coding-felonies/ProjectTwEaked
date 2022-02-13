@@ -1,37 +1,5 @@
 package quartzshard.projecttweaked.emc;
 
-import quartzshard.projecttweaked.emc.json.NSSItem;
-import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-import quartzshard.projecttweaked.emc.mappers.*;
-import quartzshard.projecttweaked.emc.mappers.customConversions.CustomConversionMapper;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.api.event.EMCRemapEvent;
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import quartzshard.projecttweaked.emc.generators.BigFractionToLongGenerator;
-import quartzshard.projecttweaked.emc.arithmetics.HiddenBigFractionArithmetic;
-import quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
-import quartzshard.projecttweaked.emc.collector.LongToBigFractionCollector;
-import quartzshard.projecttweaked.emc.collector.DumpToFileCollector;
-import quartzshard.projecttweaked.emc.collector.IExtendedMappingCollector;
-import quartzshard.projecttweaked.emc.collector.WildcardSetValueFixCollector;
-import quartzshard.projecttweaked.emc.generators.IValueGenerator;
-import quartzshard.projecttweaked.emc.mappers.APICustomConversionMapper;
-import quartzshard.projecttweaked.emc.mappers.APICustomEMCMapper;
-import quartzshard.projecttweaked.emc.mappers.CraftingMapper;
-import quartzshard.projecttweaked.emc.mappers.CustomEMCMapper;
-import quartzshard.projecttweaked.emc.mappers.IEMCMapper;
-import quartzshard.projecttweaked.emc.mappers.OreDictionaryMapper;
-import quartzshard.projecttweaked.emc.mappers.SmeltingMapper;
-import quartzshard.projecttweaked.emc.pregenerated.PregeneratedEMC;
-import quartzshard.projecttweaked.playerData.Transmutation;
-import quartzshard.projecttweaked.utils.PrefixConfiguration;
-import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.oredict.OreDictionary;
-import org.apache.commons.math3.fraction.BigFraction;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
@@ -39,6 +7,39 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.apache.commons.math3.fraction.BigFraction;
+
+import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.oredict.OreDictionary;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.event.EMCRemapEvent;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.emc.arithmetics.HiddenBigFractionArithmetic;
+import quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
+import quartzshard.projecttweaked.emc.collector.DumpToFileCollector;
+import quartzshard.projecttweaked.emc.collector.IExtendedMappingCollector;
+import quartzshard.projecttweaked.emc.collector.LongToBigFractionCollector;
+import quartzshard.projecttweaked.emc.collector.WildcardSetValueFixCollector;
+import quartzshard.projecttweaked.emc.generators.BigFractionToLongGenerator;
+import quartzshard.projecttweaked.emc.generators.IValueGenerator;
+import quartzshard.projecttweaked.emc.json.NSSItem;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.emc.mappers.APICustomConversionMapper;
+import quartzshard.projecttweaked.emc.mappers.APICustomEMCMapper;
+import quartzshard.projecttweaked.emc.mappers.CraftingMapper;
+import quartzshard.projecttweaked.emc.mappers.CustomEMCMapper;
+import quartzshard.projecttweaked.emc.mappers.FluidMapper;
+import quartzshard.projecttweaked.emc.mappers.IEMCMapper;
+import quartzshard.projecttweaked.emc.mappers.OreDictionaryMapper;
+import quartzshard.projecttweaked.emc.mappers.SmeltingMapper;
+import quartzshard.projecttweaked.emc.mappers.customConversions.CustomConversionMapper;
+import quartzshard.projecttweaked.emc.pregenerated.PregeneratedEMC;
+import quartzshard.projecttweaked.playerData.Transmutation;
+import quartzshard.projecttweaked.utils.PrefixConfiguration;
 
 public final class EMCMapper 
 {

@@ -1,30 +1,30 @@
 package quartzshard.projecttweaked.gameObjs.items.rings;
 
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import com.google.common.collect.Lists;
-import quartzshard.projecttweaked.api.item.IPedestalItem;
-import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import quartzshard.projecttweaked.utils.WorldHelper;
+
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nonnull;
-import java.util.List;
+import quartzshard.projecttweaked.api.item.IPedestalItem;
+import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 public class MindStone extends RingToggle implements IPedestalItem
 {

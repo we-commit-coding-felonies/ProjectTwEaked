@@ -1,14 +1,14 @@
 package quartzshard.projecttweaked.api.item;
 
-import quartzshard.projecttweaked.api.PESounds;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
+import quartzshard.projecttweaked.api.PESounds;
 
 /**
  * This interface specifies items that have a charge that changes when the respective keybinding is activated (default V)

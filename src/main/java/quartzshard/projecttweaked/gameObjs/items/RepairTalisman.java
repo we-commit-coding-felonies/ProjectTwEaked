@@ -1,20 +1,13 @@
 package quartzshard.projecttweaked.gameObjs.items;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import baubles.api.BaubleType;
 import baubles.api.BaublesApi;
 import baubles.api.IBauble;
-import com.google.common.collect.Lists;
-import quartzshard.projecttweaked.gameObjs.items.rings.RingToggle;
-import quartzshard.projecttweaked.api.item.IAlchBagItem;
-import quartzshard.projecttweaked.api.item.IAlchChestItem;
-import quartzshard.projecttweaked.api.item.IModeChanger;
-import quartzshard.projecttweaked.api.item.IPedestalItem;
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import quartzshard.projecttweaked.gameObjs.tiles.AlchChestTile;
-import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
-import quartzshard.projecttweaked.handlers.InternalTimers;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import quartzshard.projecttweaked.utils.MathUtils;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -22,7 +15,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
@@ -33,10 +25,17 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
-
-import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.List;
+import quartzshard.projecttweaked.api.item.IAlchBagItem;
+import quartzshard.projecttweaked.api.item.IAlchChestItem;
+import quartzshard.projecttweaked.api.item.IModeChanger;
+import quartzshard.projecttweaked.api.item.IPedestalItem;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.items.rings.RingToggle;
+import quartzshard.projecttweaked.gameObjs.tiles.AlchChestTile;
+import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
+import quartzshard.projecttweaked.handlers.InternalTimers;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.MathUtils;
 
 @Optional.Interface(iface = "baubles.api.IBauble", modid = "baubles")
 public class RepairTalisman extends ItemPE implements IAlchBagItem, IAlchChestItem, IBauble, IPedestalItem
@@ -154,7 +153,6 @@ public class RepairTalisman extends ItemPE implements IAlchBagItem, IAlchChestIt
 	{
 		if (!world.isRemote && ProjectTwEakedConfig.pedestalCooldown.repairPedCooldown != -1)
 		{
-			TileEntity te = world.getTileEntity(pos);
 			DMPedestalTile tile = ((DMPedestalTile) world.getTileEntity(pos));
 			if (tile.getActivityCooldown() == 0)
 			{

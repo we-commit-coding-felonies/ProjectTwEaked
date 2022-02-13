@@ -1,10 +1,10 @@
 package quartzshard.projecttweaked.utils;
 
+import java.util.Random;
+
 import net.minecraft.client.resources.I18n;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import java.util.Random;
 
 /**
  * Helper class for any method that turns numbers into other numbers.

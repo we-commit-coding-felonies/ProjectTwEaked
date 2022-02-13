@@ -1,11 +1,11 @@
 package quartzshard.projecttweaked.utils;
 
-import quartzshard.projecttweaked.emc.SimpleStack;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
-
 import java.util.HashSet;
 import java.util.Set;
+
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
+import quartzshard.projecttweaked.emc.SimpleStack;
 
 public final class NBTWhitelist
 {

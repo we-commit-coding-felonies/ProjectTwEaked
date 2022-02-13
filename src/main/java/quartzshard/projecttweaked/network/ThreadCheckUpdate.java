@@ -1,8 +1,6 @@
 package quartzshard.projecttweaked.network;
 
-import quartzshard.projecttweaked.PECore;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextComponentTranslation;
@@ -10,6 +8,7 @@ import net.minecraft.util.text.event.ClickEvent;
 import net.minecraftforge.common.ForgeVersion;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.ModContainer;
+import quartzshard.projecttweaked.PECore;
 
 public class ThreadCheckUpdate extends Thread
 {

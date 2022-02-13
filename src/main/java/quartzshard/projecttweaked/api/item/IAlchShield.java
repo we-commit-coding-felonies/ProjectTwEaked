@@ -1,7 +1,7 @@
 package quartzshard.projecttweaked.api.item;
 
-import java.util.List;
 import java.util.Arrays;
+import java.util.List;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;

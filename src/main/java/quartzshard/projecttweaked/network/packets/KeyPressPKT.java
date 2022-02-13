@@ -1,19 +1,6 @@
 package quartzshard.projecttweaked.network.packets;
 
 import io.netty.buffer.ByteBuf;
-import quartzshard.projecttweaked.api.item.IExtraFunction;
-import quartzshard.projecttweaked.api.item.IItemCharge;
-import quartzshard.projecttweaked.api.item.IModeChanger;
-import quartzshard.projecttweaked.api.item.IProjectileShooter;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.gameObjs.items.armor.GemArmorBase;
-import quartzshard.projecttweaked.gameObjs.items.armor.GemChest;
-import quartzshard.projecttweaked.gameObjs.items.armor.GemFeet;
-import quartzshard.projecttweaked.gameObjs.items.armor.GemHelmet;
-import quartzshard.projecttweaked.handlers.InternalAbilities;
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import quartzshard.projecttweaked.utils.PEKeybind;
-import quartzshard.projecttweaked.utils.PlayerHelper;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
@@ -22,6 +9,19 @@ import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import quartzshard.projecttweaked.api.item.IExtraFunction;
+import quartzshard.projecttweaked.api.item.IItemCharge;
+import quartzshard.projecttweaked.api.item.IModeChanger;
+import quartzshard.projecttweaked.api.item.IProjectileShooter;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.items.armor.GemArmorBase;
+import quartzshard.projecttweaked.gameObjs.items.armor.GemChest;
+import quartzshard.projecttweaked.gameObjs.items.armor.GemFeet;
+import quartzshard.projecttweaked.gameObjs.items.armor.GemHelmet;
+import quartzshard.projecttweaked.handlers.InternalAbilities;
+import quartzshard.projecttweaked.utils.PEKeybind;
+import quartzshard.projecttweaked.utils.PlayerHelper;
 
 public class KeyPressPKT implements IMessage
 {
@@ -150,6 +150,7 @@ public class KeyPressPKT implements IMessage
                                     return;
                                 }
                                 break;
+                            case ARMOR_TOGGLE:
                         }
 
                     }

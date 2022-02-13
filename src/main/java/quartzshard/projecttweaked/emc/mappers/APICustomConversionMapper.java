@@ -1,12 +1,12 @@
 package quartzshard.projecttweaked.emc.mappers;
 
-import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-import quartzshard.projecttweaked.emc.collector.IMappingCollector;
-import quartzshard.projecttweaked.impl.ConversionProxyImpl;
-import net.minecraftforge.common.config.Configuration;
-
 import java.util.List;
 import java.util.Map;
+
+import net.minecraftforge.common.config.Configuration;
+import quartzshard.projecttweaked.emc.collector.IMappingCollector;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.impl.ConversionProxyImpl;
 
 public class APICustomConversionMapper implements IEMCMapper<NormalizedSimpleStack,Long>
 {

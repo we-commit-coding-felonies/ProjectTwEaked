@@ -1,13 +1,15 @@
 package quartzshard.projecttweaked.emc.mappers;
 
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.emc.IngredientMap;
-import quartzshard.projecttweaked.emc.json.NSSFake;
-import quartzshard.projecttweaked.emc.json.NSSItem;
-import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-import quartzshard.projecttweaked.emc.collector.IMappingCollector;
-import quartzshard.projecttweaked.gameObjs.customRecipes.RecipeShapelessHidden;
-import quartzshard.projecttweaked.gameObjs.customRecipes.RecipeShapelessKleinStar;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
@@ -18,16 +20,14 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.emc.IngredientMap;
+import quartzshard.projecttweaked.emc.collector.IMappingCollector;
+import quartzshard.projecttweaked.emc.json.NSSFake;
+import quartzshard.projecttweaked.emc.json.NSSItem;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.gameObjs.customRecipes.RecipeShapelessHidden;
+import quartzshard.projecttweaked.gameObjs.customRecipes.RecipeShapelessKleinStar;
 
 public class CraftingMapper implements IEMCMapper<NormalizedSimpleStack, Long> {
 

@@ -1,10 +1,10 @@
 package quartzshard.projecttweaked.integration.jei.mappers;
 
-import mezz.jei.api.recipe.IRecipeWrapper;
-import quartzshard.projecttweaked.integration.jei.PEJeiPlugin;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import mezz.jei.api.recipe.IRecipeWrapper;
+import quartzshard.projecttweaked.integration.jei.PEJeiPlugin;
 
 public abstract class JEICompatMapper<T extends IRecipeWrapper>
 {

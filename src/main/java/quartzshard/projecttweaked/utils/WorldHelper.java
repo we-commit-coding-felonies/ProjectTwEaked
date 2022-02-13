@@ -1,16 +1,49 @@
 package quartzshard.projecttweaked.utils;
 
+import java.util.ArrayList;
+import java.util.EnumMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
+
 import com.google.common.collect.Lists;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import net.minecraft.block.*;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockFlower;
+import net.minecraft.block.BlockNetherWart;
+import net.minecraft.block.BlockSnow;
+import net.minecraft.block.IGrowable;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.IProjectile;
 import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.monster.*;
+import net.minecraft.entity.monster.EntityBlaze;
+import net.minecraft.entity.monster.EntityCreeper;
+import net.minecraft.entity.monster.EntityEnderman;
+import net.minecraft.entity.monster.EntityEndermite;
+import net.minecraft.entity.monster.EntityEvoker;
+import net.minecraft.entity.monster.EntityGhast;
+import net.minecraft.entity.monster.EntityGuardian;
+import net.minecraft.entity.monster.EntityHusk;
+import net.minecraft.entity.monster.EntityPigZombie;
+import net.minecraft.entity.monster.EntityPolarBear;
+import net.minecraft.entity.monster.EntityShulker;
+import net.minecraft.entity.monster.EntitySilverfish;
+import net.minecraft.entity.monster.EntitySkeleton;
+import net.minecraft.entity.monster.EntitySlime;
+import net.minecraft.entity.monster.EntitySpider;
+import net.minecraft.entity.monster.EntityStray;
+import net.minecraft.entity.monster.EntityVex;
+import net.minecraft.entity.monster.EntityVindicator;
+import net.minecraft.entity.monster.EntityWitch;
+import net.minecraft.entity.monster.EntityWitherSkeleton;
+import net.minecraft.entity.monster.EntityZombie;
+import net.minecraft.entity.monster.EntityZombieVillager;
+import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.passive.EntityBat;
 import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityCow;
@@ -46,14 +79,8 @@ import net.minecraftforge.common.IShearable;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.ExplosionEvent;
 import net.minecraftforge.items.IItemHandler;
-
-import java.util.ArrayList;
-import java.util.EnumMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Set;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
 
 /**
  * Helper class for anything that touches a World.

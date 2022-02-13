@@ -1,13 +1,13 @@
 package quartzshard.projecttweaked.network.packets;
 
 import io.netty.buffer.ByteBuf;
-import quartzshard.projecttweaked.gameObjs.gui.GUIAlchChest;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.EnumHand;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.items.ItemStackHandler;
+import quartzshard.projecttweaked.gameObjs.gui.GUIAlchChest;
 
 public class ShowBagPKT implements IMessage
 {

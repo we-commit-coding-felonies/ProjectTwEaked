@@ -1,10 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.tiles;
 
-import quartzshard.projecttweaked.api.tile.IEmcAcceptor;
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
-import quartzshard.projecttweaked.utils.EMCHelper;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import quartzshard.projecttweaked.utils.NBTWhitelist;
+import javax.annotation.Nonnull;
+
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -15,8 +12,11 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.items.ItemStackHandler;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.api.tile.IEmcAcceptor;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.NBTWhitelist;
 
 public class CondenserTile extends TileEmc implements IEmcAcceptor
 {

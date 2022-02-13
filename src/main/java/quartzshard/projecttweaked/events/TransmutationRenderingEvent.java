@@ -1,12 +1,10 @@
 package quartzshard.projecttweaked.events;
 
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.gameObjs.items.ItemMode;
-import quartzshard.projecttweaked.gameObjs.items.PhilosophersStone;
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import quartzshard.projecttweaked.utils.WorldTransmutations;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.lwjgl.opengl.GL11;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BufferBuilder;
@@ -32,10 +30,13 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
-import org.lwjgl.opengl.GL11;
-
-import java.util.ArrayList;
-import java.util.List;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.items.ItemMode;
+import quartzshard.projecttweaked.gameObjs.items.PhilosophersStone;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.WorldTransmutations;
 
 @Mod.EventBusSubscriber(value = Side.CLIENT, modid = PECore.MODID)
 public class TransmutationRenderingEvent 

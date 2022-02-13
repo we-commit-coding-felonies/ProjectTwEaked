@@ -1,13 +1,13 @@
 package quartzshard.projecttweaked.network;
 
-import quartzshard.projecttweaked.PECore;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+
+import quartzshard.projecttweaked.PECore;
 
 public class ThreadCheckUUID extends Thread
 {

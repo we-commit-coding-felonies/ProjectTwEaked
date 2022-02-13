@@ -1,16 +1,11 @@
 package quartzshard.projecttweaked.gameObjs.items;
 
-import com.google.common.collect.Sets;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.api.PESounds;
-import quartzshard.projecttweaked.api.item.IExtraFunction;
-import quartzshard.projecttweaked.api.item.IProjectileShooter;
-import quartzshard.projecttweaked.gameObjs.entity.EntityMobRandomizer;
-import quartzshard.projecttweaked.utils.ClientKeyHelper;
-import quartzshard.projecttweaked.utils.Constants;
-import quartzshard.projecttweaked.utils.PEKeybind;
-import quartzshard.projecttweaked.utils.PlayerHelper;
-import quartzshard.projecttweaked.utils.WorldTransmutations;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.annotation.Nonnull;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
@@ -28,11 +23,16 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nonnull;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.api.item.IExtraFunction;
+import quartzshard.projecttweaked.api.item.IProjectileShooter;
+import quartzshard.projecttweaked.gameObjs.entity.EntityMobRandomizer;
+import quartzshard.projecttweaked.utils.ClientKeyHelper;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.PEKeybind;
+import quartzshard.projecttweaked.utils.PlayerHelper;
+import quartzshard.projecttweaked.utils.WorldTransmutations;
 
 public class PhilosophersStone extends ItemMode implements IProjectileShooter, IExtraFunction
 {

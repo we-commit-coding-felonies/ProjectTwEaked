@@ -1,8 +1,8 @@
 package quartzshard.projecttweaked.emc.collector;
 
-import quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
-
 import java.util.Map;
+
+import quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
 
 /**
  * A Class that is used to collect Contributions to the EMC Mapping.

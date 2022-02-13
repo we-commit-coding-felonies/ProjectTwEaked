@@ -1,7 +1,5 @@
 package quartzshard.projecttweaked.gameObjs.entity;
 
-import quartzshard.projecttweaked.utils.Constants;
-import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.nbt.NBTTagCompound;
@@ -10,6 +8,8 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 public class EntityLensProjectile extends PEProjectile
 {

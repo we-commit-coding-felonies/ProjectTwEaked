@@ -1,12 +1,12 @@
 package quartzshard.projecttweaked.network.packets;
 
 import io.netty.buffer.ByteBuf;
-import quartzshard.projecttweaked.gameObjs.container.LongContainer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import quartzshard.projecttweaked.gameObjs.container.LongContainer;
 
 // Version of SPacketWindowProperty that does not truncate the `value` arg to an int
 public class UpdateWindowLongPKT implements IMessage

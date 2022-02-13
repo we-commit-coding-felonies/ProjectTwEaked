@@ -1,14 +1,14 @@
 package quartzshard.projecttweaked.integration.jei.collectors;
 
+import java.awt.Color;
+import java.util.Collections;
+
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.IRecipeWrapper;
-import quartzshard.projecttweaked.utils.EMCHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.item.ItemStack;
-
-import java.awt.*;
-import java.util.*;
+import quartzshard.projecttweaked.utils.EMCHelper;
 
 public class FuelUpgradeRecipe implements IRecipeWrapper {
 

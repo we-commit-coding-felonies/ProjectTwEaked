@@ -1,12 +1,12 @@
 package quartzshard.projecttweaked.gameObjs.container.slots.transmutation;
 
-import quartzshard.projecttweaked.gameObjs.container.inventory.TransmutationInventory;
-import quartzshard.projecttweaked.utils.EMCHelper;
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.SlotItemHandler;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.gameObjs.container.inventory.TransmutationInventory;
+import quartzshard.projecttweaked.utils.EMCHelper;
 
 public class SlotOutput extends SlotItemHandler
 {

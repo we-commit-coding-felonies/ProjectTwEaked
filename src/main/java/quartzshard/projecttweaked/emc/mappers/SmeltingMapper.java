@@ -1,14 +1,14 @@
 package quartzshard.projecttweaked.emc.mappers;
 
-import quartzshard.projecttweaked.emc.IngredientMap;
-import quartzshard.projecttweaked.emc.json.NSSItem;
-import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-import quartzshard.projecttweaked.emc.collector.IMappingCollector;
+import java.util.Map;
+
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.common.config.Configuration;
-
-import java.util.Map;
+import quartzshard.projecttweaked.emc.IngredientMap;
+import quartzshard.projecttweaked.emc.collector.IMappingCollector;
+import quartzshard.projecttweaked.emc.json.NSSItem;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
 
 public class SmeltingMapper implements IEMCMapper<NormalizedSimpleStack, Long> {
 	@Override

@@ -1,18 +1,19 @@
 package quartzshard.projecttweaked.impl;
 
+import javax.annotation.Nonnull;
+
 import com.google.common.base.Preconditions;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.api.proxy.IBlacklistProxy;
-import quartzshard.projecttweaked.gameObjs.items.TimeWatch;
-import quartzshard.projecttweaked.utils.NBTWhitelist;
-import quartzshard.projecttweaked.utils.WorldHelper;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.LoaderState;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.proxy.IBlacklistProxy;
+import quartzshard.projecttweaked.gameObjs.items.TimeWatch;
+import quartzshard.projecttweaked.utils.NBTWhitelist;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 public class BlacklistProxyImpl implements IBlacklistProxy
 {

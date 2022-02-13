@@ -1,24 +1,23 @@
 package quartzshard.projecttweaked.gameObjs.container;
 
-import quartzshard.projecttweaked.emc.FuelMapper;
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotGhost;
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
-import quartzshard.projecttweaked.gameObjs.container.slots.ValidatedSlot;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK1Tile;
-import quartzshard.projecttweaked.network.PacketHandler;
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ClickType;
-import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IContainerListener;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.IItemHandler;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.emc.FuelMapper;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotGhost;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
+import quartzshard.projecttweaked.gameObjs.container.slots.ValidatedSlot;
+import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK1Tile;
+import quartzshard.projecttweaked.network.PacketHandler;
 
 public class CollectorMK1Container extends LongContainer
 {
@@ -185,7 +184,6 @@ public class CollectorMK1Container extends LongContainer
 		}
 		
 		ItemStack stack = slot.getStack();
-		ItemStack newStack = stack.copy();
 		
 		if (slotIndex <= 10)
 		{

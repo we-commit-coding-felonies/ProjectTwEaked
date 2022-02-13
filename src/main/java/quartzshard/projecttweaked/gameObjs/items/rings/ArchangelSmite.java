@@ -1,16 +1,10 @@
 package quartzshard.projecttweaked.gameObjs.items.rings;
 
-import com.google.common.collect.Lists;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.api.item.IModeChanger;
-import quartzshard.projecttweaked.api.item.IPedestalItem;
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import quartzshard.projecttweaked.gameObjs.entity.EntityHomingArrow;
-import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
-import quartzshard.projecttweaked.network.PacketHandler;
-import quartzshard.projecttweaked.network.packets.LeftClickArchangelPKT;
-import quartzshard.projecttweaked.utils.EMCHelper;
-import quartzshard.projecttweaked.utils.MathUtils;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
@@ -35,12 +29,17 @@ import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.item.IPedestalItem;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.entity.EntityHomingArrow;
+import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
+import quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.network.packets.LeftClickArchangelPKT;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.MathUtils;
 
-import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.List;
-
-public class ArchangelSmite extends RingToggle implements IPedestalItem, IModeChanger
+public class ArchangelSmite extends RingToggle implements IPedestalItem
 {
 	public ArchangelSmite()
 	{

@@ -1,21 +1,24 @@
 package quartzshard.projecttweaked.gameObjs.items.tools;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
-import quartzshard.projecttweaked.api.PESounds;
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import quartzshard.projecttweaked.gameObjs.items.ItemMode;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import quartzshard.projecttweaked.utils.MathUtils;
-import quartzshard.projecttweaked.utils.PlayerHelper;
-import quartzshard.projecttweaked.utils.WorldHelper;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRedstoneOre;
 import net.minecraft.block.BlockShulkerBox;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.*;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityAgeable;
+import net.minecraft.entity.EntityList;
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.entity.player.EntityPlayer;
@@ -25,7 +28,6 @@ import net.minecraft.init.Enchantments;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.stats.StatList;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumFacing;
@@ -42,13 +44,13 @@ import net.minecraftforge.common.IShearable;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.UseHoeEvent;
 import net.minecraftforge.oredict.OreDictionary;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.items.ItemMode;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.MathUtils;
+import quartzshard.projecttweaked.utils.PlayerHelper;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 public abstract class PEToolBase extends ItemMode
 {
@@ -276,6 +278,7 @@ public abstract class PEToolBase extends ItemMode
 							{
 								case X: box = new AxisAlignedBB(hitPos.offset(EnumFacing.SOUTH), hitPos.offset(EnumFacing.NORTH)); break;
 								case Z: box = new AxisAlignedBB(hitPos.offset(EnumFacing.WEST), hitPos.offset(EnumFacing.EAST)); break;
+								case Y:;
 							}
 							break;
 						case Z: box = new AxisAlignedBB(hitPos.offset(EnumFacing.WEST), hitPos.offset(EnumFacing.EAST)); break;

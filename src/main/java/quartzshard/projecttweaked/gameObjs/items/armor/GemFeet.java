@@ -1,12 +1,12 @@
 package quartzshard.projecttweaked.gameObjs.items.armor;
 
+import java.util.List;
+import java.util.UUID;
+
+import javax.annotation.Nonnull;
+
 import com.google.common.collect.Multimap;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.gameObjs.items.IFlightProvider;
-import quartzshard.projecttweaked.gameObjs.items.IStepAssister;
-import quartzshard.projecttweaked.utils.ClientKeyHelper;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import quartzshard.projecttweaked.utils.PEKeybind;
+
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -15,17 +15,18 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nonnull;
-import java.util.List;
-import java.util.UUID;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.items.IFlightProvider;
+import quartzshard.projecttweaked.gameObjs.items.IStepAssister;
+import quartzshard.projecttweaked.utils.ClientKeyHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.PEKeybind;
 
 public class GemFeet extends GemArmorBase implements IFlightProvider, IStepAssister
 {

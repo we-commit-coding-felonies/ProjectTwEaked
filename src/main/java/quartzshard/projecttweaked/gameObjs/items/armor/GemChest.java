@@ -1,9 +1,9 @@
 package quartzshard.projecttweaked.gameObjs.items.armor;
 
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import quartzshard.projecttweaked.gameObjs.items.IFireProtector;
-import quartzshard.projecttweaked.handlers.InternalTimers;
-import quartzshard.projecttweaked.utils.WorldHelper;
+import java.util.List;
+
+import javax.annotation.Nullable;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
@@ -16,9 +16,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nullable;
-import java.util.List;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.items.IFireProtector;
+import quartzshard.projecttweaked.handlers.InternalTimers;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 public class GemChest extends GemArmorBase implements IFireProtector
 {

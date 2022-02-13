@@ -1,9 +1,9 @@
 package quartzshard.projecttweaked.gameObjs.items.tools;
 
+import javax.annotation.Nonnull;
+
 import com.google.common.collect.Multimap;
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.utils.ItemHelper;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockClay;
 import net.minecraft.block.BlockDirt;
@@ -25,8 +25,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.RayTraceResult.Type;
 import net.minecraft.world.World;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.utils.ItemHelper;
 
 public class RedStar extends PEToolBase
 {

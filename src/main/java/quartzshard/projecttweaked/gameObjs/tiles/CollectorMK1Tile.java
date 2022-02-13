@@ -1,14 +1,9 @@
 package quartzshard.projecttweaked.gameObjs.tiles;
 
-import quartzshard.projecttweaked.api.item.IItemEmc;
-import quartzshard.projecttweaked.api.tile.IEmcAcceptor;
-import quartzshard.projecttweaked.api.tile.IEmcProvider;
-import quartzshard.projecttweaked.emc.FuelMapper;
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
-import quartzshard.projecttweaked.utils.Constants;
-import quartzshard.projecttweaked.utils.EMCHelper;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import quartzshard.projecttweaked.utils.WorldHelper;
+import java.util.Map;
+
+import javax.annotation.Nonnull;
+
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -20,9 +15,15 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.wrapper.CombinedInvWrapper;
 import net.minecraftforge.items.wrapper.RangedWrapper;
-
-import javax.annotation.Nonnull;
-import java.util.Map;
+import quartzshard.projecttweaked.api.item.IItemEmc;
+import quartzshard.projecttweaked.api.tile.IEmcAcceptor;
+import quartzshard.projecttweaked.api.tile.IEmcProvider;
+import quartzshard.projecttweaked.emc.FuelMapper;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 public class CollectorMK1Tile extends TileEmc implements IEmcProvider, IEmcAcceptor
 {

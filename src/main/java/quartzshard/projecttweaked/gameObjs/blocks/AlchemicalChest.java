@@ -1,9 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.blocks;
 
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.api.state.PEStateProps;
-import quartzshard.projecttweaked.gameObjs.tiles.AlchChestTile;
-import quartzshard.projecttweaked.utils.Constants;
+import javax.annotation.Nonnull;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,8 +16,10 @@ import net.minecraft.world.World;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.state.PEStateProps;
+import quartzshard.projecttweaked.gameObjs.tiles.AlchChestTile;
+import quartzshard.projecttweaked.utils.Constants;
 
 public class AlchemicalChest extends BlockDirection
 {

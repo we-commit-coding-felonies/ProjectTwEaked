@@ -1,14 +1,14 @@
 package quartzshard.projecttweaked.gameObjs.gui;
 
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.gameObjs.container.CollectorMK1Container;
-import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK1Tile;
-import quartzshard.projecttweaked.utils.Constants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.container.CollectorMK1Container;
+import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK1Tile;
+import quartzshard.projecttweaked.utils.Constants;
 
 public class GUICollectorMK1 extends GuiContainer
 {

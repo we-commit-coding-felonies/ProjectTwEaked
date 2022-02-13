@@ -1,11 +1,9 @@
 package quartzshard.projecttweaked.gameObjs.items.tools;
 
+import javax.annotation.Nonnull;
+
 import com.google.common.collect.Multimap;
-import quartzshard.projecttweaked.api.state.PEStateProps;
-import quartzshard.projecttweaked.api.state.enums.EnumMatterType;
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.utils.ItemHelper;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -21,8 +19,11 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.api.state.PEStateProps;
+import quartzshard.projecttweaked.api.state.enums.EnumMatterType;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.utils.ItemHelper;
 
 public class DarkPick extends PEToolBase
 {

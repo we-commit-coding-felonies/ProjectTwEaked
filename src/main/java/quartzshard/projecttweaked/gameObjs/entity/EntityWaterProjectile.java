@@ -1,6 +1,5 @@
 package quartzshard.projecttweaked.gameObjs.entity;
 
-import quartzshard.projecttweaked.utils.PlayerHelper;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -12,6 +11,7 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.RayTraceResult.Type;
 import net.minecraft.world.World;
 import net.minecraft.world.storage.WorldInfo;
+import quartzshard.projecttweaked.utils.PlayerHelper;
 
 public class EntityWaterProjectile extends PEProjectile
 {

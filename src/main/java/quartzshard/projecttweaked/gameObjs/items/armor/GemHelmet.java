@@ -1,11 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.items.armor;
 
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import quartzshard.projecttweaked.handlers.InternalTimers;
-import quartzshard.projecttweaked.utils.ClientKeyHelper;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import quartzshard.projecttweaked.utils.PEKeybind;
-import quartzshard.projecttweaked.utils.PlayerHelper;
+import java.util.List;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;
@@ -17,7 +13,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.Style;
@@ -27,10 +22,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.handlers.InternalTimers;
+import quartzshard.projecttweaked.utils.ClientKeyHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.PEKeybind;
+import quartzshard.projecttweaked.utils.PlayerHelper;
 import thaumcraft.api.items.IGoggles;
 import thaumcraft.api.items.IRevealer;
-
-import java.util.List;
 
 @Optional.InterfaceList(value = {@Optional.Interface(iface = "thaumcraft.api.items.IRevealer", modid = "Thaumcraft"), @Optional.Interface(iface = "thaumcraft.api.items.IGoggles", modid = "Thaumcraft")})
 public class GemHelmet extends GemArmorBase implements IGoggles, IRevealer

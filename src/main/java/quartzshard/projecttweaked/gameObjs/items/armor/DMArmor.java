@@ -1,7 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.items.armor;
 
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -12,8 +12,8 @@ import net.minecraft.util.DamageSource;
 import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
 
 public class DMArmor extends ItemArmor implements ISpecialArmor
 {

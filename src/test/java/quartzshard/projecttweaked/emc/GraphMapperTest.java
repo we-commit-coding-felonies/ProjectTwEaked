@@ -1,20 +1,24 @@
 package quartzshard.projecttweaked.emc;
 
-import quartzshard.projecttweaked.emc.SimpleGraphMapper;
-import quartzshard.projecttweaked.emc.generators.BigFractionToLongGenerator;
-import quartzshard.projecttweaked.emc.arithmetics.HiddenBigFractionArithmetic;
-import quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
-import quartzshard.projecttweaked.emc.collector.LongToBigFractionCollector;
-import quartzshard.projecttweaked.emc.collector.IExtendedMappingCollector;
-import quartzshard.projecttweaked.emc.generators.IValueGenerator;
+import static org.junit.Assert.assertEquals;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+
 import org.apache.commons.math3.fraction.BigFraction;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.rules.Timeout;
 
-import java.util.*;
-
-import static org.junit.Assert.assertEquals;
+import quartzshard.projecttweaked.emc.arithmetics.HiddenBigFractionArithmetic;
+import quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
+import quartzshard.projecttweaked.emc.collector.IExtendedMappingCollector;
+import quartzshard.projecttweaked.emc.collector.LongToBigFractionCollector;
+import quartzshard.projecttweaked.emc.generators.BigFractionToLongGenerator;
+import quartzshard.projecttweaked.emc.generators.IValueGenerator;
 
 //@RunWith(value = Parameterized.class)
 public class GraphMapperTest {

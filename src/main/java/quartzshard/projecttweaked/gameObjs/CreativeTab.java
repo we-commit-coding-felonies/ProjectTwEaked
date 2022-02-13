@@ -1,12 +1,12 @@
 package quartzshard.projecttweaked.gameObjs;
 
-import quartzshard.projecttweaked.PECore;
+import javax.annotation.Nonnull;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.PECore;
 
 public class CreativeTab extends CreativeTabs
 {

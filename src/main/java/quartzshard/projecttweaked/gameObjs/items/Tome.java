@@ -1,16 +1,16 @@
 package quartzshard.projecttweaked.gameObjs.items;
 
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import java.util.List;
+
+import javax.annotation.Nullable;
+
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nullable;
-import java.util.List;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
 
 public class Tome extends ItemPE
 {

@@ -1,18 +1,18 @@
 package quartzshard.projecttweaked.gameObjs.container;
 
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotCondenserLock;
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
-import quartzshard.projecttweaked.gameObjs.container.slots.ValidatedSlot;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.gameObjs.tiles.CondenserMK2Tile;
-import quartzshard.projecttweaked.utils.EMCHelper;
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotCondenserLock;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
+import quartzshard.projecttweaked.gameObjs.container.slots.ValidatedSlot;
+import quartzshard.projecttweaked.gameObjs.tiles.CondenserMK2Tile;
+import quartzshard.projecttweaked.utils.EMCHelper;
 
 public class CondenserMK2Container extends CondenserContainer
 {
@@ -67,7 +67,6 @@ public class CondenserMK2Container extends CondenserContainer
 		}
 
 		ItemStack stack = slot.getStack();
-		ItemStack newStack = stack.copy();
 
 		if (slotIndex <= 84)
 		{

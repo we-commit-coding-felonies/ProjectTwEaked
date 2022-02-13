@@ -1,18 +1,18 @@
 package quartzshard.projecttweaked.gameObjs.container;
 
-import quartzshard.projecttweaked.emc.FuelMapper;
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotGhost;
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
-import quartzshard.projecttweaked.gameObjs.container.slots.ValidatedSlot;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK0Tile;
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.emc.FuelMapper;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotGhost;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
+import quartzshard.projecttweaked.gameObjs.container.slots.ValidatedSlot;
+import quartzshard.projecttweaked.gameObjs.tiles.CollectorMK0Tile;
 
 public class CollectorMK0Container extends CollectorMK1Container
 {
@@ -65,7 +65,6 @@ public class CollectorMK0Container extends CollectorMK1Container
 		}
 		
 		ItemStack stack = slot.getStack();
-		ItemStack newStack = stack.copy();
 		
 		if (slotIndex <= 10)
 		{

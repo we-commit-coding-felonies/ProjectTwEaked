@@ -1,9 +1,9 @@
 package quartzshard.projecttweaked.gameObjs.items.tools;
 
+import javax.annotation.Nonnull;
+
 import com.google.common.collect.Multimap;
-import quartzshard.projecttweaked.api.state.PEStateProps;
-import quartzshard.projecttweaked.api.state.enums.EnumMatterType;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -17,8 +17,9 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.api.state.PEStateProps;
+import quartzshard.projecttweaked.api.state.enums.EnumMatterType;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
 
 public class DarkHammer extends PEToolBase
 {

@@ -1,11 +1,11 @@
 package quartzshard.projecttweaked.api.event;
 
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.eventhandler.Cancelable;
 import net.minecraftforge.fml.common.eventhandler.Event;
-
-import javax.annotation.Nonnull;
 
 /**
  * This event is fired on both the server and client when a player is attempting to place an item in the condenser.

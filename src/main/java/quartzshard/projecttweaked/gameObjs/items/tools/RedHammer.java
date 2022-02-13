@@ -1,12 +1,12 @@
 package quartzshard.projecttweaked.gameObjs.items.tools;
 
-import quartzshard.projecttweaked.api.state.PEStateProps;
-import quartzshard.projecttweaked.api.state.enums.EnumMatterType;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemStack;
+import quartzshard.projecttweaked.api.state.PEStateProps;
+import quartzshard.projecttweaked.api.state.enums.EnumMatterType;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
 
 public class RedHammer extends DarkHammer
 {

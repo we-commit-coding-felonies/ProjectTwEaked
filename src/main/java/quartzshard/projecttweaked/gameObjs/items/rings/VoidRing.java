@@ -1,5 +1,25 @@
 package quartzshard.projecttweaked.gameObjs.items.rings;
 
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.living.EnderTeleportEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.items.IItemHandler;
+import quartzshard.projecttweaked.PECore;
 import quartzshard.projecttweaked.api.item.IAlchBagItem;
 import quartzshard.projecttweaked.api.item.IAlchChestItem;
 import quartzshard.projecttweaked.api.item.IExtraFunction;
@@ -8,25 +28,6 @@ import quartzshard.projecttweaked.gameObjs.ObjHandler;
 import quartzshard.projecttweaked.gameObjs.items.GemEternalDensity;
 import quartzshard.projecttweaked.utils.ItemHelper;
 import quartzshard.projecttweaked.utils.PlayerHelper;
-import quartzshard.projecttweaked.PECore;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
-import net.minecraft.init.SoundEvents;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentTranslation;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.living.EnderTeleportEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-import net.minecraftforge.items.IItemHandler;
-
-import javax.annotation.Nonnull;
-import java.util.List;
 
 public class VoidRing extends GemEternalDensity implements IPedestalItem, IExtraFunction
 {

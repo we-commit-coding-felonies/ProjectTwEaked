@@ -1,10 +1,18 @@
 package quartzshard.projecttweaked.utils;
 
+import java.util.Set;
+
 import com.google.common.collect.ImmutableSet;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumDyeColor;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.common.network.IGuiHandler;
+import net.minecraftforge.items.IItemHandlerModifiable;
 import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
-import quartzshard.projecttweaked.gameObjs.container.inventory.EternalDensityInventory;
-import quartzshard.projecttweaked.gameObjs.container.inventory.MercurialEyeInventory;
-import quartzshard.projecttweaked.gameObjs.container.inventory.TransmutationInventory;
 import quartzshard.projecttweaked.gameObjs.container.AlchBagContainer;
 import quartzshard.projecttweaked.gameObjs.container.AlchChestContainer;
 import quartzshard.projecttweaked.gameObjs.container.CollectorMK0Container;
@@ -25,6 +33,9 @@ import quartzshard.projecttweaked.gameObjs.container.RelayMK2Container;
 import quartzshard.projecttweaked.gameObjs.container.RelayMK3Container;
 import quartzshard.projecttweaked.gameObjs.container.RelayMK4Container;
 import quartzshard.projecttweaked.gameObjs.container.TransmutationContainer;
+import quartzshard.projecttweaked.gameObjs.container.inventory.EternalDensityInventory;
+import quartzshard.projecttweaked.gameObjs.container.inventory.MercurialEyeInventory;
+import quartzshard.projecttweaked.gameObjs.container.inventory.TransmutationInventory;
 import quartzshard.projecttweaked.gameObjs.gui.GUIAlchChest;
 import quartzshard.projecttweaked.gameObjs.gui.GUICollectorMK0;
 import quartzshard.projecttweaked.gameObjs.gui.GUICollectorMK1;
@@ -59,16 +70,6 @@ import quartzshard.projecttweaked.gameObjs.tiles.RelayMK1Tile;
 import quartzshard.projecttweaked.gameObjs.tiles.RelayMK2Tile;
 import quartzshard.projecttweaked.gameObjs.tiles.RelayMK3Tile;
 import quartzshard.projecttweaked.gameObjs.tiles.RelayMK4Tile;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumDyeColor;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.common.network.IGuiHandler;
-import net.minecraftforge.items.IItemHandlerModifiable;
-
-import java.util.Set;
 
 public class GuiHandler implements IGuiHandler
 {

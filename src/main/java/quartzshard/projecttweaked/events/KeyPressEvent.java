@@ -1,14 +1,14 @@
 package quartzshard.projecttweaked.events;
 
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.network.PacketHandler;
-import quartzshard.projecttweaked.network.packets.KeyPressPKT;
-import quartzshard.projecttweaked.utils.ClientKeyHelper;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
 import net.minecraftforge.fml.relauncher.Side;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.network.packets.KeyPressPKT;
+import quartzshard.projecttweaked.utils.ClientKeyHelper;
 
 @Mod.EventBusSubscriber(value = Side.CLIENT, modid = PECore.MODID)
 public class KeyPressEvent

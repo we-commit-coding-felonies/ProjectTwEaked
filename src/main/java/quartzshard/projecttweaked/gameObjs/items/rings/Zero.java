@@ -1,18 +1,12 @@
 package quartzshard.projecttweaked.gameObjs.items.rings;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
-import com.google.common.collect.Lists;
-import quartzshard.projecttweaked.api.PESounds;
-import quartzshard.projecttweaked.api.item.IItemCharge;
-import quartzshard.projecttweaked.api.item.IModeChanger;
-import quartzshard.projecttweaked.api.item.IPedestalItem;
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import quartzshard.projecttweaked.gameObjs.items.ItemPE;
-import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import quartzshard.projecttweaked.utils.MathUtils;
-import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -31,10 +25,16 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.List;
+import quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.api.item.IItemCharge;
+import quartzshard.projecttweaked.api.item.IModeChanger;
+import quartzshard.projecttweaked.api.item.IPedestalItem;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.items.ItemPE;
+import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.MathUtils;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 @Optional.Interface(iface = "baubles.api.IBauble", modid = "baubles")
 public class Zero extends ItemPE implements IModeChanger, IBauble, IPedestalItem, IItemCharge

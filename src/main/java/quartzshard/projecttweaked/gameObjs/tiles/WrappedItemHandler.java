@@ -1,9 +1,9 @@
 package quartzshard.projecttweaked.gameObjs.tiles;
 
+import javax.annotation.Nonnull;
+
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.items.IItemHandlerModifiable;
-
-import javax.annotation.Nonnull;
 
 /**
  * IItemHandler implementation for exposure to the public

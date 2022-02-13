@@ -1,15 +1,16 @@
 package quartzshard.projecttweaked.emc.mappers;
 
+import java.util.Set;
+
 import com.google.common.collect.Sets;
-import quartzshard.projecttweaked.emc.json.NSSItem;
-import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
-import quartzshard.projecttweaked.emc.collector.IMappingCollector;
-import quartzshard.projecttweaked.utils.ItemHelper;
+
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.oredict.OreDictionary;
-
-import java.util.Set;
+import quartzshard.projecttweaked.emc.collector.IMappingCollector;
+import quartzshard.projecttweaked.emc.json.NSSItem;
+import quartzshard.projecttweaked.emc.json.NormalizedSimpleStack;
+import quartzshard.projecttweaked.utils.ItemHelper;
 
 public class OreDictionaryMapper implements IEMCMapper<NormalizedSimpleStack, Long> {
 

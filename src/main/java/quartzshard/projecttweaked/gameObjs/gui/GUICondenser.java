@@ -1,18 +1,18 @@
 package quartzshard.projecttweaked.gameObjs.gui;
 
-import quartzshard.projecttweaked.gameObjs.container.CondenserContainer;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.gameObjs.tiles.CondenserTile;
-import quartzshard.projecttweaked.utils.Constants;
-import quartzshard.projecttweaked.utils.TransmutationEMCFormatter;
+import java.util.Arrays;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-
-import java.util.Arrays;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.gameObjs.container.CondenserContainer;
+import quartzshard.projecttweaked.gameObjs.tiles.CondenserTile;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.TransmutationEMCFormatter;
 
 public class GUICondenser extends GuiContainer
 {

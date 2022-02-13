@@ -1,10 +1,11 @@
 package quartzshard.projecttweaked.api.event;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraftforge.fml.common.eventhandler.Event;
+import java.util.UUID;
 
 import javax.annotation.Nonnull;
-import java.util.UUID;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.fml.common.eventhandler.Event;
 
 /**
  * This event is fired serverside after a players transmutation knowledge is changed

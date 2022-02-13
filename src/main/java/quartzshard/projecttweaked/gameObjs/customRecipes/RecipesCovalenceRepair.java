@@ -1,21 +1,20 @@
 package quartzshard.projecttweaked.gameObjs.customRecipes;
 
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.utils.EMCHelper;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import net.minecraft.inventory.InventoryCrafting;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.util.NonNullList;
-import net.minecraft.util.Tuple;
-import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeHooks;
-import net.minecraftforge.registries.IForgeRegistryEntry;
-
-import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import javax.annotation.Nonnull;
+
+import net.minecraft.inventory.InventoryCrafting;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.Tuple;
+import net.minecraft.world.World;
+import net.minecraftforge.registries.IForgeRegistryEntry;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
 
 public class RecipesCovalenceRepair extends IForgeRegistryEntry.Impl<IRecipe> implements IRecipe
 {

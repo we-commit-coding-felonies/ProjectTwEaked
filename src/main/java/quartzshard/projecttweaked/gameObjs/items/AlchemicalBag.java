@@ -1,16 +1,10 @@
 package quartzshard.projecttweaked.gameObjs.items;
 
-import quartzshard.projecttweaked.gameObjs.items.rings.BlackHoleBand;
-import quartzshard.projecttweaked.gameObjs.items.rings.VoidRing;
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
-import quartzshard.projecttweaked.gameObjs.ObjHandler;
-import quartzshard.projecttweaked.utils.Constants;
-import quartzshard.projecttweaked.utils.ItemHelper;
+import javax.annotation.Nonnull;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumDyeColor;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
@@ -21,8 +15,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.IItemHandler;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
+import quartzshard.projecttweaked.gameObjs.ObjHandler;
+import quartzshard.projecttweaked.gameObjs.items.rings.BlackHoleBand;
+import quartzshard.projecttweaked.gameObjs.items.rings.VoidRing;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.ItemHelper;
 
 public class AlchemicalBag extends ItemPE
 {

@@ -1,15 +1,14 @@
 package quartzshard.projecttweaked.gameObjs.items.rings;
 
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Nonnull;
+
+import com.google.common.collect.Lists;
+
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
-import com.google.common.collect.Lists;
-import quartzshard.projecttweaked.api.item.IAlchBagItem;
-import quartzshard.projecttweaked.api.item.IAlchChestItem;
-import quartzshard.projecttweaked.api.item.IPedestalItem;
-import quartzshard.projecttweaked.gameObjs.tiles.AlchChestTile;
-import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.block.BlockLiquid;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
@@ -39,10 +38,13 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.items.wrapper.InvWrapper;
-
-import javax.annotation.Nonnull;
-import java.util.List;
-import java.util.Map;
+import quartzshard.projecttweaked.api.item.IAlchBagItem;
+import quartzshard.projecttweaked.api.item.IAlchChestItem;
+import quartzshard.projecttweaked.api.item.IPedestalItem;
+import quartzshard.projecttweaked.gameObjs.tiles.AlchChestTile;
+import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 @Optional.Interface(iface = "baubles.api.IBauble", modid = "baubles")
 public class BlackHoleBand extends RingToggle implements IAlchBagItem, IAlchChestItem, IBauble, IPedestalItem

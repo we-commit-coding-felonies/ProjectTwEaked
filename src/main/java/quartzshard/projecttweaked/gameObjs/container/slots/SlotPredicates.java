@@ -1,15 +1,15 @@
 package quartzshard.projecttweaked.gameObjs.container.slots;
 
-import quartzshard.projecttweaked.api.item.IItemEmc;
-import quartzshard.projecttweaked.emc.FuelMapper;
-import quartzshard.projecttweaked.utils.EMCHelper;
-import quartzshard.projecttweaked.utils.ItemHelper;
+import java.util.function.Predicate;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.tileentity.TileEntityFurnace;
-
-import java.util.function.Predicate;
+import quartzshard.projecttweaked.api.item.IItemEmc;
+import quartzshard.projecttweaked.emc.FuelMapper;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
 
 public final class SlotPredicates {
 

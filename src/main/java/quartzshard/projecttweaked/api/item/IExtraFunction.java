@@ -1,11 +1,11 @@
 package quartzshard.projecttweaked.api.item;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 /**
  * This interface specifies items that perform a specific function when the Extra Function key is activated (default C)

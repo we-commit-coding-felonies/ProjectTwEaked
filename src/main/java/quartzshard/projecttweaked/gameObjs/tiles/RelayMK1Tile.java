@@ -1,12 +1,7 @@
 package quartzshard.projecttweaked.gameObjs.tiles;
 
-import quartzshard.projecttweaked.api.item.IItemEmc;
-import quartzshard.projecttweaked.api.tile.IEmcAcceptor;
-import quartzshard.projecttweaked.api.tile.IEmcProvider;
-import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
-import quartzshard.projecttweaked.utils.Constants;
-import quartzshard.projecttweaked.utils.EMCHelper;
-import quartzshard.projecttweaked.utils.ItemHelper;
+import javax.annotation.Nonnull;
+
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
@@ -14,8 +9,13 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.api.item.IItemEmc;
+import quartzshard.projecttweaked.api.tile.IEmcAcceptor;
+import quartzshard.projecttweaked.api.tile.IEmcProvider;
+import quartzshard.projecttweaked.gameObjs.container.slots.SlotPredicates;
+import quartzshard.projecttweaked.utils.Constants;
+import quartzshard.projecttweaked.utils.EMCHelper;
+import quartzshard.projecttweaked.utils.ItemHelper;
 
 public class RelayMK1Tile extends TileEmc implements IEmcAcceptor, IEmcProvider
 {

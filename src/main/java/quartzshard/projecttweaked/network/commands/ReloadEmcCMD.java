@@ -1,14 +1,14 @@
 package quartzshard.projecttweaked.network.commands;
 
-import quartzshard.projecttweaked.emc.EMCMapper;
-import quartzshard.projecttweaked.config.CustomEMCParser;
-import quartzshard.projecttweaked.network.PacketHandler;
+import javax.annotation.Nonnull;
+
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.text.TextComponentTranslation;
-
-import javax.annotation.Nonnull;
+import quartzshard.projecttweaked.config.CustomEMCParser;
+import quartzshard.projecttweaked.emc.EMCMapper;
+import quartzshard.projecttweaked.network.PacketHandler;
 
 public class ReloadEmcCMD extends CommandBase
 {

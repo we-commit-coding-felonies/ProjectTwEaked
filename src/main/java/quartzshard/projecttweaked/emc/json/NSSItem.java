@@ -1,14 +1,14 @@
 package quartzshard.projecttweaked.emc.json;
 
-import quartzshard.projecttweaked.PECore;
+import java.util.HashSet;
+import java.util.Set;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.oredict.OreDictionary;
-
-import java.util.HashSet;
-import java.util.Set;
+import quartzshard.projecttweaked.PECore;
 
 public class NSSItem implements NormalizedSimpleStack {
 	static final Set<String> seenIds = new HashSet<>();

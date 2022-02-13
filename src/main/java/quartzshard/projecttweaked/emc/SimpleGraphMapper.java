@@ -1,13 +1,13 @@
 package quartzshard.projecttweaked.emc;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
 import quartzshard.projecttweaked.PECore;
 import quartzshard.projecttweaked.emc.arithmetics.IValueArithmetic;
 import quartzshard.projecttweaked.emc.collector.MappingCollector;
 import quartzshard.projecttweaked.emc.generators.IValueGenerator;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
 
 public class SimpleGraphMapper<T, V extends Comparable<V>, A extends IValueArithmetic<V>> extends MappingCollector<T, V, A> implements IValueGenerator<T, V>
 {

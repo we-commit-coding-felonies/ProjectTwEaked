@@ -1,19 +1,13 @@
 package quartzshard.projecttweaked.gameObjs.items;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
-import com.google.common.collect.Lists;
-import quartzshard.projecttweaked.api.item.IPedestalItem;
-import quartzshard.projecttweaked.api.item.IProjectileShooter;
-import quartzshard.projecttweaked.api.PESounds;
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import quartzshard.projecttweaked.gameObjs.entity.EntityWaterProjectile;
-import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
-import quartzshard.projecttweaked.utils.ClientKeyHelper;
-import quartzshard.projecttweaked.utils.FluidHelper;
-import quartzshard.projecttweaked.utils.MathUtils;
-import quartzshard.projecttweaked.utils.PEKeybind;
-import quartzshard.projecttweaked.utils.PlayerHelper;
 import net.minecraft.block.BlockCauldron;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -45,17 +39,22 @@ import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fluids.capability.FluidTankProperties;
-import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidHandlerItem;
 import net.minecraftforge.fluids.capability.IFluidTankProperties;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.List;
+import quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.api.item.IPedestalItem;
+import quartzshard.projecttweaked.api.item.IProjectileShooter;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.entity.EntityWaterProjectile;
+import quartzshard.projecttweaked.gameObjs.tiles.DMPedestalTile;
+import quartzshard.projecttweaked.utils.ClientKeyHelper;
+import quartzshard.projecttweaked.utils.FluidHelper;
+import quartzshard.projecttweaked.utils.MathUtils;
+import quartzshard.projecttweaked.utils.PEKeybind;
+import quartzshard.projecttweaked.utils.PlayerHelper;
 
 @Optional.Interface(iface = "baubles.api.IBauble", modid = "baubles")
 public class EvertideAmulet extends ItemPE implements IProjectileShooter, IBauble, IPedestalItem

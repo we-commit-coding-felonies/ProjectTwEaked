@@ -296,5 +296,8 @@ public final class ProjectTwEakedConfig
 
 		@Config.Comment("Set this to false if you want the barrier to not make any noise when it blocks damage")
 		public boolean suppressBarrierNoise = false;
+
+		@Config.Comment("Allows the ring of arcana to provide the alchemical shield when active")
+		public boolean arcanaShield = false;
 	}
 }

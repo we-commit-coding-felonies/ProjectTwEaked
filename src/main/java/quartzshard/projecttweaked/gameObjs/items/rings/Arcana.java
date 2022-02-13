@@ -1,19 +1,11 @@
 package quartzshard.projecttweaked.gameObjs.items.rings;
 
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
-import quartzshard.projecttweaked.api.PESounds;
-import quartzshard.projecttweaked.api.item.IExtraFunction;
-import quartzshard.projecttweaked.api.item.IModeChanger;
-import quartzshard.projecttweaked.api.item.IProjectileShooter;
-import quartzshard.projecttweaked.gameObjs.entity.EntityFireProjectile;
-import quartzshard.projecttweaked.gameObjs.entity.EntitySWRGProjectile;
-import quartzshard.projecttweaked.gameObjs.items.IFireProtector;
-import quartzshard.projecttweaked.gameObjs.items.IFlightProvider;
-import quartzshard.projecttweaked.gameObjs.items.ItemPE;
-import quartzshard.projecttweaked.utils.ItemHelper;
-import quartzshard.projecttweaked.utils.PlayerHelper;
-import quartzshard.projecttweaked.utils.WorldHelper;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
@@ -24,14 +16,12 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.projectile.EntitySnowball;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
@@ -39,13 +29,27 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import javax.annotation.Nonnull;
-import java.util.List;
+import quartzshard.projecttweaked.api.PESounds;
+import quartzshard.projecttweaked.api.item.IAlchShield;
+import quartzshard.projecttweaked.api.item.IExtraFunction;
+import quartzshard.projecttweaked.api.item.IModeChanger;
+import quartzshard.projecttweaked.api.item.IProjectileShooter;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.entity.EntityFireProjectile;
+import quartzshard.projecttweaked.gameObjs.entity.EntitySWRGProjectile;
+import quartzshard.projecttweaked.gameObjs.items.IFireProtector;
+import quartzshard.projecttweaked.gameObjs.items.IFlightProvider;
+import quartzshard.projecttweaked.gameObjs.items.ItemPE;
+import quartzshard.projecttweaked.utils.ItemHelper;
+import quartzshard.projecttweaked.utils.PlayerHelper;
+import quartzshard.projecttweaked.utils.WorldHelper;
 
 @Optional.Interface(iface = "baubles.api.IBauble", modid = "baubles")
-public class Arcana extends ItemPE implements IBauble, IModeChanger, IFlightProvider, IFireProtector, IExtraFunction, IProjectileShooter
+public class Arcana extends ItemPE implements IBauble, IModeChanger, IFlightProvider, IFireProtector, IExtraFunction, IProjectileShooter, IAlchShield
 {
+
+	public boolean equipped = false;
+
 	public Arcana()
 	{
 		setTranslationKey("arcana_ring");
@@ -132,11 +136,15 @@ public class Arcana extends ItemPE implements IBauble, IModeChanger, IFlightProv
 
 	@Override
 	@Optional.Method(modid = "baubles")
-	public void onEquipped(ItemStack stack, EntityLivingBase player) {}
+	public void onEquipped(ItemStack stack, EntityLivingBase player) {
+		this.equipped = true;
+	}
 
 	@Override
 	@Optional.Method(modid = "baubles")
-	public void onUnequipped(ItemStack stack, EntityLivingBase player) {}
+	public void onUnequipped(ItemStack stack, EntityLivingBase player) {
+		this.equipped = false;
+	}
 
 	@Override
 	@Optional.Method(modid = "baubles")
@@ -219,6 +227,11 @@ public class Arcana extends ItemPE implements IBauble, IModeChanger, IFlightProv
 						}
 						break;
 					}
+					case UP:
+					case DOWN:
+					{
+						break;
+					}
 				}
 				world.playSound(null, player.posX, player.posY, player.posZ, PESounds.POWER, SoundCategory.PLAYERS, 1.0F, 1.0F);
 				break;
@@ -269,4 +282,11 @@ public class Arcana extends ItemPE implements IBauble, IModeChanger, IFlightProv
 	{
 		return true;
 	}
+
+	@Override
+	public boolean shieldCondition(EntityPlayer player, int slot)
+	{	
+		if(player.getEntityWorld().isRemote || !(slot < 8 || this.equipped )) return false;
+		return ProjectTwEakedConfig.alchemicalBarrier.arcanaShield;
+	}	
 }

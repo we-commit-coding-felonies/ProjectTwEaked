@@ -1,19 +1,7 @@
 package quartzshard.projecttweaked.events;
 
-import quartzshard.projecttweaked.PECore;
-import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
-import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
-import quartzshard.projecttweaked.gameObjs.items.AlchemicalBag;
-import quartzshard.projecttweaked.handlers.InternalAbilities;
-import quartzshard.projecttweaked.handlers.InternalTimers;
-import quartzshard.projecttweaked.network.PacketHandler;
-import quartzshard.projecttweaked.network.packets.CheckUpdatePKT;
-import quartzshard.projecttweaked.network.packets.SyncCovalencePKT;
-import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
-import quartzshard.projecttweaked.impl.AlchBagImpl;
-import quartzshard.projecttweaked.impl.KnowledgeImpl;
-import quartzshard.projecttweaked.impl.TransmutationOffline;
-import quartzshard.projecttweaked.utils.PlayerHelper;
+import baubles.api.BaublesApi;
+import baubles.api.cap.IBaublesItemHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -22,13 +10,19 @@ import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.play.server.SPacketCollectItem;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.text.*;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.Style;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.entity.EntityEvent;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
@@ -36,8 +30,24 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
+import quartzshard.projecttweaked.PECore;
+import quartzshard.projecttweaked.api.ProjectTwEakedAPI;
+import quartzshard.projecttweaked.api.capabilities.IKnowledgeProvider;
+import quartzshard.projecttweaked.api.item.IAlchShield;
+import quartzshard.projecttweaked.config.ProjectTwEakedConfig;
+import quartzshard.projecttweaked.gameObjs.items.AlchemicalBag;
+import quartzshard.projecttweaked.handlers.InternalAbilities;
+import quartzshard.projecttweaked.handlers.InternalTimers;
+import quartzshard.projecttweaked.impl.AlchBagImpl;
+import quartzshard.projecttweaked.impl.KnowledgeImpl;
+import quartzshard.projecttweaked.impl.TransmutationOffline;
+import quartzshard.projecttweaked.network.PacketHandler;
+import quartzshard.projecttweaked.network.packets.CheckUpdatePKT;
+import quartzshard.projecttweaked.network.packets.SyncCovalencePKT;
+import quartzshard.projecttweaked.utils.PlayerHelper;
 
 @Mod.EventBusSubscriber(modid = PECore.MODID)
 public class PlayerEvents
@@ -163,5 +173,51 @@ public class PlayerEvents
 		}
 
 		event.setCanceled(true);
+	}
+	
+	@SubscribeEvent
+	public static void onPlayerAttacked(LivingAttackEvent event)
+	{
+		if (!(event.getEntity() instanceof EntityPlayer)) return;
+		EntityPlayer player = (EntityPlayer)event.getEntity();
+		ItemStack offhand = player.getHeldItemOffhand();
+		IItemHandler inv = player.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.UP);
+		Iterable<ItemStack> armour = player.getArmorInventoryList();
+		IBaublesItemHandler baubles = BaublesApi.getBaublesHandler(player);
+		for (ItemStack stack : armour){
+			if (stack.isEmpty()) continue;
+			if (stack.getItem() instanceof IAlchShield)
+			{
+				((IAlchShield) stack.getItem()).onPlayerAttacked(event, 0);
+				if (event.isCanceled()) return;
+			}
+		}
+		for (int i = 0; i < baubles.getSlots(); i++)
+		{
+			ItemStack stack = baubles.getStackInSlot(i);
+			if (stack.isEmpty()) continue;
+			if (stack.getItem() instanceof IAlchShield)
+			{
+				((IAlchShield) stack.getItem()).onPlayerAttacked(event, 0);
+				if (event.isCanceled()) return;
+			}
+		}
+		if (!offhand.isEmpty() && offhand.getItem() instanceof IAlchShield)
+		{
+			((IAlchShield) offhand.getItem()).onPlayerAttacked(event, 0);
+			if (event.isCanceled()) return;
+		}
+		
+		for (int i = 0; i < inv.getSlots(); i++)
+		{
+			ItemStack stack = inv.getStackInSlot(i);
+			if (stack.isEmpty()) continue;
+			if (stack.getItem() instanceof IAlchShield)
+			{
+				((IAlchShield) stack.getItem()).onPlayerAttacked(event, i);
+				if (event.isCanceled()) return;
+			}
+		}
+		return;
 	}
 }

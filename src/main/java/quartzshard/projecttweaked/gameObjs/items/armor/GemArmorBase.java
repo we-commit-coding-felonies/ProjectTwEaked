@@ -82,8 +82,6 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor
 			PECore.LOGGER.info("*** ALCHEMICAL BARRIER DEBUG START ***");
 			PECore.LOGGER.info("Name of attacked player: " + player.getName());
 			PECore.LOGGER.info("UUID of attacked player: " + player.getUniqueID());
-			PECore.LOGGER.info("Name of attacker: " + source.getTrueSource().getName());
-			PECore.LOGGER.info("UUID of attacker: " + source.getTrueSource().getUniqueID());
 			PECore.LOGGER.info("Type of damage dealt: " + source.getDamageType());
 			PECore.LOGGER.info("Amount of damage dealt: " + damage);
 			PECore.LOGGER.info("*** ALCHEMICAL BARRIER DEBUG END ***");
@@ -100,7 +98,9 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor
 				}
 				provider.setEmc(provider.getEmc() - cost);
 				provider.sync((EntityPlayerMP)player);
-				player.getEntityWorld().playSound(null, player.posX, player.posY, player.posZ, PESounds.PROTECT, SoundCategory.PLAYERS, 0.45F, 1.0F);
+				if (!ProjectTwEakedConfig.alchemicalBarrier.suppressBarrierNoise) {
+					player.getEntityWorld().playSound(null, player.posX, player.posY, player.posZ, PESounds.PROTECT, SoundCategory.PLAYERS, 0.45F, 1.0F);
+				}
 				return true;
 			}
 			else

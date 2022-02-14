@@ -142,7 +142,7 @@ shadowJar {
     exclude('META-INF/maven/**')
 
     // Relocate apache commons-math3 to prevent conflicts with other mods that include it
-    relocate 'org.apache.commons.math3', 'quartzshard.projecttweaked.shaded.org.apache.commons.math3'
+    relocate 'org.apache.commons.math3', 'moze_intel.projecte.shaded.org.apache.commons.math3'
 
     classifier = 'universal' // Replace the default JAR
 }

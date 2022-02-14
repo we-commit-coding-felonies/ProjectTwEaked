@@ -1,5 +1,5 @@
 {
   "conditions": {
-    "tome_enabled": "quartzshard.projecttweaked.config.TomeEnabledFactory"
+    "tome_enabled": "moze_intel.projecte.config.TomeEnabledFactory"
   }
 }

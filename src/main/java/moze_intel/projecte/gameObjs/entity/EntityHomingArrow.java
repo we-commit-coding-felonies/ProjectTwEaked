@@ -20,6 +20,8 @@ import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.World;
 
+import moze_intel.projecte.config.ProjectEConfig;
+
 public class EntityHomingArrow extends EntityTippedArrow
 {
 	private static final DataParameter<Integer> DW_TARGET_ID = EntityDataManager.createKey(EntityHomingArrow.class, DataSerializers.VARINT);
@@ -59,6 +61,11 @@ public class EntityHomingArrow extends EntityTippedArrow
 	{
 		if (!world.isRemote && this.ticksExisted > 3)
 		{
+			if (this.ticksExisted > ProjectEConfig.items.maxHomingArrowLifetime) {
+				this.setDead();
+				return;
+			}
+			
 			if (hasTarget() && (!getTarget().isEntityAlive() || this.inGround))
 			{
 				dataManager.set(DW_TARGET_ID, NO_TARGET);

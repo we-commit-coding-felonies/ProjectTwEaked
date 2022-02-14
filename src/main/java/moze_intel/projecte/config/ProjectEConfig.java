@@ -41,6 +41,12 @@ public final class ProjectEConfig
 
 		@Config.Comment("Enable Watch of Flowing Time")
 		public boolean enableTimeWatch = true;
+
+		@Config.RangeInt(min = 0)
+		@Config.Comment({"Determines the maximum amount of TICKS that Archangel's Smite arrows are allowed to exist for",
+						"This can help with lag from large amounts of homing arrows sitting around doing nothing",
+						"Set to 0 for no maximum (they will still despawn if they spend too long stuck in a block, like normal arrows)"})
+		public int maxHomingArrowLifetime = 300;
 	}
 
 	public static final Effects effects = new Effects();

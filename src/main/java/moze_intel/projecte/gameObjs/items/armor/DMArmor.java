@@ -6,45 +6,21 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
-import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import moze_intel.projecte.PECore;
 import moze_intel.projecte.gameObjs.ObjHandler;
 
-public class DMArmor extends ItemArmor implements ISpecialArmor
+public class DMArmor extends MatterArmor
 {
 	public DMArmor(EntityEquipmentSlot armorPiece)
 	{
-		super(ArmorMaterial.DIAMOND, 0, armorPiece);
+		super(armorPiece, 0.6);
 		this.setCreativeTab(ObjHandler.cTab);
 		this.setTranslationKey("pe_dm_armor_" + armorPiece.getIndex());
-		this.setMaxDamage(0);
-	}
-	
-	@Override
-	public ArmorProperties getProperties(EntityLivingBase player, @Nonnull ItemStack armor, DamageSource source, double damage, int slot)
-	{
-		EntityEquipmentSlot type = ((DMArmor) armor.getItem()).armorType;
-		if (source.isExplosion())
-		{
-			return new ArmorProperties(1, 1.0D, 350);
-		}
-
-		if (type == EntityEquipmentSlot.FEET && source == DamageSource.FALL)
-		{
-			return new ArmorProperties(1, 1.0D, 5);
-		}
-
-		if (type == EntityEquipmentSlot.HEAD || type == EntityEquipmentSlot.FEET)
-		{
-			return new ArmorProperties(0, 0.2D, 100);
-		}
-
-		return new ArmorProperties(0, 0.3D, 150);
+		this.setMaxDamage(1);
 	}
 
 	@Override

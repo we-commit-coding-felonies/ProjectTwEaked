@@ -16,10 +16,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import moze_intel.projecte.PECore;
 import moze_intel.projecte.gameObjs.ObjHandler;
 import thaumcraft.api.items.IGoggles;
-import thaumcraft.api.items.IRevealer;
 
 @Optional.InterfaceList(value = {@Optional.Interface(iface = "thaumcraft.api.items.IRevealer", modid = "Thaumcraft"), @Optional.Interface(iface = "thaumcraft.api.items.IGoggles", modid = "Thaumcraft")})
-public class RMArmor extends ItemArmor implements ISpecialArmor, IRevealer, IGoggles
+public class RMArmor extends ItemArmor implements ISpecialArmor, IGoggles
 {
 	public RMArmor(EntityEquipmentSlot armorType)
 	{
@@ -72,13 +71,6 @@ public class RMArmor extends ItemArmor implements ISpecialArmor, IRevealer, IGog
 	@Override
 	@Optional.Method(modid = "Thaumcraft")
 	public boolean showIngamePopups(ItemStack itemstack, EntityLivingBase player) 
-	{
-		return ((RMArmor) itemstack.getItem()).armorType == EntityEquipmentSlot.HEAD;
-	}
-
-	@Override
-	@Optional.Method(modid = "Thaumcraft")
-	public boolean showNodes(ItemStack itemstack, EntityLivingBase player) 
 	{
 		return ((RMArmor) itemstack.getItem()).armorType == EntityEquipmentSlot.HEAD;
 	}

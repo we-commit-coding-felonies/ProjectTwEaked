@@ -335,10 +335,7 @@ public final class ProjectEConfig
 			"minecraft:levitation|60|2"
 		};
 
-		@Config.Comment("Should the effects applied be randomized, or should they all be applied at once?")
+		@Config.Comment("Should the effect applied be randomized, or should they all be applied at once?")
 		public boolean randomizeEffects = true;
-
-		@Config.Comment("Number of effects to apply per hit when randomizeEffects is true")
-		public int numRandomEffectsToApply = 1;
 	}
 }

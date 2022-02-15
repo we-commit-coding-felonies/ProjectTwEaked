@@ -60,9 +60,14 @@ public class EntityHomingArrow extends EntityTippedArrow
 		}
 		String[] effectList = ProjectEConfig.homingArrows.listOfEffects; 
 		if (ProjectEConfig.homingArrows.applyPotionEffects && effectList.length > 0) {
-			for (int i = 0; i < ProjectEConfig.homingArrows.numRandomEffectsToApply; i++) {
-				String[] chosen = (effectList[living.world.rand.nextInt(ProjectEConfig.homingArrows.listOfEffects.length)]).split("\\|");
+			if (ProjectEConfig.homingArrows.randomizeEffects) {
+				String[] chosen = (effectList[living.world.rand.nextInt(effectList.length)]).split("\\|");
 				living.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation(chosen[0]), Integer.parseInt(chosen[1]), Integer.parseInt(chosen[2])));
+			} else {
+				for (int i=0; i < effectList.length; i++) {
+					String[] current = (effectList[i]).split("\\|");
+					living.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation(current[0]), Integer.parseInt(current[1]), Integer.parseInt(current[2])));	
+				}
 			}
 		}
 	}

@@ -41,12 +41,6 @@ public final class ProjectEConfig
 
 		@Config.Comment("Enable Watch of Flowing Time")
 		public boolean enableTimeWatch = true;
-
-		@Config.RangeInt(min = 0)
-		@Config.Comment({"Determines the maximum amount of TICKS that Archangel's Smite arrows are allowed to exist for",
-						"This can help with lag from large amounts of homing arrows sitting around doing nothing",
-						"Set to 0 for no maximum (they will still despawn if they spend too long stuck in a block, like normal arrows)"})
-		public int maxHomingArrowLifetime = 300;
 	}
 
 	public static final Effects effects = new Effects();
@@ -313,5 +307,38 @@ public final class ProjectEConfig
 
 		@Config.Comment("Allows the ring of arcana to provide the alchemical barrier when active")
 		public boolean arcanaShield = false;
+	}
+
+	@Config.Comment("Settings related to the homing arrows fired by the Archangel's Smite")
+	public static final HomingArrows homingArrows = new HomingArrows();
+	public static class HomingArrows {
+		@Config.RangeInt(min = 0)
+		@Config.Comment({"Determines the maximum amount of TICKS that Archangel's Smite arrows are allowed to exist for",
+						"This can help with lag from large amounts of homing arrows sitting around doing nothing",
+						"Set to 0 for no maximum (they will still despawn if they spend too long stuck in a block, like normal arrows)"})
+		public int maxHomingArrowLifetime = 300;
+
+		@Config.Comment("Should the arrows ignore immunity frames?")
+		public boolean archangelsBadTime = true;
+
+		@Config.Comment("Should the arrows apply any potion effects at all?")
+		public boolean applyPotionEffects = true;
+
+		@Config.Comment({"A list of potion effects that can be applied, the amount of time they are applied for, and the strength of the effect",
+						"Each entry MUST be in the format 'mod:potion|ticks|level'",
+						"Note that level starts from 0, so to add Poison 3 for 10 seconds to the list, you would put:",
+						"'minecraft:poison|200|2'"})
+		public String[] listOfEffects = {
+			"minecraft:slowness|100|3",
+			"minecraft:weakness|250|4",
+			"minecraft:mining_fatigue|20|4",
+			"minecraft:levitation|60|2"
+		};
+
+		@Config.Comment("Should the effects applied be randomized, or should they all be applied at once?")
+		public boolean randomizeEffects = true;
+
+		@Config.Comment("Number of effects to apply per hit when randomizeEffects is true")
+		public int numRandomEffectsToApply = 1;
 	}
 }

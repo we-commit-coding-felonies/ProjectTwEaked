@@ -22,8 +22,7 @@ public class MatterArmor extends ItemArmor implements ISpecialArmor
 	@Override
 	public ArmorProperties getProperties(EntityLivingBase player, @Nonnull ItemStack armor, DamageSource source, double damage, int slot)
 	{
-		double scaledResistance = this.resistance * (this.getDamage(armor) / this.getMaxDamage(armor));
-		return new ArmorProperties(1, scaledResistance, (int) damage);
+		return new ArmorProperties(1, this.resistance, (int) damage);
 	}
 
 	@Override

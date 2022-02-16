@@ -188,7 +188,7 @@ public class PlayerEvents
 			if (stack.isEmpty()) continue;
 			if (stack.getItem() instanceof IAlchShield)
 			{
-				((IAlchShield) stack.getItem()).onPlayerAttacked(event, 0);
+				((IAlchShield) stack.getItem()).onPlayerAttacked(event, 0, stack);
 				if (event.isCanceled()) return;
 			}
 		}
@@ -198,13 +198,13 @@ public class PlayerEvents
 			if (stack.isEmpty()) continue;
 			if (stack.getItem() instanceof IAlchShield)
 			{
-				((IAlchShield) stack.getItem()).onPlayerAttacked(event, 0);
+				((IAlchShield) stack.getItem()).onPlayerAttacked(event, 0, stack);
 				if (event.isCanceled()) return;
 			}
 		}
 		if (!offhand.isEmpty() && offhand.getItem() instanceof IAlchShield)
 		{
-			((IAlchShield) offhand.getItem()).onPlayerAttacked(event, 0);
+			((IAlchShield) offhand.getItem()).onPlayerAttacked(event, 0, offhand);
 			if (event.isCanceled()) return;
 		}
 		
@@ -214,7 +214,7 @@ public class PlayerEvents
 			if (stack.isEmpty()) continue;
 			if (stack.getItem() instanceof IAlchShield)
 			{
-				((IAlchShield) stack.getItem()).onPlayerAttacked(event, i);
+				((IAlchShield) stack.getItem()).onPlayerAttacked(event, i, stack);
 				if (event.isCanceled()) return;
 			}
 		}

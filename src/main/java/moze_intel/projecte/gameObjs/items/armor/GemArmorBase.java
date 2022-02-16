@@ -2,6 +2,11 @@ package moze_intel.projecte.gameObjs.items.armor;
 
 import javax.annotation.Nonnull;
 
+import moze_intel.projecte.PECore;
+import moze_intel.projecte.api.item.IAlchShield;
+import moze_intel.projecte.gameObjs.ObjHandler;
+import moze_intel.projecte.gameObjs.items.ItemPE;
+import moze_intel.projecte.config.ProjectEConfig;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -9,12 +14,10 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
+import net.minecraft.world.World;
 import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import moze_intel.projecte.PECore;
-import moze_intel.projecte.api.item.IAlchShield;
-import moze_intel.projecte.gameObjs.ObjHandler;
 
 public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor, IAlchShield
 {
@@ -23,7 +26,7 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor, I
 		super(ArmorMaterial.DIAMOND, 0, armorType);
 		this.setCreativeTab(ObjHandler.cTab);
 		this.setTranslationKey("pe_gem_armor_" + armorType.getIndex());
-		this.setMaxDamage(0);
+		this.setMaxDamage(ProjectEConfig.matterArmors.gemArmorDurability);
 	}
 
 	public static boolean hasAnyPiece(EntityPlayer player)
@@ -53,36 +56,12 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor, I
 	@Override
 	public ArmorProperties getProperties(EntityLivingBase player, @Nonnull ItemStack armor, DamageSource source, double damage, int slot)
 	{	
-		EntityEquipmentSlot type = ((GemArmorBase) armor.getItem()).armorType;
-		int priority, max;
-		double ratio;
-
-		priority = source.isExplosion() ? 1 : 0;
-
-		if (type == EntityEquipmentSlot.CHEST || type == EntityEquipmentSlot.LEGS)
-		{
-			ratio = 0.3D;
-		} 
-		else 
-		{
-			ratio = 0.2D;
-		}
-		
-		if (type == EntityEquipmentSlot.HEAD || type == EntityEquipmentSlot.FEET)
-		{
-			max = 250;
-		} 
-		else 
-		{
-			max = 350;
-		}
-		
-		return new ArmorProperties(priority, ratio, max);
+		return new ArmorProperties(2, 1, 10000);
 	}
 
 	@Override
-	public boolean shieldCondition(EntityPlayer player, int slot)
-	{	
+	public boolean shieldCondition(EntityPlayer player, int slot, ItemStack stack)
+	{
 		return GemArmorBase.hasFullSet(player);
 	}
 
@@ -94,7 +73,9 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor, I
 	}
 
 	@Override
-	public void damageArmor(EntityLivingBase entity, @Nonnull ItemStack stack, DamageSource source, int damage, int slot) {}
+	public void damageArmor(EntityLivingBase entity, @Nonnull ItemStack stack, DamageSource source, int damage, int slot) {
+		stack.damageItem(damage * 10, entity);
+	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
@@ -102,5 +83,14 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor, I
 	{
 		char index = this.armorType == EntityEquipmentSlot.LEGS ? '2' : '1';
 		return PECore.MODID + ":textures/armor/gem_" + index + ".png";
+	}
+
+	@Override
+	public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
+		if (stack.isItemDamaged() && ProjectEConfig.matterArmors.gemAutoRepair) {
+			if (ItemPE.consumeFuel(player, stack, 16384, true)) {
+				stack.damageItem(-1, player);
+			}
+		}
 	}
 }

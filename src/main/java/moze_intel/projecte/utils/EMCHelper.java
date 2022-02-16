@@ -113,6 +113,48 @@ public final class EMCHelper
 		return -1;
 	}
 
+	public static long checkPlayerFuel(EntityPlayer player)
+	{
+		if (player.capabilities.isCreativeMode)
+		{
+			return Long.MAX_VALUE;
+		}
+
+		IItemHandler inv = player.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.UP);
+		long totalEMC = 0;
+
+		ItemStack offhand = player.getHeldItemOffhand();
+
+		if (!offhand.isEmpty() && offhand.getItem() instanceof IItemEmc)
+		{
+			IItemEmc itemEmc = ((IItemEmc) offhand.getItem());
+			totalEMC += itemEmc.getStoredEmc(offhand);
+		}
+
+		for (int i = 0; i < inv.getSlots(); i++)
+		{
+			ItemStack stack = inv.getStackInSlot(i);
+
+			if (stack.isEmpty())
+			{
+				continue;
+			}
+			else if (stack.getItem() instanceof IItemEmc)
+			{
+				IItemEmc itemEmc = ((IItemEmc) stack.getItem());
+				totalEMC += itemEmc.getStoredEmc(stack);
+			}
+			else if (FuelMapper.isStackFuel(stack))
+			{
+				if(FuelMapper.isStackFuel(stack))
+				{
+					totalEMC += getEmcValue(stack);
+				}
+			}
+		}
+		return totalEMC;
+	}
+
 	public static boolean doesBlockHaveEmc(Block block)
 	{
 		return block != null && doesItemHaveEmc(new ItemStack(block));

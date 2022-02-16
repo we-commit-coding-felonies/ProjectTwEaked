@@ -84,6 +84,7 @@ public class GemHelmet extends GemArmorBase implements IGoggles, IRevealer
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack stack)
     {
+        super.onArmorTick(world, player, stack);
         if (world.isRemote)
         {
             int x = (int) Math.floor(player.posX);

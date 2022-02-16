@@ -6,10 +6,8 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
-import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -17,37 +15,21 @@ import moze_intel.projecte.PECore;
 import moze_intel.projecte.gameObjs.ObjHandler;
 import thaumcraft.api.items.IGoggles;
 
-@Optional.InterfaceList(value = {@Optional.Interface(iface = "thaumcraft.api.items.IRevealer", modid = "Thaumcraft"), @Optional.Interface(iface = "thaumcraft.api.items.IGoggles", modid = "Thaumcraft")})
-public class RMArmor extends ItemArmor implements ISpecialArmor, IGoggles
+@Optional.Interface(iface = "thaumcraft.api.items.IGoggles", modid = "Thaumcraft")
+public class RMArmor extends MatterArmor implements IGoggles
 {
 	public RMArmor(EntityEquipmentSlot armorType)
 	{
-		super(ArmorMaterial.DIAMOND, 0, armorType);
+		super(armorType, 0.95);
 		this.setCreativeTab(ObjHandler.cTab);
 		this.setTranslationKey("pe_rm_armor_" + armorType.getIndex());
-		this.setMaxDamage(0);
+		this.setMaxDamage(100000);
 	}
 	
 	@Override
 	public ArmorProperties getProperties(EntityLivingBase player, @Nonnull ItemStack armor, DamageSource source, double damage, int slot)
 	{
-		EntityEquipmentSlot type = ((RMArmor) armor.getItem()).armorType;
-		if (source.isExplosion())
-		{
-			return new ArmorProperties(1, 1.0D, 500);
-		}
-
-		if (type == EntityEquipmentSlot.FEET && source == DamageSource.FALL)
-		{
-			return new ArmorProperties(1, 1.0D, 10);
-		}
-		
-		if (type == EntityEquipmentSlot.HEAD || type == EntityEquipmentSlot.FEET)
-		{
-			return new ArmorProperties(0, 0.2D, 250);
-		}
-		
-		return new ArmorProperties(0, 0.3D, 350);
+		return new ArmorProperties(1, this.resistance, (int) damage);
 	}
 
 	@Override
@@ -58,7 +40,9 @@ public class RMArmor extends ItemArmor implements ISpecialArmor, IGoggles
 	}
 
 	@Override
-	public void damageArmor(EntityLivingBase entity, @Nonnull ItemStack stack, DamageSource source, int damage, int slot) {}
+	public void damageArmor(EntityLivingBase entity, @Nonnull ItemStack stack, DamageSource source, int damage, int slot) {
+		//lol
+	}
 
 	@Override
 	@SideOnly(Side.CLIENT)

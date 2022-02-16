@@ -68,6 +68,7 @@ public class GemFeet extends GemArmorBase implements IFlightProvider, IStepAssis
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack stack)
     {
+        super.onArmorTick(world, player, stack);
         if (!world.isRemote)
         {
             EntityPlayerMP playerMP = ((EntityPlayerMP) player);

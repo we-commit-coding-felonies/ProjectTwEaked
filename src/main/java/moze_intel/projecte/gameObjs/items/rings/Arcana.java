@@ -284,7 +284,7 @@ public class Arcana extends ItemPE implements IBauble, IModeChanger, IFlightProv
 	}
 
 	@Override
-	public boolean shieldCondition(EntityPlayer player, int slot)
+	public boolean shieldCondition(EntityPlayer player, int slot, ItemStack stack)
 	{	
 		if(player.getEntityWorld().isRemote || !(slot < 8 || this.equipped )) return false;
 		return ProjectEConfig.alchemicalBarrier.arcanaShield;

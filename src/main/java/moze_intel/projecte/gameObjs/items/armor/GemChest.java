@@ -36,8 +36,9 @@ public class GemChest extends GemArmorBase implements IFireProtector
     }
 
     @Override
-    public void onArmorTick(World world, EntityPlayer player, ItemStack chest)
+    public void onArmorTick(World world, EntityPlayer player, ItemStack stack)
     {
+        super.onArmorTick(world, player, stack);
         if (world.isRemote)
         {
             int x = (int) Math.floor(player.posX);

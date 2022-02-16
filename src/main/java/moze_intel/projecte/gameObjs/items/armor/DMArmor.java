@@ -17,10 +17,10 @@ public class DMArmor extends MatterArmor
 {
 	public DMArmor(EntityEquipmentSlot armorPiece)
 	{
-		super(armorPiece, 0.6);
+		super(armorPiece, 0.4);
 		this.setCreativeTab(ObjHandler.cTab);
 		this.setTranslationKey("pe_dm_armor_" + armorPiece.getIndex());
-		this.setMaxDamage(1);
+		this.setMaxDamage(0);
 	}
 
 	@Override

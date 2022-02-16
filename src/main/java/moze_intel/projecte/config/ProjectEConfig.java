@@ -262,40 +262,36 @@ public final class ProjectEConfig
 	@Config.Comment("This section contains config relating to the 3 armor sets, Dark, Red, and Gem")
 	public static final MatterArmors matterArmors = new MatterArmors();
 	public static class MatterArmors {
-		@Config.Comment("How much durability each piece of Dark Matter armor has")
-		public int[] dmArmorDurability = {
-			0,
-			0,
-			0,
-			0
-		};
+		@Config.Comment("How much durability each piece of Dark Matter armor has. 0 for infinite")
+		public int dmArmorDurability = 0;
 
-		@Config.Comment("How much durability each piece of Red Matter armor has")
-		public int[] rmArmorDurability = {
-			0,
-			0,
-			0,
-			0
-		};
+		@Config.Comment("How much durability each piece of Red Matter armor has. 0 for infinite")
+		public int rmArmorDurability = 0;
 		
-		@Config.Comment("How much durability each piece of Gem armor has")
-		public int[] gemArmorDurability = {
-			0,
-			0,
-			0,
-			0
-		};
+		@Config.Comment("How much durability each piece of Gem armor has. 0 for infinite")
+		public int gemArmorDurability = 1000;
+
+		@Config.Comment("Should Gem armor automagically repair itself from EMC in your inventory when worn?")
+		public boolean gemAutoRepair = false;
+
+		@Config.Comment({"How much EMC should be consumed to restore 1 durability point of Gem armor?",
+						"Set to -1"})
+		public int emcPerGemDurability = 16384;
+
 	}
 
 	@Config.Comment("This section contains settings related to the Alchemical Barrier")
 	public static final AlchemicalBarrier alchemicalBarrier = new AlchemicalBarrier();
 	public static class AlchemicalBarrier {
 		@Config.Comment("Should the Alchemical Barrier be enabled?")
-		public boolean enableGemArmorEMCShield = true;
+		public boolean enableEMCShield = true;
 
 		@Config.RequiresMcRestart
 		@Config.Comment("The cost in EMC required to absorb 1 damage (half-heart)")
 		public int emcShieldCost = 64;
+
+		@Config.Comment("If set to true, the alchemical barrier will pull directly from the transmutation tablet, rather than klein stars")
+		public boolean pullFromTablet = true;
 
 		//@Config.Comment({"Should the Alchemical Barrier block 'unblockable' damage?",
 		//				"Unblockable damage is stuff like harming potions, the void, entity cramming,",
@@ -319,8 +315,7 @@ public final class ProjectEConfig
 		@Config.RangeInt(min = 0, max = 2)
 		@Config.Comment({"This setting changes the behavior of the barrier when the player has insufficient EMC to block incoming damage:",
 						"0: Consume all remaining EMC to reduce damage, any that cannot be afforded passes through.",
-						"1: Do not consume any EMC, and simply allow the damage to happen.",
-						"2: Similar to mode 0, except the armor will instead take durability damage to cover any damage the player cannot afford."})
+						"1: Do not consume any EMC, and simply allow the damage to happen."})
 		public int lowEMCMode = 0;
 
 		@Config.Comment("Set this to false if you want the barrier to not make any noise when it blocks damage")

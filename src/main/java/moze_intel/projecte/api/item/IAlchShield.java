@@ -58,20 +58,18 @@ public interface IAlchShield {
 	{
         if (ProjectEConfig.alchemicalBarrier.debugBarrier) 
         {
-            PECore.LOGGER.info("Logged attack event: Shielding");
-			PECore.LOGGER.info(shieldCondition(player, slot));
-        }
-		if (!shieldCondition(player, slot)) {
-			return false;
-		}
-
-		if (ProjectEConfig.alchemicalBarrier.debugBarrier) {
 			PECore.LOGGER.info("*** ALCHEMICAL BARRIER DEBUG START ***");
+            PECore.LOGGER.info("Logged attack event");
+			PECore.LOGGER.info("Will the player be shielded?: " + shieldCondition(player, slot));
+			PECore.LOGGER.info("Extra information about this attack:");
 			PECore.LOGGER.info("Name of attacked player: " + player.getName());
 			PECore.LOGGER.info("UUID of attacked player: " + player.getUniqueID());
 			PECore.LOGGER.info("Type of damage dealt: " + source.getDamageType());
 			PECore.LOGGER.info("Amount of damage dealt: " + damage);
 			PECore.LOGGER.info("*** ALCHEMICAL BARRIER DEBUG END ***");
+        }
+		if (!shieldCondition(player, slot)) {
+			return false;
 		}
 
 		IKnowledgeProvider provider = player.getCapability(ProjectEAPI.KNOWLEDGE_CAPABILITY, null);

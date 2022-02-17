@@ -13,10 +13,12 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundCategory;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.fml.common.Loader;
 
 public interface IAlchShield {
 
@@ -59,6 +61,7 @@ public interface IAlchShield {
      */
 	default boolean shieldWithEMC(EntityPlayer player, float damage, DamageSource source , int slot, ItemStack stack)
 	{
+		int ouchieModifier = 1;
         if (ProjectEConfig.alchemicalBarrier.debugBarrier) 
         {
 			PECore.LOGGER.info("*** ALCHEMICAL BARRIER DEBUG START ***");
@@ -77,9 +80,16 @@ public interface IAlchShield {
 			return false;
 		}
 
+		if (Loader.isModLoaded("avaritia") && source.getTrueSource() instanceof EntityPlayer) {
+			EntityPlayer attacker = (EntityPlayer) source.getTrueSource();
+			if (!attacker.getHeldItemMainhand().isEmpty() && attacker.getHeldItemMainhand().getItem().equals(Item.getByNameOrId("avaritia:infinity_sword"))) {
+				ouchieModifier = 1337;
+			}
+		}
+
 		int costPerDamage = ProjectEConfig.alchemicalBarrier.emcShieldCost;
 		if (checkListForDamageType(source.getDamageType())) {
-			long cost = (long) Math.pow((damage + costPerDamage), 2);
+			long cost = (long) Math.pow((damage + costPerDamage), 2 * ouchieModifier);
 			if (ProjectEConfig.alchemicalBarrier.pullFromTablet) {
 				IKnowledgeProvider provider = player.getCapability(ProjectEAPI.KNOWLEDGE_CAPABILITY, null);	
 				if (cost < 0)

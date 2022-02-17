@@ -39,6 +39,7 @@ public class GemChest extends GemArmorBase implements IFireProtector
     public void onArmorTick(World world, EntityPlayer player, ItemStack stack)
     {
         super.onArmorTick(world, player, stack);
+        if (stack.isItemDamaged()) return;
         if (world.isRemote)
         {
             int x = (int) Math.floor(player.posX);
@@ -71,7 +72,7 @@ public class GemChest extends GemArmorBase implements IFireProtector
 
     public void doExplode(EntityPlayer player)
     {
-        if (ProjectEConfig.difficulty.offensiveAbilities)
+        if (ProjectEConfig.difficulty.offensiveAbilities && !player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).isItemDamaged())
         {
             WorldHelper.createNovaExplosion(player.getEntityWorld(), player, player.posX, player.posY, player.posZ, 9.0F);
         }
@@ -80,6 +81,6 @@ public class GemChest extends GemArmorBase implements IFireProtector
     @Override
     public boolean canProtectAgainstFire(ItemStack stack, EntityPlayerMP player)
     {
-        return player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) == stack;
+        return (player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) == stack && !player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).isItemDamaged());
     }
 }

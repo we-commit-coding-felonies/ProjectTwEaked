@@ -12,7 +12,6 @@ import moze_intel.projecte.utils.EMCHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
@@ -134,7 +133,7 @@ public interface IAlchShield {
 					if (!ProjectEConfig.alchemicalBarrier.suppressBarrierNoise) {
 						if ( consumed > cost )
 						{
-							player.world.playSound(null, player.posX, player.posY, player.posZ, PESounds.UNCHARGE, SoundCategory.PLAYERS, 0.45F, 1.0F);
+							player.world.playSound(null, player.posX, player.posY, player.posZ, PESounds.WASTE, SoundCategory.PLAYERS, 0.45F, 1.0F);
 						}
 						if ( EMCHelper.checkPlayerFuel(player) > 0)
 						{
@@ -180,7 +179,7 @@ public interface IAlchShield {
      */
 	default boolean checkListForDamageType(String type) {
 		List<String> typeList = Arrays.asList(ProjectEConfig.alchemicalBarrier.dmgTypesList);
-		if (ProjectEConfig.alchemicalBarrier.typesIsAllowList) {
+		if (ProjectEConfig.alchemicalBarrier.typesIsWhitelist) {
 			if (typeList.contains(type)) {
 				return true;
 			}

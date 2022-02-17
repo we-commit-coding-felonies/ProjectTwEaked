@@ -4,26 +4,24 @@ import javax.annotation.Nonnull;
 
 import moze_intel.projecte.PECore;
 import moze_intel.projecte.api.item.IAlchShield;
+import moze_intel.projecte.config.ProjectEConfig;
 import moze_intel.projecte.gameObjs.ObjHandler;
 import moze_intel.projecte.gameObjs.items.ItemPE;
-import moze_intel.projecte.config.ProjectEConfig;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
-import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor, IAlchShield
+public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 {
 	public GemArmorBase(EntityEquipmentSlot armorType)
 	{
-		super(ArmorMaterial.DIAMOND, 0, armorType);
+		super(armorType, 1);
 		this.setCreativeTab(ObjHandler.cTab);
 		this.setTranslationKey("pe_gem_armor_" + armorType.getIndex());
 		this.setMaxDamage(ProjectEConfig.matterArmors.gemArmorDurability);

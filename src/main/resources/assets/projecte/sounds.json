@@ -48,5 +48,10 @@
     {
         "sounds": [ "projecte:item/peprotectfail" ],
         "subtitle": "pe.subtitle.peprotectfail"
+    },
+    "item.pewaste":
+    {
+        "sounds": [ "projecte:item/pewaste" ],
+        "subtitle": "pe.subtitle.pewaste"
     }
 }

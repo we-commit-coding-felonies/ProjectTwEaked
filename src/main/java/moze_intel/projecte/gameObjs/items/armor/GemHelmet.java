@@ -85,6 +85,7 @@ public class GemHelmet extends GemArmorBase implements IGoggles, IRevealer
     public void onArmorTick(World world, EntityPlayer player, ItemStack stack)
     {
         super.onArmorTick(world, player, stack);
+        if (stack.isItemDamaged()) return;
         if (world.isRemote)
         {
             int x = (int) Math.floor(player.posX);
@@ -144,7 +145,7 @@ public class GemHelmet extends GemArmorBase implements IGoggles, IRevealer
 
     public void doZap(EntityPlayer player)
     {
-        if (ProjectEConfig.difficulty.offensiveAbilities)
+        if (ProjectEConfig.difficulty.offensiveAbilities && !player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).isItemDamaged())
         {
             BlockPos strikePos = PlayerHelper.getBlockLookingAt(player, 120.0F);
             if (strikePos != null)

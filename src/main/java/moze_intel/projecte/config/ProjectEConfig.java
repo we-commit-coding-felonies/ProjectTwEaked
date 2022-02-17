@@ -305,7 +305,7 @@ public final class ProjectEConfig
 		};
 
 		@Config.Comment("If set to true, the barrier will ONLY block damage sources listed there")
-		public boolean typesIsAllowList = false;
+		public boolean typesIsWhitelist = false;
 
 		@Config.Comment({"Set to true to enable a barrier debug mode",
 						"This will output the following information to the log whenever the alchemical barrier blocks damage:",

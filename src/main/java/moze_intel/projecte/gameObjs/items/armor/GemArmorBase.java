@@ -53,6 +53,18 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor, I
 		return true;
 	}
 
+	public static boolean hasFullUndamagedSet(EntityPlayer player)
+	{
+		for (ItemStack i : player.inventory.armorInventory)
+		{
+			if (i.isEmpty() || !(i.getItem() instanceof GemArmorBase) || i.isItemDamaged() )
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+
 	@Override
 	public ArmorProperties getProperties(EntityLivingBase player, @Nonnull ItemStack armor, DamageSource source, double damage, int slot)
 	{	
@@ -62,7 +74,7 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor, I
 	@Override
 	public boolean shieldCondition(EntityPlayer player, int slot, ItemStack stack)
 	{
-		return GemArmorBase.hasFullSet(player);
+		return GemArmorBase.hasFullUndamagedSet(player);
 	}
 
 	@Override

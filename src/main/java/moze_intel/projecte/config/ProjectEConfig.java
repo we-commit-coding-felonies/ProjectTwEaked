@@ -287,8 +287,8 @@ public final class ProjectEConfig
 		public boolean enableEMCShield = true;
 
 		@Config.RequiresMcRestart
-		@Config.Comment("The cost in EMC required to absorb 1 damage (half-heart)")
-		public int emcShieldCost = 64;
+		@Config.Comment("The base EMC of the barrier. Total cost is (base + damage) ^ 2.")
+		public int emcShieldCost = 8;
 
 		@Config.Comment("If set to true, the alchemical barrier will pull directly from the transmutation tablet, rather than klein stars")
 		public boolean pullFromTablet = true;

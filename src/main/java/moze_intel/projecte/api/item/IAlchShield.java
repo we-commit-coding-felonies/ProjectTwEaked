@@ -70,6 +70,7 @@ public interface IAlchShield {
 			PECore.LOGGER.info("Type of damage dealt: " + source.getDamageType());
 			PECore.LOGGER.info("Amount of damage dealt: " + damage);
 			PECore.LOGGER.info("Current EMC in player inventory: " + EMCHelper.checkPlayerFuel(player));
+			PECore.LOGGER.info("Cost to the player: " + Math.pow(ProjectEConfig.alchemicalBarrier.emcShieldCost + damage, 2));
 			PECore.LOGGER.info("*** ALCHEMICAL BARRIER DEBUG END ***");
         }
 		if (!shieldCondition(player, slot, stack)) {
@@ -78,9 +79,9 @@ public interface IAlchShield {
 
 		int costPerDamage = ProjectEConfig.alchemicalBarrier.emcShieldCost;
 		if (checkListForDamageType(source.getDamageType())) {
+			long cost = (long) Math.pow((damage + costPerDamage), 2);
 			if (ProjectEConfig.alchemicalBarrier.pullFromTablet) {
 				IKnowledgeProvider provider = player.getCapability(ProjectEAPI.KNOWLEDGE_CAPABILITY, null);	
-				long cost = (long)damage * costPerDamage;
 				if (cost < 0)
 				{
 					cost *= -1;
@@ -114,23 +115,31 @@ public interface IAlchShield {
 					}
 					return false;
 				}
-			} else {
-				long cost = (long)damage * costPerDamage;
-				if (cost < 0)
-				{
-					cost *= -1;
-				}
+			} else 
+			{
 				long total = EMCHelper.checkPlayerFuel(player);
+
 				if (cost <= total && total > 0) {
 					long consumed = EMCHelper.consumePlayerFuel(player, cost);
 					if (!ProjectEConfig.alchemicalBarrier.suppressBarrierNoise) {
-						if (cost < consumed) {
-							player.getEntityWorld().playSound(null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_ENDERDRAGON_DEATH, SoundCategory.PLAYERS, 0.45F, 1.0F);
+						if ( consumed > cost )
+						{
+							player.world.playSound(null, player.posX, player.posY, player.posZ, PESounds.UNCHARGE, SoundCategory.PLAYERS, 0.45F, 1.0F);
 						}
-						player.getEntityWorld().playSound(null, player.posX, player.posY, player.posZ, PESounds.PROTECT, SoundCategory.PLAYERS, 0.45F, 1.0F);
+						if ( EMCHelper.checkPlayerFuel(player) > 0)
+						{
+							player.world.playSound(null, player.posX, player.posY, player.posZ, PESounds.PROTECT, SoundCategory.PLAYERS, 0.45F, 1.0F);
+						}
+						else
+						{
+							player.world.playSound(null, player.posX, player.posY, player.posZ, PESounds.PROTECTFAIL, SoundCategory.PLAYERS, 1.5F, 1.0F);
+						}
+
 					}
 					return true;
-				} else {
+				} 
+				else 
+				{
 					switch (ProjectEConfig.alchemicalBarrier.lowEMCMode) {
 						case 0:
 							if (total <= 0) {

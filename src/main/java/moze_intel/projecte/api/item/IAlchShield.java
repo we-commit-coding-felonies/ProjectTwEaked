@@ -12,6 +12,7 @@ import moze_intel.projecte.utils.EMCHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundCategory;
@@ -78,14 +79,14 @@ public interface IAlchShield {
 		int costPerDamage = ProjectEConfig.alchemicalBarrier.emcShieldCost;
 		if (checkListForDamageType(source.getDamageType())) {
 			if (ProjectEConfig.alchemicalBarrier.pullFromTablet) {
-				IKnowledgeProvider provider = player.getCapability(ProjectEAPI.KNOWLEDGE_CAPABILITY, null);
-				if (damage * costPerDamage <= provider.getEmc() && provider.getEmc() > 0)
-				{	
-					long cost = (long)damage * costPerDamage;
-					if (cost < 0)
-					{
-						cost *= -1;
-					}
+				IKnowledgeProvider provider = player.getCapability(ProjectEAPI.KNOWLEDGE_CAPABILITY, null);	
+				long cost = (long)damage * costPerDamage;
+				if (cost < 0)
+				{
+					cost *= -1;
+				}
+				if (cost <= provider.getEmc() && provider.getEmc() > 0)
+				{
 					provider.setEmc(provider.getEmc() - cost);
 					provider.sync((EntityPlayerMP)player);
 					if (!ProjectEConfig.alchemicalBarrier.suppressBarrierNoise) {
@@ -119,15 +120,34 @@ public interface IAlchShield {
 				{
 					cost *= -1;
 				}
-				long emcConsumed = EMCHelper.consumePlayerFuel(player, cost);
-				if (emcConsumed >= 0)
-				{
+				long total = EMCHelper.checkPlayerFuel(player);
+				if (cost <= total && total > 0) {
+					long consumed = EMCHelper.consumePlayerFuel(player, cost);
 					if (!ProjectEConfig.alchemicalBarrier.suppressBarrierNoise) {
+						if (cost < consumed) {
+							player.getEntityWorld().playSound(null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_ENDERDRAGON_DEATH, SoundCategory.PLAYERS, 0.45F, 1.0F);
+						}
 						player.getEntityWorld().playSound(null, player.posX, player.posY, player.posZ, PESounds.PROTECT, SoundCategory.PLAYERS, 0.45F, 1.0F);
 					}
 					return true;
+				} else {
+					switch (ProjectEConfig.alchemicalBarrier.lowEMCMode) {
+						case 0:
+							if (total <= 0) {
+								break;
+							}
+							float affordableDamage = total / costPerDamage;
+							EMCHelper.consumePlayerFuel(player, total);
+							player.attackEntityFrom(source, damage - affordableDamage);
+							if (!ProjectEConfig.alchemicalBarrier.suppressBarrierNoise) {
+								player.world.playSound(null, player.posX, player.posY, player.posZ, PESounds.PROTECTFAIL, SoundCategory.PLAYERS, 1.5F, 1.0F);
+							}
+							return true;
+						case 1:
+							break;
+					}
+					return false;
 				}
-				return false;
 			}
 			
 		}

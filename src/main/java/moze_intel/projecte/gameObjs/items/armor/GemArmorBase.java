@@ -10,12 +10,16 @@ import moze_intel.projecte.gameObjs.items.ItemPE;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.items.IItemHandler;
 
 public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 {
@@ -26,6 +30,7 @@ public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 		this.setTranslationKey("pe_gem_armor_" + armorType.getIndex());
 		this.setMaxDamage(ProjectEConfig.matterArmors.gemArmorDurability);
 	}
+
 
 	public static boolean hasAnyPiece(EntityPlayer player)
 	{
@@ -84,7 +89,20 @@ public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 
 	@Override
 	public void damageArmor(EntityLivingBase entity, @Nonnull ItemStack stack, DamageSource source, int damage, int slot) {
-		stack.damageItem(damage * 10, entity);
+
+		if ( (this.getDamage(stack) + damage*10) < this.getMaxDamage(stack) )
+		{
+			stack.damageItem(damage * 10, entity);
+		}
+		else
+		{	
+			//Handle the breaking and replacing
+			//stack.shrink(1);
+			/* ItemStack newStack = new ItemStack(Items.DIAMOND_CHESTPLATE);
+			EntityPlayer player = (EntityPlayer)entity;
+			IItemHandler inv = player.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH);
+			inv.insertItem(slot, newStack, false); */
+		}
 	}
 
 	@Override
@@ -103,4 +121,6 @@ public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 			}
 		}
 	}
+
+
 }

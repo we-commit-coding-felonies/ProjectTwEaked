@@ -2,6 +2,7 @@ package moze_intel.projecte.gameObjs.items.armor;
 
 import javax.annotation.Nonnull;
 
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -34,4 +35,14 @@ public class MatterArmor extends ItemArmor implements ISpecialArmor
 
 	@Override
 	public void damageArmor(EntityLivingBase entity, @Nonnull ItemStack stack, DamageSource source, int damage, int slot) {}
+
+	@Override
+	public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+		return false;
+	}
+
+	@Override
+	public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
+		return false;
+	}
 }

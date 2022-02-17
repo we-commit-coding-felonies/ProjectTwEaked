@@ -2,6 +2,7 @@ package moze_intel.projecte.gameObjs.items;
 
 import javax.annotation.Nonnull;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -9,11 +10,13 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import moze_intel.projecte.PECore;
 import moze_intel.projecte.api.item.IItemEmc;
+import moze_intel.projecte.config.ProjectEConfig;
 import moze_intel.projecte.utils.EMCHelper;
 
 public class KleinStar extends ItemPE implements IItemEmc
@@ -130,5 +133,24 @@ public class KleinStar extends ItemPE implements IItemEmc
 	public long getMaximumEmc(@Nonnull ItemStack stack)
 	{
 		return EMCHelper.getKleinStarMaxEmc(stack);
+	}
+
+	@Override
+	public int getRGBDurabilityForDisplay(ItemStack stack) {
+		return covalenceColorFade(Minecraft.getMinecraft().world);
+	}
+
+	public int covalenceColorFade(World world) {
+		int totalTime = ProjectEConfig.misc.barColorFadeSpeed;
+		int fadeSpeed = totalTime/2;
+		float fade = world.getWorldTime() % totalTime;
+		//high 0.605555555555
+		//low 0.303055555556
+		if (fade < fadeSpeed) {
+			return MathHelper.hsvToRGB(0.3031f + ((0.3025f * fade) / fadeSpeed), 1.0f, 0.824f);
+		}
+		else {
+			return MathHelper.hsvToRGB(0.6065f - ((0.3025f * (fade - fadeSpeed)) / fadeSpeed), 1.0f, 0.824f);
+		}
 	}
 }

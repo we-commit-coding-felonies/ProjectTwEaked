@@ -7,6 +7,7 @@ import net.minecraft.item.IItemPropertyGetter;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.MathHelper;
 import moze_intel.projecte.PECore;
 import moze_intel.projecte.gameObjs.ObjHandler;
 import moze_intel.projecte.utils.EMCHelper;
@@ -102,6 +103,11 @@ public class ItemPE extends Item
 		}
 		
 		return true;
+	}
+
+	@Override
+	public int getRGBDurabilityForDisplay(ItemStack stack) {
+        return MathHelper.hsvToRGB(Math.max(0.3031F, (float) (1.0F - getDurabilityForDisplay(stack)) / 1.65137614679F), 1.0f, 0.824f);
 	}
 	
 }

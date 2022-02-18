@@ -5,6 +5,7 @@ import baubles.api.cap.IBaublesItemHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
@@ -33,12 +34,15 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
+import net.minecraftforge.items.wrapper.InvWrapper;
 import moze_intel.projecte.PECore;
 import moze_intel.projecte.api.ProjectEAPI;
 import moze_intel.projecte.api.capabilities.IKnowledgeProvider;
 import moze_intel.projecte.api.item.IAlchShield;
 import moze_intel.projecte.config.ProjectEConfig;
+import moze_intel.projecte.gameObjs.ObjHandler;
 import moze_intel.projecte.gameObjs.items.AlchemicalBag;
+import moze_intel.projecte.gameObjs.items.armor.GemArmorBase;
 import moze_intel.projecte.handlers.InternalAbilities;
 import moze_intel.projecte.handlers.InternalTimers;
 import moze_intel.projecte.impl.AlchBagImpl;
@@ -47,6 +51,7 @@ import moze_intel.projecte.impl.TransmutationOffline;
 import moze_intel.projecte.network.PacketHandler;
 import moze_intel.projecte.network.packets.CheckUpdatePKT;
 import moze_intel.projecte.network.packets.SyncCovalencePKT;
+import moze_intel.projecte.utils.ItemHelper;
 import moze_intel.projecte.utils.PlayerHelper;
 
 @Mod.EventBusSubscriber(modid = PECore.MODID)
@@ -190,6 +195,42 @@ public class PlayerEvents
 			{
 				((IAlchShield) stack.getItem()).onPlayerAttacked(event, 0, stack);
 				if (event.isCanceled()) return;
+			}
+			if (stack.getItem() instanceof GemArmorBase) {
+				GemArmorBase armorItem = (GemArmorBase) stack.getItem();
+				if (stack.getItemDamage() + event.getAmount() >= stack.getMaxDamage()) {
+					player.renderBrokenItemStack(stack);
+					stack.setItemDamage(0);
+					stack.shrink(1);
+					ItemStack newStack = null;
+					int slot = 0;
+					switch (armorItem.armorType) {
+						case HEAD: //slot 39
+							newStack = new ItemStack(ObjHandler.rmHelmet);
+							slot = 39;
+							break;
+						case CHEST: //slot 38
+							newStack = new ItemStack(ObjHandler.rmChest);
+							slot = 38;
+							break;
+						case LEGS:
+							newStack = new ItemStack(ObjHandler.rmLegs);
+							slot = 37;
+							break;
+						case FEET:
+							newStack = 	new ItemStack(ObjHandler.rmFeet);
+							slot = 36;
+							break;
+						default:
+							PECore.LOGGER.error("GemArmorBase is somehow doing something with armorType: " + armorItem.armorType);
+							PECore.LOGGER.error("Please report this bug to ProjectTwEaked!");
+							newStack = new ItemStack(Items.DIAMOND); //placeholder item in case game doesnt like null items
+							break;
+					}
+					ItemHelper.getOrCreateCompound(newStack).setInteger("pe_wear", 5000);
+					InvWrapper playerInv = new InvWrapper(player.inventory);
+					playerInv.setStackInSlot(slot, newStack);
+				}
 			}
 		}
 		for (int i = 0; i < baubles.getSlots(); i++)

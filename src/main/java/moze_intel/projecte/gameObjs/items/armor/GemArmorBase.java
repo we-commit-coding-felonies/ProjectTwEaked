@@ -10,16 +10,12 @@ import moze_intel.projecte.gameObjs.items.ItemPE;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.items.IItemHandler;
 
 public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 {
@@ -83,23 +79,42 @@ public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 
 	@Override
 	public void damageArmor(EntityLivingBase entity, @Nonnull ItemStack stack, DamageSource source, int damage, int slot) {
-
 		if ( (this.getDamage(stack) + damage*10) < this.getMaxDamage(stack) )
 		{
 			stack.damageItem(damage * 10, entity);
 		}
-		else
-		{	
-			//Handle the breaking and replacing
-			//stack.shrink(1);
-			/* ItemStack newStack = new ItemStack(Items.DIAMOND_CHESTPLATE);
-			EntityPlayer player = (EntityPlayer)entity;
-			IItemHandler inv = player.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH);
-			inv.insertItem(slot, newStack, false); 
-			
-			hey shard, you may find this useful: entityIn.renderBrokenItemStack(this);
-			*/
-		}
+		//else
+		//{	
+		//	//Handle the breaking and replacing
+		//	System.out.println(slot);
+		//	entity.renderBrokenItemStack(stack);
+		//	stack.setItemDamage(0);
+		//	stack.shrink(1);
+		//	ItemStack newStack = null;
+		//	switch (armorType) {
+		//		case HEAD:
+		//			newStack = new ItemStack(ObjHandler.rmHelmet);
+		//			break;
+		//		case CHEST:
+		//			newStack = new ItemStack(ObjHandler.rmChest);
+		//			break;
+		//		case LEGS:
+		//			newStack = new ItemStack(ObjHandler.rmLegs);
+		//			break;
+		//		case FEET:
+		//			newStack = 	new ItemStack(ObjHandler.rmFeet);
+		//			break;
+		//		default:
+		//			PECore.LOGGER.error("GemArmorBase is somehow doing something with armorType: " + armorType);
+		//			PECore.LOGGER.error("Please report this bug to ProjectTwEaked!");
+		//			break;
+		//	}
+		//	EntityPlayer player = (EntityPlayer)entity;
+		//	IItemHandler inv = player.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH);
+		//	inv.insertItem(slot, newStack, false);
+		//	System.out.println(player.inventoryContainer.inventorySlots);
+		//	InvWrapper
+		//}
 	}
 
 	@Override

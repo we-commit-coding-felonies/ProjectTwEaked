@@ -142,7 +142,7 @@ public class KleinStar extends ItemPE implements IItemEmc
 
 	@Override
 	public int getRGBDurabilityForDisplay(ItemStack stack) {
-		return covalenceColorFade(Minecraft.getMinecraft().world, stack);
+		return covalenceColorFade(Minecraft.getMinecraft().world.init(), stack);
 	}
 
 

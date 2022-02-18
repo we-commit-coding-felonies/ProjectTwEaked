@@ -17,7 +17,7 @@ public class DMArmor extends MatterArmor
 {
 	public DMArmor(EntityEquipmentSlot armorPiece)
 	{
-		super(armorPiece, 0.4);
+		super(armorPiece, 0.6, 0.85);
 		this.setCreativeTab(ObjHandler.cTab);
 		this.setTranslationKey("pe_dm_armor_" + armorPiece.getIndex());
 		this.setMaxDamage(0);

@@ -25,7 +25,7 @@ public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 {
 	public GemArmorBase(EntityEquipmentSlot armorType)
 	{
-		super(armorType, 1);
+		super(armorType, 0.99, 0.55);
 		this.setCreativeTab(ObjHandler.cTab);
 		this.setTranslationKey("pe_gem_armor_" + armorType.getIndex());
 		this.setMaxDamage(ProjectEConfig.matterArmors.gemArmorDurability);
@@ -69,12 +69,6 @@ public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 	}
 
 	@Override
-	public ArmorProperties getProperties(EntityLivingBase player, @Nonnull ItemStack armor, DamageSource source, double damage, int slot)
-	{	
-		return new ArmorProperties(2, 1, 10000);
-	}
-
-	@Override
 	public boolean shieldCondition(EntityPlayer player, int slot, ItemStack stack)
 	{
 		return GemArmorBase.hasFullUndamagedSet(player);
@@ -101,7 +95,10 @@ public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 			/* ItemStack newStack = new ItemStack(Items.DIAMOND_CHESTPLATE);
 			EntityPlayer player = (EntityPlayer)entity;
 			IItemHandler inv = player.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH);
-			inv.insertItem(slot, newStack, false); */
+			inv.insertItem(slot, newStack, false); 
+			
+			hey shard, you may find this useful: entityIn.renderBrokenItemStack(this);
+			*/
 		}
 	}
 

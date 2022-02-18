@@ -14,15 +14,27 @@ import net.minecraftforge.common.ISpecialArmor;
 public class MatterArmor extends ItemArmor implements ISpecialArmor
 {
     public double resistance;
-	public MatterArmor(EntityEquipmentSlot armorPiece, double fullResistance)
+	public double unblockableEffectiveness;
+	public MatterArmor(EntityEquipmentSlot armorPiece, double fullResistance, double unblockablePenalty)
 	{
 		super(ArmorMaterial.DIAMOND, 0, armorPiece);
         this.resistance = fullResistance / 4;
+		this.unblockableEffectiveness = 1.0 - unblockablePenalty;
+	}
+
+	@Override
+	public boolean handleUnblockableDamage(EntityLivingBase entity, @Nonnull ItemStack armor, DamageSource source, double damage, int slot) {
+		return true;
 	}
 	
 	@Override
 	public ArmorProperties getProperties(EntityLivingBase player, @Nonnull ItemStack armor, DamageSource source, double damage, int slot)
 	{
+		if (source.isUnblockable()) {
+			System.out.println(this.resistance * this.unblockableEffectiveness);
+			return new ArmorProperties(1, this.resistance * this.unblockableEffectiveness, (int) damage);
+		}
+		System.out.println(this.resistance);
 		return new ArmorProperties(1, this.resistance, (int) damage);
 	}
 

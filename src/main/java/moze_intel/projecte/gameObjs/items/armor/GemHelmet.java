@@ -29,10 +29,9 @@ import moze_intel.projecte.utils.ItemHelper;
 import moze_intel.projecte.utils.PEKeybind;
 import moze_intel.projecte.utils.PlayerHelper;
 import thaumcraft.api.items.IGoggles;
-import thaumcraft.api.items.IRevealer;
 
 @Optional.InterfaceList(value = {@Optional.Interface(iface = "thaumcraft.api.items.IRevealer", modid = "Thaumcraft"), @Optional.Interface(iface = "thaumcraft.api.items.IGoggles", modid = "Thaumcraft")})
-public class GemHelmet extends GemArmorBase implements IGoggles, IRevealer
+public class GemHelmet extends GemArmorBase implements IGoggles
 {
     public GemHelmet()
     {
@@ -132,13 +131,6 @@ public class GemHelmet extends GemArmorBase implements IGoggles, IRevealer
     @Override
     @Optional.Method(modid = "Thaumcraft")
     public boolean showIngamePopups(ItemStack stack, EntityLivingBase player)
-    {
-        return true;
-    }
-
-    @Override
-    @Optional.Method(modid = "Thaumcraft")
-    public boolean showNodes(ItemStack stack, EntityLivingBase player)
     {
         return true;
     }

@@ -1,9 +1,12 @@
 package moze_intel.projecte.gameObjs.items;
 
+import java.util.Random;
+
 import javax.annotation.Nonnull;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
@@ -18,9 +21,11 @@ import moze_intel.projecte.PECore;
 import moze_intel.projecte.api.item.IItemEmc;
 import moze_intel.projecte.config.ProjectEConfig;
 import moze_intel.projecte.utils.EMCHelper;
+import moze_intel.projecte.utils.ItemHelper;
 
 public class KleinStar extends ItemPE implements IItemEmc
 {
+
 	public KleinStar()
 	{
 		this.setTranslationKey("klein_star");
@@ -137,13 +142,26 @@ public class KleinStar extends ItemPE implements IItemEmc
 
 	@Override
 	public int getRGBDurabilityForDisplay(ItemStack stack) {
-		return covalenceColorFade(Minecraft.getMinecraft().world);
+		return covalenceColorFade(Minecraft.getMinecraft().world, stack);
 	}
 
-	public int covalenceColorFade(World world) {
+
+	// display stuff
+
+	@Override
+	public void onUpdate(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected)
+	{
+		if (ItemHelper.getOrCreateCompound(stack).getInteger("offset") == 0)
+		{
+			ItemHelper.getOrCreateCompound(stack).setInteger("offset", (int)Math.round(Math.random() * ProjectEConfig.misc.barColorFadeSpeed));
+		}
+		return;
+	}
+	public int covalenceColorFade(World world, ItemStack stack) {
+		int offset = ItemHelper.getOrCreateCompound(stack).getInteger("offset");
 		int totalTime = ProjectEConfig.misc.barColorFadeSpeed;
 		int fadeSpeed = totalTime/2;
-		float fade = world.getWorldTime() % totalTime;
+		float fade = ((world.getWorldTime() % totalTime) + offset) % totalTime;
 		//high 0.605555555555
 		//low 0.303055555556
 		if (fade < fadeSpeed) {

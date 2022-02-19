@@ -31,10 +31,8 @@ public class MatterArmor extends ItemArmor implements ISpecialArmor
 	public ArmorProperties getProperties(EntityLivingBase player, @Nonnull ItemStack armor, DamageSource source, double damage, int slot)
 	{
 		if (source.isUnblockable()) {
-			System.out.println(this.resistance * this.unblockableEffectiveness);
 			return new ArmorProperties(1, this.resistance * this.unblockableEffectiveness, (int) damage);
 		}
-		System.out.println(this.resistance);
 		return new ArmorProperties(1, this.resistance, (int) damage);
 	}
 

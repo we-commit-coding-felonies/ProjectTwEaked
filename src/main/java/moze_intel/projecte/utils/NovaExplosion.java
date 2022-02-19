@@ -8,6 +8,7 @@ import java.util.List;
 
 import com.google.common.collect.Sets;
 
+import moze_intel.projecte.api.PESounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -98,7 +99,7 @@ public class NovaExplosion extends Explosion
 		double y = getPosition().y;
 		double z = getPosition().z;
 
-		this.worldObj.playSound(null, x, y, z, SoundEvents.ENTITY_GENERIC_EXPLODE, SoundCategory.BLOCKS, 4.0F, (1.0F + (this.worldObj.rand.nextFloat() - this.worldObj.rand.nextFloat()) * 0.2F) * 0.7F);
+		this.worldObj.playSound(null, x, y, z, PESounds.NOVA, SoundCategory.BLOCKS, 4.0F, (1.0F + (this.worldObj.rand.nextFloat() - this.worldObj.rand.nextFloat()) * 0.2F) * 0.7F);
 
 		if (cachedExplosionSize >= 2.0F)
 		{

@@ -7,15 +7,20 @@ import moze_intel.projecte.api.item.IAlchShield;
 import moze_intel.projecte.config.ProjectEConfig;
 import moze_intel.projecte.gameObjs.ObjHandler;
 import moze_intel.projecte.gameObjs.items.ItemPE;
+import moze_intel.projecte.utils.ItemHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.items.wrapper.InvWrapper;
 
 public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 {
@@ -79,42 +84,77 @@ public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 
 	@Override
 	public void damageArmor(EntityLivingBase entity, @Nonnull ItemStack stack, DamageSource source, int damage, int slot) {
-		if ( (this.getDamage(stack) + damage*10) < this.getMaxDamage(stack) )
-		{
-			stack.damageItem(damage * 10, entity);
+		if (entity instanceof EntityPlayer) {
+			if (stack.attemptDamageItem((damage * 10), entity.world.rand, null)) {
+				NBTTagCompound entData = entity.getEntityData();
+				entData.setByte("pe_gem_num_replacements", (byte) Math.min(4, (entData.getByte("pe_gem_num_replacements") + 1))); // TODO: literally anything but this
+				//if (entData.getByte("pe_broken_armor_types") < 15 && entData.getByte("pe_broken_armor_types") >= 0) {
+				//	switch (this.armorType) {
+				//		case HEAD:
+				//			entData.setByte("pe_broken_armor_types", (byte) (entData.getByte("pe_broken_armor_types") + 8));
+				//			break;
+				//		case CHEST:
+				//			entData.setByte("pe_broken_armor_types", (byte) (entData.getByte("pe_broken_armor_types") + 4));
+				//			break;
+				//		case LEGS:
+				//			entData.setByte("pe_broken_armor_types", (byte) (entData.getByte("pe_broken_armor_types") + 2));
+				//			break;
+				//		case FEET:
+				//			entData.setByte("pe_broken_armor_types", (byte) (entData.getByte("pe_broken_armor_types") + 1));
+				//			break;
+				//		default:
+				//			PECore.LOGGER.error("GemArmorBase has encountered unknown armor type: " + this.armorType);
+				//			PECore.LOGGER.error("Please report this bug to ProjectTwEaked!");
+				//			break;
+				//	}
+				//} else {
+				//	PECore.LOGGER.error("NBT Tag 'pe_broken_armor_types' on entity " + entity + " had an unexpected value of " + entData.getByte("pe_broken_armor_types") + "!");
+				//	PECore.LOGGER.error("This value should ALWAYS be between 0 and 15! Please report this to the ProjectTwEaked devs ASAP!");
+				//	entData.removeTag("pe_broken_armor_types");
+				//	entData.removeTag("pe_broke_gem_armor");
+				//	PECore.LOGGER.error("The tag has been removed from the entity to prevent unintended behavior. SERIOUSLY, PLEASE REPORT THIS TO THE DEVS!");
+				//}
+			} else {
+				if (stack.getMaxDamage() - stack.getItemDamage() <= 1) {
+					stack.setItemDamage(stack.getMaxDamage() - 2);
+					return;
+				}
+				stack.damageItem(-1, entity);
+			}
+			//if (stack.getCount() < 1) {
+			//	ItemStack newStack = null;
+			//switch (this.armorType) {
+			//	case HEAD:
+			//		newStack = new ItemStack(ObjHandler.rmHelmet);
+			//		slot = 39;
+			//		System.out.println("head");
+			//		break;
+			//	case CHEST:
+			//		newStack = new ItemStack(ObjHandler.rmChest);
+			//		slot = 38;
+			//		System.out.println("body");
+			//		break;
+			//	case LEGS:
+			//		newStack = new ItemStack(ObjHandler.rmLegs);
+			//		slot = 37;
+			//		System.out.println("legs");
+			//		break;
+			//	case FEET:
+			//		newStack = new ItemStack(ObjHandler.rmHelmet);
+			//		slot = 36;
+			//		System.out.println("feet");
+			//		break;
+			//	default:
+			//		PECore.LOGGER.error("GemArmorBase is somehow doing something with armorType: " + this.armorType);
+			//		PECore.LOGGER.error("Please report this bug to ProjectTwEaked!");
+			//		newStack = new ItemStack(Items.DIAMOND); //placeholder item in case game doesnt like null items
+			//		break;
+			//}
+			//	ItemHelper.getOrCreateCompound(newStack).setInteger("pe_wear", Math.min(9999, damage * 100));
+			//	//entity.getEntityData().setBoolean("pe_broke_gem_armor", true);
+			//	System.out.println(this.armorType);
+			//}
 		}
-		//else
-		//{	
-		//	//Handle the breaking and replacing
-		//	System.out.println(slot);
-		//	entity.renderBrokenItemStack(stack);
-		//	stack.setItemDamage(0);
-		//	stack.shrink(1);
-		//	ItemStack newStack = null;
-		//	switch (armorType) {
-		//		case HEAD:
-		//			newStack = new ItemStack(ObjHandler.rmHelmet);
-		//			break;
-		//		case CHEST:
-		//			newStack = new ItemStack(ObjHandler.rmChest);
-		//			break;
-		//		case LEGS:
-		//			newStack = new ItemStack(ObjHandler.rmLegs);
-		//			break;
-		//		case FEET:
-		//			newStack = 	new ItemStack(ObjHandler.rmFeet);
-		//			break;
-		//		default:
-		//			PECore.LOGGER.error("GemArmorBase is somehow doing something with armorType: " + armorType);
-		//			PECore.LOGGER.error("Please report this bug to ProjectTwEaked!");
-		//			break;
-		//	}
-		//	EntityPlayer player = (EntityPlayer)entity;
-		//	IItemHandler inv = player.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH);
-		//	inv.insertItem(slot, newStack, false);
-		//	System.out.println(player.inventoryContainer.inventorySlots);
-		//	InvWrapper
-		//}
 	}
 
 	@Override
@@ -134,5 +174,44 @@ public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 		}
 	}
 
-
+	//public void downgradeToRM(ItemStack stack, EntityPlayer player, int damage) {
+	//	System.out.println("downgrading");
+	//	player.renderBrokenItemStack(stack);
+	//	ItemStack newStack = null;
+	//	int slot = 0;
+	//	switch (this.armorType) {
+	//		case HEAD:
+	//			newStack = new ItemStack(ObjHandler.rmHelmet);
+	//			slot = 39;
+	//			System.out.println("head");
+	//			break;
+	//		case CHEST:
+	//			newStack = new ItemStack(ObjHandler.rmChest);
+	//			slot = 38;
+	//			System.out.println("body");
+	//			break;
+	//		case LEGS:
+	//			newStack = new ItemStack(ObjHandler.rmLegs);
+	//			slot = 37;
+	//			System.out.println("legs");
+	//			break;
+	//		case FEET:
+	//			newStack = 	new ItemStack(ObjHandler.rmFeet);
+	//			slot = 36;
+	//			System.out.println("feet");
+	//			break;
+	//		default:
+	//			PECore.LOGGER.error("GemArmorBase is somehow doing something with armorType: " + this.armorType);
+	//			PECore.LOGGER.error("Please report this bug to ProjectTwEaked!");
+	//			newStack = new ItemStack(Items.DIAMOND); //placeholder item in case game doesnt like null items
+	//			break;
+	//	}
+	//	System.out.println("switch case complete: " + newStack + " will be put in slot " + slot);
+	//	newStack.setCount(2);
+	//	System.out.println("stack size is: " + newStack.getCount());
+	//	ItemHelper.getOrCreateCompound(newStack).setInteger("pe_wear", Math.min(9999, damage * 100));
+	//	InvWrapper playerInv = new InvWrapper(player.inventory);
+	//	playerInv.setStackInSlot(slot, newStack);
+	//	System.out.println("end of downgradeToRM function, itemstack in slot " + slot + " is: " + playerInv.getStackInSlot(slot));
+	//}
 }

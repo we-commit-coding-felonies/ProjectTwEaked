@@ -18,6 +18,7 @@ public final class PESounds
     public static final SoundEvent PROTECT = ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("projecte", "item.peprotect"));
     public static final SoundEvent PROTECTFAIL = ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("projecte", "item.peprotectfail"));
     public static final SoundEvent WASTE = ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("projecte", "item.pewaste"));
+    public static final SoundEvent NOVA = ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("projecte", "item.penova"));
 
     private PESounds() {}
 

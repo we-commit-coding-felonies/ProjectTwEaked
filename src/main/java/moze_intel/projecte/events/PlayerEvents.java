@@ -22,6 +22,7 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
+import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
@@ -53,6 +54,7 @@ import moze_intel.projecte.network.packets.CheckUpdatePKT;
 import moze_intel.projecte.network.packets.SyncCovalencePKT;
 import moze_intel.projecte.utils.ItemHelper;
 import moze_intel.projecte.utils.PlayerHelper;
+import moze_intel.projecte.utils.WorldHelper;
 
 @Mod.EventBusSubscriber(modid = PECore.MODID)
 public class PlayerEvents
@@ -196,42 +198,6 @@ public class PlayerEvents
 				((IAlchShield) stack.getItem()).onPlayerAttacked(event, 0, stack);
 				if (event.isCanceled()) return;
 			}
-			if (stack.getItem() instanceof GemArmorBase) {
-				GemArmorBase armorItem = (GemArmorBase) stack.getItem();
-				if (stack.getItemDamage() + event.getAmount() >= stack.getMaxDamage()) {
-					player.renderBrokenItemStack(stack);
-					stack.setItemDamage(0);
-					stack.shrink(1);
-					ItemStack newStack = null;
-					int slot = 0;
-					switch (armorItem.armorType) {
-						case HEAD: //slot 39
-							newStack = new ItemStack(ObjHandler.rmHelmet);
-							slot = 39;
-							break;
-						case CHEST: //slot 38
-							newStack = new ItemStack(ObjHandler.rmChest);
-							slot = 38;
-							break;
-						case LEGS:
-							newStack = new ItemStack(ObjHandler.rmLegs);
-							slot = 37;
-							break;
-						case FEET:
-							newStack = 	new ItemStack(ObjHandler.rmFeet);
-							slot = 36;
-							break;
-						default:
-							PECore.LOGGER.error("GemArmorBase is somehow doing something with armorType: " + armorItem.armorType);
-							PECore.LOGGER.error("Please report this bug to ProjectTwEaked!");
-							newStack = new ItemStack(Items.DIAMOND); //placeholder item in case game doesnt like null items
-							break;
-					}
-					ItemHelper.getOrCreateCompound(newStack).setInteger("pe_wear", 5000);
-					InvWrapper playerInv = new InvWrapper(player.inventory);
-					playerInv.setStackInSlot(slot, newStack);
-				}
-			}
 		}
 		for (int i = 0; i < baubles.getSlots(); i++)
 		{
@@ -260,5 +226,43 @@ public class PlayerEvents
 			}
 		}
 		return;
+	}
+
+	@SubscribeEvent
+	public static void onPlayerEquipmentUpdate(LivingEquipmentChangeEvent event) {
+		if (event.getEntity() instanceof EntityPlayer) {
+			EntityPlayer ent = (EntityPlayer) event.getEntity();
+			NBTTagCompound entData = event.getEntity().getEntityData();
+			if (event.getFrom().getItem() instanceof GemArmorBase && (event.getTo().isEmpty() || event.getFrom().getMaxDamage() <= event.getFrom().getItemDamage()) && entData.getByte("pe_gem_num_replacements") > 0) {
+				ItemStack newStack;
+				int slot;
+				switch (event.getSlot()) {
+					case HEAD:
+						newStack = new ItemStack(ObjHandler.rmHelmet);
+						slot = 39;
+						break;
+					case CHEST:
+						newStack = new ItemStack(ObjHandler.rmChest);
+						slot = 38;
+						break;
+					case LEGS:
+						newStack = new ItemStack(ObjHandler.rmLegs);
+						slot = 37;
+						break;
+					case FEET:
+						newStack = new ItemStack(ObjHandler.rmFeet);
+						slot = 36;
+						break;
+					default:
+						return;
+				}
+				ItemHelper.getOrCreateCompound(newStack).setInteger("pe_wear", Math.max(1000, event.getEntity().world.rand.nextInt(3001)));
+				InvWrapper playerInv = new InvWrapper(ent.inventory);
+				ent.renderBrokenItemStack(event.getFrom());
+				WorldHelper.createNovaExplosion(ent.world, ent, ent.posX, ent.posY, ent.posZ, 2.0f);
+				playerInv.setStackInSlot(slot, newStack);
+				entData.setByte("pe_gem_num_replacements", (byte) (entData.getByte("pe_gem_num_replacements") - 1));
+			}
+		}
 	}
 }

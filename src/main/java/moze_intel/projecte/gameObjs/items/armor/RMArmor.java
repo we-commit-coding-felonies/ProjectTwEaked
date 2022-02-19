@@ -39,16 +39,9 @@ public class RMArmor extends MatterArmor implements IGoggles
 	public ArmorProperties getProperties(EntityLivingBase player, @Nonnull ItemStack armor, DamageSource source, double damage, int slot)
 	{
 		double duraLeft = 1.0 - getDurabilityForDisplay(armor);
-		System.out.println("Armor Type: " + this.armorType);
-		System.out.println("Unblockable: " + source.isUnblockable());
-		System.out.println("Damage: " + damage);
-		System.out.println("Armor Durability: " + duraLeft);
-		System.out.println("Unblockable Effectiveness: " + this.unblockableEffectiveness);
 		if (source.isUnblockable()) {
-			System.out.println("'ratio': " + (this.resistance * duraLeft) * this.unblockableEffectiveness);
 			return new ArmorProperties(1, (this.resistance * duraLeft) * this.unblockableEffectiveness, (int) damage);
 		}
-		System.out.println("'ratio': " + this.resistance * duraLeft);
 		return new ArmorProperties(1, this.resistance * duraLeft, (int) damage);
 	}
 
@@ -65,9 +58,6 @@ public class RMArmor extends MatterArmor implements IGoggles
 		if (!stackTag.hasKey("pe_wear")) {
 			stackTag.setInteger("pe_wear", 1);
 		} else if (stackTag.getInteger("pe_wear") < this.maxWear) {
-			System.out.println("damage: " + damage);
-			System.out.println("tern: " + (source.isUnblockable() ? 0.01 : 1));
-			System.out.println("damage/tern: " + (damage / (source.isUnblockable() ? 0.01 : 1)));
 			stackTag.setInteger("pe_wear", (int) (stackTag.getInteger("pe_wear") + 9 + (damage / (source.isUnblockable() ? 0.01 : 1))));
 		}
 		if (stackTag.getInteger("pe_wear") > this.maxWear) {

@@ -53,5 +53,10 @@
     {
         "sounds": [ "projecte:item/pewaste" ],
         "subtitle": "pe.subtitle.pewaste"
+    },
+    "item.penova":
+    {
+        "sounds": [ "projecte:item/nova" ],
+        "subtitle": "pe.subtitle.penova"
     }
 }

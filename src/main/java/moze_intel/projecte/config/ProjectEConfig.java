@@ -102,6 +102,9 @@ public final class ProjectEConfig
 		@Config.RangeInt(min = 0)
 		@Config.Comment("A cooldown (in ticks) for Gem Chestplate explosion")
 		public int gemChestCooldown = 0;
+
+		@Config.Comment("How fast should the durability bar on Klein Stars change color?")
+		public int barColorFadeSpeed = 600;
 	}
 
 	@Config.Comment({"Cooldown for various items within the pedestal. A cooldown of -1 will disable the functionality.",

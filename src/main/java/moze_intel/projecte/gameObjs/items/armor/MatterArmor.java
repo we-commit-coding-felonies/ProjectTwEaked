@@ -2,6 +2,7 @@ package moze_intel.projecte.gameObjs.items.armor;
 
 import javax.annotation.Nonnull;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -9,6 +10,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.common.ISpecialArmor;
 
 public class MatterArmor extends ItemArmor implements ISpecialArmor
@@ -54,5 +56,10 @@ public class MatterArmor extends ItemArmor implements ISpecialArmor
 	@Override
 	public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
 		return false;
+	}
+
+	@Override
+	public int getRGBDurabilityForDisplay(ItemStack stack) {
+        return MathHelper.hsvToRGB(Math.max(0.3911F, (float) (1.0F - getDurabilityForDisplay(stack)) / 1.65125495376F), 1.0f, 0.824f);
 	}
 }

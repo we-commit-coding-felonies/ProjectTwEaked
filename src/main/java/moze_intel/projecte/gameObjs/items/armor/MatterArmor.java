@@ -50,6 +50,6 @@ public class MatterArmor extends ItemArmor implements ISpecialArmor
 
 	@Override
 	public int getRGBDurabilityForDisplay(ItemStack stack) {
-        return MathHelper.hsvToRGB(Math.max(0.3031F, (float) (1.0F - getDurabilityForDisplay(stack)) / 1.65137614679F), 1.0f, 0.824f);
+        return MathHelper.hsvToRGB(Math.max(0.3911F, (float) (1.0F - getDurabilityForDisplay(stack)) / 1.65125495376F), 1.0f, 0.824f);
 	}
 }

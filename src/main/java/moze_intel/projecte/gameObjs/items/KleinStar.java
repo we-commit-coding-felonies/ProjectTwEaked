@@ -165,10 +165,10 @@ public class KleinStar extends ItemPE implements IItemEmc
 		//high 0.605555555555
 		//low 0.303055555556
 		if (fade < fadeSpeed) {
-			return MathHelper.hsvToRGB(0.3031f + ((0.3025f * fade) / fadeSpeed), 1.0f, 0.824f);
+			return MathHelper.hsvToRGB(0.3911f + ((0.2154f * fade) / fadeSpeed), 1.0f, 0.824f);
 		}
 		else {
-			return MathHelper.hsvToRGB(0.6065f - ((0.3025f * (fade - fadeSpeed)) / fadeSpeed), 1.0f, 0.824f);
+			return MathHelper.hsvToRGB(0.6056f - ((0.2154f * (fade - fadeSpeed)) / fadeSpeed), 1.0f, 0.824f);
 		}
 	}
 }

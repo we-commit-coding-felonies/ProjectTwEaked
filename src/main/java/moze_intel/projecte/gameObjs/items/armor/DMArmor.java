@@ -11,16 +11,17 @@ import net.minecraft.util.DamageSource;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import moze_intel.projecte.PECore;
+import moze_intel.projecte.config.ProjectEConfig;
 import moze_intel.projecte.gameObjs.ObjHandler;
 
 public class DMArmor extends MatterArmor
 {
 	public DMArmor(EntityEquipmentSlot armorPiece)
 	{
-		super(armorPiece, 0.6, 0.85);
+		super(armorPiece, ProjectEConfig.matterArmors.dmArmorResistance, 0.85);
 		this.setCreativeTab(ObjHandler.cTab);
 		this.setTranslationKey("pe_dm_armor_" + armorPiece.getIndex());
-		this.setMaxDamage(0);
+		this.setMaxDamage(ProjectEConfig.matterArmors.dmArmorDurability);
 	}
 
 	@Override

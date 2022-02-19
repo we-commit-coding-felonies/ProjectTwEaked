@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.Nonnull;
 
 import moze_intel.projecte.PECore;
+import moze_intel.projecte.config.ProjectEConfig;
 import moze_intel.projecte.gameObjs.ObjHandler;
 import moze_intel.projecte.utils.ItemHelper;
 import net.minecraft.client.resources.I18n;
@@ -28,11 +29,11 @@ public class RMArmor extends MatterArmor implements IGoggles
 	public int maxWear;
 	public RMArmor(EntityEquipmentSlot armorType)
 	{
-		super(armorType, 0.95, 0.7);
+		super(armorType, ProjectEConfig.matterArmors.rmArmorResistance, 0.7);
 		this.setCreativeTab(ObjHandler.cTab);
 		this.setTranslationKey("pe_rm_armor_" + armorType.getIndex());
-		this.setMaxDamage(0);
-		this.maxWear = 10000;
+		this.setMaxDamage(ProjectEConfig.matterArmors.rmBurnout ? 0 : ProjectEConfig.matterArmors.rmArmorDurability);
+		this.maxWear = ProjectEConfig.matterArmors.rmArmorDurability;
 	}
 	
 	@Override
@@ -83,7 +84,7 @@ public class RMArmor extends MatterArmor implements IGoggles
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
 		NBTTagCompound stackTag = ItemHelper.getOrCreateCompound(stack);
-		if (stackTag.getInteger("pe_wear") > 0 && world.getTotalWorldTime() % (int) ( 3 + ( 10 * getDurabilityForDisplay(stack) ) ) == 0) {
+		if (stackTag.getInteger("pe_wear") > 0 && world.getTotalWorldTime() % (int) ( ProjectEConfig.matterArmors.rmBurnoutRechargeRate + ( 10 * getDurabilityForDisplay(stack) ) ) == 0) {
 			stackTag.setInteger("pe_wear", stackTag.getInteger("pe_wear") - 1);
 		}
 	}

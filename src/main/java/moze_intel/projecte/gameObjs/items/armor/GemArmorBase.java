@@ -22,7 +22,7 @@ public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 {
 	public GemArmorBase(EntityEquipmentSlot armorType)
 	{
-		super(armorType, 0.99, 0.55);
+		super(armorType, ProjectEConfig.matterArmors.gemArmorResistance, 0.55);
 		this.setCreativeTab(ObjHandler.cTab);
 		this.setTranslationKey("pe_gem_armor_" + armorType.getIndex());
 		this.setMaxDamage(ProjectEConfig.matterArmors.gemArmorDurability);
@@ -68,7 +68,7 @@ public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 	@Override
 	public boolean shieldCondition(EntityPlayer player, int slot, ItemStack stack)
 	{
-		return GemArmorBase.hasFullUndamagedSet(player);
+		return GemArmorBase.hasFullUndamagedSet(player) && ProjectEConfig.matterArmors.gemArmorBarrier;
 	}
 
 	@Override
@@ -83,7 +83,7 @@ public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 		if (entity instanceof EntityPlayer) {
 			if (stack.attemptDamageItem((damage * 10), entity.world.rand, null)) {
 				NBTTagCompound entData = entity.getEntityData();
-				entData.setByte("pe_gem_num_replacements", (byte) Math.min(4, (entData.getByte("pe_gem_num_replacements") + 1)));
+				if (ProjectEConfig.matterArmors.gemDowngrade) {entData.setByte("pe_gem_num_replacements", (byte) Math.min(4, (entData.getByte("pe_gem_num_replacements") + 1)));}
 				// TODO: this is a bit silly, if we can find a better way of doing this that would be good
 			} else {
 				if (stack.getMaxDamage() - stack.getItemDamage() <= 1) {

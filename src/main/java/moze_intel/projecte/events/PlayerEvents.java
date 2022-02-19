@@ -258,7 +258,7 @@ public class PlayerEvents
 				ItemHelper.getOrCreateCompound(newStack).setInteger("pe_wear", Math.max(1000, event.getEntity().world.rand.nextInt(3001)));
 				InvWrapper playerInv = new InvWrapper(ent.inventory);
 				ent.renderBrokenItemStack(event.getFrom());
-				WorldHelper.createNovaExplosion(ent.world, ent, ent.posX, ent.posY, ent.posZ, 2.0f);
+				if (ProjectEConfig.matterArmors.gemBreakExplosion) {WorldHelper.createNovaExplosion(ent.world, ent, ent.posX, ent.posY, ent.posZ, (float) (ProjectEConfig.matterArmors.gemBreakExplosionPower));}
 				playerInv.setStackInSlot(slot, newStack);
 				entData.setByte("pe_gem_num_replacements", (byte) (entData.getByte("pe_gem_num_replacements") - 1));
 			}

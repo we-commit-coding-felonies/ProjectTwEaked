@@ -2,6 +2,25 @@ package moze_intel.projecte.events;
 
 import baubles.api.BaublesApi;
 import baubles.api.cap.IBaublesItemHandler;
+import moze_intel.projecte.PECore;
+import moze_intel.projecte.api.ProjectEAPI;
+import moze_intel.projecte.api.capabilities.IKnowledgeProvider;
+import moze_intel.projecte.api.item.IAlchShield;
+import moze_intel.projecte.config.ProjectEConfig;
+import moze_intel.projecte.gameObjs.ObjHandler;
+import moze_intel.projecte.gameObjs.items.AlchemicalBag;
+import moze_intel.projecte.gameObjs.items.armor.GemArmorBase;
+import moze_intel.projecte.handlers.InternalAbilities;
+import moze_intel.projecte.handlers.InternalTimers;
+import moze_intel.projecte.impl.AlchBagImpl;
+import moze_intel.projecte.impl.KnowledgeImpl;
+import moze_intel.projecte.impl.TransmutationOffline;
+import moze_intel.projecte.network.PacketHandler;
+import moze_intel.projecte.network.packets.CheckUpdatePKT;
+import moze_intel.projecte.network.packets.SyncCovalencePKT;
+import moze_intel.projecte.utils.ItemHelper;
+import moze_intel.projecte.utils.PlayerHelper;
+import moze_intel.projecte.utils.WorldHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -23,6 +42,7 @@ import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.living.LivingEquipmentChangeEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.fml.common.FMLCommonHandler;
@@ -33,21 +53,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
-import moze_intel.projecte.PECore;
-import moze_intel.projecte.api.ProjectEAPI;
-import moze_intel.projecte.api.capabilities.IKnowledgeProvider;
-import moze_intel.projecte.api.item.IAlchShield;
-import moze_intel.projecte.config.ProjectEConfig;
-import moze_intel.projecte.gameObjs.items.AlchemicalBag;
-import moze_intel.projecte.handlers.InternalAbilities;
-import moze_intel.projecte.handlers.InternalTimers;
-import moze_intel.projecte.impl.AlchBagImpl;
-import moze_intel.projecte.impl.KnowledgeImpl;
-import moze_intel.projecte.impl.TransmutationOffline;
-import moze_intel.projecte.network.PacketHandler;
-import moze_intel.projecte.network.packets.CheckUpdatePKT;
-import moze_intel.projecte.network.packets.SyncCovalencePKT;
-import moze_intel.projecte.utils.PlayerHelper;
+import net.minecraftforge.items.wrapper.InvWrapper;
 
 @Mod.EventBusSubscriber(modid = PECore.MODID)
 public class PlayerEvents
@@ -188,7 +194,7 @@ public class PlayerEvents
 			if (stack.isEmpty()) continue;
 			if (stack.getItem() instanceof IAlchShield)
 			{
-				((IAlchShield) stack.getItem()).onPlayerAttacked(event, 0);
+				((IAlchShield) stack.getItem()).onPlayerAttacked(event, 0, stack);
 				if (event.isCanceled()) return;
 			}
 		}
@@ -198,13 +204,13 @@ public class PlayerEvents
 			if (stack.isEmpty()) continue;
 			if (stack.getItem() instanceof IAlchShield)
 			{
-				((IAlchShield) stack.getItem()).onPlayerAttacked(event, 0);
+				((IAlchShield) stack.getItem()).onPlayerAttacked(event, 0, stack);
 				if (event.isCanceled()) return;
 			}
 		}
 		if (!offhand.isEmpty() && offhand.getItem() instanceof IAlchShield)
 		{
-			((IAlchShield) offhand.getItem()).onPlayerAttacked(event, 0);
+			((IAlchShield) offhand.getItem()).onPlayerAttacked(event, 0, offhand);
 			if (event.isCanceled()) return;
 		}
 		
@@ -214,10 +220,48 @@ public class PlayerEvents
 			if (stack.isEmpty()) continue;
 			if (stack.getItem() instanceof IAlchShield)
 			{
-				((IAlchShield) stack.getItem()).onPlayerAttacked(event, i);
+				((IAlchShield) stack.getItem()).onPlayerAttacked(event, i, stack);
 				if (event.isCanceled()) return;
 			}
 		}
 		return;
+	}
+
+	@SubscribeEvent
+	public static void onPlayerEquipmentUpdate(LivingEquipmentChangeEvent event) {
+		if (event.getEntity() instanceof EntityPlayer) {
+			EntityPlayer ent = (EntityPlayer) event.getEntity();
+			NBTTagCompound entData = event.getEntity().getEntityData();
+			if (event.getFrom().getItem() instanceof GemArmorBase && (event.getTo().isEmpty() || event.getFrom().getMaxDamage() <= event.getFrom().getItemDamage()) && entData.getByte("pe_gem_num_replacements") > 0) {
+				ItemStack newStack;
+				int slot;
+				switch (event.getSlot()) {
+					case HEAD:
+						newStack = new ItemStack(ObjHandler.rmHelmet);
+						slot = 39;
+						break;
+					case CHEST:
+						newStack = new ItemStack(ObjHandler.rmChest);
+						slot = 38;
+						break;
+					case LEGS:
+						newStack = new ItemStack(ObjHandler.rmLegs);
+						slot = 37;
+						break;
+					case FEET:
+						newStack = new ItemStack(ObjHandler.rmFeet);
+						slot = 36;
+						break;
+					default:
+						return;
+				}
+				ItemHelper.getOrCreateCompound(newStack).setInteger("pe_wear", Math.max(1000, event.getEntity().world.rand.nextInt(3001)));
+				InvWrapper playerInv = new InvWrapper(ent.inventory);
+				ent.renderBrokenItemStack(event.getFrom());
+				if (ProjectEConfig.matterArmors.gemBreakExplosion) {WorldHelper.createNovaExplosion(ent.world, ent, ent.posX, ent.posY, ent.posZ, (float) (ProjectEConfig.matterArmors.gemBreakExplosionPower));}
+				playerInv.setStackInSlot(slot, newStack);
+				entData.setByte("pe_gem_num_replacements", (byte) (entData.getByte("pe_gem_num_replacements") - 1));
+			}
+		}
 	}
 }

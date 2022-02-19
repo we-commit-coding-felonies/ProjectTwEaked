@@ -2,29 +2,32 @@ package moze_intel.projecte.gameObjs.items.armor;
 
 import javax.annotation.Nonnull;
 
+import moze_intel.projecte.PECore;
+import moze_intel.projecte.api.item.IAlchShield;
+import moze_intel.projecte.config.ProjectEConfig;
+import moze_intel.projecte.gameObjs.ObjHandler;
+import moze_intel.projecte.gameObjs.items.ItemPE;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
-import net.minecraftforge.common.ISpecialArmor;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import moze_intel.projecte.PECore;
-import moze_intel.projecte.api.item.IAlchShield;
-import moze_intel.projecte.gameObjs.ObjHandler;
 
-public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor, IAlchShield
+public abstract class GemArmorBase extends MatterArmor implements IAlchShield
 {
 	public GemArmorBase(EntityEquipmentSlot armorType)
 	{
-		super(ArmorMaterial.DIAMOND, 0, armorType);
+		super(armorType, ProjectEConfig.matterArmors.gemArmorResistance, 0.55);
 		this.setCreativeTab(ObjHandler.cTab);
 		this.setTranslationKey("pe_gem_armor_" + armorType.getIndex());
-		this.setMaxDamage(0);
+		this.setMaxDamage(ProjectEConfig.matterArmors.gemArmorDurability);
 	}
+
 
 	public static boolean hasAnyPiece(EntityPlayer player)
 	{
@@ -50,40 +53,22 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor, I
 		return true;
 	}
 
-	@Override
-	public ArmorProperties getProperties(EntityLivingBase player, @Nonnull ItemStack armor, DamageSource source, double damage, int slot)
-	{	
-		EntityEquipmentSlot type = ((GemArmorBase) armor.getItem()).armorType;
-		int priority, max;
-		double ratio;
-
-		priority = source.isExplosion() ? 1 : 0;
-
-		if (type == EntityEquipmentSlot.CHEST || type == EntityEquipmentSlot.LEGS)
+	public static boolean hasFullUndamagedSet(EntityPlayer player)
+	{
+		for (ItemStack i : player.inventory.armorInventory)
 		{
-			ratio = 0.3D;
-		} 
-		else 
-		{
-			ratio = 0.2D;
+			if (i.isEmpty() || !(i.getItem() instanceof GemArmorBase) || i.isItemDamaged() )
+			{
+				return false;
+			}
 		}
-		
-		if (type == EntityEquipmentSlot.HEAD || type == EntityEquipmentSlot.FEET)
-		{
-			max = 250;
-		} 
-		else 
-		{
-			max = 350;
-		}
-		
-		return new ArmorProperties(priority, ratio, max);
+		return true;
 	}
 
 	@Override
-	public boolean shieldCondition(EntityPlayer player, int slot)
-	{	
-		return GemArmorBase.hasFullSet(player);
+	public boolean shieldCondition(EntityPlayer player, int slot, ItemStack stack)
+	{
+		return GemArmorBase.hasFullUndamagedSet(player) && ProjectEConfig.matterArmors.gemArmorBarrier;
 	}
 
 	@Override
@@ -94,7 +79,21 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor, I
 	}
 
 	@Override
-	public void damageArmor(EntityLivingBase entity, @Nonnull ItemStack stack, DamageSource source, int damage, int slot) {}
+	public void damageArmor(EntityLivingBase entity, @Nonnull ItemStack stack, DamageSource source, int damage, int slot) {
+		if (entity instanceof EntityPlayer) {
+			if (stack.attemptDamageItem((damage * 10), entity.world.rand, null)) {
+				NBTTagCompound entData = entity.getEntityData();
+				if (ProjectEConfig.matterArmors.gemDowngrade) {entData.setByte("pe_gem_num_replacements", (byte) Math.min(4, (entData.getByte("pe_gem_num_replacements") + 1)));}
+				// TODO: this is a bit silly, if we can find a better way of doing this that would be good
+			} else {
+				if (stack.getMaxDamage() - stack.getItemDamage() <= 1) {
+					stack.setItemDamage(stack.getMaxDamage() - 2);
+					return;
+				}
+				stack.damageItem(-1, entity);
+			}
+		}
+	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
@@ -102,5 +101,14 @@ public abstract class GemArmorBase extends ItemArmor implements ISpecialArmor, I
 	{
 		char index = this.armorType == EntityEquipmentSlot.LEGS ? '2' : '1';
 		return PECore.MODID + ":textures/armor/gem_" + index + ".png";
+	}
+
+	@Override
+	public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
+		if (stack.isItemDamaged() && ProjectEConfig.matterArmors.gemAutoRepair) {
+			if (ItemPE.consumeFuel(player, stack, 16384, true)) {
+				stack.damageItem(-1, player);
+			}
+		}
 	}
 }

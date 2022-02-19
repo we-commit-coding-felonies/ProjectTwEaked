@@ -68,6 +68,8 @@ public class GemFeet extends GemArmorBase implements IFlightProvider, IStepAssis
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack stack)
     {
+        super.onArmorTick(world, player, stack);
+        if (stack.isItemDamaged()) return;
         if (!world.isRemote)
         {
             EntityPlayerMP playerMP = ((EntityPlayerMP) player);
@@ -117,7 +119,7 @@ public class GemFeet extends GemArmorBase implements IFlightProvider, IStepAssis
 
     private boolean canStep(ItemStack stack)
     {
-        return stack.getTagCompound() != null && stack.getTagCompound().hasKey("StepAssist") && stack.getTagCompound().getBoolean("StepAssist");
+        return stack.getTagCompound() != null && stack.getTagCompound().hasKey("StepAssist") && stack.getTagCompound().getBoolean("StepAssist") && !stack.isItemDamaged();
     }
 
     @Nonnull
@@ -133,7 +135,7 @@ public class GemFeet extends GemArmorBase implements IFlightProvider, IStepAssis
     @Override
     public boolean canProvideFlight(ItemStack stack, EntityPlayerMP player)
     {
-        return player.getItemStackFromSlot(EntityEquipmentSlot.FEET) == stack;
+        return (player.getItemStackFromSlot(EntityEquipmentSlot.FEET) == stack && !stack.isItemDamaged());
     }
 
     @Override

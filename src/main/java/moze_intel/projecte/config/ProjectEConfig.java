@@ -102,6 +102,9 @@ public final class ProjectEConfig
 		@Config.RangeInt(min = 0)
 		@Config.Comment("A cooldown (in ticks) for Gem Chestplate explosion")
 		public int gemChestCooldown = 0;
+
+		@Config.Comment("How fast should the durability bar on Klein Stars change color?")
+		public int barColorFadeSpeed = 200;
 	}
 
 	@Config.Comment({"Cooldown for various items within the pedestal. A cooldown of -1 will disable the functionality.",
@@ -262,25 +265,65 @@ public final class ProjectEConfig
 	@Config.Comment("This section contains config relating to the 3 armor sets, Dark, Red, and Gem")
 	public static final MatterArmors matterArmors = new MatterArmors();
 	public static class MatterArmors {
-		@Config.Comment({"How much durability Dark Matter armor has, in order of helmet, chestplate, leggings, boots",
-						"0 means infinite durability"})
-		public int[] dmArmorDurability = {
-			0,
-			0,
-			0,
-			0
-		};
+		@Config.Comment("How much durability each piece of Dark Matter armor has. 0 for infinite")
+		public int dmArmorDurability = 0;
+		@Config.Comment({"By how much should Dark Matter armor reduce damage?",
+						"Note that this value is for the FULL SET, so each piece will only give 1/4 of this on their own",
+						"0.0 = 0%, 1.0 = 100%"})
+		public double dmArmorResistance = 0.6;
+
+		@Config.Comment({"How much durability each piece of Red Matter armor has. 0 for infinite",
+						"If RM Armor 'burnout' mode is enabled, this defines the maximum burnout instead"})
+		public int rmArmorDurability = 10000;
+		@Config.Comment({"By how much should Red Matter armor reduce damage?",
+						"Note that this value is for the FULL SET, so each piece will only give 1/4 of this on their own",
+						"0.0 = 0%, 1.0 = 100%"})
+		public double rmArmorResistance = 0.9;
+		
+		@Config.Comment("How much durability each piece of Gem armor has. 0 for infinite")
+		public int gemArmorDurability = 1000;
+		@Config.Comment({"By how much should Gem armor reduce damage (assuming the barrier is off)?",
+						"Note that this value is for the FULL SET, so each piece will only give 1/4 of this on their own",
+						"0.0 = 0%, 1.0 = 100%"})
+		public double gemArmorResistance = 0.99;
+
+		@Config.Comment("Should Gem armor automagically repair itself from EMC in your inventory when worn?")
+		public boolean gemAutoRepair = false;
+
+		@Config.Comment("How much EMC should be consumed to restore 1 durability point of Gem armor when auto-repair is enabled?")
+		public int emcPerGemDurability = 16384;
+
+		@Config.Comment("When enabled, Red Matter armor will be indestructible, but will 'burn out', decreasing in damage resistance as it absorbs more, recharging over time")
+		public boolean rmBurnout = true;
+
+		@Config.Comment("Defines how fast burnout will dissipate")
+		public int rmBurnoutRechargeRate = 3;
+
+		@Config.Comment("Should Gem Armor explode when it 'downgrades'?")
+		public boolean gemBreakExplosion = true;
+
+		@Config.Comment("How strong should the Gem armor break explosion be?")
+		public double gemBreakExplosionPower = 3.0;
+
+		@Config.Comment("Should gem armor 'downgrade' to Red Matter armor when it breaks?")
+		public boolean gemDowngrade = true;
+
+		@Config.Comment("Should Gem Armor give an Alchemical Barrier?")
+		public boolean gemArmorBarrier = true;
 	}
 
 	@Config.Comment("This section contains settings related to the Alchemical Barrier")
 	public static final AlchemicalBarrier alchemicalBarrier = new AlchemicalBarrier();
 	public static class AlchemicalBarrier {
 		@Config.Comment("Should the Alchemical Barrier be enabled?")
-		public boolean enableGemArmorEMCShield = true;
+		public boolean enableEMCShield = true;
 
 		@Config.RequiresMcRestart
-		@Config.Comment("The cost in EMC required to absorb 1 damage (half-heart)")
-		public int emcShieldCost = 64;
+		@Config.Comment("The base EMC of the barrier. Total cost is (base + damage) ^ 2.")
+		public int emcShieldCost = 8;
+
+		@Config.Comment("If set to true, the alchemical barrier will pull directly from the transmutation tablet, rather than klein stars")
+		public boolean pullFromTablet = false;
 
 		//@Config.Comment({"Should the Alchemical Barrier block 'unblockable' damage?",
 		//				"Unblockable damage is stuff like harming potions, the void, entity cramming,",
@@ -294,7 +337,7 @@ public final class ProjectEConfig
 		};
 
 		@Config.Comment("If set to true, the barrier will ONLY block damage sources listed there")
-		public boolean typesIsAllowList = false;
+		public boolean typesIsWhitelist = false;
 
 		@Config.Comment({"Set to true to enable a barrier debug mode",
 						"This will output the following information to the log whenever the alchemical barrier blocks damage:",
@@ -304,8 +347,7 @@ public final class ProjectEConfig
 		@Config.RangeInt(min = 0, max = 2)
 		@Config.Comment({"This setting changes the behavior of the barrier when the player has insufficient EMC to block incoming damage:",
 						"0: Consume all remaining EMC to reduce damage, any that cannot be afforded passes through.",
-						"1: Do not consume any EMC, and simply allow the damage to happen.",
-						"2: Similar to mode 0, except the armor will instead take durability damage to cover any damage the player cannot afford."})
+						"1: Do not consume any EMC, and simply allow the damage to happen."})
 		public int lowEMCMode = 0;
 
 		@Config.Comment("Set this to false if you want the barrier to not make any noise when it blocks damage")

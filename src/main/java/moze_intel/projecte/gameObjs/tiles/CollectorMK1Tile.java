@@ -288,7 +288,6 @@ public class CollectorMK1Tile extends TileEmc implements IEmcProvider, IEmcAccep
 	public int getSunLevel()
 	{
 		int trueSkyLight = world.getLightFor(EnumSkyBlock.SKY, pos.up()) - world.getSkylightSubtracted();
-		System.out.println(trueSkyLight);
 		int blockLight = world.getLightFor(EnumSkyBlock.BLOCK, pos.up());
 		int trueLight = 0;
 		if (trueSkyLight <= blockLight || trueSkyLight <= 4) {
@@ -297,7 +296,6 @@ public class CollectorMK1Tile extends TileEmc implements IEmcProvider, IEmcAccep
 		else {
 			trueLight = trueSkyLight;
 		}
-		System.out.println(trueLight);
 		return trueLight;
 	}
 

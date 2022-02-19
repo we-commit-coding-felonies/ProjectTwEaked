@@ -17,6 +17,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.World;
 
@@ -53,7 +55,21 @@ public class EntityHomingArrow extends EntityTippedArrow
 	{
 		super.arrowHit(living);
 		// Strip damage vulnerability
-		living.hurtResistantTime = 0;
+		if (ProjectEConfig.homingArrows.archangelsBadTime) {
+			living.hurtResistantTime = 0;
+		}
+		String[] effectList = ProjectEConfig.homingArrows.listOfEffects; 
+		if (ProjectEConfig.homingArrows.applyPotionEffects && effectList.length > 0) {
+			if (ProjectEConfig.homingArrows.randomizeEffects) {
+				String[] chosen = (effectList[living.world.rand.nextInt(effectList.length)]).split("\\|");
+				living.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation(chosen[0]), Integer.parseInt(chosen[1]), Integer.parseInt(chosen[2])));
+			} else {
+				for (int i=0; i < effectList.length; i++) {
+					String[] current = (effectList[i]).split("\\|");
+					living.addPotionEffect(new PotionEffect(Potion.getPotionFromResourceLocation(current[0]), Integer.parseInt(current[1]), Integer.parseInt(current[2])));	
+				}
+			}
+		}
 	}
 
 	@Override
@@ -61,7 +77,7 @@ public class EntityHomingArrow extends EntityTippedArrow
 	{
 		if (!world.isRemote && this.ticksExisted > 3)
 		{
-			if (this.ticksExisted > ProjectEConfig.items.maxHomingArrowLifetime) {
+			if (this.ticksExisted > ProjectEConfig.homingArrows.maxHomingArrowLifetime && ProjectEConfig.homingArrows.maxHomingArrowLifetime > 0) {
 				this.setDead();
 				return;
 			}

@@ -410,3 +410,19 @@ pe.manual.introduction.header=Introduction
 
 # ImagePage headers
 pe.manual.img_alchchest.header=alchchest.png
+
+#Subtitles
+pe.subtitle.pewindmagic=Transmuté par le vent
+pe.subtitle.pewatermagic=Transmuté par l'eau
+pe.subtitle.pepower=Pouvoir alchimique activé
+pe.subtitle.peheal=Effet alchimique déclenché
+pe.subtitle.pedestruct=Destruction alchimique
+pe.subtitle.pecharge=Charge alchimique
+pe.subtitle.peuncharge=Décharge alchimique
+pe.subtitle.petransmute=Quelque-chose transmute
+pe.subtitle.peprotect=Barrière alchimique s'active
+pe.subtitle.peprotectfail=Barrière alchimique se désactive
+pe.subtitle.pewaste=EMC Gaspillé
+pe.subtitle.penova=Explosion alchimique
+
+pe.rmarmor.wear=Burnout: %s / %s

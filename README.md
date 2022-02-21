@@ -20,7 +20,7 @@ Here is a list of changes:
    - Subtitles have been localized (incomplete! please help if you can.)
    - Energy Collector progress bars now work properly
 
-Almost all of these changes are configurable, 
+Almost all of these changes are configurable, so if you just want the bugfixes you can disable all of the feature changes!
 
 .
 

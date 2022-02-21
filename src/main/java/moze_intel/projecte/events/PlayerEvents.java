@@ -255,7 +255,8 @@ public class PlayerEvents
 					default:
 						return;
 				}
-				ItemHelper.getOrCreateCompound(newStack).setInteger("pe_wear", Math.max(1000, event.getEntity().world.rand.nextInt(3001)));
+				int rmDura = ProjectEConfig.matterArmors.rmArmorDurability;
+				if (ProjectEConfig.matterArmors.rmBurnout) {ItemHelper.getOrCreateCompound(newStack).setInteger("pe_wear", Math.max((rmDura - (rmDura / 10)), event.getEntity().world.rand.nextInt(((rmDura / 10) * 3) + 1)));} else {newStack.setItemDamage(Math.max((rmDura - (rmDura / 10)), event.getEntity().world.rand.nextInt(((rmDura / 10) * 3) + 1)));}
 				InvWrapper playerInv = new InvWrapper(ent.inventory);
 				ent.renderBrokenItemStack(event.getFrom());
 				if (ProjectEConfig.matterArmors.gemBreakExplosion) {WorldHelper.createNovaExplosion(ent.world, ent, ent.posX, ent.posY, ent.posZ, (float) (ProjectEConfig.matterArmors.gemBreakExplosionPower));}

@@ -1,10 +1,43 @@
 ![](/src/main/resources/assets/projecte/logo.png?raw=true)
 
-This is a fork of projectE with the aim of rebalancing for inclusion in [MagiTekkit](https://github.com/we-commit-coding-felonies/magitekkit)
+This is a fork of projectE with the aim of code modification for inclusion in [MagiTekkit](https://github.com/we-commit-coding-felonies/magitekkit), because crafttweaker just isnt quite up to the task.
 
-Contains some bugfixes and feature changes.
+Here is a list of changes:
+ - Gem of Eternal Density can only create up to dark matter, Void Ring can still make red matter
+ - Makes the transmutation table/tablet ui less horrid (shamelessly stolen and slightly modified from [ProjectEX](https://github.com/latvian-dev/ProjectEX))
+ - Archangels smite now applies random potion effects to entities (the effects it applies are configurable, too!)
+ - Configurable collector / relay values
+   - Stuff like EMC/s, EMC transfer rate, etc.
+   - Also a MK0 and MK4 collector/relay, both configurable
+ - Keybind to open alchemical bag / transmutation tablet (default B / N respectively)
+ - More items are now baubles
+   - Klein star (body slot)
+   - Transmutation tablet (head slot)
+   - Mind stone (head slot)
+   - Alchemical bag (belt slot)
+ - Armor rebalance
+   - Dark matter is mostly unchanged, but its damage resistance was nerfed
+   - Red matter armor is roughly as strong as it is in stock ProjectE, but will 'burn out', reducing its damage resistance when taking lots of damage in a short amount of time
+   - Gem armor has recieved an EMC-powered alchemical barrier!
+     - Completely blocks ALL damage recieved (assuming you can afford it)
+       - Certain types of damage can be configured to bypass the barrier (defaults to the void and /kill)
+     - Consumes from klein stars & fuel items (or your tansmutation tablet, if you set it in the config)
+     - Ramps up in cost vs higher damage attacks
+     - Make sure you keep it fueled, or the armor will start to break!
+       - When damaged, almost all of the armor's abilities will cease to work
+       - Will continue to function as extremely strong normal armor, but has low durability
+       - Can be repaired by a repair talisman
+       - If it runs out of durability, it will explode and turn into Red Matter armor!
+ - Bugfixes
+   - Matter tools 'oredict radius mining' (eg matter axe aoe tree harvest) no longer fail when water is nearby
+   - Subtitles have been localized (incomplete! please help if you can.)
+   - Energy Collector progress bars now work properly
 
-Below here is all from the original readme:
+Almost all of these changes are configurable, so if you just want the bugfixes you can disable all of the feature changes!
+
+<br>
+
+<b>Below here is all from the original ProjectE readme:</b>
 
 <hr>
 

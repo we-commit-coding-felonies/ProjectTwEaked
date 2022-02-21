@@ -184,7 +184,12 @@ public class Arcana extends ItemPE implements IBauble, IModeChanger, IFlightProv
 		if(!world.isRemote)
 		{
 			NBTTagCompound compound = ItemHelper.getOrCreateCompound(player.getHeldItem(hand));
-
+			if (!compound.getBoolean(TAG_ACTIVE)) {
+				world.playSound(null, player.posX, player.posY, player.posZ, PESounds.HEAL, SoundCategory.PLAYERS, 1.0F, 1.0F);
+			}
+			else {
+				world.playSound(null, player.posX, player.posY, player.posZ, PESounds.UNCHARGE, SoundCategory.PLAYERS, 1.0F, 1.0F);
+			}
 			compound.setBoolean(TAG_ACTIVE, !compound.getBoolean(TAG_ACTIVE));
 		}
 		

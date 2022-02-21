@@ -1,9 +1,12 @@
 package moze_intel.projecte.gameObjs.items;
 
-import java.util.Random;
-
 import javax.annotation.Nonnull;
 
+import moze_intel.projecte.PECore;
+import moze_intel.projecte.api.item.IItemEmc;
+import moze_intel.projecte.config.ProjectEConfig;
+import moze_intel.projecte.utils.EMCHelper;
+import moze_intel.projecte.utils.ItemHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
@@ -17,11 +20,6 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import moze_intel.projecte.PECore;
-import moze_intel.projecte.api.item.IItemEmc;
-import moze_intel.projecte.config.ProjectEConfig;
-import moze_intel.projecte.utils.EMCHelper;
-import moze_intel.projecte.utils.ItemHelper;
 
 public class KleinStar extends ItemPE implements IItemEmc
 {

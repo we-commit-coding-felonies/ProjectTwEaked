@@ -98,7 +98,7 @@ public class ArchangelSmite extends RingToggle implements IPedestalItem
 	{
 		if (!world.isRemote)
 		{
-			fireArrow(player.getHeldItem(hand), world, player, 1F);
+			fireArrow(player.getHeldItem(hand), world, player, 0F);
 		}
 		return ActionResult.newResult(EnumActionResult.SUCCESS, player.getHeldItem(hand));
 	}

@@ -7,12 +7,19 @@ import javax.annotation.Nonnull;
 
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
+import moze_intel.projecte.api.PESounds;
+import moze_intel.projecte.api.item.IItemCharge;
+import moze_intel.projecte.api.item.IPedestalItem;
+import moze_intel.projecte.config.ProjectEConfig;
+import moze_intel.projecte.gameObjs.tiles.DMPedestalTile;
+import moze_intel.projecte.utils.ItemHelper;
+import moze_intel.projecte.utils.MathUtils;
+import moze_intel.projecte.utils.WorldHelper;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
@@ -25,24 +32,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import moze_intel.projecte.api.PESounds;
-import moze_intel.projecte.api.item.IItemCharge;
-import moze_intel.projecte.api.item.IModeChanger;
-import moze_intel.projecte.api.item.IPedestalItem;
-import moze_intel.projecte.config.ProjectEConfig;
-import moze_intel.projecte.gameObjs.items.ItemPE;
-import moze_intel.projecte.gameObjs.tiles.DMPedestalTile;
-import moze_intel.projecte.utils.ItemHelper;
-import moze_intel.projecte.utils.MathUtils;
-import moze_intel.projecte.utils.WorldHelper;
 
 @Optional.Interface(iface = "baubles.api.IBauble", modid = "baubles")
-public class Zero extends ItemPE implements IModeChanger, IBauble, IPedestalItem, IItemCharge
+public class Zero extends RingToggle implements IBauble, IPedestalItem, IItemCharge
 {
 	public Zero() 
 	{
-		this.setTranslationKey("zero_ring");
-		this.setMaxStackSize(1);
+		super("zero_ring");
 		this.setContainerItem(this);
 		this.setNoRepair();
 		this.addPropertyOverride(ACTIVE_NAME, ACTIVE_GETTER);
@@ -77,20 +73,6 @@ public class Zero extends ItemPE implements IModeChanger, IBauble, IPedestalItem
 		}
 		
 		return ActionResult.newResult(EnumActionResult.SUCCESS, stack);
-	}
-
-	@Override
-	public byte getMode(@Nonnull ItemStack stack)
-	{
-		return ItemHelper.getOrCreateCompound(stack).getBoolean(TAG_ACTIVE) ? (byte) 1 : 0;
-	}
-
-	@Override
-	public boolean changeMode(@Nonnull EntityPlayer player, @Nonnull ItemStack stack, EnumHand hand)
-	{
-		NBTTagCompound tag = ItemHelper.getOrCreateCompound(stack);
-		tag.setBoolean(TAG_ACTIVE, !tag.getBoolean(TAG_ACTIVE));
-		return true;
 	}
 	
 	@Override

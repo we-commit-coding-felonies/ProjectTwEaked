@@ -4,6 +4,7 @@ import javax.annotation.Nonnull;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import moze_intel.projecte.api.PESounds;
@@ -36,16 +37,14 @@ public abstract class RingToggle extends ItemPE implements IModeChanger
 	@Override
 	public boolean changeMode(@Nonnull EntityPlayer player, @Nonnull ItemStack stack, EnumHand hand)
 	{
-		if (!ItemHelper.getOrCreateCompound(stack).getBoolean(TAG_ACTIVE))
-		{
+		NBTTagCompound tag  = ItemHelper.getOrCreateCompound(stack);
+		if (!tag.getBoolean(TAG_ACTIVE)) {
 			player.getEntityWorld().playSound(null, player.posX, player.posY, player.posZ, PESounds.HEAL, SoundCategory.PLAYERS, 1.0F, 1.0F);
-			stack.getTagCompound().setBoolean(TAG_ACTIVE, true);
 		}
-		else
-		{
+		else {
 			player.getEntityWorld().playSound(null, player.posX, player.posY, player.posZ, PESounds.UNCHARGE, SoundCategory.PLAYERS, 1.0F, 1.0F);
-			stack.getTagCompound().setBoolean(TAG_ACTIVE, false);
 		}
+		tag.setBoolean(TAG_ACTIVE, !tag.getBoolean(TAG_ACTIVE));
 		return true;
 	}
 }

@@ -2,7 +2,6 @@ package moze_intel.projecte.gameObjs.items.armor;
 
 import javax.annotation.Nonnull;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -60,6 +59,6 @@ public class MatterArmor extends ItemArmor implements ISpecialArmor
 
 	@Override
 	public int getRGBDurabilityForDisplay(ItemStack stack) {
-        return MathHelper.hsvToRGB(Math.max(0.3911F, (float) (1.0F - getDurabilityForDisplay(stack)) / 1.65125495376F), 1.0f, 0.824f);
+        return MathHelper.hsvToRGB((Math.max(0.0F, (float) (1.0F - getDurabilityForDisplay(stack)) / 4.66297083052F) + 0.3911f), 1.0f, 0.824f);
 	}
 }

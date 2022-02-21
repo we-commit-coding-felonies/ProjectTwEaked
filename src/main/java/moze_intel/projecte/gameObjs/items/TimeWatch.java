@@ -317,7 +317,7 @@ public class TimeWatch extends ItemPE implements IModeChanger, IBauble, IPedesta
 	@Optional.Method(modid = "baubles")
 	public baubles.api.BaubleType getBaubleType(ItemStack itemstack)
 	{
-		return BaubleType.BELT;
+		return ProjectEConfig.baubleCompat.woftSlot;
 	}
 
 	@Override
@@ -339,7 +339,7 @@ public class TimeWatch extends ItemPE implements IModeChanger, IBauble, IPedesta
 	@Optional.Method(modid = "baubles")
 	public boolean canEquip(ItemStack itemstack, EntityLivingBase player) 
 	{
-		return true;
+		return ProjectEConfig.baubleCompat.baubleToggle && ProjectEConfig.baubleCompat.woftBauble;
 	}
 
 	@Override

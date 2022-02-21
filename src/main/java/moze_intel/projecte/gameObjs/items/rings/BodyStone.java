@@ -76,7 +76,7 @@ public class BodyStone extends RingToggle implements IBauble, IPedestalItem
 	@Optional.Method(modid = "baubles")
 	public baubles.api.BaubleType getBaubleType(ItemStack itemstack)
 	{
-		return BaubleType.AMULET;
+		return ProjectEConfig.baubleCompat.bodySlot;
 	}
 
 	@Override
@@ -98,7 +98,7 @@ public class BodyStone extends RingToggle implements IBauble, IPedestalItem
 	@Optional.Method(modid = "baubles")
 	public boolean canEquip(ItemStack itemstack, EntityLivingBase player) 
 	{
-		return true;
+		return ProjectEConfig.baubleCompat.baubleToggle && ProjectEConfig.baubleCompat.bodyBauble;
 	}
 
 	@Override

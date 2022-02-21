@@ -83,7 +83,7 @@ public class LifeStone extends RingToggle implements IBauble, IPedestalItem
 	@Optional.Method(modid = "baubles")
 	public baubles.api.BaubleType getBaubleType(ItemStack itemstack)
 	{
-		return BaubleType.AMULET;
+		return ProjectEConfig.baubleCompat.lifeSlot;
 	}
 
 	@Override
@@ -105,7 +105,7 @@ public class LifeStone extends RingToggle implements IBauble, IPedestalItem
 	@Optional.Method(modid = "baubles")
 	public boolean canEquip(ItemStack stack, EntityLivingBase player) 
 	{
-		return true;
+		return ProjectEConfig.baubleCompat.baubleToggle && ProjectEConfig.baubleCompat.lifeBauble;
 	}
 
 	@Override

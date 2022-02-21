@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.Nonnull;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
@@ -24,10 +25,12 @@ import moze_intel.projecte.api.item.IAlchBagItem;
 import moze_intel.projecte.api.item.IAlchChestItem;
 import moze_intel.projecte.api.item.IExtraFunction;
 import moze_intel.projecte.api.item.IPedestalItem;
+import moze_intel.projecte.config.ProjectEConfig;
 import moze_intel.projecte.gameObjs.ObjHandler;
 import moze_intel.projecte.gameObjs.items.GemEternalDensity;
 import moze_intel.projecte.utils.ItemHelper;
 import moze_intel.projecte.utils.PlayerHelper;
+import net.minecraftforge.fml.common.Optional;
 
 public class VoidRing extends GemEternalDensity implements IPedestalItem, IExtraFunction
 {
@@ -169,5 +172,19 @@ public class VoidRing extends GemEternalDensity implements IPedestalItem, IExtra
 				PECore.LOGGER.fatal("Invalid target for gem of eternal density: {}", target);
 				return ItemStack.EMPTY;
 		}
+	}
+
+	@Override
+	@Optional.Method(modid = "baubles")
+	public boolean canEquip(ItemStack itemstack, EntityLivingBase player) 
+	{
+		return ProjectEConfig.baubleCompat.baubleToggle && ProjectEConfig.baubleCompat.voidBauble;
+	}
+	
+	@Override
+	@Optional.Method(modid = "baubles")
+	public baubles.api.BaubleType getBaubleType(ItemStack itemstack)
+	{
+		return ProjectEConfig.baubleCompat.voidSlot;
 	}
 }

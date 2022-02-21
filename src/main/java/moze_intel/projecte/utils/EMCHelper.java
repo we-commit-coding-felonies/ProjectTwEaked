@@ -4,6 +4,12 @@ import java.math.BigInteger;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import baubles.api.BaublesApi;
+import baubles.api.cap.IBaublesItemHandler;
+import moze_intel.projecte.api.item.IItemEmc;
+import moze_intel.projecte.emc.EMCMapper;
+import moze_intel.projecte.emc.FuelMapper;
+import moze_intel.projecte.emc.SimpleStack;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -11,12 +17,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
-import moze_intel.projecte.api.item.IItemEmc;
-import moze_intel.projecte.emc.EMCMapper;
-import moze_intel.projecte.emc.FuelMapper;
-import moze_intel.projecte.emc.SimpleStack;
 
 /**
  * Helper class for EMC.
@@ -53,6 +56,25 @@ public final class EMCHelper
 			}
 		}
 
+		if (Loader.isModLoaded("baubles")) {
+			IBaublesItemHandler baubles = BaublesApi.getBaublesHandler(player);
+			for (int i = 0; i < baubles.getSlots(); i++)
+			{
+				ItemStack stack = baubles.getStackInSlot(i);
+				if (stack.isEmpty()) continue;
+				if (stack.getItem() instanceof IItemEmc)
+				{
+					IItemEmc itemEmc = ((IItemEmc) stack.getItem());
+					if (itemEmc.getStoredEmc(stack) >= minFuel)
+					{
+						itemEmc.extractEmc(stack, minFuel);
+						player.inventoryContainer.detectAndSendChanges();
+						return minFuel;
+					}
+				}
+			}
+		}
+		
 		for (int i = 0; i < inv.getSlots(); i++)
 		{
 			ItemStack stack = inv.getStackInSlot(i);
@@ -129,6 +151,20 @@ public final class EMCHelper
 		{
 			IItemEmc itemEmc = ((IItemEmc) offhand.getItem());
 			totalEMC += itemEmc.getStoredEmc(offhand);
+		}
+
+		if (Loader.isModLoaded("baubles")) {
+			IBaublesItemHandler baubles = BaublesApi.getBaublesHandler(player);
+			for (int i = 0; i < baubles.getSlots(); i++)
+			{
+				ItemStack stack = baubles.getStackInSlot(i);
+				if (stack.isEmpty()) continue;
+				if (stack.getItem() instanceof IItemEmc)
+				{
+					IItemEmc itemEmc = ((IItemEmc) stack.getItem());
+					totalEMC += itemEmc.getStoredEmc(stack);
+				}
+			}
 		}
 
 		for (int i = 0; i < inv.getSlots(); i++)

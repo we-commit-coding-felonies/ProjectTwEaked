@@ -6,9 +6,11 @@ import javax.annotation.Nonnull;
 
 import com.google.common.collect.Lists;
 
+import baubles.api.IBauble;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -22,11 +24,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import moze_intel.projecte.api.item.IPedestalItem;
+import moze_intel.projecte.config.ProjectEConfig;
 import moze_intel.projecte.gameObjs.tiles.DMPedestalTile;
 import moze_intel.projecte.utils.ItemHelper;
 import moze_intel.projecte.utils.WorldHelper;
+import net.minecraftforge.fml.common.Optional;
 
-public class MindStone extends RingToggle implements IPedestalItem
+@Optional.Interface(iface = "baubles.api.IBauble", modid = "baubles")
+public class MindStone extends RingToggle implements IPedestalItem, IBauble
 {
 	private static final int TRANSFER_RATE = 50;
 
@@ -235,5 +240,26 @@ public class MindStone extends RingToggle implements IPedestalItem
 	public List<String> getPedestalDescription()
 	{
 		return Lists.newArrayList(I18n.format("pe.mind.pedestal1"));
+	}
+
+	@Override
+	@Optional.Method(modid = "baubles")
+	public boolean canEquip(ItemStack itemstack, EntityLivingBase player) 
+	{
+		return ProjectEConfig.baubleCompat.baubleToggle && ProjectEConfig.baubleCompat.mindBauble;
+	}
+	
+	@Override
+	@Optional.Method(modid = "baubles")
+	public baubles.api.BaubleType getBaubleType(ItemStack itemstack)
+	{
+		return ProjectEConfig.baubleCompat.mindSlot;
+	}
+
+	@Override
+	@Optional.Method(modid = "baubles")
+	public void onWornTick(ItemStack stack, EntityLivingBase player) 
+	{
+		this.onUpdate(stack, player.getEntityWorld(), player, 0, false);
 	}
 }

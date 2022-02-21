@@ -79,7 +79,7 @@ public class Zero extends RingToggle implements IBauble, IPedestalItem, IItemCha
 	@Optional.Method(modid = "baubles")
 	public baubles.api.BaubleType getBaubleType(ItemStack itemstack)
 	{
-		return BaubleType.RING;
+		return ProjectEConfig.baubleCompat.zeroSlot;
 	}
 
 	@Override
@@ -101,7 +101,7 @@ public class Zero extends RingToggle implements IBauble, IPedestalItem, IItemCha
 	@Optional.Method(modid = "baubles")
 	public boolean canEquip(ItemStack itemstack, EntityLivingBase player) 
 	{
-		return true;
+		return ProjectEConfig.baubleCompat.baubleToggle && ProjectEConfig.baubleCompat.zeroBauble;
 	}
 
 	@Override

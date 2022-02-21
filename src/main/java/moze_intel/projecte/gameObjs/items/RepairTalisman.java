@@ -116,7 +116,7 @@ public class RepairTalisman extends ItemPE implements IAlchBagItem, IAlchChestIt
 	@Optional.Method(modid = "baubles")
 	public baubles.api.BaubleType getBaubleType(ItemStack itemstack)
 	{
-		return BaubleType.BELT;
+		return ProjectEConfig.baubleCompat.talismanSlot;
 	}
 
 	@Override
@@ -138,7 +138,7 @@ public class RepairTalisman extends ItemPE implements IAlchBagItem, IAlchChestIt
 	@Optional.Method(modid = "baubles")
 	public boolean canEquip(ItemStack itemstack, EntityLivingBase player) 
 	{
-		return true;
+		return ProjectEConfig.baubleCompat.baubleToggle && ProjectEConfig.baubleCompat.talismanBauble;
 	}
 
 	@Override

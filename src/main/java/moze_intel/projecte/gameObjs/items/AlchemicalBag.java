@@ -2,7 +2,11 @@ package moze_intel.projecte.gameObjs.items;
 
 import javax.annotation.Nonnull;
 
+import baubles.api.BaublesApi;
+import baubles.api.IBauble;
+import baubles.api.cap.IBaublesItemHandler;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
@@ -17,13 +21,17 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.items.IItemHandler;
 import moze_intel.projecte.PECore;
 import moze_intel.projecte.api.ProjectEAPI;
+import moze_intel.projecte.config.ProjectEConfig;
 import moze_intel.projecte.gameObjs.ObjHandler;
 import moze_intel.projecte.gameObjs.items.rings.BlackHoleBand;
 import moze_intel.projecte.gameObjs.items.rings.VoidRing;
 import moze_intel.projecte.utils.Constants;
 import moze_intel.projecte.utils.ItemHelper;
+import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.fml.common.Optional;
 
-public class AlchemicalBag extends ItemPE
+@Optional.Interface(iface = "baubles.api.IBauble", modid = "baubles")
+public class AlchemicalBag extends ItemPE implements IBauble
 {
 	// MC Lang files have these unlocalized names mapped to raw color names
 	private final String[] unlocalizedColors = {
@@ -86,6 +94,45 @@ public class AlchemicalBag extends ItemPE
 
 	public static ItemStack getFirstBagWithSuctionItem(EntityPlayer player, NonNullList<ItemStack> inventory)
 	{
+		if (player.getHeldItemOffhand().getItem() == ObjHandler.alchBag) {
+			ItemStack stack = player.getHeldItemOffhand();
+			IItemHandler inv = player.getCapability(ProjectEAPI.ALCH_BAG_CAPABILITY, null)
+					.getBag(EnumDyeColor.byMetadata(stack.getItemDamage()));
+			for (int i = 0; i < inv.getSlots(); i++) {
+				ItemStack ring = inv.getStackInSlot(i);
+
+				if (!ring.isEmpty() && (ring.getItem() instanceof BlackHoleBand || ring.getItem() instanceof VoidRing)) {
+					if (ItemHelper.getOrCreateCompound(ring).getBoolean(TAG_ACTIVE)) {
+						return stack;
+					}
+				}
+			}
+		}
+		
+		if (Loader.isModLoaded("baubles") && ProjectEConfig.baubleCompat.baubleToggle && ProjectEConfig.baubleCompat.alchBagBauble) {
+			IBaublesItemHandler baubles = BaublesApi.getBaublesHandler(player);
+			for (int i = 0; i < baubles.getSlots(); i++)
+			{
+				ItemStack stack = baubles.getStackInSlot(i);
+				if (stack.isEmpty()) continue;
+	
+				if (stack.getItem() == ObjHandler.alchBag)
+				{
+					IItemHandler inv = player.getCapability(ProjectEAPI.ALCH_BAG_CAPABILITY, null)
+							.getBag(EnumDyeColor.byMetadata(stack.getItemDamage()));
+					for (int j = 0; j < inv.getSlots(); j++) {
+						ItemStack ring = inv.getStackInSlot(j);
+	
+						if (!ring.isEmpty() && (ring.getItem() instanceof BlackHoleBand || ring.getItem() instanceof VoidRing)) {
+							if (ItemHelper.getOrCreateCompound(ring).getBoolean(TAG_ACTIVE)) {
+								return stack;
+							}
+						}
+					}
+				}
+			}
+		}
+		
 		for (ItemStack stack : inventory)
 		{
 			if (stack.isEmpty())
@@ -110,5 +157,19 @@ public class AlchemicalBag extends ItemPE
 		}
 
 		return ItemStack.EMPTY;
+	}
+
+	@Override
+	@Optional.Method(modid = "baubles")
+	public boolean canEquip(ItemStack itemstack, EntityLivingBase player) 
+	{
+		return ProjectEConfig.baubleCompat.baubleToggle && ProjectEConfig.baubleCompat.alchBagBauble;
+	}
+	
+	@Override
+	@Optional.Method(modid = "baubles")
+	public baubles.api.BaubleType getBaubleType(ItemStack itemstack)
+	{
+		return ProjectEConfig.baubleCompat.alchBagSlot;
 	}
 }

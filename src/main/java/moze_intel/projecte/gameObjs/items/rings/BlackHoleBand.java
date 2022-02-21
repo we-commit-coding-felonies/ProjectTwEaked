@@ -41,6 +41,7 @@ import net.minecraftforge.items.wrapper.InvWrapper;
 import moze_intel.projecte.api.item.IAlchBagItem;
 import moze_intel.projecte.api.item.IAlchChestItem;
 import moze_intel.projecte.api.item.IPedestalItem;
+import moze_intel.projecte.config.ProjectEConfig;
 import moze_intel.projecte.gameObjs.tiles.AlchChestTile;
 import moze_intel.projecte.gameObjs.tiles.DMPedestalTile;
 import moze_intel.projecte.utils.ItemHelper;
@@ -118,7 +119,7 @@ public class BlackHoleBand extends RingToggle implements IAlchBagItem, IAlchChes
 	@Optional.Method(modid = "baubles")
 	public BaubleType getBaubleType(ItemStack itemstack)
 	{
-		return BaubleType.RING;
+		return ProjectEConfig.baubleCompat.blackHoleSlot;
 	}
 
 	@Override
@@ -140,7 +141,7 @@ public class BlackHoleBand extends RingToggle implements IAlchBagItem, IAlchChes
 	@Optional.Method(modid = "baubles")
 	public boolean canEquip(ItemStack itemstack, EntityLivingBase player) 
 	{
-		return true;
+		return ProjectEConfig.baubleCompat.baubleToggle && ProjectEConfig.baubleCompat.blackHoleBauble;
 	}
 
 	@Override

@@ -1,5 +1,6 @@
 package moze_intel.projecte.config;
 
+import baubles.api.BaubleType;
 import moze_intel.projecte.PECore;
 import net.minecraftforge.common.config.Config;
 
@@ -379,5 +380,138 @@ public final class ProjectEConfig
 
 		@Config.Comment("Should the effect applied be randomized, or should they all be applied at once?")
 		public boolean randomizeEffects = true;
+	}
+
+	@Config.Comment("Settings related to Baubles integration")
+	public static final BaubleCompat baubleCompat = new BaubleCompat();
+	public static class BaubleCompat {
+		@Config.Comment("Should any items from ProjectE be registered as baubles at all?")
+		public boolean baubleToggle = true;
+
+
+		@Config.Comment("Should Klein Stars be wearable as baubles?")
+		public boolean kleinBauble = true;
+
+		@Config.Comment("What slot should Klein Stars be wearable in?")
+		public BaubleType kleinSlot = BaubleType.BODY;
+
+
+		@Config.Comment("Should the Ring of Arcana be wearable as a bauble?")
+		public boolean arcanaBauble = true;
+
+		@Config.Comment("What slot should the Ring of Arcana be wearable in?")
+		public BaubleType arcanaSlot = BaubleType.RING;
+
+
+		@Config.Comment("Should the Repair Talisman be wearable as a bauble?")
+		public boolean talismanBauble = true;
+
+		@Config.Comment("What slot should the Repair Talisman be wearable in?")
+		public BaubleType talismanSlot = BaubleType.BELT;
+
+
+		@Config.Comment("Should the Black Hole Band be wearable as a bauble?")
+		public boolean blackHoleBauble = true;
+
+		@Config.Comment("What slot should the Black Hole Band be wearable in?")
+		public BaubleType blackHoleSlot = BaubleType.RING;
+
+
+		@Config.Comment("Should the Ring of Ignition be wearable as a bauble?")
+		public boolean ignitionBauble = true;
+
+		@Config.Comment("What slot should the Ring of Ignition be wearable in?")
+		public BaubleType ignitionSlot = BaubleType.RING;
+
+
+		@Config.Comment("Should the Zero Ring be wearable as a bauble?")
+		public boolean zeroBauble = true;
+
+		@Config.Comment("What slot should the Zero Ring be wearable in?")
+		public BaubleType zeroSlot = BaubleType.RING;
+
+
+		@Config.Comment("Should the Swiftwolf's Rending Gale be wearable as a bauble?")
+		public boolean swrgBauble = true;
+
+		@Config.Comment("What slot should the Swiftwolf's Rending Gale be wearable in?")
+		public BaubleType swrgSlot = BaubleType.RING;
+
+
+		@Config.Comment("Should the Watch of Flowing Time be wearable as a bauble?")
+		public boolean woftBauble = true;
+
+		@Config.Comment("What slot should the Watch of Flowing Time be wearable in?")
+		public BaubleType woftSlot = BaubleType.CHARM;
+
+
+		@Config.Comment("Should the Gem of Eternal Density be wearable as a bauble?")
+		public boolean densityBauble = true;
+
+		@Config.Comment("What slot should the Gem of Eternal Density be wearable in?")
+		public BaubleType densitySlot = BaubleType.AMULET;
+
+
+		@Config.Comment("Should the Void Ring be wearable as a bauble?")
+		public boolean voidBauble = true;
+
+		@Config.Comment("What slot should the Void Ring be wearable in?")
+		public BaubleType voidSlot = BaubleType.RING;
+
+
+		@Config.Comment("Should the Body Stone be wearable as a bauble?")
+		public boolean bodyBauble = true;
+
+		@Config.Comment("What slot should the Body Stone be wearable in?")
+		public BaubleType bodySlot = BaubleType.AMULET;
+
+
+		@Config.Comment("Should the Soul Stone be wearable as a bauble?")
+		public boolean soulBauble = true;
+
+		@Config.Comment("What slot should the Soul Stone be wearable in?")
+		public BaubleType soulSlot = BaubleType.AMULET;
+
+
+		@Config.Comment("Should the Mind Stone be wearable as a bauble?")
+		public boolean mindBauble = true;
+
+		@Config.Comment("What slot should the Mind Stone be wearable in?")
+		public BaubleType mindSlot = BaubleType.HEAD;
+
+
+		@Config.Comment("Should the Life Stone be wearable as a bauble?")
+		public boolean lifeBauble = true;
+
+		@Config.Comment("What slot should the Life Stone be wearable in?")
+		public BaubleType lifeSlot = BaubleType.AMULET;
+
+
+		@Config.Comment("Should the Evertide Amulet be wearable as a bauble?")
+		public boolean evertideBauble = true;
+
+		@Config.Comment("What slot should the Evertide Amulet be wearable in?")
+		public BaubleType evertideSlot = BaubleType.AMULET;
+
+
+		@Config.Comment("Should the Volcanite Amulet be wearable as a bauble?")
+		public boolean volcaniteBauble = true;
+
+		@Config.Comment("What slot should the Volcanite Amulet be wearable in?")
+		public BaubleType volcaniteSlot = BaubleType.AMULET;
+
+
+		@Config.Comment("Should the Transmutation Tablet be wearable as a bauble?")
+		public boolean transTabBauble = true;
+
+		@Config.Comment("What slot should the Transmutation Tablet be wearable in?")
+		public BaubleType transTabSlot = BaubleType.HEAD;
+
+
+		@Config.Comment("Should Alchemical Bags be wearable as baubles?")
+		public boolean alchBagBauble = true;
+
+		@Config.Comment("What slot should Alchemical Bags be wearable in?")
+		public BaubleType alchBagSlot = BaubleType.BELT;
 	}
 }

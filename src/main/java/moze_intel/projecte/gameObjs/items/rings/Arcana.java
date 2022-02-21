@@ -122,7 +122,7 @@ public class Arcana extends ItemPE implements IBauble, IModeChanger, IFlightProv
 	@Optional.Method(modid = "baubles")
 	public BaubleType getBaubleType(ItemStack stack)
 	{
-		return BaubleType.RING;
+		return ProjectEConfig.baubleCompat.arcanaSlot;
 	}
 
 	@Override
@@ -150,7 +150,7 @@ public class Arcana extends ItemPE implements IBauble, IModeChanger, IFlightProv
 	@Optional.Method(modid = "baubles")
 	public boolean canEquip(ItemStack stack, EntityLivingBase player)
 	{
-		return true;
+		return ProjectEConfig.baubleCompat.baubleToggle && ProjectEConfig.baubleCompat.arcanaBauble;
 	}
 
 	@Override

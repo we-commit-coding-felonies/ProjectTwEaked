@@ -3,11 +3,14 @@ package moze_intel.projecte.events;
 import java.util.EnumSet;
 import java.util.Set;
 
+import baubles.api.BaublesApi;
+import baubles.api.cap.IBaublesItemHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
@@ -17,6 +20,7 @@ import moze_intel.projecte.PECore;
 import moze_intel.projecte.api.ProjectEAPI;
 import moze_intel.projecte.api.capabilities.IAlchBagProvider;
 import moze_intel.projecte.api.item.IAlchBagItem;
+import moze_intel.projecte.config.ProjectEConfig;
 import moze_intel.projecte.gameObjs.ObjHandler;
 import moze_intel.projecte.gameObjs.container.AlchBagContainer;
 import moze_intel.projecte.handlers.InternalAbilities;
@@ -69,6 +73,22 @@ public class TickEvents
 	private static Set<EnumDyeColor> getBagColorsPresent(EntityPlayer player)
 	{
 		Set<EnumDyeColor> bagsPresent = EnumSet.noneOf(EnumDyeColor.class);
+		
+		if (player.getHeldItemOffhand().getItem() == ObjHandler.alchBag) {
+			bagsPresent.add(EnumDyeColor.byMetadata(player.getHeldItemOffhand().getItemDamage()));
+		}
+		
+		if (Loader.isModLoaded("baubles") && ProjectEConfig.baubleCompat.baubleToggle && ProjectEConfig.baubleCompat.alchBagBauble) {
+			IBaublesItemHandler baubles = BaublesApi.getBaublesHandler(player);
+			for (int i = 0; i < baubles.getSlots(); i++)
+			{
+				ItemStack stack = baubles.getStackInSlot(i);
+				if (!stack.isEmpty() && stack.getItem() == ObjHandler.alchBag)
+				{
+					bagsPresent.add(EnumDyeColor.byMetadata(stack.getItemDamage()));
+				}
+			}
+		}
 
 		IItemHandler inv = player.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.UP);
 		for (int i = 0; i < inv.getSlots(); i++)

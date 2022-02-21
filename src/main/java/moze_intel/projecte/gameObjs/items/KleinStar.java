@@ -2,6 +2,8 @@ package moze_intel.projecte.gameObjs.items;
 
 import javax.annotation.Nonnull;
 
+import baubles.api.BaubleType;
+import baubles.api.IBauble;
 import moze_intel.projecte.PECore;
 import moze_intel.projecte.api.item.IItemEmc;
 import moze_intel.projecte.config.ProjectEConfig;
@@ -10,6 +12,7 @@ import moze_intel.projecte.utils.ItemHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
@@ -18,10 +21,12 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class KleinStar extends ItemPE implements IItemEmc
+@Optional.Interface(iface = "baubles.api.IBauble", modid = "baubles")
+public class KleinStar extends ItemPE implements IItemEmc, IBauble
 {
 
 	public KleinStar()
@@ -168,5 +173,25 @@ public class KleinStar extends ItemPE implements IItemEmc
 		else {
 			return MathHelper.hsvToRGB(0.6056f - ((0.2154f * (fade - fadeSpeed)) / fadeSpeed), 1.0f, 0.824f);
 		}
+	}
+
+	// baubles stuff
+
+	@Override
+	@Optional.Method(modid = "baubles")
+	public BaubleType getBaubleType(ItemStack itemstack) {
+		return ProjectEConfig.baubleCompat.kleinSlot;
+	}
+
+	@Override
+	@Optional.Method(modid = "baubles")
+	public boolean willAutoSync(ItemStack itemstack, EntityLivingBase player) {
+		return true;
+	}
+
+	@Override
+	@Optional.Method(modid = "baubles")
+	public boolean canEquip(ItemStack itemstack, EntityLivingBase player) {		
+		return ProjectEConfig.baubleCompat.baubleToggle && ProjectEConfig.baubleCompat.kleinBauble;
 	}
 }

@@ -35,6 +35,9 @@ Here is a list of changes:
 
 Almost all of these changes are configurable, so if you just want the bugfixes you can disable all of the feature changes!
 
+Thanks to the following people for helping translate some stuff from english:
+- Manitara (French): Mû#0001
+
 <br>
 
 <b>Below here is all from the original ProjectE readme:</b>

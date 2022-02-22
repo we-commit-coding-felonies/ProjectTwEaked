@@ -440,7 +440,9 @@ pe.subtitle.peprotectfail=Alchemical barrier dissipates
 pe.subtitle.pewaste=EMC wasted
 pe.subtitle.penova=Alchemical explosion
 
+#Tooltips
 pe.rmarmor.wear=Burnout: %s / %s
 
+#Controls
 pe.key.bag=Open Alchemical Bag
 pe.key.tablet=Open Transmutation Tablet

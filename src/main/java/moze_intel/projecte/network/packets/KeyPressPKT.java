@@ -1,25 +1,33 @@
 package moze_intel.projecte.network.packets;
 
+import baubles.api.BaublesApi;
+import baubles.api.cap.IBaublesItemHandler;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
+import net.minecraftforge.items.IItemHandlerModifiable;
+import moze_intel.projecte.api.ProjectEAPI;
 import moze_intel.projecte.api.item.IExtraFunction;
 import moze_intel.projecte.api.item.IItemCharge;
 import moze_intel.projecte.api.item.IModeChanger;
 import moze_intel.projecte.api.item.IProjectileShooter;
 import moze_intel.projecte.config.ProjectEConfig;
 import moze_intel.projecte.gameObjs.ObjHandler;
+import moze_intel.projecte.gameObjs.container.AlchBagContainer;
 import moze_intel.projecte.gameObjs.items.armor.GemArmorBase;
 import moze_intel.projecte.gameObjs.items.armor.GemChest;
 import moze_intel.projecte.gameObjs.items.armor.GemFeet;
 import moze_intel.projecte.gameObjs.items.armor.GemHelmet;
 import moze_intel.projecte.handlers.InternalAbilities;
+import moze_intel.projecte.network.PacketHandler;
 import moze_intel.projecte.utils.PEKeybind;
 import moze_intel.projecte.utils.PlayerHelper;
 
@@ -150,6 +158,65 @@ public class KeyPressPKT implements IMessage
                                     return;
                                 }
                                 break;
+                            case BAG:
+                                if (Loader.isModLoaded("baubles") && ProjectEConfig.baubleCompat.baubleToggle && ProjectEConfig.baubleCompat.alchBagBauble) {
+                                    IBaublesItemHandler baubles = BaublesApi.getBaublesHandler(player);
+                                    for (int i = 0; i < baubles.getSlots(); i++)
+                                    {
+                                        ItemStack bStack = baubles.getStackInSlot(i);
+                                        if (bStack.isEmpty()) continue;
+                                    
+                                        if (bStack.getItem() == ObjHandler.alchBag)
+                                        {
+                                            EntityPlayerMP mPlayer = (EntityPlayerMP) player;
+                                            IItemHandlerModifiable invBag = (IItemHandlerModifiable) player.getCapability(ProjectEAPI.ALCH_BAG_CAPABILITY, null).getBag(EnumDyeColor.byMetadata(bStack.getItemDamage()));
+
+                                            mPlayer.closeScreen();
+                                            mPlayer.getNextWindowId();
+                                            mPlayer.openContainer = new AlchBagContainer(mPlayer.inventory, EnumHand.OFF_HAND, invBag);
+                                            mPlayer.openContainer.windowId = mPlayer.currentWindowId;
+                                            PacketHandler.sendTo(new ShowBagPKT(mPlayer.openContainer.windowId), mPlayer);
+                                            mPlayer.openContainer.addListener(mPlayer);
+                                            return;
+                                        }
+                                    }
+                                }
+                                
+                                for (ItemStack iStack : player.inventory.mainInventory)
+                                {
+                                    if (iStack.isEmpty())
+                                    {
+                                        continue;
+                                    }
+                                
+                                    if (iStack.getItem() == ObjHandler.alchBag)
+                                    {
+                                        EntityPlayerMP mPlayer = (EntityPlayerMP) player;
+                                        IItemHandlerModifiable invBag = (IItemHandlerModifiable) player.getCapability(ProjectEAPI.ALCH_BAG_CAPABILITY, null).getBag(EnumDyeColor.byMetadata(iStack.getItemDamage()));
+
+                                        mPlayer.closeScreen();
+                                        mPlayer.getNextWindowId();
+                                        mPlayer.openContainer = new AlchBagContainer(mPlayer.inventory, EnumHand.OFF_HAND, invBag);
+                                        mPlayer.openContainer.windowId = mPlayer.currentWindowId;
+                                        PacketHandler.sendTo(new ShowBagPKT(mPlayer.openContainer.windowId), mPlayer);
+                                        mPlayer.openContainer.addListener(mPlayer);
+                                        return;
+                                    }
+                                }
+
+                                if (!player.getHeldItemOffhand().isEmpty() && player.getHeldItemOffhand().getItem() == ObjHandler.alchBag)
+                                {
+                                    EntityPlayerMP mPlayer = (EntityPlayerMP) player;
+                                    IItemHandlerModifiable invBag = (IItemHandlerModifiable) player.getCapability(ProjectEAPI.ALCH_BAG_CAPABILITY, null).getBag(EnumDyeColor.byMetadata(player.getHeldItemOffhand().getItemDamage()));
+
+                                    mPlayer.closeScreen();
+                                    mPlayer.getNextWindowId();
+                                    mPlayer.openContainer = new AlchBagContainer(mPlayer.inventory, EnumHand.OFF_HAND, invBag);
+                                    mPlayer.openContainer.windowId = mPlayer.currentWindowId;
+                                    PacketHandler.sendTo(new ShowBagPKT(mPlayer.openContainer.windowId), mPlayer);
+                                    mPlayer.openContainer.addListener(mPlayer);
+                                    return;
+                                }
                             case ARMOR_TOGGLE:
                         }
 

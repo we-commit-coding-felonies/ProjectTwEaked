@@ -426,7 +426,7 @@ pe.manual.introduction.header=Introduction
 # ImagePage headers
 pe.manual.img_alchchest.header=alchchest.png
 
-#Subtitles
+#ProjectTwEaked
 pe.subtitle.pewindmagic=Wind transmuted
 pe.subtitle.pewatermagic=Water transmuted
 pe.subtitle.pepower=Alchemical power activated
@@ -441,3 +441,6 @@ pe.subtitle.pewaste=EMC wasted
 pe.subtitle.penova=Alchemical explosion
 
 pe.rmarmor.wear=Burnout: %s / %s
+
+pe.key.bag=Open Alchemical Bag
+pe.key.tablet=Open Transmutation Tablet

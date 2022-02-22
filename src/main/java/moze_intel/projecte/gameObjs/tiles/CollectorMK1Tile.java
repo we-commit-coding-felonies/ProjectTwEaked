@@ -19,6 +19,7 @@ import net.minecraftforge.items.wrapper.RangedWrapper;
 import moze_intel.projecte.api.item.IItemEmc;
 import moze_intel.projecte.api.tile.IEmcAcceptor;
 import moze_intel.projecte.api.tile.IEmcProvider;
+import moze_intel.projecte.config.ProjectEConfig;
 import moze_intel.projecte.emc.FuelMapper;
 import moze_intel.projecte.gameObjs.container.slots.SlotPredicates;
 import moze_intel.projecte.utils.Constants;
@@ -290,7 +291,7 @@ public class CollectorMK1Tile extends TileEmc implements IEmcProvider, IEmcAccep
 		int trueSkyLight = world.getLightFor(EnumSkyBlock.SKY, pos.up()) - world.getSkylightSubtracted();
 		int blockLight = world.getLightFor(EnumSkyBlock.BLOCK, pos.up());
 		int trueLight = 0;
-		if (trueSkyLight <= blockLight || trueSkyLight <= 4) {
+		if ((trueSkyLight <= blockLight || trueSkyLight <= 4) && !ProjectEConfig.powerFlowerValues.collectorsRequireSun) {
 			trueLight = blockLight;
 		}
 		else {

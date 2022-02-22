@@ -13,7 +13,8 @@ public enum PEKeybind
 	EXTRA_FUNCTION("pe.key.extra_function", Keyboard.KEY_C),
 	FIRE_PROJECTILE("pe.key.fire_projectile", Keyboard.KEY_R),
 	MODE("pe.key.mode", Keyboard.KEY_G),
-	BAG("pe.key.bag", Keyboard.KEY_B);
+	BAG("pe.key.bag", Keyboard.KEY_B),
+	TABLET("pe.key.tablet", Keyboard.KEY_U);
 
 
 	public final String keyName;

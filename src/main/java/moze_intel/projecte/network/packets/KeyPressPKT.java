@@ -14,6 +14,7 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.items.IItemHandlerModifiable;
+import moze_intel.projecte.PECore;
 import moze_intel.projecte.api.ProjectEAPI;
 import moze_intel.projecte.api.item.IExtraFunction;
 import moze_intel.projecte.api.item.IItemCharge;
@@ -22,12 +23,14 @@ import moze_intel.projecte.api.item.IProjectileShooter;
 import moze_intel.projecte.config.ProjectEConfig;
 import moze_intel.projecte.gameObjs.ObjHandler;
 import moze_intel.projecte.gameObjs.container.AlchBagContainer;
+import moze_intel.projecte.gameObjs.items.TransmutationTablet;
 import moze_intel.projecte.gameObjs.items.armor.GemArmorBase;
 import moze_intel.projecte.gameObjs.items.armor.GemChest;
 import moze_intel.projecte.gameObjs.items.armor.GemFeet;
 import moze_intel.projecte.gameObjs.items.armor.GemHelmet;
 import moze_intel.projecte.handlers.InternalAbilities;
 import moze_intel.projecte.network.PacketHandler;
+import moze_intel.projecte.utils.Constants;
 import moze_intel.projecte.utils.PEKeybind;
 import moze_intel.projecte.utils.PlayerHelper;
 
@@ -217,6 +220,44 @@ public class KeyPressPKT implements IMessage
                                     mPlayer.openContainer.addListener(mPlayer);
                                     return;
                                 }
+                                break;
+                            case TABLET:
+                                boolean open = false;
+                                if (Loader.isModLoaded("baubles") && ProjectEConfig.baubleCompat.baubleToggle && ProjectEConfig.baubleCompat.alchBagBauble) {
+                                    IBaublesItemHandler baubles = BaublesApi.getBaublesHandler(player);
+                                    for (int i = 0; i < baubles.getSlots(); i++)
+                                    {
+                                        ItemStack bStack = baubles.getStackInSlot(i);
+                                        if (bStack.isEmpty()) continue;
+                                    
+                                        if (bStack.getItem() instanceof TransmutationTablet && !player.world.isRemote)
+                                        {
+                                            player.openGui(PECore.instance, Constants.TRANSMUTATION_GUI, player.world, hand == EnumHand.MAIN_HAND ? 0 : 1, -1, -1);
+                                            return;
+                                        }
+                                    }
+                                }
+                                
+                                for (ItemStack iStack : player.inventory.mainInventory)
+                                {
+                                    if (iStack.isEmpty())
+                                    {
+                                        continue;
+                                    }
+                                
+                                    if (iStack.getItem() instanceof TransmutationTablet && !player.world.isRemote)
+                                    {
+                                        player.openGui(PECore.instance, Constants.TRANSMUTATION_GUI, player.world, hand == EnumHand.MAIN_HAND ? 0 : 1, -1, -1);
+                                        return;
+                                    }
+                                }
+
+                                if (!player.getHeldItemOffhand().isEmpty() && player.getHeldItemOffhand().getItem() instanceof TransmutationTablet && !player.world.isRemote)
+                                {
+                                    player.openGui(PECore.instance, Constants.TRANSMUTATION_GUI, player.world, hand == EnumHand.MAIN_HAND ? 0 : 1, -1, -1);
+                                    return;
+                                }
+                                break;
                             case ARMOR_TOGGLE:
                         }
 

@@ -4,7 +4,21 @@ This is a fork of ProjectE with the aim of code modification for inclusion in [M
 
 Here is a list of changes:
  - Gem of Eternal Density can only create up to dark matter, Void Ring can still make red matter
- - Makes the transmutation table/tablet ui less horrid (shamelessly stolen and slightly modified from [ProjectEX](https://github.com/latvian-dev/ProjectEX))
+ - Transmutation table revamp
+   - Learning items requires total destruction, meaning you have to sacrifice it and all of it's EMC value to be able to make more!
+   - 3 'tiers' of table:
+     - Normal
+       - Identical to the tablet from stock ProjectE
+     - Classic
+       - Closer to the table from EE2
+       - No search bar or pages
+       - Transmutation is locked based on ore dictionary
+     - Basic
+       - Like classic, but with even more limits
+       - EMC is stored in the table itself, rather than the player
+         - Slowly decays over time!
+       - Covalence loss, unless you use covalence dust!
+       - Klein stars cannot be used to fuel it!
  - Archangels smite now applies random potion effects to entities (the effects it applies are configurable, too!)
  - Configurable collector / relay values
    - Stuff like EMC/s, EMC transfer rate, etc.

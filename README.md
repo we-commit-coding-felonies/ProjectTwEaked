@@ -1,6 +1,6 @@
 ![](/src/main/resources/assets/projecte/logo.png?raw=true)
 
-This is a fork of projectE with the aim of code modification for inclusion in [MagiTekkit](https://github.com/we-commit-coding-felonies/magitekkit), because crafttweaker just isnt quite up to the task.
+This is a fork of ProjectE with the aim of code modification for inclusion in [MagiTekkit](https://github.com/we-commit-coding-felonies/magitekkit), because crafttweaker just isn't quite up to the task.
 
 Here is a list of changes:
  - Gem of Eternal Density can only create up to dark matter, Void Ring can still make red matter
